@@ -1,6 +1,6 @@
 # 한국 4국면 예측·ML·자산배분 실증 보고서
 
-- 연구 ID: `kr-four-regime-20261018-v1`. 결과 생성일 2026-10-17T20:35:57.676Z. 실행 소스 `e98e111ab3773a14e757448803fe0aba496b4cf6`.
+- 연구 ID: `kr-four-regime-20261018-v2`. 결과 생성일 2026-10-17T21:17:45.085Z. 실행 소스 `b27681813bbc5c50b47074469363289e7108b1d1`.
 - 주 분석: 2009-09–2026-05 예측 201개월, 2016-11–2026-05 배분 115개월. 보조 장기 수정치 예측 2001-10–2026-07 298개월.
 - 기존 ETF 수익을 이미 관찰한 역사 탐색 연구다. 해시 등록과 실행 순서를 보존했지만 독립 전향 확인연구는 아니다.
 
@@ -154,18 +154,18 @@ SMOOTH_1/6은 각 평활 정의에서 라벨과 정책을 다시 만든 결과�
 | cost_25bp | 국면 전이 배분 | 6.21% | 8.70% |
 | cost_25bp | 로지스틱 배분 | 6.22% | 8.65% |
 | cost_25bp | LightGBM 배분 | 6.34% | 8.72% |
-| gamma_2 | 국면 전이 배분 | 6.28% | 8.78% |
-| gamma_2 | 로지스틱 배분 | 6.29% | 8.72% |
-| gamma_2 | LightGBM 배분 | 6.43% | 8.82% |
-| gamma_10 | 국면 전이 배분 | 6.28% | 8.78% |
-| gamma_10 | 로지스틱 배분 | 6.29% | 8.72% |
-| gamma_10 | LightGBM 배분 | 6.43% | 8.82% |
-| shrink_12 | 국면 전이 배분 | 6.28% | 8.78% |
-| shrink_12 | 로지스틱 배분 | 6.29% | 8.72% |
-| shrink_12 | LightGBM 배분 | 6.43% | 8.82% |
-| shrink_48 | 국면 전이 배분 | 6.28% | 8.78% |
-| shrink_48 | 로지스틱 배분 | 6.29% | 8.72% |
-| shrink_48 | LightGBM 배분 | 6.43% | 8.82% |
+| gamma_2 | 국면 전이 배분 | 7.59% | 12.58% |
+| gamma_2 | 로지스틱 배분 | 7.44% | 12.30% |
+| gamma_2 | LightGBM 배분 | 7.78% | 12.71% |
+| gamma_10 | 국면 전이 배분 | 6.15% | 7.92% |
+| gamma_10 | 로지스틱 배분 | 6.13% | 7.90% |
+| gamma_10 | LightGBM 배분 | 6.15% | 7.91% |
+| shrink_12 | 국면 전이 배분 | 6.45% | 9.18% |
+| shrink_12 | 로지스틱 배분 | 6.47% | 9.10% |
+| shrink_12 | LightGBM 배분 | 6.66% | 9.25% |
+| shrink_48 | 국면 전이 배분 | 6.12% | 8.37% |
+| shrink_48 | 로지스틱 배분 | 6.11% | 8.33% |
+| shrink_48 | LightGBM 배분 | 6.21% | 8.39% |
 
 정책 gamma를 바꾼 민감도에도 평가 CER의 gamma는 5다. [3/12개월 블록 추론](../results/four-regime/bootstrap-block-sensitivity.csv), [시기별 성과](../results/four-regime/subperiods.csv), [민감도 실패 원장](../results/four-regime/sensitivity-failures.json)을 전부 공개했다. 민감도에서 가장 좋은 설정을 골라 주 결과로 바꾸지 않는다.
 
@@ -181,6 +181,8 @@ SMOOTH_1/6은 각 평활 정의에서 라벨과 정책을 다시 만든 결과�
 [확신이 컸던 오답 12개](../results/four-regime/failure-cases.csv)를 확률과 함께 공개했다. SHAP는 OOS 예측의 기술적 설명이며 피처 재선정에 사용하지 않았다. 선형 대비 ML의 실제 추가 가치는 주 로그손실·CER의 동시 구간으로 판단한다.
 
 ## 8. 검정력·잔여 편향·다음 확인
+
+**검정력 재시도를 실제 완료했다.** 예측 237개월·ETF 배분 140개월로 늘린 분석, 12개 비교 보정, 실제 손실 경로의 고정효과 MDE·필요 N·분산 민감도는 [별도 전체 결과](power_retry_results.md)에 있다. 아래 24개월 개발 추정은 기존 설계의 참조값이다. 확대 결과로 교체하거나 전향 검정력이라고 부르지 않는다.
 
 | 비교 | 끝점 | 개발 N | 평가 N | 근사 80% MDE | 최소효과 판별 |
 | --- | --- | --- | --- | --- | --- |
@@ -210,10 +212,10 @@ CER은 개발 구간의 변동성으로 계산하면 최소효과 판별이 가�
 
 ## 9. 실행 증거와 원자료 권리
 
-- 소스 커밋: `e98e111ab3773a14e757448803fe0aba496b4cf6`, 트리 `5d5db63300b72e44691a9b6f420b6432719475df`.
+- 소스 커밋: `b27681813bbc5c50b47074469363289e7108b1d1`, 트리 `d4f3f788123c8351e33ca30d22b8f7a4caef5f11`.
 - LightGBM: 공식 4.6.0, 소스 `d02a01ac6f51d36c9e62388243bcb75c3b1b1774`, 실제 바이너리 해시 `12fcb04e0cb9a025f44eb4b06d255507bd5a2d5812c72b20c313d9d99f7c72ec`.
-- [등록 해시](../configs/registrations/kr-four-regime-20261018-v1.json), [원천 해시](../configs/four_regime_sources.json), [실행 원장](../results/four-regime/run-log.jsonl), [실제 재검증](../results/four-regime/verification.json).
-- [동일 트리의 공개 소스](https://github.com/bucheoncityboy/korean-macro-factor-allocation/commit/893836688e70cf5d5ed9b4208eceea2c40f1aea9)는 로컬 실행 소스와 파일이 같고 Git tree도 일치한다. API 게시로 커밋 메타데이터가 달라진 내역은 [매핑](source_mirrors.json)에 기록했다.
+- [등록 해시](../configs/registrations/kr-four-regime-20261018-v2.json), [원천 해시](../configs/four_regime_sources.json), [실행 원장](../results/four-regime/run-log.jsonl), [실제 재검증](../results/four-regime/verification.json).
+- [동일 트리의 공개 소스](https://github.com/bucheoncityboy/korean-macro-factor-allocation/commit/45f62cac985833187dcab631c084525a9bd9b9d1)는 로컬 실행 소스와 파일이 같고 Git tree도 일치한다. API 게시로 커밋 메타데이터가 달라진 내역은 [매핑](source_mirrors.json)에 기록했다.
 - 단위/통합 테스트의 합성 fixture는 회계·누수 경계를 검사한다. 실증 모형의 학습·성능·검정력에는 실제 자료만 사용했다.
 - 공개 접근을 원자료 재배포 허가로 해석하지 않는다. 원본·원자료를 직접 복원할 수 있는 입력 패널은 로컬에만 보관하고 자체 모형 산출물·통계·그림·취득 경로를 공개한다.
 

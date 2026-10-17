@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "local_commit": "b27681813bbc5c50b47074469363289e7108b1d1",
+    "remote_commit": "45f62cac985833187dcab631c084525a9bd9b9d1",
+    "tree_sha": "d4f3f788123c8351e33ca30d22b8f7a4caef5f11",
+    "remote_url": "https://github.com/bucheoncityboy/korean-macro-factor-allocation/commit/45f62cac985833187dcab631c084525a9bd9b9d1",
+    "note": "Exact source/config tree committed before this power-extension execution; prior historical results already observed. API mirror commit metadata differ. No independent preregistration certification."
+  }
+]

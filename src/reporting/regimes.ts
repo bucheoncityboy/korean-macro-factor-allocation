@@ -17,6 +17,8 @@ const mdTable=(headers:string[],rows:(string|number)[][])=>'| '+headers.join(' |
 const readableMarkdown=(s:string)=>s.replace(/\*\*([^*\n]*[^\p{L}\p{N}\s])\*\*(?=[\p{L}\p{N}])/gu,'<strong>$1</strong>');
 const subtitle='Historical exploratory study · archived macro snapshots + assumed availability · no prospective validation';
 const summary=await read('ARCHIVE/forecast-summary'),rawSummary=await read('ARCHIVE/forecast-summary-raw'),allocation=await read('ARCHIVE/allocation-summary'),comparisons=await read('primary-comparisons'),predictions=await read('ARCHIVE/predictions'),monthly=await read('ARCHIVE/allocation-monthly'),revisions=await read('data-revisions'),shap=await read('oos-shap'),power=await read('development-power'),episodes=await read('state-episodes'),scenarios=await read('scenario-summary'),policySensitivity=await read('policy-sensitivity'),transitions=await read('transition-summary');
+const powerFragment=await readFile('results/private/power-retry-readme-fragment.md','utf8');
+const mirrors=JSON.parse(await readFile('docs/source_mirrors.json','utf8')) as Row[];
 const manifest=JSON.parse(await readFile(`${ROOT}/manifest.json`,'utf8')) as Row;
 const verification=JSON.parse(await readFile(`${ROOT}/verification.json`,'utf8')) as Row;
 const validity=JSON.parse(await readFile(`${ROOT}/construct-validity.json`,'utf8')) as Row;
@@ -70,7 +72,8 @@ const readme=`# 한국 4국면 예측과 자산배분
 골디락스·오버히트·리세션·스태그플레이션의 확률을 예측하고, 그 확률을 ETF 비중으로 연결한 실증 연구다. **규제 로지스틱과 LightGBM을 동등한 주 모형으로 비교**한다. 예측을 잘하는지와 돈을 더 잘 배분하는지를 각각 검증한다.
 
 - **장기 자료:** 1990년부터의 산업생산·CPI 지수, 1991년부터 구성 가능한 거시 입력. 수정치 기반 장기 예측 평가는 **2001-10–2026-07, 298개월**.
-- **주 검증:** OECD 월별 아카이브 **333개**로 당시 성장·물가 정보를 복원. 공통 예측 **201개월**, 실제 ETF 배분 **115개월**.
+- **표본 확대 재검증:** 예측 237개월·실제 ETF 배분 140개월, 기존 결과와 같은 구간의 확률 일치·12개 비교 보정.
+- **기존 고정 비교:** OECD 월별 아카이브 **333개**로 당시 성장·물가 정보를 복원. 공통 예측 **201개월**, 실제 ETF 배분 **115개월**.
 - **공정한 ML 비교:** 같은 입력·가용 시점·내부 검증·정책·체결·비용. 주 비교 6개의 불확실성을 함께 보정.
 - **연구 상태:** 실제 자료에 근거한 역사 탐색 연구. 아카이브 가용일 가정과 일부 시장변수의 수정치 사용이 남아 있으며, 전향 검증을 마친 성과가 아니다.
 
@@ -89,6 +92,7 @@ ${effectsTable}
 
 ![주 비교와 불확실성](${FIG}/primary-effects.svg)
 
+${powerFragment}
 ## 네 국면을 어떻게 정하나
 
 성장은 **산업생산의 전년동월 성장률**, 물가는 **CPI의 전년동월 상승률**로 측정한다. 각각 최근 3개월 평균에서 직전 3개월 평균을 뺀 값으로 방향을 정한다. 두 방향을 조합하며, 성과를 보고 경계나 국면 수를 바꾸지 않는다.
@@ -143,7 +147,7 @@ KODEX 200(069500)과 KODEX 국고채3년(114260)의 실제 종가·분배금을 
 - **과도한 탐색:** 주 학습모형 2개, 기본 후보 각 4개, 온도 3개로 고정. 미리 정한 민감도 전부 공개.
 - **기간·사례 선택:** 추가 발표 지연 실험까지 가능한 공통 구간을 결과 전에 고정. 불리한 국면·실패한 전환도 보존.
 - **수정치 편향:** 첫 완성 아카이브와 최신치 사이 국면 라벨 **${changed}/${revisions.length}개월(${pct(changed/revisions.length,1)})**이 달랐다. 수정치만 쓴 장기 성과를 주 아카이브 성과와 구분.
-- **검증 중 발견한 표본 차이:** 한 판 추가 지연 부록은 마지막 라벨이 미공개여서 200개월이다. 해당 예측 비교는 기본안도 같은 200개월로 맞췄다. [계획과의 차이·처리](results/four-regime/protocol-deviations.json)를 공개했고 주 분석 201개월의 결과는 바꾸지 않았다.
+- **참조 설계 감사에서 확인한 표본 차이:** 한 판 추가 지연 부록은 마지막 라벨이 미공개여서 200개월이다. 해당 예측 비교는 기본안도 같은 200개월로 맞췄다. [계획과의 차이·처리](results/four-regime/protocol-deviations.json)를 공개했고 주 분석 201개월의 결과는 바꾸지 않았다.
 - **검정력:** 일별 가격 수를 독립 표본 수로 부풀리지 않는다. 개발 구간 MDE와 국면별 에피소드 수를 공개한다. ${power.some(r=>!r.adequate_for_minimum)?'사전 최소효과를 판별하기에 부족한 비교가 있어 작은 효과에 대한 결론은 제한된다.':'개발자료 기반 근사 검정력은 전향 검증의 보장이 아니다.'}
 
 이 검사들이 **모든 편향이나 과적합의 부재를 증명하지는 않는다.** 아카이브 판의 과거 배포시각은 가정이며, 시장통제변수 일부는 최신 수정치다. 이전 연구에서 같은 ETF 수익을 이미 봤다. 한국·두 ETF·한 역사 경로에 한정되고, 향후 시점에 미리 기록한 예측으로 재검증해야 한다.
@@ -159,11 +163,14 @@ pnpm install --frozen-lockfile
 pnpm setup:lightgbm
 pnpm check
 pnpm verify:published       # 공개 산출물·등록 코드 검증, 원자료 불필요
+pnpm verify:power -- --public # 확대 분석 공개 검증
 pnpm acquire                # 공식 원천 취득, 원자료는 로컬에 보관
 pnpm research               # 등록된 동일 스냅샷으로 전체 실증 재실행
+pnpm research:power         # 237/140개월 확대 실험·검정력 민감도
 pnpm research:validity      # GDP와의 사후 구성 타당성 대조, 예측모형에 사용 안 함
 pnpm verify:research        # 동일 스냅샷·환경에서 실제 입력·예측·체결을 재검증
-pnpm report                 # 검증 후 표·그림·README 생성
+pnpm verify:power           # 확대 분석의 실제 입력·예측·체결 재검증
+pnpm report                 # 검증 후 모든 표·그림·README 생성
 \`\`\`
 
 공급자 자료는 갱신될 수 있다. 취득한 자료의 해시가 [고정 스냅샷](configs/four_regime_sources.json)과 다르면 같은 연구로 실행하지 않고 중단한다. 공개 저장소는 원자료 대신 취득 코드·출처·해시·자체 통계와 모형 산출물을 제공한다. **원자료 취득 없이 과거 실행과 숫자가 완전히 재현된다고 주장하지 않는다.**
@@ -174,9 +181,10 @@ pnpm report                 # 검증 후 표·그림·README 생성
 | 결과 전 고정한 규칙·변경 근거·잔여 편향 | [실행 계약](docs/four_regime_preregistration.md) |
 | 출처·단위·빈티지·가용 시각 | [데이터 사전](docs/four_regime_data.md) |
 | 실행 증거·소스 커밋·검증 | [실행 manifest](${ROOT}/manifest.json) · [검증](${ROOT}/verification.json) |
+| 확대 실험·검정력·필요 표본 수 | [재시도 결과](docs/power_retry_results.md) · [설계](docs/power_retry_protocol.md) |
 | 핵심 구현 | [자료/라벨](src/regimes/data.ts) · [분류/내부 검증](src/regimes/models.ts) · [배분](src/regimes/allocation.ts) · [체결](src/backtest/engine.ts) |
 
-기존 수익률 요인 연구는 [이전 커밋](https://github.com/bucheoncityboy/korean-macro-factor-allocation/tree/d3506d47096a24e9f85e0ff7456b4703463d5a36)에 보존했다. 이 README와 \`results/four-regime/\`가 현재 4국면 연구의 결과다.
+현재 작업 트리에는 4국면 연구의 코드·문서·산출물만 유지한다.
 `;
 await write('README.md',readableMarkdown(readme));
 const report=`# 한국 4국면 예측·ML·자산배분 실증 보고서
@@ -269,6 +277,8 @@ ${mdTable(['민감도','전략','연 순 CER','순 CAGR'],policySensitivity.filt
 
 ## 8. 검정력·잔여 편향·다음 확인
 
+**검정력 재시도를 실제 완료했다.** 예측 237개월·ETF 배분 140개월로 늘린 분석, 12개 비교 보정, 실제 손실 경로의 고정효과 MDE·필요 N·분산 민감도는 [별도 전체 결과](power_retry_results.md)에 있다. 아래 24개월 개발 추정은 기존 설계의 참조값이다. 확대 결과로 교체하거나 전향 검정력이라고 부르지 않는다.
+
 ${mdTable(['비교','끝점','개발 N','평가 N','근사 80% MDE','최소효과 판별'],power.map(r=>[r.comparison,r.endpoint,r.development_n,r.target_n,r.endpoint==='annual_CER'?pp(r.approximate_80pct_MDE):num(r.approximate_80pct_MDE),r.adequate_for_minimum?'개발 추정상 가능':'부족']))}
 MDE는 최초 예측 OOS 이전의 내부 OOF 24개월, 배분 OOS 이전의 개발 수익 24개월을 사용한 HAC(6) 정규 근사다. 작은 개발 표본의 추정 오차가 크다. 20,000회 재표집은 실제 관측 수를 늘리지 않는다. 비유의는 효과가 없다는 증명이 아니다.
 
@@ -292,7 +302,7 @@ CER은 개발 구간의 변동성으로 계산하면 최소효과 판별이 가�
 - 소스 커밋: \`${manifest.source_commit}\`, 트리 \`${manifest.source_tree}\`.
 - LightGBM: 공식 4.6.0, 소스 \`${manifest.binary.source_commit}\`, 실제 바이너리 해시 \`${manifest.binary.sha256}\`.
 - [등록 해시](../configs/registrations/${manifest.id}.json), [원천 해시](../configs/four_regime_sources.json), [실행 원장](../${ROOT}/run-log.jsonl), [실제 재검증](../${ROOT}/verification.json).
-- [동일 트리의 공개 소스](https://github.com/bucheoncityboy/korean-macro-factor-allocation/commit/893836688e70cf5d5ed9b4208eceea2c40f1aea9)는 로컬 실행 소스와 파일이 같고 Git tree도 일치한다. API 게시로 커밋 메타데이터가 달라진 내역은 [매핑](source_mirrors.json)에 기록했다.
+- [동일 트리의 공개 소스](${mirrors.find(r=>r.local_commit===manifest.source_commit)?.remote_url ?? 'https://github.com/bucheoncityboy/korean-macro-factor-allocation'})는 로컬 실행 소스와 파일이 같고 Git tree도 일치한다. API 게시로 커밋 메타데이터가 달라진 내역은 [매핑](source_mirrors.json)에 기록했다.
 - 단위/통합 테스트의 합성 fixture는 회계·누수 경계를 검사한다. 실증 모형의 학습·성능·검정력에는 실제 자료만 사용했다.
 - 공개 접근을 원자료 재배포 허가로 해석하지 않는다. 원본·원자료를 직접 복원할 수 있는 입력 패널은 로컬에만 보관하고 자체 모형 산출물·통계·그림·취득 경로를 공개한다.
 
@@ -326,7 +336,7 @@ await write('docs/four_regime_data.md',`# 4국면 데이터 사전
 
 주 정책 학습은 다음 실제 거래 세션~그 다음 월의 실제 체결 세션 수익에 해당 보유 주월의 국면을 연결한다. cutoff에 수익이 끝나고 국면도 알려진 경우만 조건부 평균에 사용한다. 공분산은 완료 수익만으로 추정한다. 최초 계정은 50/50이며 마지막은 다음 체결 종가 평가다. 마지막 청산 매도 비용을 낸 실제 실현손익으로 주장하지 않는다.
 
-소스별 URL·취득 UTC·SHA256·파일 크기는 [고정 원천 목록](../configs/four_regime_sources.json)에 있다. 운용사 ETF의 가격·분배금 교차 검증은 [기존 원천 감사](../results/data-quality.json)에 보존했다. 기존 CPI 중단 시리즈는 새 연구 입력에 쓰지 않는다.
+소스별 URL·취득 UTC·SHA256·파일 크기는 [고정 원천 목록](../configs/four_regime_sources.json)에 있다. 운용사 ETF의 가격·분배금 교차 검증은 [공통 원천 감사](../results/data-quality.json)에 보존했다. 기존 CPI 중단 시리즈는 새 연구 입력에 쓰지 않는다.
 
 - ARCHIVE: 당시 판의 성장·물가 값과 첫 완성 판 라벨. 시장통제변수는 최신치/버퍼.
 - REVISED_MATCHED: 당시 있었던 관측월만 남기고 최신 성장·물가 값을 채운 보조 비교, 첫 라벨 가용일 유지.
@@ -337,6 +347,6 @@ await write('docs/four_regime_data.md',`# 4국면 데이터 사전
 await write('docs/four_regime_data.md',(await readFile('docs/four_regime_data.md','utf8'))+`\n## 사후 GDP 대조 자료\n\nIMF International Financial Statistics의 계절조정 실질 GDP를 FRED 시리즈 [NGDPRSAXDCKRQ](https://fred.stlouisfed.org/series/NGDPRSAXDCKRQ)로 취득했다. 단위는 자국 통화 백만, 빈도는 분기다. 최신 수정치이며 예측 입력·라벨 정의·튜닝에는 사용하지 않았다. 실제 비교는 2009-Q4–2026-Q2의 67개 완성 분기다. 세 달의 산업생산 모멘텀을 분기 평균해 GDP YoY의 직전 분기 대비 변화와 대조한다. 국가의 공식 경기순환 연대기를 검증한 결과로 표시하지 않는다. 원본은 로컬에 보관하고 취득 UTC·SHA256·해석 한계는 [진단 결과](../results/four-regime/construct-validity.json)에 기록했다.\n`);
 const paths:string[]=[];
 async function collect(dir:string){for(const entry of await readdir(dir,{withFileTypes:true})){const p=dir+'/'+entry.name;if(entry.isDirectory())await collect(p);else if(p!==`${ROOT}/artifact-hashes.json`)paths.push(p);}}
-await collect(ROOT);paths.push('README.md','docs/four_regime_results.md','docs/four_regime_data.md','docs/four_regime_experiment_log.md','docs/source_mirrors.json','docs/README.md','results/README.md');
+await collect(ROOT);paths.push('README.md','docs/four_regime_results.md','docs/four_regime_data.md','docs/four_regime_experiment_log.md','docs/source_mirrors.json','docs/README.md','results/README.md','docs/power_retry_results.md','docs/power_retry_protocol.md');
 await writeJson(`${ROOT}/artifact-hashes.json`,Object.fromEntries(await Promise.all(paths.map(async p=>[p,sha256(await readFile(p))]))));
 console.log(`Reported ${manifest.id}: ${paths.length} artifacts and documents; empirical values read from verified outputs.`);

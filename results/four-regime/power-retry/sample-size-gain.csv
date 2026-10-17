@@ -1,0 +1,3 @@
+endpoint,reference_n,expanded_n,relative_se_change_same_variance,scope
+log_loss,201,237,-0.07907586315550141,"Mechanical sample-size change at identical variance and multiplicity, not a guarantee about realized intervals"
+annual_CER,115,140,-0.09367303282503425,"Mechanical sample-size change at identical variance and multiplicity, not a guarantee about realized intervals"

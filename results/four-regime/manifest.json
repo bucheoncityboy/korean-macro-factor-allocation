@@ -1,9 +1,9 @@
 {
-  "id": "kr-four-regime-20261018-v1",
-  "completed_at": "2026-10-17T20:35:57.676Z",
-  "source_commit": "e98e111ab3773a14e757448803fe0aba496b4cf6",
-  "source_tree": "5d5db63300b72e44691a9b6f420b6432719475df",
-  "registration_sha256": "28fc6d1d9394405f9a35884218c9505df55f97817c3d9c4681b1eaa078e8fd8c",
+  "id": "kr-four-regime-20261018-v2",
+  "completed_at": "2026-10-17T21:17:45.085Z",
+  "source_commit": "b27681813bbc5c50b47074469363289e7108b1d1",
+  "source_tree": "d4f3f788123c8351e33ca30d22b8f7a4caef5f11",
+  "registration_sha256": "0835144ae47b3692f15d948a2fc7495c2aa3f7e1bb9879ff338a728f28d78ca7",
   "binary": {
     "path": "/tmp/kmfa-lightgbm/lightgbm",
     "sha256": "12fcb04e0cb9a025f44eb4b06d255507bd5a2d5812c72b20c313d9d99f7c72ec",

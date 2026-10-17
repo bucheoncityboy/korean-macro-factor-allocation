@@ -1,0 +1,17 @@
+{
+  "verified_at": "2026-10-17T21:21:00.948Z",
+  "result": "PASS",
+  "checks": [
+    "237 consecutive common forecast origins / 140 actual ETF intervals",
+    "201 common-origin probabilities and tuning exactly equal to reference",
+    "all probabilities normalized; labels mature at training cutoff",
+    "three real origins independently refitted for both models",
+    "unpublished-label permutation leaves first expanded origin unchanged",
+    "all policies/signals/cost/NAV paths exactly replayed",
+    "gamma/shrink sensitivity arguments independently checked on real data",
+    "family-12 block bootstrap exactly recomputed",
+    "HAC precision independently recomputed from paired paths",
+    "multiclass SHAP raw-score additivity"
+  ],
+  "scope": "Historical exploratory extension, not independent prospective confirmation"
+}

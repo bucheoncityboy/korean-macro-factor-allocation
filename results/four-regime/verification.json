@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-10-17T20:38:22.122Z",
+  "verified_at": "2026-10-17T21:20:45.470Z",
   "checks": [
     "registered code/config/source hashes",
     "201 common scored primary forecast origins / 115 common allocation origins",
@@ -14,7 +14,8 @@
     "unpublished-label permutation leaves all five models, tuning and temperatures exactly unchanged at a real origin",
     "all strategy signals and daily cost/NAV paths exactly replayed"
   ],
-  "protocol_deviation_count": 1,
-  "result": "PASS_WITH_DISCLOSED_PROTOCOL_DEVIATION",
+  "protocol_deviation_count": 0,
+  "historical_protocol_deviation_count": 1,
+  "result": "PASS_WITH_DISCLOSED_HISTORICAL_PROTOCOL_DEVIATION",
   "scope": "These checks do not prove absence of every bias or future overfitting"
 }

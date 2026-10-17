@@ -17,7 +17,7 @@
     "verify:research": "tsx src/verifyRegimes.ts",
     "setup:lightgbm": "tsx src/setupLightgbm.ts",
     "check": "pnpm typecheck && pnpm test",
-    "report": "tsx src/reporting/regimes.ts",
+    "report": "tsx src/reporting/powerRetry.ts && tsx src/reporting/regimes.ts",
     "research:prepare": "tsx src/regimes/study.ts --prepare",
     "verify:published": "tsx src/verifyRegimes.ts --public",
     "research:validity": "tsx src/reporting/regimeValidity.ts",
