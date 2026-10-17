@@ -1,6 +1,5 @@
 import { readFile, readdir, appendFile, mkdir } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
-import { parse as yamlParse } from 'yaml';
 import { sha256, write, writeJson, csv } from '../ingestion/io.js';
 import { registerExperiment, verifyRegistration } from '../validation/registration.js';
 import { binaryIdentity } from '../forecasting/lightgbm.js';
@@ -18,7 +17,7 @@ const CONFIG = 'configs/four_regime.json', ROOT = 'results/four-regime';
 type Config = { id: string; study_asof: string; primary_forecast_start: string; primary_scored_end: string; prediction_end: string; primary_allocation_start: string; primary_allocation_end: string; long_revised_start: string; long_revised_scored_end: string };
 const config = JSON.parse(await readFile(CONFIG, 'utf8')) as Config;
 const sourcePaths = (await readdir('src/regimes')).filter((p) => p.endsWith('.ts')).map((p) => 'src/regimes/' + p);
-const registrationPaths = [CONFIG, 'configs/four_regime_sources.json', 'docs/four_regime_preregistration.md', ...sourcePaths, 'src/backtest/engine.ts', 'src/forecasting/models.ts', 'src/forecasting/lightgbm.ts', 'src/evaluation/bootstrap.ts'];
+const registrationPaths = [CONFIG, 'configs/four_regime_sources.json', 'docs/four_regime_preregistration.md', ...sourcePaths, 'src/backtest/engine.ts', 'src/forecasting/models.ts', 'src/forecasting/lightgbm.ts', 'src/evaluation/bootstrap.ts', 'src/econometrics/ols.ts', 'src/features/asof.ts', 'src/ingestion/acquire.ts', 'src/ingestion/io.ts', 'src/backtest/evaluation.ts', 'src/validation/registration.ts', 'configs/power_retry.json', 'docs/power_retry_protocol.md'];
 const progress = (message: string) => console.log(new Date().toISOString(), message);
 const db = await loadDatabase(), daily = JSON.parse(await readFile('data/processed/daily.json', 'utf8')) as DailyPair[], intervals = intervalsFor(daily);
 

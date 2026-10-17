@@ -1,6 +1,6 @@
 {
   "name": "korean-macro-factor-allocation",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "private": true,
   "type": "module",
   "description": "Korean growth-inflation regime forecasting: archived macro vintages, multinomial logit versus LightGBM, and cost-aware ETF allocation",
@@ -11,25 +11,19 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "test": "tsx --test tests/*.test.ts",
-    "harness": "tsx src/harness.ts",
-    "demo": "tsx src/cli.ts demo",
-    "gate": "tsx src/cli.ts gate",
     "acquire": "tsx src/regimes/acquire.ts",
     "register": "tsx src/regimes/study.ts --register",
     "research": "tsx src/regimes/study.ts",
     "verify:research": "tsx src/verifyRegimes.ts",
-    "research:custom": "tsx src/cli.ts run",
     "setup:lightgbm": "tsx src/setupLightgbm.ts",
-    "fetch": "tsx src/cli.ts fetch",
-    "check": "pnpm typecheck && pnpm test && pnpm harness",
-    "legacy:acquire": "tsx src/ingestion/acquire.ts",
-    "legacy:register": "tsx src/study.ts --register",
-    "legacy:research": "tsx src/study.ts",
-    "legacy:verify:research": "tsx src/verifyStudy.ts",
+    "check": "pnpm typecheck && pnpm test",
     "report": "tsx src/reporting/regimes.ts",
     "research:prepare": "tsx src/regimes/study.ts --prepare",
     "verify:published": "tsx src/verifyRegimes.ts --public",
-    "research:validity": "tsx src/reporting/regimeValidity.ts"
+    "research:validity": "tsx src/reporting/regimeValidity.ts",
+    "research:power": "tsx src/regimes/powerRetry.ts",
+    "verify:power": "tsx src/verifyPower.ts",
+    "report:power": "tsx src/reporting/powerRetry.ts"
   },
   "dependencies": {
     "csv-parse": "^6.1.0",
@@ -37,9 +31,7 @@
     "ml-matrix": "^6.12.1",
     "vega": "^6.2.0",
     "vega-lite": "^6.4.1",
-    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
-    "yaml": "^2.8.1",
-    "zod": "^4.1.5"
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",

@@ -41,7 +41,7 @@ export function allocationStart(intervals: Interval[], labels: Label[], samples:
 export function allocationSignals(predictions: Prediction[], samples: Sample[], intervals: Interval[], labels: Label[], start: string, end: string, gamma = 5, shrink = 24) {
   const signals: ExecutionSignal[] = [], policies: Record<string, unknown>[] = [];
   for (const row of samples.filter((s) => s.period >= start && s.period <= end)) {
-    const policy = policyAt(intervals, labels, row.cutoff), p = predictions.filter((p) => p.period === row.period);
+    const policy = policyAt(intervals, labels, row.cutoff, gamma, shrink), p = predictions.filter((p) => p.period === row.period);
     if (p.length !== 5) throw new Error('Missing co-primary forecast at policy origin');
     const add = (strategy: string, equity_weight: number) => signals.push({ period: row.period, decision_datetime: row.cutoff, strategy, equity_weight });
     add('SAA', 0.5); add('POOLED', policy.pooled_weight); add('LAST_STATE', policy.states[row.lastState].equity_weight);

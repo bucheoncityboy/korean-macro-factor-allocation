@@ -1,4 +1,0 @@
-regime,n,mean_next_equity_return,mean_next_bond_return,equity_vol,bond_vol,mean_next_spread,interpretation
-defensive,4,0.019216609573526083,0.0012901322020009431,0.04004844281871509,0.0038827964882824223,0.01792647737152514,"Descriptive conditional next-month returns; fixed continuous signal bands, no causal or independent regime claim"
-balanced,77,0.012541781817937843,0.0015526939662625782,0.0626071864362351,0.006777330442776055,0.010989087851675265,"Descriptive conditional next-month returns; fixed continuous signal bands, no causal or independent regime claim"
-pro_risk,28,0.02783339406789462,0.0007238588742310902,0.13159605049878154,0.005576130452768649,0.02710953519366353,"Descriptive conditional next-month returns; fixed continuous signal bands, no causal or independent regime claim"

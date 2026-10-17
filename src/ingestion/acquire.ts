@@ -3,13 +3,11 @@ import { dirname } from 'node:path';
 import * as XLSX from 'xlsx';
 import { parse } from 'csv-parse/sync';
 import { write, writeJson, sha256 } from './io.js';
-import { addMonths } from '../features/asof.js';
-import type { Decision, Observation } from '../types.js';
 
 export interface DailyAsset { date: string; close: number; nav: number; market_tr: number; volume: number; distribution: number }
 export interface DailyPair { date: string; equity: DailyAsset; bond: DailyAsset }
 const base = 'https://www.samsungfund.com';
-const macroIds = { KR_PRODUCTION: 'KORPRINTO01GYSAM', KR_SHORT: 'IR3TIB01KRM156N', KR_LONG: 'IRLTLT01KRM156N', US_RATE: 'DGS10', USDKRW: 'DEXKOUS', DOLLAR: 'DTWEXBGS', KR_CPI: 'KORCPIALLMINMEI' };
+const macroIds = { KR_PRODUCTION: 'KORPRINTO01GYSAM', KR_SHORT: 'IR3TIB01KRM156N', KR_LONG: 'IRLTLT01KRM156N', US_RATE: 'DGS10', USDKRW: 'DEXKOUS' };
 
 async function snapshot(url: string, path: string, refresh = false): Promise<Buffer> {
   if (!refresh) { try { await access(path + '.metadata.json'); return await readFile(path); } catch { /* acquire new snapshot */ } }
@@ -99,17 +97,8 @@ export async function acquireEmpirical(refresh = false) {
   const [equity, bond] = await Promise.all([asset('2ETF01', refresh), asset('2ETF19', refresh)]);
   const eq = new Map(equity.points.map((r) => [r.date, r]));
   const daily: DailyPair[] = bond.points.flatMap((b) => eq.has(b.date) ? [{ date: b.date, equity: eq.get(b.date)!, bond: b }] : []);
-  const monthEnds = new Map<string, DailyPair>();
-  for (const row of daily) if (row.date < '2026-10-01') monthEnds.set(row.date.slice(0, 7), row);
-  const decisions: Decision[] = [...monthEnds].map(([period, row]) => ({ period, decision_datetime: row.date + 'T18:00:00+09:00' }));
-  const observations: Observation[] = [];
   const retrievedAt = new Date().toISOString();
-  const add = (series: string, period: string, value: number, available: string, source: string, basis: 'reported' | 'assumed_lag') => observations.push({
-    series_id: series, observation_period: period, value, available_datetime: available, release_datetime: basis === 'reported' ? available : null,
-    vintage_id: null, revision_flag: basis === 'reported' ? false : null, source, retrieved_at: retrievedAt, availability_basis: basis,
-  });
   const macroQuality: Record<string, unknown>[] = [];
-  const shortRates = new Map<string, number>();
   for (const [internal, series] of Object.entries(macroIds)) {
     const bytes = await snapshot(`https://fred.stlouisfed.org/graph/fredgraph.csv?id=${series}`, `data/raw/empirical/${series}.csv`, refresh);
     const rows = parse(bytes.toString('utf8'), { columns: true, skip_empty_lines: true }) as Record<string, string>[];
@@ -119,58 +108,18 @@ export async function acquireEmpirical(refresh = false) {
         : ['DEXKOUS', 'DTWEXBGS'].includes(series) ? 'H10 daily observations are published weekly Monday 16:15 US (next business day on holiday); predictive features use 14-calendar-day buffer. Separate contemporaneous series for explanatory analysis.'
         : 'Monthly values eligible from first day of reference month + 2 months; conservative assumption, not historical release evidence',
       vintage: 'Current revised snapshot; pseudo-OOS only' });
-    if (['DGS10', 'DEXKOUS', 'DTWEXBGS'].includes(series)) {
-      // Last value known under the next-day buffer at each real Korean decision cutoff.
-      // Store a decision-month feature observation, never the later same-date US close.
-      for (const d of decisions) {
-        const date = d.decision_datetime.slice(0, 10);
-        const buffer = series === 'DGS10' ? 7 : 14;
-        const known = dailyReferenceBefore(valid, date, buffer);
-        if (!known) continue;
-        const observedDate = known.observation_date;
-        const eligibleDate = new Date(Date.parse(observedDate) + buffer * 86400000).toISOString().slice(0, 10);
-        add(internal, d.period, Number(known[series]), eligibleDate + 'T18:00:00+09:00', `FRED:${series};reference_date=${observedDate};eligibility_buffer_days=${buffer}`, 'assumed_lag');
-        if (buffer > 1) {
-          const contemporary = dailyReferenceBefore(valid, date, 1);
-          if (contemporary) {
-            const delayedDate = new Date(Date.parse(contemporary.observation_date) + buffer * 86400000).toISOString().slice(0, 10);
-            add(internal + '_EXPLANATORY', d.period, Number(contemporary[series]), delayedDate + 'T18:00:00+09:00',
-              `FRED:${series};reference_date=${contemporary.observation_date};EXPLANATORY_ONLY;eligibility_buffer_days=${buffer}`, 'assumed_lag');
-          }
-        }
-      }
-    } else {
-      for (const r of valid) {
-        const period = r.observation_date.slice(0, 7);
-        if (period < '2007-01' || period > '2026-09') continue;
-        add(internal, period, Number(r[series]), addMonths(period, 2) + '-01T00:00:00+09:00', `OECD via FRED:${series};eligibility_assumption=2months`, 'assumed_lag');
-        if (internal === 'KR_SHORT') shortRates.set(period, Number(r[series]));
-      }
-    }
-  }
-  const ordered = [...monthEnds];
-  for (let i = 1; i < ordered.length; i++) {
-    const [period, row] = ordered[i], previous = ordered[i - 1][1];
-    add('EQ_KR', period, row.equity.market_tr / previous.equity.market_tr - 1, row.date + 'T18:00:00+09:00', 'SAMSUNG:2ETF01:MARKET_TR;distributions=Yahoo+issuer', 'reported');
-    add('BOND_KR', period, row.bond.market_tr / previous.bond.market_tr - 1, row.date + 'T18:00:00+09:00', 'SAMSUNG:2ETF19:MARKET_TR;distributions=Yahoo+issuer', 'reported');
-    const rate = shortRates.get(period);
-    if (rate === undefined) throw new Error(`Missing cash quote ${period}`);
-    const [year, month] = period.split('-').map(Number), days = new Date(Date.UTC(year, month, 0)).getUTCDate();
-    add('CASH_KR', period, rate / 100 * days / 365, row.date + 'T18:00:00+09:00', 'OECD:FRED:IR3TIB01KRM156N;ACT365_simple_proxy', 'assumed_lag');
   }
   const quality = { acquired_at: retrievedAt, equity: equity.quality, bond: bond.quality,
     common_daily_n: daily.length, common_start: daily[0].date, common_end: daily.at(-1)!.date,
     month_end_calendar: 'Intersection of actual issuer ETF trading-date records, not weekday approximation',
     macro_series: macroQuality, label: 'REAL_DATA_REVISED_PSEUDO_OOS_ETF_MARKET_TR',
     data_choices_made_before_model_output: true };
-  await writeJson('data/processed/observations.json', observations);
-  await writeJson('data/processed/decisions.json', decisions);
   await writeJson('data/processed/daily.json', daily);
   await writeJson('results/data-quality.json', quality);
-  return { observations, decisions, daily, quality };
+  return { daily, quality };
 }
 
-if (process.argv[1]?.endsWith('/acquire.ts')) {
+if (process.argv[1]?.endsWith('/ingestion/acquire.ts')) {
   const result = await acquireEmpirical(process.argv.includes('--refresh'));
-  console.log(JSON.stringify({ ...result.quality, normalized_observations: result.observations.length }, null, 2));
+  console.log(JSON.stringify({ ...result.quality, daily_observations: result.daily.length }, null, 2));
 }

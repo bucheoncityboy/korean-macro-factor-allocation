@@ -53,7 +53,7 @@ export function episodeSummary(labels: { month: string; state: number }[]) {
 export const PAIRS = [['MACRO_LOGIT', 'MARKOV', 'MACRO_ALLOC', 'MARKOV_ALLOC'], ['MACRO_LGBM', 'MARKOV', 'LGBM_ALLOC', 'MARKOV_ALLOC'], ['MACRO_LGBM', 'MACRO_LOGIT', 'LGBM_ALLOC', 'MACRO_ALLOC']] as const;
 export function allocationMetrics(rows: BacktestRow[]) { return [...new Set(rows.map((r) => r.strategy))].map((strategy) => { const subset = rows.filter((r) => r.strategy === strategy); return { strategy, start: subset[0].period, end: subset.at(-1)!.period, ...portfolioMetrics(subset), cer_annual: cer(subset.map((r) => r.net_return)) }; }); }
 function fastCer(rows: number[], idx: number[]) { let s = 0, q = 0; for (const i of idx) { s += rows[i]; q += rows[i] ** 2; } return 12 * (s / idx.length - 2.5 * (q - s * s / idx.length) / (idx.length - 1)); }
-export function comparisons(predictions: Prediction[], returns: BacktestRow[], repetitions = 20000, block = 6) {
+export function comparisons(predictions: Prediction[], returns: BacktestRow[], repetitions = 20000, block = 6, familySize = 6) {
   const rows: Record<string, unknown>[] = [], rng = random(20261018 + block);
   for (const [a, b, sa, sb] of PAIRS) {
     const A = predictions.filter((p) => p.model === a && p.actual !== null), B = predictions.filter((p) => p.model === b && p.actual !== null);
@@ -67,8 +67,8 @@ export function comparisons(predictions: Prediction[], returns: BacktestRow[], r
       bootsLoss.push(mean(fidx.map((j) => loss[j]))); bootsCer.push(fastCer(x, ridx) - fastCer(y, ridx));
     }
     for (const [endpoint, estimate, draws, n, minimum] of [['log_loss_improvement', mean(loss), bootsLoss, loss.length, 0.02], ['net_CER_improvement', cer(x) - cer(y), bootsCer, x.length, 0.005]] as const) {
-      const low = quantile(draws, 0.05 / 12)!, high = quantile(draws, 1 - 0.05 / 12)!;
-      rows.push({ comparison: `${a} - ${b}`, endpoint, estimate, n, ci_low: quantile(draws, 0.025), ci_high: quantile(draws, 0.975), simultaneous_ci_low: low, simultaneous_ci_high: high, family_size: 6, block_months: block, bootstrap_repetitions: repetitions, minimum_effect: minimum, positive_interval: low > 0, meaningful_interval: low > minimum, scope: 'Exploratory historical study; conditional intervals for realized paths, not a full training-process bootstrap or prospective confirmation' });
+      const low = quantile(draws, 0.05 / (2 * familySize))!, high = quantile(draws, 1 - 0.05 / (2 * familySize))!;
+      rows.push({ comparison: `${a} - ${b}`, endpoint, estimate, n, ci_low: quantile(draws, 0.025), ci_high: quantile(draws, 0.975), simultaneous_ci_low: low, simultaneous_ci_high: high, family_size: familySize, block_months: block, bootstrap_repetitions: repetitions, minimum_effect: minimum, positive_interval: low > 0, meaningful_interval: low > minimum, scope: 'Exploratory historical study; conditional intervals for realized paths, not a full training-process bootstrap or prospective confirmation' });
     }
   }
   return rows;

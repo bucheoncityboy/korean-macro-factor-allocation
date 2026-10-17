@@ -1,5 +1,4 @@
 import { mean, variance } from '../econometrics/ols.js';
-import { circularBlocks, quantile, random } from '../evaluation/bootstrap.js';
 import type { BacktestRow } from './engine.js';
 
 export function portfolioMetrics(rows: BacktestRow[]) {
@@ -17,25 +16,3 @@ export function portfolioMetrics(rows: BacktestRow[]) {
     terminal_wealth: wealth };
 }
 
-export function evaluateAllocation(rows: BacktestRow[], repetitions = 5000, blockLength = 6) {
-  const grouped = ['SAA', 'NON_MACRO', 'MACRO_TAA'].map((strategy) => ({ strategy, rows: rows.filter((r) => r.strategy === strategy) }));
-  if (grouped.some((g) => g.rows.map((r) => r.period).join() !== grouped[0].rows.map((r) => r.period).join())) throw new Error('Allocation strategies have different OOS masks');
-  const summary = grouped.map((g) => ({ strategy: g.strategy, ...portfolioMetrics(g.rows) }));
-  const macro = grouped[2].rows, baseline = grouped[1].rows;
-  const rng = random(20261018), diffs: number[] = [], cagrDiffs: number[] = [];
-  for (let b = 0; b < repetitions; b++) {
-    const idx = circularBlocks(macro.length, blockLength, rng);
-    diffs.push(mean(idx.map((i) => macro[i].net_return - baseline[i].net_return)) * 12);
-    cagrDiffs.push(portfolioMetrics(idx.map((i) => macro[i])).cagr - portfolioMetrics(idx.map((i) => baseline[i])).cagr);
-  }
-  const paired = { comparison: 'MACRO_TAA - NON_MACRO', annualized_mean_difference: mean(macro.map((r, i) => r.net_return - baseline[i].net_return)) * 12,
-    annualized_mean_ci: [quantile(diffs, 0.025), quantile(diffs, 0.975)],
-    cagr_difference: summary[2].cagr - summary[1].cagr,
-    cagr_difference_ci: [quantile(cagrDiffs, 0.025), quantile(cagrDiffs, 0.975)],
-    exposure_difference: summary[2].average_equity_weight - summary[1].average_equity_weight,
-    volatility_difference: summary[2].annualized_vol - summary[1].annualized_vol,
-    inference: 'Paired circular block bootstrap of realized net return paths; theoretical ex-date reinvestment; not live trading evidence' };
-  const downMonths = grouped[0].rows.flatMap((r, i) => r.net_return < 0 ? [i] : []);
-  const downside = grouped.map((g) => ({ strategy: g.strategy, months: downMonths.length, mean_monthly_return_in_saa_down_months: mean(downMonths.map((i) => g.rows[i].net_return)) }));
-  return { summary, paired, downside };
-}

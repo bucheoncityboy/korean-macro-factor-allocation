@@ -1,3 +1,0 @@
-removed_feature,model,n,oos_r2,rmse,mae,direction_accuracy,start,end,ci_low,ci_high,simultaneous_ci_low,simultaneous_ci_high,inference
-fx_change,LightGBM,109,0.010494168327028874,0.08357094867244436,0.05654559049923531,0.47706422018348627,2017-08,2026-08,-0.04787837946862964,0.04493234738523914,-0.06789688644017275,0.05862055908025866,descriptive paired block-bootstrap intervals; no universal nested-model p-value
-dollar_change,LightGBM,109,0.01777429862696367,0.08326295119696366,0.055643044405567485,0.5412844036697247,2017-08,2026-08,-0.024412294207363853,0.06511827912646766,-0.041380239169641266,0.0831790579232032,descriptive paired block-bootstrap intervals; no universal nested-model p-value

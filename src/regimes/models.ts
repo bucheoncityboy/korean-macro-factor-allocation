@@ -100,7 +100,7 @@ export function baselines(labels: Label[], row: Sample) {
   return { FREQ: counts.map((v) => v / counts.reduce((a, b) => a + b, 0)), PERSIST: counts.map((_, k) => k === row.lastState ? 0.97 : 0.01), MARKOV: p, steps };
 }
 export interface WalkResult { predictions: Prediction[]; shap: Record<string, unknown>[]; tuning: Record<string, unknown>[]; development: Record<string, unknown>[] }
-export async function walkForward(samples: Sample[], labels: Label[], start: string, end: string, names: string[], progress: (message: string) => void, explain = true): Promise<WalkResult> {
+export async function walkForward(samples: Sample[], labels: Label[], start: string, end: string, names: string[], progress: (message: string) => void, explain = true, outerFloor = 120): Promise<WalkResult> {
   const predictions: Prediction[] = [], shap: Record<string, unknown>[] = [], tuning: Record<string, unknown>[] = [], development: Record<string, unknown>[] = [];
   const cache = new Map<string, Fit>();
   async function fitAt(origin: Sample, model: Model, candidate: number) {
@@ -113,7 +113,7 @@ export async function walkForward(samples: Sample[], labels: Label[], start: str
   const evaluation = samples.filter((s) => s.period >= start && s.period <= end);
   for (const [i, row] of evaluation.entries()) {
     const train = trainingAt(samples, row.cutoff), known = labels.filter((l) => Date.parse(l.available) <= Date.parse(row.cutoff));
-    if (train.length < 120 || [0, 1, 2, 3].some((k) => train.filter((s) => s.label!.state === k).length < 12)) throw new Error(`Outer training floor failed ${row.period}`);
+    if (train.length < outerFloor || [0, 1, 2, 3].some((k) => train.filter((s) => s.label!.state === k).length < 12)) throw new Error(`Outer training floor failed ${row.period}`);
     const validation = train.slice(-24), base = baselines(known, row);
     for (const model of MODELS) {
       let best = { candidate: 0, temperature: 1, loss: Infinity }; const allScores: Record<string, unknown>[] = [];

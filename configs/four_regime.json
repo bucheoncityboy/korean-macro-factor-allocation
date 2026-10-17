@@ -1,6 +1,6 @@
 {
-  "id": "kr-four-regime-20261018-v1",
-  "status": "frozen_before_new_model_outputs",
+  "id": "kr-four-regime-20261018-v2",
+  "status": "frozen_before_power_extension_outputs_after_prior_historical_results_seen",
   "study_asof": "2026-10-18T00:00:00+09:00",
   "snapshot_end": "2026-10",
   "primary_mode": "ARCHIVE",
@@ -170,5 +170,6 @@
   "no_post_result_selection": true,
   "independent_unseen_confirmation": false,
   "scope": "Historical exploratory study; mixed vintage market controls and assumed edition availability leave residual bias. No claim that all bias or overfitting has been eliminated.",
-  "primary_date_rule": "Common period satisfying initial floors and label maturity for all prespecified archive sensitivities, including one additional edition delay; fixed before any model outputs"
+  "primary_date_rule": "Common period satisfying initial floors and label maturity for all prespecified archive sensitivities, including one additional edition delay; fixed before any model outputs",
+  "revision_note": "Legacy factor study removed; utility cleanup; fixed gamma/shrink arguments in secondary policy sensitivities (primary unchanged). Original 201/115 masks retained; power extension separately specified."
 }

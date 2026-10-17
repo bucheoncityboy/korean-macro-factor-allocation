@@ -1,3 +1,0 @@
-asset,n,start,end,domestic_adjusted_r2,full_adjusted_r2,delta_adjusted_r2,wald_statistic,p_value,holm_p_value,assessment
-EQ_KR,172,2009-08,2023-11,0.03601958962583063,0.3324258703262857,0.29640628070045505,107.39250801425649,0,0,joint_association_detected_requires_sensitivity_review
-BOND_KR,172,2009-08,2023-11,0.332152564252986,0.4795619556190601,0.14740939136607412,19.426345756126892,0.00022315094287372883,0.00022315094287372883,joint_association_detected_requires_sensitivity_review

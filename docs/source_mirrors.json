@@ -1,16 +1,1 @@
-[
-  {
-    "local_commit": "5d5b2d2678b9d8e586628b8b1be75cfedd6cd858",
-    "remote_commit": "0488d81a2ba5ef6a8144527b56fd6e43f4e0de06",
-    "tree_sha": "5ed4dc91293db0ebc4145873b41bc4acea4cd2f2",
-    "remote_url": "https://github.com/bucheoncityboy/korean-macro-factor-allocation/commit/0488d81a2ba5ef6a8144527b56fd6e43f4e0de06",
-    "note": "GitHub Git data API preserved the exact source tree. Commit metadata and parent differ from the local execution commit. Published after execution; not independent preregistration certification."
-  },
-  {
-    "local_commit": "e98e111ab3773a14e757448803fe0aba496b4cf6",
-    "remote_commit": "893836688e70cf5d5ed9b4208eceea2c40f1aea9",
-    "tree_sha": "5d5db63300b72e44691a9b6f420b6432719475df",
-    "remote_url": "https://github.com/bucheoncityboy/korean-macro-factor-allocation/commit/893836688e70cf5d5ed9b4208eceea2c40f1aea9",
-    "note": "Exact locally committed scientific source/config tree, fixed before empirical execution. Mirrored during the run via GitHub Git data API; commit metadata differ. No claim of independent preregistration or untouched historical data."
-  }
-]
+[]
