@@ -1,0 +1,362 @@
+[
+  {
+    "period": "2010-06",
+    "cutoff": "2010-06-30T18:00:00+09:00",
+    "target": "2010-07",
+    "model": "MACRO_LGBM",
+    "p": [
+      0.37218010340259533,
+      0.5599271070881356,
+      0.026894868785956042,
+      0.04099792072331291
+    ],
+    "raw_p": [
+      0.35369725234687704,
+      0.4338312742565778,
+      0.09508014269932427,
+      0.11739133069722096
+    ],
+    "actual": 3,
+    "latest_actual": 2,
+    "train_n": 132,
+    "max_label_available": "2010-06-01T00:00:00+09:00",
+    "last_month": "2010-03",
+    "vintage": "2010-05",
+    "temperature": 0.5,
+    "candidate": 3,
+    "inner_n": 24,
+    "inner_loss": 1.2510047912134714,
+    "actual_state": "stagflation",
+    "predicted_state": "overheat"
+  },
+  {
+    "period": "2024-01",
+    "cutoff": "2024-01-31T18:00:00+09:00",
+    "target": "2024-02",
+    "model": "MACRO_LGBM",
+    "p": [
+      0.08962094884765069,
+      0.21937843659822978,
+      0.2322489814748417,
+      0.4587516330792778
+    ],
+    "raw_p": [
+      0.08962094884765069,
+      0.21937843659822978,
+      0.2322489814748417,
+      0.4587516330792778
+    ],
+    "actual": 0,
+    "latest_actual": 0,
+    "train_n": 295,
+    "max_label_available": "2024-01-01T00:00:00+09:00",
+    "last_month": "2023-10",
+    "vintage": "2023-12",
+    "temperature": 1,
+    "candidate": 1,
+    "inner_n": 24,
+    "inner_loss": 1.323974706459684,
+    "actual_state": "goldilocks",
+    "predicted_state": "stagflation"
+  },
+  {
+    "period": "2010-05",
+    "cutoff": "2010-05-31T18:00:00+09:00",
+    "target": "2010-06",
+    "model": "MACRO_LGBM",
+    "p": [
+      0.2692461374330424,
+      0.28005079093971846,
+      0.09120413086642942,
+      0.35949894076080974
+    ],
+    "raw_p": [
+      0.2692461374330424,
+      0.28005079093971846,
+      0.09120413086642942,
+      0.35949894076080974
+    ],
+    "actual": 2,
+    "latest_actual": 2,
+    "train_n": 131,
+    "max_label_available": "2010-05-01T00:00:00+09:00",
+    "last_month": "2010-02",
+    "vintage": "2010-04",
+    "temperature": 1,
+    "candidate": 3,
+    "inner_n": 24,
+    "inner_loss": 1.2542862607059104,
+    "actual_state": "recession",
+    "predicted_state": "stagflation"
+  },
+  {
+    "period": "2020-07",
+    "cutoff": "2020-07-31T18:00:00+09:00",
+    "target": "2020-08",
+    "model": "MACRO_LGBM",
+    "p": [
+      0.31150886528285815,
+      0.3372978863963132,
+      0.25094367825450015,
+      0.10024957006632854
+    ],
+    "raw_p": [
+      0.31150886528285815,
+      0.3372978863963132,
+      0.25094367825450015,
+      0.10024957006632854
+    ],
+    "actual": 3,
+    "latest_actual": 1,
+    "train_n": 253,
+    "max_label_available": "2020-07-01T00:00:00+09:00",
+    "last_month": "2020-04",
+    "vintage": "2020-06",
+    "temperature": 1,
+    "candidate": 3,
+    "inner_n": 24,
+    "inner_loss": 1.282168494523507,
+    "actual_state": "stagflation",
+    "predicted_state": "overheat"
+  },
+  {
+    "period": "2010-07",
+    "cutoff": "2010-07-31T18:00:00+09:00",
+    "target": "2010-08",
+    "model": "MACRO_LGBM",
+    "p": [
+      0.2511738660351816,
+      0.3709455103093074,
+      0.2653757274897816,
+      0.11250489616572946
+    ],
+    "raw_p": [
+      0.2511738660351816,
+      0.3709455103093074,
+      0.2653757274897816,
+      0.11250489616572946
+    ],
+    "actual": 3,
+    "latest_actual": 3,
+    "train_n": 133,
+    "max_label_available": "2010-07-01T00:00:00+09:00",
+    "last_month": "2010-04",
+    "vintage": "2010-06",
+    "temperature": 1,
+    "candidate": 1,
+    "inner_n": 24,
+    "inner_loss": 1.266580700132301,
+    "actual_state": "stagflation",
+    "predicted_state": "overheat"
+  },
+  {
+    "period": "2019-05",
+    "cutoff": "2019-05-31T18:00:00+09:00",
+    "target": "2019-06",
+    "model": "MACRO_LGBM",
+    "p": [
+      0.19416623151511989,
+      0.4798768600325875,
+      0.19790482863360326,
+      0.12805207981868935
+    ],
+    "raw_p": [
+      0.19416623151511989,
+      0.4798768600325875,
+      0.19790482863360326,
+      0.12805207981868935
+    ],
+    "actual": 3,
+    "latest_actual": 1,
+    "train_n": 239,
+    "max_label_available": "2019-05-01T00:00:00+09:00",
+    "last_month": "2019-02",
+    "vintage": "2019-04",
+    "temperature": 1,
+    "candidate": 3,
+    "inner_n": 24,
+    "inner_loss": 1.2448819767182744,
+    "actual_state": "stagflation",
+    "predicted_state": "overheat"
+  },
+  {
+    "period": "2023-12",
+    "cutoff": "2023-12-31T18:00:00+09:00",
+    "target": "2024-01",
+    "model": "MACRO_LGBM",
+    "p": [
+      0.1431597954270384,
+      0.2363323372553899,
+      0.30104373470335405,
+      0.31946413261421763
+    ],
+    "raw_p": [
+      0.07617941130398649,
+      0.20760689544011512,
+      0.3368640457618927,
+      0.37934964749400574
+    ],
+    "actual": 0,
+    "latest_actual": 0,
+    "train_n": 294,
+    "max_label_available": "2023-12-01T00:00:00+09:00",
+    "last_month": "2023-09",
+    "vintage": "2023-11",
+    "temperature": 2,
+    "candidate": 1,
+    "inner_n": 24,
+    "inner_loss": 1.339117139733639,
+    "actual_state": "goldilocks",
+    "predicted_state": "stagflation"
+  },
+  {
+    "period": "2022-10",
+    "cutoff": "2022-10-31T18:00:00+09:00",
+    "target": "2022-11",
+    "model": "MACRO_LGBM",
+    "p": [
+      0.05940644963332331,
+      0.420516448874761,
+      0.14386535699566158,
+      0.37621174449625416
+    ],
+    "raw_p": [
+      0.12931141222123554,
+      0.3440420682801417,
+      0.2012325217397155,
+      0.32541399775890717
+    ],
+    "actual": 2,
+    "latest_actual": 2,
+    "train_n": 280,
+    "max_label_available": "2022-10-01T00:00:00+09:00",
+    "last_month": "2022-07",
+    "vintage": "2022-09",
+    "temperature": 0.5,
+    "candidate": 0,
+    "inner_n": 24,
+    "inner_loss": 1.2962093323718082,
+    "actual_state": "recession",
+    "predicted_state": "overheat"
+  },
+  {
+    "period": "2010-03",
+    "cutoff": "2010-03-31T18:00:00+09:00",
+    "target": "2010-04",
+    "model": "MACRO_LGBM",
+    "p": [
+      0.1608135004453507,
+      0.21296142060638434,
+      0.147957672319425,
+      0.47826740662884004
+    ],
+    "raw_p": [
+      0.1608135004453507,
+      0.21296142060638434,
+      0.147957672319425,
+      0.47826740662884004
+    ],
+    "actual": 2,
+    "latest_actual": 2,
+    "train_n": 129,
+    "max_label_available": "2010-03-01T00:00:00+09:00",
+    "last_month": "2009-12",
+    "vintage": "2010-02",
+    "temperature": 1,
+    "candidate": 3,
+    "inner_n": 24,
+    "inner_loss": 1.2721491426072136,
+    "actual_state": "recession",
+    "predicted_state": "stagflation"
+  },
+  {
+    "period": "2023-03",
+    "cutoff": "2023-03-31T18:00:00+09:00",
+    "target": "2023-04",
+    "model": "MACRO_LGBM",
+    "p": [
+      0.14853656334503013,
+      0.42043765728117205,
+      0.28142150277361067,
+      0.14960427660018713
+    ],
+    "raw_p": [
+      0.14853656334503013,
+      0.42043765728117205,
+      0.28142150277361067,
+      0.14960427660018713
+    ],
+    "actual": 0,
+    "latest_actual": 0,
+    "train_n": 285,
+    "max_label_available": "2023-03-01T00:00:00+09:00",
+    "last_month": "2022-12",
+    "vintage": "2023-02",
+    "temperature": 1,
+    "candidate": 1,
+    "inner_n": 24,
+    "inner_loss": 1.2802638143626555,
+    "actual_state": "goldilocks",
+    "predicted_state": "overheat"
+  },
+  {
+    "period": "2010-09",
+    "cutoff": "2010-09-30T18:00:00+09:00",
+    "target": "2010-10",
+    "model": "MACRO_LGBM",
+    "p": [
+      0.21789076545176891,
+      0.295674567535141,
+      0.3363190627911922,
+      0.15011560422189793
+    ],
+    "raw_p": [
+      0.21789076545176891,
+      0.295674567535141,
+      0.3363190627911922,
+      0.15011560422189793
+    ],
+    "actual": 3,
+    "latest_actual": 3,
+    "train_n": 135,
+    "max_label_available": "2010-09-01T00:00:00+09:00",
+    "last_month": "2010-06",
+    "vintage": "2010-08",
+    "temperature": 1,
+    "candidate": 1,
+    "inner_n": 24,
+    "inner_loss": 1.3443161458900832,
+    "actual_state": "stagflation",
+    "predicted_state": "recession"
+  },
+  {
+    "period": "2023-07",
+    "cutoff": "2023-07-31T18:00:00+09:00",
+    "target": "2023-08",
+    "model": "MACRO_LGBM",
+    "p": [
+      0.15362020817819289,
+      0.39042356372025827,
+      0.33760519328089733,
+      0.1183510348206515
+    ],
+    "raw_p": [
+      0.15362020817819289,
+      0.39042356372025827,
+      0.33760519328089733,
+      0.1183510348206515
+    ],
+    "actual": 0,
+    "latest_actual": 0,
+    "train_n": 289,
+    "max_label_available": "2023-07-01T00:00:00+09:00",
+    "last_month": "2023-04",
+    "vintage": "2023-06",
+    "temperature": 1,
+    "candidate": 1,
+    "inner_n": 24,
+    "inner_loss": 1.2893047694735107,
+    "actual_state": "goldilocks",
+    "predicted_state": "overheat"
+  }
+]

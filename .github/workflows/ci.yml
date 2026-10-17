@@ -19,3 +19,4 @@ jobs:
       - run: pnpm check
         env:
           LIGHTGBM_BIN: '${{ github.workspace }}/.cache/LightGBM/lightgbm'
+      - run: pnpm verify:published

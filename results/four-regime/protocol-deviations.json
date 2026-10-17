@@ -1,0 +1,12 @@
+[
+  {
+    "id": "D1",
+    "found_by": "Independent artifact verification after the frozen run",
+    "planned": "All archive sensitivities would have 201 scored forecast origins through 2026-05",
+    "actual": "Extra-edition-lag has 200 through 2026-04; allocation returns remain fully observed for the same 115 intervals",
+    "reason": "The 2026-08 OECD production archive still ends in 2026-05. The 2026-06 label first becomes complete in edition 2026-09, eligible 2026-11-01 under the extra-lag assumption, after study_asof.",
+    "resolution": "Keep all six primary contrasts and their preregistered 201/115 masks unchanged. Compare this secondary forecast sensitivity to ARCHIVE on the same 200 available origins. Do not invent the missing label or retune/reselect models.",
+    "effect_on_primary_results": "none",
+    "verification_failure_preserved": true
+  }
+]

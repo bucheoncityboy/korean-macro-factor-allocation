@@ -1,0 +1,22 @@
+Independent verification at 2026-10-17T20:36 UTC
+The assertion requiring 201 scored origins in every secondary archive scenario failed.
+$ tsx src/verifyRegimes.ts
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(s.every(r=>r.n===201&&r.start===config.primary_forecast_start&&r.end===config.primary_scored_end))
+
+    at <anonymous> (<workspace>/src/verifyRegimes.ts:35:227) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0
+[ELIFECYCLE] Command failed with exit code 1.

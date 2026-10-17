@@ -1,0 +1,7 @@
+comparison,endpoint,development_n,target_n,approximate_80pct_MDE,minimum_effect,adequate_for_minimum,method
+MACRO_LOGIT - MARKOV,log_loss,24,201,0.15025205574661016,0.02,false,"Development-only HAC(6) normal approximation; Bonferroni 6 two-sided tests; design sensitivity, not a prospective power guarantee"
+MACRO_LOGIT - MARKOV,annual_CER,24,115,0.0028579128433998536,0.005,true,"Development-only HAC(6) normal approximation; Bonferroni 6 two-sided tests; design sensitivity, not a prospective power guarantee"
+MACRO_LGBM - MARKOV,log_loss,24,201,0.07631327875479836,0.02,false,"Development-only HAC(6) normal approximation; Bonferroni 6 two-sided tests; design sensitivity, not a prospective power guarantee"
+MACRO_LGBM - MARKOV,annual_CER,24,115,0.0013925945029801873,0.005,true,"Development-only HAC(6) normal approximation; Bonferroni 6 two-sided tests; design sensitivity, not a prospective power guarantee"
+MACRO_LGBM - MACRO_LOGIT,log_loss,24,201,0.1507095812650122,0.02,false,"Development-only HAC(6) normal approximation; Bonferroni 6 two-sided tests; design sensitivity, not a prospective power guarantee"
+MACRO_LGBM - MACRO_LOGIT,annual_CER,24,115,0.003755447245444443,0.005,true,"Development-only HAC(6) normal approximation; Bonferroni 6 two-sided tests; design sensitivity, not a prospective power guarantee"

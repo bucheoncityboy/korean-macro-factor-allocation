@@ -27,7 +27,9 @@
     "legacy:research": "tsx src/study.ts",
     "legacy:verify:research": "tsx src/verifyStudy.ts",
     "report": "tsx src/reporting/regimes.ts",
-    "research:prepare": "tsx src/regimes/study.ts --prepare"
+    "research:prepare": "tsx src/regimes/study.ts --prepare",
+    "verify:published": "tsx src/verifyRegimes.ts --public",
+    "research:validity": "tsx src/reporting/regimeValidity.ts"
   },
   "dependencies": {
     "csv-parse": "^6.1.0",

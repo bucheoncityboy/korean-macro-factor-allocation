@@ -1,0 +1,157 @@
+{
+  "title": {
+    "text": "How often do economic state labels change after revision?",
+    "subtitle": [
+      "Historical exploratory study · archived macro snapshots + assumed availability · no prospective validation",
+      "48 of 332 monthly labels differ between the first complete archive and latest vintage"
+    ]
+  },
+  "width": 400,
+  "height": 300,
+  "data": {
+    "values": [
+      {
+        "first": "goldilocks",
+        "latest": "goldilocks",
+        "n": 57
+      },
+      {
+        "first": "goldilocks",
+        "latest": "overheat",
+        "n": 0
+      },
+      {
+        "first": "goldilocks",
+        "latest": "recession",
+        "n": 9
+      },
+      {
+        "first": "goldilocks",
+        "latest": "stagflation",
+        "n": 0
+      },
+      {
+        "first": "overheat",
+        "latest": "goldilocks",
+        "n": 4
+      },
+      {
+        "first": "overheat",
+        "latest": "overheat",
+        "n": 80
+      },
+      {
+        "first": "overheat",
+        "latest": "recession",
+        "n": 0
+      },
+      {
+        "first": "overheat",
+        "latest": "stagflation",
+        "n": 11
+      },
+      {
+        "first": "recession",
+        "latest": "goldilocks",
+        "n": 10
+      },
+      {
+        "first": "recession",
+        "latest": "overheat",
+        "n": 1
+      },
+      {
+        "first": "recession",
+        "latest": "recession",
+        "n": 80
+      },
+      {
+        "first": "recession",
+        "latest": "stagflation",
+        "n": 4
+      },
+      {
+        "first": "stagflation",
+        "latest": "goldilocks",
+        "n": 1
+      },
+      {
+        "first": "stagflation",
+        "latest": "overheat",
+        "n": 4
+      },
+      {
+        "first": "stagflation",
+        "latest": "recession",
+        "n": 4
+      },
+      {
+        "first": "stagflation",
+        "latest": "stagflation",
+        "n": 67
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": "rect",
+      "encoding": {
+        "x": {
+          "field": "latest",
+          "type": "nominal",
+          "title": "Latest revised label"
+        },
+        "y": {
+          "field": "first",
+          "type": "nominal",
+          "title": "First archive label"
+        },
+        "color": {
+          "field": "n",
+          "type": "quantitative",
+          "scale": {
+            "scheme": "tealblues"
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 14,
+        "color": "#0f172a"
+      },
+      "encoding": {
+        "x": {
+          "field": "latest",
+          "type": "nominal"
+        },
+        "y": {
+          "field": "first",
+          "type": "nominal"
+        },
+        "text": {
+          "field": "n"
+        }
+      }
+    }
+  ],
+  "background": "#ffffff",
+  "padding": 24,
+  "config": {
+    "font": "Arial",
+    "title": {
+      "fontSize": 18,
+      "anchor": "start"
+    },
+    "axis": {
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "gridColor": "#e5eaf0",
+      "domainColor": "#cbd5e1"
+    },
+    "view": {
+      "stroke": null
+    }
+  }
+}

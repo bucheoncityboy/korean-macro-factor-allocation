@@ -1,0 +1,482 @@
+[
+  {
+    "model": "FREQ",
+    "actual": "goldilocks",
+    "predicted": "goldilocks",
+    "n": 2
+  },
+  {
+    "model": "FREQ",
+    "actual": "goldilocks",
+    "predicted": "overheat",
+    "n": 2
+  },
+  {
+    "model": "FREQ",
+    "actual": "goldilocks",
+    "predicted": "recession",
+    "n": 29
+  },
+  {
+    "model": "FREQ",
+    "actual": "goldilocks",
+    "predicted": "stagflation",
+    "n": 0
+  },
+  {
+    "model": "FREQ",
+    "actual": "overheat",
+    "predicted": "goldilocks",
+    "n": 8
+  },
+  {
+    "model": "FREQ",
+    "actual": "overheat",
+    "predicted": "overheat",
+    "n": 3
+  },
+  {
+    "model": "FREQ",
+    "actual": "overheat",
+    "predicted": "recession",
+    "n": 48
+  },
+  {
+    "model": "FREQ",
+    "actual": "overheat",
+    "predicted": "stagflation",
+    "n": 0
+  },
+  {
+    "model": "FREQ",
+    "actual": "recession",
+    "predicted": "goldilocks",
+    "n": 11
+  },
+  {
+    "model": "FREQ",
+    "actual": "recession",
+    "predicted": "overheat",
+    "n": 9
+  },
+  {
+    "model": "FREQ",
+    "actual": "recession",
+    "predicted": "recession",
+    "n": 44
+  },
+  {
+    "model": "FREQ",
+    "actual": "recession",
+    "predicted": "stagflation",
+    "n": 0
+  },
+  {
+    "model": "FREQ",
+    "actual": "stagflation",
+    "predicted": "goldilocks",
+    "n": 11
+  },
+  {
+    "model": "FREQ",
+    "actual": "stagflation",
+    "predicted": "overheat",
+    "n": 8
+  },
+  {
+    "model": "FREQ",
+    "actual": "stagflation",
+    "predicted": "recession",
+    "n": 26
+  },
+  {
+    "model": "FREQ",
+    "actual": "stagflation",
+    "predicted": "stagflation",
+    "n": 0
+  },
+  {
+    "model": "PERSIST",
+    "actual": "goldilocks",
+    "predicted": "goldilocks",
+    "n": 5
+  },
+  {
+    "model": "PERSIST",
+    "actual": "goldilocks",
+    "predicted": "overheat",
+    "n": 5
+  },
+  {
+    "model": "PERSIST",
+    "actual": "goldilocks",
+    "predicted": "recession",
+    "n": 15
+  },
+  {
+    "model": "PERSIST",
+    "actual": "goldilocks",
+    "predicted": "stagflation",
+    "n": 8
+  },
+  {
+    "model": "PERSIST",
+    "actual": "overheat",
+    "predicted": "goldilocks",
+    "n": 16
+  },
+  {
+    "model": "PERSIST",
+    "actual": "overheat",
+    "predicted": "overheat",
+    "n": 10
+  },
+  {
+    "model": "PERSIST",
+    "actual": "overheat",
+    "predicted": "recession",
+    "n": 21
+  },
+  {
+    "model": "PERSIST",
+    "actual": "overheat",
+    "predicted": "stagflation",
+    "n": 12
+  },
+  {
+    "model": "PERSIST",
+    "actual": "recession",
+    "predicted": "goldilocks",
+    "n": 10
+  },
+  {
+    "model": "PERSIST",
+    "actual": "recession",
+    "predicted": "overheat",
+    "n": 21
+  },
+  {
+    "model": "PERSIST",
+    "actual": "recession",
+    "predicted": "recession",
+    "n": 20
+  },
+  {
+    "model": "PERSIST",
+    "actual": "recession",
+    "predicted": "stagflation",
+    "n": 13
+  },
+  {
+    "model": "PERSIST",
+    "actual": "stagflation",
+    "predicted": "goldilocks",
+    "n": 4
+  },
+  {
+    "model": "PERSIST",
+    "actual": "stagflation",
+    "predicted": "overheat",
+    "n": 22
+  },
+  {
+    "model": "PERSIST",
+    "actual": "stagflation",
+    "predicted": "recession",
+    "n": 7
+  },
+  {
+    "model": "PERSIST",
+    "actual": "stagflation",
+    "predicted": "stagflation",
+    "n": 12
+  },
+  {
+    "model": "MARKOV",
+    "actual": "goldilocks",
+    "predicted": "goldilocks",
+    "n": 5
+  },
+  {
+    "model": "MARKOV",
+    "actual": "goldilocks",
+    "predicted": "overheat",
+    "n": 5
+  },
+  {
+    "model": "MARKOV",
+    "actual": "goldilocks",
+    "predicted": "recession",
+    "n": 19
+  },
+  {
+    "model": "MARKOV",
+    "actual": "goldilocks",
+    "predicted": "stagflation",
+    "n": 4
+  },
+  {
+    "model": "MARKOV",
+    "actual": "overheat",
+    "predicted": "goldilocks",
+    "n": 15
+  },
+  {
+    "model": "MARKOV",
+    "actual": "overheat",
+    "predicted": "overheat",
+    "n": 12
+  },
+  {
+    "model": "MARKOV",
+    "actual": "overheat",
+    "predicted": "recession",
+    "n": 26
+  },
+  {
+    "model": "MARKOV",
+    "actual": "overheat",
+    "predicted": "stagflation",
+    "n": 6
+  },
+  {
+    "model": "MARKOV",
+    "actual": "recession",
+    "predicted": "goldilocks",
+    "n": 8
+  },
+  {
+    "model": "MARKOV",
+    "actual": "recession",
+    "predicted": "overheat",
+    "n": 21
+  },
+  {
+    "model": "MARKOV",
+    "actual": "recession",
+    "predicted": "recession",
+    "n": 23
+  },
+  {
+    "model": "MARKOV",
+    "actual": "recession",
+    "predicted": "stagflation",
+    "n": 12
+  },
+  {
+    "model": "MARKOV",
+    "actual": "stagflation",
+    "predicted": "goldilocks",
+    "n": 4
+  },
+  {
+    "model": "MARKOV",
+    "actual": "stagflation",
+    "predicted": "overheat",
+    "n": 24
+  },
+  {
+    "model": "MARKOV",
+    "actual": "stagflation",
+    "predicted": "recession",
+    "n": 9
+  },
+  {
+    "model": "MARKOV",
+    "actual": "stagflation",
+    "predicted": "stagflation",
+    "n": 8
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "actual": "goldilocks",
+    "predicted": "goldilocks",
+    "n": 0
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "actual": "goldilocks",
+    "predicted": "overheat",
+    "n": 10
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "actual": "goldilocks",
+    "predicted": "recession",
+    "n": 20
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "actual": "goldilocks",
+    "predicted": "stagflation",
+    "n": 3
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "actual": "overheat",
+    "predicted": "goldilocks",
+    "n": 0
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "actual": "overheat",
+    "predicted": "overheat",
+    "n": 13
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "actual": "overheat",
+    "predicted": "recession",
+    "n": 41
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "actual": "overheat",
+    "predicted": "stagflation",
+    "n": 5
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "actual": "recession",
+    "predicted": "goldilocks",
+    "n": 0
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "actual": "recession",
+    "predicted": "overheat",
+    "n": 27
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "actual": "recession",
+    "predicted": "recession",
+    "n": 26
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "actual": "recession",
+    "predicted": "stagflation",
+    "n": 11
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "actual": "stagflation",
+    "predicted": "goldilocks",
+    "n": 0
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "actual": "stagflation",
+    "predicted": "overheat",
+    "n": 20
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "actual": "stagflation",
+    "predicted": "recession",
+    "n": 24
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "actual": "stagflation",
+    "predicted": "stagflation",
+    "n": 1
+  },
+  {
+    "model": "MACRO_LGBM",
+    "actual": "goldilocks",
+    "predicted": "goldilocks",
+    "n": 1
+  },
+  {
+    "model": "MACRO_LGBM",
+    "actual": "goldilocks",
+    "predicted": "overheat",
+    "n": 12
+  },
+  {
+    "model": "MACRO_LGBM",
+    "actual": "goldilocks",
+    "predicted": "recession",
+    "n": 14
+  },
+  {
+    "model": "MACRO_LGBM",
+    "actual": "goldilocks",
+    "predicted": "stagflation",
+    "n": 6
+  },
+  {
+    "model": "MACRO_LGBM",
+    "actual": "overheat",
+    "predicted": "goldilocks",
+    "n": 3
+  },
+  {
+    "model": "MACRO_LGBM",
+    "actual": "overheat",
+    "predicted": "overheat",
+    "n": 21
+  },
+  {
+    "model": "MACRO_LGBM",
+    "actual": "overheat",
+    "predicted": "recession",
+    "n": 29
+  },
+  {
+    "model": "MACRO_LGBM",
+    "actual": "overheat",
+    "predicted": "stagflation",
+    "n": 6
+  },
+  {
+    "model": "MACRO_LGBM",
+    "actual": "recession",
+    "predicted": "goldilocks",
+    "n": 3
+  },
+  {
+    "model": "MACRO_LGBM",
+    "actual": "recession",
+    "predicted": "overheat",
+    "n": 19
+  },
+  {
+    "model": "MACRO_LGBM",
+    "actual": "recession",
+    "predicted": "recession",
+    "n": 21
+  },
+  {
+    "model": "MACRO_LGBM",
+    "actual": "recession",
+    "predicted": "stagflation",
+    "n": 21
+  },
+  {
+    "model": "MACRO_LGBM",
+    "actual": "stagflation",
+    "predicted": "goldilocks",
+    "n": 0
+  },
+  {
+    "model": "MACRO_LGBM",
+    "actual": "stagflation",
+    "predicted": "overheat",
+    "n": 21
+  },
+  {
+    "model": "MACRO_LGBM",
+    "actual": "stagflation",
+    "predicted": "recession",
+    "n": 18
+  },
+  {
+    "model": "MACRO_LGBM",
+    "actual": "stagflation",
+    "predicted": "stagflation",
+    "n": 6
+  }
+]

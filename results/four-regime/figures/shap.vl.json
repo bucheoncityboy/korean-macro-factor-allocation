@@ -1,0 +1,227 @@
+{
+  "title": {
+    "text": "What drives the nonlinear regime forecasts?",
+    "subtitle": [
+      "Historical exploratory study · archived macro snapshots + assumed availability · no prospective validation",
+      "OOS mean absolute TreeSHAP · raw class score units · not causal effects or additive probability contributions"
+    ]
+  },
+  "data": {
+    "values": [
+      {
+        "state": "goldilocks",
+        "feature": "Growth momentum",
+        "mean_abs_raw_shap": 0.08162315678387363
+      },
+      {
+        "state": "goldilocks",
+        "feature": "Inflation momentum",
+        "mean_abs_raw_shap": 0.21399983754921068
+      },
+      {
+        "state": "goldilocks",
+        "feature": "KR short rate change",
+        "mean_abs_raw_shap": 0.10226820793995818
+      },
+      {
+        "state": "goldilocks",
+        "feature": "US 10y rate change",
+        "mean_abs_raw_shap": 0.017597954036549106
+      },
+      {
+        "state": "goldilocks",
+        "feature": "USD/KRW change",
+        "mean_abs_raw_shap": 0.007617024535687968
+      },
+      {
+        "state": "goldilocks",
+        "feature": "Oil change",
+        "mean_abs_raw_shap": 0.05029027490891815
+      },
+      {
+        "state": "goldilocks",
+        "feature": "Growth data age",
+        "mean_abs_raw_shap": 0
+      },
+      {
+        "state": "goldilocks",
+        "feature": "Inflation data age",
+        "mean_abs_raw_shap": 0.007005219105622013
+      },
+      {
+        "state": "overheat",
+        "feature": "Growth momentum",
+        "mean_abs_raw_shap": 0.07542352795088941
+      },
+      {
+        "state": "overheat",
+        "feature": "Inflation momentum",
+        "mean_abs_raw_shap": 0.15375031209492968
+      },
+      {
+        "state": "overheat",
+        "feature": "KR short rate change",
+        "mean_abs_raw_shap": 0.12699155123835182
+      },
+      {
+        "state": "overheat",
+        "feature": "US 10y rate change",
+        "mean_abs_raw_shap": 0.03566589776935304
+      },
+      {
+        "state": "overheat",
+        "feature": "USD/KRW change",
+        "mean_abs_raw_shap": 0.009735505706718692
+      },
+      {
+        "state": "overheat",
+        "feature": "Oil change",
+        "mean_abs_raw_shap": 0.03617825158703895
+      },
+      {
+        "state": "overheat",
+        "feature": "Growth data age",
+        "mean_abs_raw_shap": 0
+      },
+      {
+        "state": "overheat",
+        "feature": "Inflation data age",
+        "mean_abs_raw_shap": 0.001068213473927514
+      },
+      {
+        "state": "recession",
+        "feature": "Growth momentum",
+        "mean_abs_raw_shap": 0.10306288844263528
+      },
+      {
+        "state": "recession",
+        "feature": "Inflation momentum",
+        "mean_abs_raw_shap": 0.07312785643136917
+      },
+      {
+        "state": "recession",
+        "feature": "KR short rate change",
+        "mean_abs_raw_shap": 0.07154464152391783
+      },
+      {
+        "state": "recession",
+        "feature": "US 10y rate change",
+        "mean_abs_raw_shap": 0.026475413051161346
+      },
+      {
+        "state": "recession",
+        "feature": "USD/KRW change",
+        "mean_abs_raw_shap": 0.11635765661434103
+      },
+      {
+        "state": "recession",
+        "feature": "Oil change",
+        "mean_abs_raw_shap": 0.1375898214301566
+      },
+      {
+        "state": "recession",
+        "feature": "Growth data age",
+        "mean_abs_raw_shap": 0
+      },
+      {
+        "state": "recession",
+        "feature": "Inflation data age",
+        "mean_abs_raw_shap": 0.041935780702150934
+      },
+      {
+        "state": "stagflation",
+        "feature": "Growth momentum",
+        "mean_abs_raw_shap": 0.09035819693913943
+      },
+      {
+        "state": "stagflation",
+        "feature": "Inflation momentum",
+        "mean_abs_raw_shap": 0.2641178959021738
+      },
+      {
+        "state": "stagflation",
+        "feature": "KR short rate change",
+        "mean_abs_raw_shap": 0.053321272492648425
+      },
+      {
+        "state": "stagflation",
+        "feature": "US 10y rate change",
+        "mean_abs_raw_shap": 0.0742241294519122
+      },
+      {
+        "state": "stagflation",
+        "feature": "USD/KRW change",
+        "mean_abs_raw_shap": 0.02603531138115604
+      },
+      {
+        "state": "stagflation",
+        "feature": "Oil change",
+        "mean_abs_raw_shap": 0.018914696615442102
+      },
+      {
+        "state": "stagflation",
+        "feature": "Growth data age",
+        "mean_abs_raw_shap": 0
+      },
+      {
+        "state": "stagflation",
+        "feature": "Inflation data age",
+        "mean_abs_raw_shap": 0
+      }
+    ]
+  },
+  "facet": {
+    "column": {
+      "field": "state",
+      "type": "nominal",
+      "title": null
+    }
+  },
+  "spec": {
+    "width": 200,
+    "height": 220,
+    "mark": {
+      "type": "bar",
+      "color": "#0f766e"
+    },
+    "encoding": {
+      "y": {
+        "field": "feature",
+        "type": "nominal",
+        "title": null,
+        "sort": "-x",
+        "axis": {
+          "labelLimit": 180
+        }
+      },
+      "x": {
+        "field": "mean_abs_raw_shap",
+        "type": "quantitative",
+        "title": "Mean |SHAP|"
+      }
+    }
+  },
+  "resolve": {
+    "scale": {
+      "x": "independent"
+    }
+  },
+  "background": "#ffffff",
+  "padding": 24,
+  "config": {
+    "font": "Arial",
+    "title": {
+      "fontSize": 18,
+      "anchor": "start"
+    },
+    "axis": {
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "gridColor": "#e5eaf0",
+      "domainColor": "#cbd5e1"
+    },
+    "view": {
+      "stroke": null
+    }
+  }
+}

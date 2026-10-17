@@ -1,0 +1,62 @@
+[
+  {
+    "model": "FREQ",
+    "n": 200,
+    "start": "2009-09",
+    "end": "2026-04",
+    "log_loss": 1.3892462155431704,
+    "brier": 0.7514569263691392,
+    "accuracy": 0.24,
+    "balanced_accuracy": 0.19605129963427376,
+    "macro_f1": 0.13677232854864435,
+    "raw": true
+  },
+  {
+    "model": "PERSIST",
+    "n": 200,
+    "start": "2009-09",
+    "end": "2026-04",
+    "log_loss": 3.5758602158248185,
+    "brier": 1.489199999999999,
+    "accuracy": 0.225,
+    "balanced_accuracy": 0.22122681556948798,
+    "macro_f1": 0.22111566608349115,
+    "raw": true
+  },
+  {
+    "model": "MARKOV",
+    "n": 200,
+    "start": "2009-09",
+    "end": "2026-04",
+    "log_loss": 1.3854291586608805,
+    "brier": 0.7505746836577031,
+    "accuracy": 0.245,
+    "balanced_accuracy": 0.21386113288052944,
+    "macro_f1": 0.20363649894410055,
+    "raw": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "n": 200,
+    "start": "2009-09",
+    "end": "2026-04",
+    "log_loss": 1.4056073890388618,
+    "brier": 0.7572010888138923,
+    "accuracy": 0.31,
+    "balanced_accuracy": 0.27241923545802854,
+    "macro_f1": 0.2627015883713205,
+    "raw": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "n": 200,
+    "start": "2009-09",
+    "end": "2026-04",
+    "log_loss": 1.3556618941662508,
+    "brier": 0.7379621831580352,
+    "accuracy": 0.34,
+    "balanced_accuracy": 0.3216099573319401,
+    "macro_f1": 0.3222400963320445,
+    "raw": true
+  }
+]

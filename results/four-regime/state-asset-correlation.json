@@ -1,0 +1,26 @@
+[
+  {
+    "state": 0,
+    "n": 20,
+    "equity_bond_correlation": -0.1668589842897805,
+    "role": "Descriptive ex-post conditional correlation; not a policy input or a new primary test"
+  },
+  {
+    "state": 1,
+    "n": 37,
+    "equity_bond_correlation": 0.003381794109529498,
+    "role": "Descriptive ex-post conditional correlation; not a policy input or a new primary test"
+  },
+  {
+    "state": 2,
+    "n": 33,
+    "equity_bond_correlation": 0.06790618431717385,
+    "role": "Descriptive ex-post conditional correlation; not a policy input or a new primary test"
+  },
+  {
+    "state": 3,
+    "n": 25,
+    "equity_bond_correlation": 0.2914012095993364,
+    "role": "Descriptive ex-post conditional correlation; not a policy input or a new primary test"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "state": "goldilocks",
+    "months": 33,
+    "episodes": 17,
+    "average_duration_months": 1.9411764705882353
+  },
+  {
+    "state": "overheat",
+    "months": 59,
+    "episodes": 19,
+    "average_duration_months": 3.1052631578947367
+  },
+  {
+    "state": "recession",
+    "months": 64,
+    "episodes": 19,
+    "average_duration_months": 3.3684210526315788
+  },
+  {
+    "state": "stagflation",
+    "months": 45,
+    "episodes": 18,
+    "average_duration_months": 2.5
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "verified_at": "2026-10-17T20:38:22.122Z",
+  "checks": [
+    "registered code/config/source hashes",
+    "201 common scored primary forecast origins / 115 common allocation origins",
+    "five archive sensitivities share 201 origins; extra lag explicitly paired on 200, protocol deviation D1 disclosed",
+    "all four probabilities normalized",
+    "no unpublished training labels",
+    "policy labels and returns known at cutoff",
+    "identical policies shared by all probability models",
+    "multiclass SHAP raw-score additivity",
+    "three actual origins independently refitted per model",
+    "future archive mutation leaves past features/state/training unchanged",
+    "unpublished-label permutation leaves all five models, tuning and temperatures exactly unchanged at a real origin",
+    "all strategy signals and daily cost/NAV paths exactly replayed"
+  ],
+  "protocol_deviation_count": 1,
+  "result": "PASS_WITH_DISCLOSED_PROTOCOL_DEVIATION",
+  "scope": "These checks do not prove absence of every bias or future overfitting"
+}

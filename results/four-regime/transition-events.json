@@ -1,0 +1,2882 @@
+[
+  {
+    "model": "FREQ",
+    "target": "2009-11",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2010-04",
+    "from": "overheat",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2010-07",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2011-01",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2011-04",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2011-06",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2011-08",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2011-11",
+    "from": "stagflation",
+    "to": "goldilocks",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "FREQ",
+    "target": "2011-12",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 6,
+    "episode_detected": true
+  },
+  {
+    "model": "FREQ",
+    "target": "2012-11",
+    "from": "recession",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2013-01",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2013-03",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "FREQ",
+    "target": "2013-07",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2013-08",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2013-10",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2013-11",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "FREQ",
+    "target": "2014-01",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2014-02",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2014-06",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2014-09",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "FREQ",
+    "target": "2015-02",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2015-05",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "FREQ",
+    "target": "2015-07",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2015-08",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2016-01",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2016-03",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "FREQ",
+    "target": "2016-04",
+    "from": "recession",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2016-05",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2016-09",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "FREQ",
+    "target": "2016-10",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2016-12",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2017-04",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2017-06",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "FREQ",
+    "target": "2017-07",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2017-09",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2017-11",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2017-12",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "FREQ",
+    "target": "2018-04",
+    "from": "recession",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2018-08",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2018-09",
+    "from": "goldilocks",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2018-12",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2019-01",
+    "from": "overheat",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "FREQ",
+    "target": "2019-06",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2019-07",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2019-08",
+    "from": "overheat",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "FREQ",
+    "target": "2019-09",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2019-12",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2020-04",
+    "from": "overheat",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "FREQ",
+    "target": "2020-08",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2020-09",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2020-12",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2021-01",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2021-08",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2022-01",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "FREQ",
+    "target": "2022-04",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2022-10",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2023-04",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2023-10",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2024-01",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2024-03",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "FREQ",
+    "target": "2024-12",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2025-01",
+    "from": "goldilocks",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2025-02",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2025-05",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2025-06",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "FREQ",
+    "target": "2025-07",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2025-08",
+    "from": "stagflation",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2025-10",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "FREQ",
+    "target": "2025-11",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2026-02",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "FREQ",
+    "target": "2026-03",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "FREQ",
+    "target": "2026-05",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2009-11",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": 4,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2010-04",
+    "from": "overheat",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2010-07",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": 4,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2011-01",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2011-04",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2011-06",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2011-08",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2011-11",
+    "from": "stagflation",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2011-12",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 4,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2012-11",
+    "from": "recession",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2013-01",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2013-03",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2013-07",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2013-08",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2013-10",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2013-11",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2014-01",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2014-02",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2014-06",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2014-09",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": 4,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2015-02",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2015-05",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2015-07",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2015-08",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": 4,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2016-01",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2016-03",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2016-04",
+    "from": "recession",
+    "to": "overheat",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2016-05",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2016-09",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2016-10",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2016-12",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2017-04",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2017-06",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2017-07",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": 1,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2017-09",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2017-11",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2017-12",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2018-04",
+    "from": "recession",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2018-08",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2018-09",
+    "from": "goldilocks",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2018-12",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2019-01",
+    "from": "overheat",
+    "to": "recession",
+    "delay_months": 4,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2019-06",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2019-07",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2019-08",
+    "from": "overheat",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2019-09",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2019-12",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2020-04",
+    "from": "overheat",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2020-08",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2020-09",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2020-12",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2021-01",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2021-08",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": 4,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2022-01",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2022-04",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2022-10",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": 4,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2023-04",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": 4,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2023-10",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2024-01",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2024-03",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 4,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2024-12",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2025-01",
+    "from": "goldilocks",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2025-02",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2025-05",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2025-06",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2025-07",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2025-08",
+    "from": "stagflation",
+    "to": "goldilocks",
+    "delay_months": 1,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2025-10",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2025-11",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2026-02",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "PERSIST",
+    "target": "2026-03",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "PERSIST",
+    "target": "2026-05",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2009-11",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": 4,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2010-04",
+    "from": "overheat",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2010-07",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": 5,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2011-01",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2011-04",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2011-06",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2011-08",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2011-11",
+    "from": "stagflation",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2011-12",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 4,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2012-11",
+    "from": "recession",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2013-01",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2013-03",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2013-07",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2013-08",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2013-10",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2013-11",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2014-01",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2014-02",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2014-06",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2014-09",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": 4,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2015-02",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2015-05",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2015-07",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2015-08",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": 4,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2016-01",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2016-03",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2016-04",
+    "from": "recession",
+    "to": "overheat",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2016-05",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2016-09",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2016-10",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2016-12",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2017-04",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2017-06",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2017-07",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": 1,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2017-09",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2017-11",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2017-12",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2018-04",
+    "from": "recession",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2018-08",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2018-09",
+    "from": "goldilocks",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2018-12",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2019-01",
+    "from": "overheat",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2019-06",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2019-07",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2019-08",
+    "from": "overheat",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2019-09",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2019-12",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2020-04",
+    "from": "overheat",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2020-08",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2020-09",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2020-12",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2021-01",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2021-08",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2022-01",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2022-04",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2022-10",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": 4,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2023-04",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": 4,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2023-10",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2024-01",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2024-03",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 4,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2024-12",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2025-01",
+    "from": "goldilocks",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2025-02",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2025-05",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2025-06",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2025-07",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2025-08",
+    "from": "stagflation",
+    "to": "goldilocks",
+    "delay_months": 1,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2025-10",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2025-11",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2026-02",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MARKOV",
+    "target": "2026-03",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MARKOV",
+    "target": "2026-05",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2009-11",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2010-04",
+    "from": "overheat",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2010-07",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2011-01",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": 1,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2011-04",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2011-06",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2011-08",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2011-11",
+    "from": "stagflation",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2011-12",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2012-11",
+    "from": "recession",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2013-01",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2013-03",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2013-07",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2013-08",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2013-10",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2013-11",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2014-01",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2014-02",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2014-06",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2014-09",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2015-02",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2015-05",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 1,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2015-07",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2015-08",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2016-01",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2016-03",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2016-04",
+    "from": "recession",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2016-05",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2016-09",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2016-10",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2016-12",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2017-04",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2017-06",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2017-07",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2017-09",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2017-11",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2017-12",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2018-04",
+    "from": "recession",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2018-08",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2018-09",
+    "from": "goldilocks",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2018-12",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2019-01",
+    "from": "overheat",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2019-06",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2019-07",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2019-08",
+    "from": "overheat",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2019-09",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2019-12",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2020-04",
+    "from": "overheat",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2020-08",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2020-09",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2020-12",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2021-01",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": 6,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2021-08",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2022-01",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": 1,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2022-04",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2022-10",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2023-04",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2023-10",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2024-01",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2024-03",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 1,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2024-12",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2025-01",
+    "from": "goldilocks",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2025-02",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2025-05",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2025-06",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2025-07",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2025-08",
+    "from": "stagflation",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2025-10",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2025-11",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2026-02",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2026-03",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "target": "2026-05",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": 1,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2009-11",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2010-04",
+    "from": "overheat",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2010-07",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2011-01",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2011-04",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2011-06",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2011-08",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2011-11",
+    "from": "stagflation",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2011-12",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 6,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2012-11",
+    "from": "recession",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2013-01",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2013-03",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 3,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2013-07",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2013-08",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2013-10",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2013-11",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2014-01",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2014-02",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2014-06",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": 2,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2014-09",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2015-02",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2015-05",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2015-07",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2015-08",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2016-01",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2016-03",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2016-04",
+    "from": "recession",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2016-05",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2016-09",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2016-10",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2016-12",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": 1,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2017-04",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": 1,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2017-06",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2017-07",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2017-09",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2017-11",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2017-12",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 2,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2018-04",
+    "from": "recession",
+    "to": "overheat",
+    "delay_months": 1,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2018-08",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2018-09",
+    "from": "goldilocks",
+    "to": "stagflation",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2018-12",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2019-01",
+    "from": "overheat",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2019-06",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2019-07",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2019-08",
+    "from": "overheat",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2019-09",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2019-12",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2020-04",
+    "from": "overheat",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2020-08",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2020-09",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2020-12",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2021-01",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": 2,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2021-08",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2022-01",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": 1,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2022-04",
+    "from": "overheat",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2022-10",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2023-04",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2023-10",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2024-01",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2024-03",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": 6,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2024-12",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2025-01",
+    "from": "goldilocks",
+    "to": "stagflation",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2025-02",
+    "from": "stagflation",
+    "to": "overheat",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2025-05",
+    "from": "overheat",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2025-06",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2025-07",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": 0,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2025-08",
+    "from": "stagflation",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2025-10",
+    "from": "goldilocks",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2025-11",
+    "from": "recession",
+    "to": "stagflation",
+    "delay_months": 2,
+    "episode_detected": true
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2026-02",
+    "from": "stagflation",
+    "to": "recession",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2026-03",
+    "from": "recession",
+    "to": "goldilocks",
+    "delay_months": null,
+    "episode_detected": false
+  },
+  {
+    "model": "MACRO_LGBM",
+    "target": "2026-05",
+    "from": "goldilocks",
+    "to": "overheat",
+    "delay_months": 0,
+    "episode_detected": true
+  }
+]

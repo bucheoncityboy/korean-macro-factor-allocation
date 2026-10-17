@@ -1,0 +1,42 @@
+[
+  {
+    "model": "FREQ",
+    "true_transition_n": 72,
+    "detected_episode_n": 18,
+    "predicted_change_n": 5,
+    "false_alarm_n": 5,
+    "definition": "False alarm = predicted argmax changes while realized state stays; delay = first correct argmax within the new realized episode, null if never correct. Retrospective diagnostic, not a live trade trigger."
+  },
+  {
+    "model": "PERSIST",
+    "true_transition_n": 72,
+    "detected_episode_n": 24,
+    "predicted_change_n": 68,
+    "false_alarm_n": 45,
+    "definition": "False alarm = predicted argmax changes while realized state stays; delay = first correct argmax within the new realized episode, null if never correct. Retrospective diagnostic, not a live trade trigger."
+  },
+  {
+    "model": "MARKOV",
+    "true_transition_n": 72,
+    "detected_episode_n": 25,
+    "predicted_change_n": 69,
+    "false_alarm_n": 44,
+    "definition": "False alarm = predicted argmax changes while realized state stays; delay = first correct argmax within the new realized episode, null if never correct. Retrospective diagnostic, not a live trade trigger."
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "true_transition_n": 72,
+    "detected_episode_n": 22,
+    "predicted_change_n": 59,
+    "false_alarm_n": 38,
+    "definition": "False alarm = predicted argmax changes while realized state stays; delay = first correct argmax within the new realized episode, null if never correct. Retrospective diagnostic, not a live trade trigger."
+  },
+  {
+    "model": "MACRO_LGBM",
+    "true_transition_n": 72,
+    "detected_episode_n": 30,
+    "predicted_change_n": 95,
+    "false_alarm_n": 56,
+    "definition": "False alarm = predicted argmax changes while realized state stays; delay = first correct argmax within the new realized episode, null if never correct. Retrospective diagnostic, not a live trade trigger."
+  }
+]

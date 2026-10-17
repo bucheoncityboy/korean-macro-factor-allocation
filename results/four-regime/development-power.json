@@ -1,0 +1,62 @@
+[
+  {
+    "comparison": "MACRO_LOGIT - MARKOV",
+    "endpoint": "log_loss",
+    "development_n": 24,
+    "target_n": 201,
+    "approximate_80pct_MDE": 0.15025205574661016,
+    "minimum_effect": 0.02,
+    "adequate_for_minimum": false,
+    "method": "Development-only HAC(6) normal approximation; Bonferroni 6 two-sided tests; design sensitivity, not a prospective power guarantee"
+  },
+  {
+    "comparison": "MACRO_LOGIT - MARKOV",
+    "endpoint": "annual_CER",
+    "development_n": 24,
+    "target_n": 115,
+    "approximate_80pct_MDE": 0.0028579128433998536,
+    "minimum_effect": 0.005,
+    "adequate_for_minimum": true,
+    "method": "Development-only HAC(6) normal approximation; Bonferroni 6 two-sided tests; design sensitivity, not a prospective power guarantee"
+  },
+  {
+    "comparison": "MACRO_LGBM - MARKOV",
+    "endpoint": "log_loss",
+    "development_n": 24,
+    "target_n": 201,
+    "approximate_80pct_MDE": 0.07631327875479836,
+    "minimum_effect": 0.02,
+    "adequate_for_minimum": false,
+    "method": "Development-only HAC(6) normal approximation; Bonferroni 6 two-sided tests; design sensitivity, not a prospective power guarantee"
+  },
+  {
+    "comparison": "MACRO_LGBM - MARKOV",
+    "endpoint": "annual_CER",
+    "development_n": 24,
+    "target_n": 115,
+    "approximate_80pct_MDE": 0.0013925945029801873,
+    "minimum_effect": 0.005,
+    "adequate_for_minimum": true,
+    "method": "Development-only HAC(6) normal approximation; Bonferroni 6 two-sided tests; design sensitivity, not a prospective power guarantee"
+  },
+  {
+    "comparison": "MACRO_LGBM - MACRO_LOGIT",
+    "endpoint": "log_loss",
+    "development_n": 24,
+    "target_n": 201,
+    "approximate_80pct_MDE": 0.1507095812650122,
+    "minimum_effect": 0.02,
+    "adequate_for_minimum": false,
+    "method": "Development-only HAC(6) normal approximation; Bonferroni 6 two-sided tests; design sensitivity, not a prospective power guarantee"
+  },
+  {
+    "comparison": "MACRO_LGBM - MACRO_LOGIT",
+    "endpoint": "annual_CER",
+    "development_n": 24,
+    "target_n": 115,
+    "approximate_80pct_MDE": 0.003755447245444443,
+    "minimum_effect": 0.005,
+    "adequate_for_minimum": true,
+    "method": "Development-only HAC(6) normal approximation; Bonferroni 6 two-sided tests; design sensitivity, not a prospective power guarantee"
+  }
+]

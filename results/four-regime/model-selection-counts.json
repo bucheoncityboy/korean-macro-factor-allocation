@@ -1,0 +1,164 @@
+[
+  {
+    "model": "MARKOV",
+    "candidate": 0,
+    "temperature": 0.5,
+    "selected_months": 46
+  },
+  {
+    "model": "MARKOV",
+    "candidate": 0,
+    "temperature": 1,
+    "selected_months": 45
+  },
+  {
+    "model": "MARKOV",
+    "candidate": 0,
+    "temperature": 2,
+    "selected_months": 110
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "candidate": 0,
+    "temperature": 0.5,
+    "selected_months": 0
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "candidate": 0,
+    "temperature": 1,
+    "selected_months": 19
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "candidate": 0,
+    "temperature": 2,
+    "selected_months": 28
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "candidate": 1,
+    "temperature": 0.5,
+    "selected_months": 9
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "candidate": 1,
+    "temperature": 1,
+    "selected_months": 0
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "candidate": 1,
+    "temperature": 2,
+    "selected_months": 19
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "candidate": 2,
+    "temperature": 0.5,
+    "selected_months": 13
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "candidate": 2,
+    "temperature": 1,
+    "selected_months": 13
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "candidate": 2,
+    "temperature": 2,
+    "selected_months": 19
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "candidate": 3,
+    "temperature": 0.5,
+    "selected_months": 30
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "candidate": 3,
+    "temperature": 1,
+    "selected_months": 11
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "candidate": 3,
+    "temperature": 2,
+    "selected_months": 40
+  },
+  {
+    "model": "MACRO_LGBM",
+    "candidate": 0,
+    "temperature": 0.5,
+    "selected_months": 9
+  },
+  {
+    "model": "MACRO_LGBM",
+    "candidate": 0,
+    "temperature": 1,
+    "selected_months": 28
+  },
+  {
+    "model": "MACRO_LGBM",
+    "candidate": 0,
+    "temperature": 2,
+    "selected_months": 46
+  },
+  {
+    "model": "MACRO_LGBM",
+    "candidate": 1,
+    "temperature": 0.5,
+    "selected_months": 0
+  },
+  {
+    "model": "MACRO_LGBM",
+    "candidate": 1,
+    "temperature": 1,
+    "selected_months": 18
+  },
+  {
+    "model": "MACRO_LGBM",
+    "candidate": 1,
+    "temperature": 2,
+    "selected_months": 11
+  },
+  {
+    "model": "MACRO_LGBM",
+    "candidate": 2,
+    "temperature": 0.5,
+    "selected_months": 0
+  },
+  {
+    "model": "MACRO_LGBM",
+    "candidate": 2,
+    "temperature": 1,
+    "selected_months": 2
+  },
+  {
+    "model": "MACRO_LGBM",
+    "candidate": 2,
+    "temperature": 2,
+    "selected_months": 22
+  },
+  {
+    "model": "MACRO_LGBM",
+    "candidate": 3,
+    "temperature": 0.5,
+    "selected_months": 1
+  },
+  {
+    "model": "MACRO_LGBM",
+    "candidate": 3,
+    "temperature": 1,
+    "selected_months": 25
+  },
+  {
+    "model": "MACRO_LGBM",
+    "candidate": 3,
+    "temperature": 2,
+    "selected_months": 39
+  }
+]
