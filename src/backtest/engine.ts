@@ -1,5 +1,5 @@
 import type { DailyPair } from '../ingestion/acquire.js';
-import type { AllocationSignal } from '../allocation/signals.js';
+export interface ExecutionSignal { period: string; decision_datetime: string; strategy: string; equity_weight: number }
 
 export function rebalance(preValues: number[], weights: number[], cost: number) {
   if (weights.some((w) => w < 0) || Math.abs(weights.reduce((s, w) => s + w, 0) - 1) > 1e-12 || cost < 0 || cost >= 1) throw new Error('Invalid long-only self-financing rebalance');
@@ -27,9 +27,9 @@ export function executionIndex(daily: DailyPair[], decision: string) {
   return found;
 }
 
-export function backtest(signals: AllocationSignal[], daily: DailyPair[], cash: Map<string, number>, costBps = 10): BacktestRow[] {
+export function backtest(signals: ExecutionSignal[], daily: DailyPair[], cash: Map<string, number>, costBps = 10): BacktestRow[] {
   const c = costBps / 10000, result: BacktestRow[] = [];
-  for (const strategy of ['SAA', 'NON_MACRO', 'MACRO_TAA']) {
+  for (const strategy of [...new Set(signals.map((s) => s.strategy))]) {
     const rows = signals.filter((s) => s.strategy === strategy).sort((a, b) => a.period.localeCompare(b.period));
     let values = [0.5, 0.5], grossValues = [0.5, 0.5], peak = 1, drawdown = 0;
     for (let m = 0; m < rows.length; m++) {

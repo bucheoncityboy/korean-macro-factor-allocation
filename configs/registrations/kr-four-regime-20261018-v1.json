@@ -1,0 +1,20 @@
+{
+  "id": "kr-four-regime-20261018-v1",
+  "created_at": "2026-10-17T20:21:31.249Z",
+  "files": {
+    "configs/four_regime.json": "517637bceee6727d3464e3e58f93ca5327391358db2d45931fc408d2564badd6",
+    "configs/four_regime_sources.json": "3889d579b29ce18448440d5998a6a42a20870cd11bc7b9f6e470749431bd3547",
+    "docs/four_regime_preregistration.md": "ccff473697b956fea5f52bb0f855b520c03c56379c00e5444c6caa421de92ffa",
+    "src/regimes/acquire.ts": "4256ba4f5bbf16d7d3deae8e5a63d0fc1d82ba9ae4aa57c1027f5464e2efbfd6",
+    "src/regimes/allocation.ts": "82677c1ca8266c80492903f45629fd54f17f151507aa03cf68b7f0d1e8027efa",
+    "src/regimes/data.ts": "0fc9e299f4174666aff73dbf834030b85d8443bd851f8e8b6360be1a0444115f",
+    "src/regimes/evaluation.ts": "6bda2f098bfab0075fa7c786f5f4649259d0fce9830f6f86908d4c782dc19d2a",
+    "src/regimes/models.ts": "eb5151919433d40efd83a3528f292a3ad2c407ccf77d67b6b8d05de0299f8ed3",
+    "src/regimes/study.ts": "60158d015978328ae6572272326f2006630ecbb6c9486007ff5d5d45bd04708b",
+    "src/backtest/engine.ts": "d220150c74e1e373a549627c5f1b1b4906418ca03515e9cef5b8b5c15611dedb",
+    "src/forecasting/models.ts": "1ebd5a7630f7ce427b1ee5ff0a88685ddaffd0b42fceb90b11283e7c824c460f",
+    "src/forecasting/lightgbm.ts": "c92b20cff9ea3473b9f3a590db18a3e49598a20c0e02611b058697e27f328da7",
+    "src/evaluation/bootstrap.ts": "faa38dd7891437fada5ef82c3b7051870f5521679a7336fca6197925a5e4af99"
+  },
+  "note": "Locks configuration before this run; does not prove that historical data were never explored."
+}

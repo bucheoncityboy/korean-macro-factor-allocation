@@ -1,0 +1,174 @@
+{
+  "id": "kr-four-regime-20261018-v1",
+  "status": "frozen_before_new_model_outputs",
+  "study_asof": "2026-10-18T00:00:00+09:00",
+  "snapshot_end": "2026-10",
+  "primary_mode": "ARCHIVE",
+  "primary_forecast_start": "2009-09",
+  "primary_scored_end": "2026-05",
+  "prediction_end": "2026-09",
+  "primary_allocation_start": "2016-11",
+  "primary_allocation_end": "2026-05",
+  "long_revised_start": "2001-10",
+  "long_revised_scored_end": "2026-07",
+  "decision": "Calendar month end 18:00 Asia/Seoul, including non-trading days",
+  "target": "Economic observation month t+1; 4 joint probabilities",
+  "label": "First jointly complete OECD monthly archive; not verified first national release",
+  "edition_eligibility": "First day of edition + 1 calendar month, assumed conservative availability",
+  "monthly_market_rate_lag": 2,
+  "daily_buffers_calendar_days": {
+    "DGS10": 7,
+    "DEXKOUS": 14,
+    "DCOILWTICO": 14
+  },
+  "growth": "100*(industrial_production_index[m]/index[m-12]-1), OECD PRVM IX BTE",
+  "inflation": "100*(CPI[m]/CPI[m-12]-1), OECD CP IX _Z",
+  "momentum": "mean(last 3 YoY)-mean(previous 3 YoY); exact zero is up",
+  "oil": "100*(asinh(price_now/50)-asinh(price_previous/50)); handles negative WTI without deletion",
+  "features": [
+    "growth_momentum_pp",
+    "inflation_momentum_pp",
+    "kr_short_3m_bp",
+    "us10y_change_bp",
+    "usdkrw_change_pct",
+    "oil_asinh_change",
+    "growth_age_months",
+    "inflation_age_months"
+  ],
+  "states": [
+    "goldilocks",
+    "overheat",
+    "recession",
+    "stagflation"
+  ],
+  "initial_training": 120,
+  "outer_min_per_state": 12,
+  "inner_min_training": 60,
+  "inner_origins": 24,
+  "logit_lambdas": [
+    0.01,
+    0.1,
+    1,
+    10
+  ],
+  "lgbm_version": "4.6.0",
+  "lgbm_candidates": [
+    {
+      "num_leaves": 3,
+      "max_depth": 2,
+      "num_iterations": 40
+    },
+    {
+      "num_leaves": 3,
+      "max_depth": 2,
+      "num_iterations": 80
+    },
+    {
+      "num_leaves": 5,
+      "max_depth": 3,
+      "num_iterations": 40
+    },
+    {
+      "num_leaves": 5,
+      "max_depth": 3,
+      "num_iterations": 80
+    }
+  ],
+  "lgbm_fixed": {
+    "min_data_in_leaf": 20,
+    "lambda_l2": 5,
+    "learning_rate": 0.03,
+    "max_bin": 31,
+    "num_threads": 1,
+    "seed": 20261018
+  },
+  "temperature_candidates": [
+    0.5,
+    1,
+    2
+  ],
+  "primary_pairs": [
+    [
+      "MACRO_LOGIT",
+      "MARKOV"
+    ],
+    [
+      "MACRO_LGBM",
+      "MARKOV"
+    ],
+    [
+      "MACRO_LGBM",
+      "MACRO_LOGIT"
+    ]
+  ],
+  "primary_endpoints": [
+    "log_loss_improvement",
+    "net_CER_improvement"
+  ],
+  "primary_family_size": 6,
+  "bootstrap": {
+    "repetitions": 20000,
+    "block_months": 6,
+    "sensitivity_blocks": [
+      3,
+      12
+    ],
+    "seed": 20261018
+  },
+  "minimum_effects": {
+    "log_loss_nat": 0.02,
+    "annual_CER": 0.005
+  },
+  "allocation": {
+    "minimum_paired_history": 84,
+    "covariance_months": 60,
+    "off_diagonal_multiplier": 0.9,
+    "mean_shrink_months": 24,
+    "gamma": 5,
+    "equity_min": 0.3,
+    "equity_max": 0.7,
+    "one_way_cost_bps": 10
+  },
+  "secondary_scenarios": [
+    "REVISED_MATCHED",
+    "LONG_REVISED",
+    "SMOOTH_1",
+    "SMOOTH_6",
+    "DOMESTIC_ONLY",
+    "EXTERNAL_ONLY",
+    "EXTRA_EDITION_LAG"
+  ],
+  "secondary_policy_sensitivities": {
+    "cost_bps": [
+      0,
+      5,
+      25
+    ],
+    "policy_gamma": [
+      2,
+      10
+    ],
+    "shrink_months": [
+      12,
+      48
+    ]
+  },
+  "subperiods": [
+    [
+      "2009-09",
+      "2016-10"
+    ],
+    [
+      "2016-11",
+      "2019-12"
+    ],
+    [
+      "2020-01",
+      "2026-05"
+    ]
+  ],
+  "no_post_result_selection": true,
+  "independent_unseen_confirmation": false,
+  "scope": "Historical exploratory study; mixed vintage market controls and assumed edition availability leave residual bias. No claim that all bias or overfitting has been eliminated.",
+  "primary_date_rule": "Common period satisfying initial floors and label maturity for all prespecified archive sensitivities, including one additional edition delay; fixed before any model outputs"
+}
