@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "verified_at": "2026-10-17T18:48:59.506Z",
+  "study_id": "kr-etf-macro-20261018-v3",
+  "checks": [
+    "Exact raw snapshot hashes",
+    "Configuration registration hashes",
+    "Daily cash-distribution total-return identity",
+    "Monthly endpoint aggregation",
+    "Actual next-month target identity",
+    "109 common OOS months for all five models",
+    "Independent OOS SSE/R2/RMSE recomputation",
+    "OOS TreeSHAP additivity",
+    "Self-financing NAV compounding and costs",
+    "Long-only exposure bounds",
+    "Daily versus monthly drawdown consistency",
+    "Power diagnostic finite bounds"
+  ],
+  "raw_snapshots_checked": 17,
+  "paired_daily_rows_checked": 4240,
+  "model_oos_predictions_checked": 545,
+  "source_commit": "5d5b2d2678b9d8e586628b8b1be75cfedd6cd858",
+  "resolved_source_commit": "5d5b2d2678b9d8e586628b8b1be75cfedd6cd858",
+  "source_tree_sha": "5ed4dc91293db0ebc4145873b41bc4acea4cd2f2",
+  "runtime": {
+    "node": "v24.19.0",
+    "platform": "darwin",
+    "arch": "x64"
+  },
+  "dependencies": {
+    "csv-parse": "6.2.1",
+    "jstat": "1.9.6",
+    "ml-matrix": "6.15.0",
+    "vega": "6.4.0",
+    "vega-lite": "6.5.0",
+    "xlsx": "0.20.3",
+    "yaml": "2.9.1",
+    "zod": "4.6.7",
+    "@types/node": "24.19.2",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3"
+  },
+  "lockfile_sha256": "6f16dbcd70790efc45c7fbedcd08a0a3392975f553a954863b63eade29b0474e",
+  "verifier_sha256": "f47fad666d64466e78ad9714581e57a61af3ba5aa43909f70ca7b0db1d9391f1",
+  "note": "These checks validate actual study artifacts; unit-test fixture passes are reported separately. This does not remove pseudo-OOS, ETF proxy, settlement or power limitations."
+}

@@ -1,0 +1,11 @@
+removed_feature,feature,mean_absolute_shap
+fx_change,production_yoy,0.0008477735316979416
+fx_change,kr_short_bp,0.0034215232657279293
+fx_change,kr_long_bp,0.005828242927543202
+fx_change,us_rate_bp,0.000920312736386731
+fx_change,dollar_change,0.002523623561746381
+dollar_change,production_yoy,0.0012408946382371326
+dollar_change,kr_short_bp,0.0037423952283293788
+dollar_change,kr_long_bp,0.006270128976570931
+dollar_change,us_rate_bp,0.0015468582202771374
+dollar_change,fx_change,0.0018038637076369017

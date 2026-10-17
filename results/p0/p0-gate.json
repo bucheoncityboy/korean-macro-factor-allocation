@@ -6,7 +6,7 @@
     "Revised-data pseudo-OOS: release lags do not eliminate revision bias"
   ],
   "scope": [
-    "P1–P4",
-    "P5/P6 not executed"
+    "P1–P4 data eligibility",
+    "P5/P6 completion is recorded separately in results/research/study.json"
   ]
 }

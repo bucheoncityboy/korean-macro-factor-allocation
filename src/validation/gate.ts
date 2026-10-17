@@ -51,7 +51,7 @@ export function evaluateGate(contract: DataContract, experiment: Experiment, fea
   if (experiment.bootstrap.block_length > oos.length) reasons.push('Bootstrap block exceeds OOS sample');
   const status = reasons.length ? 'hold' : experiment.mode === 'realtime' ? 'proceed' : 'reduced';
   return { status, label: experiment.mode === 'synthetic' ? 'SYNTHETIC_DEMO' : experiment.mode === 'pseudo_oos' ? 'PSEUDO_OOS' : 'REALTIME',
-    reasons: [...new Set(reasons)], warnings, scope: reasons.length ? ['P0 documentation only; P2–P4 blocked'] : ['P1–P4', 'P5/P6 not executed'] };
+    reasons: [...new Set(reasons)], warnings, scope: reasons.length ? ['P0 documentation only; P2–P4 blocked'] : ['P1–P4 data eligibility', 'P5/P6 completion is recorded separately in the full study manifest'] };
 }
 
 export function requireGate(result: GateResult) {

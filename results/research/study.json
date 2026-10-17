@@ -1,0 +1,1068 @@
+{
+  "study_id": "kr-etf-macro-20261018-v3",
+  "run_id": "997c5b2f-1d31-4203-a20e-063aea6183f3",
+  "label": "REAL_DATA_REVISED_PSEUDO_OOS_ETF_PROXY",
+  "status": "all_requested_analyses_executed_with_declared_data_scope_reduction",
+  "started_at": "2026-10-17T18:34:13.177Z",
+  "completed_at": "2026-10-17T18:40:17.936Z",
+  "code_commit": "5d5b2d2678b9d8e586628b8b1be75cfedd6cd858",
+  "configuration_hashes": {
+    "configs/empirical.yaml": "4ad8288cde45cbf1c02ca122443fa0a602be64b3226eb69560a563d274da26db",
+    "configs/empirical_contract.yaml": "fd7bcb70c4c072222f5994453738aa2d84aadd4187f88579e4cae7e1cef075b2",
+    "configs/empirical_features.yaml": "3cb23731f7043e5a7f4101cf31534307d1d28ed001b4301d84d5aba268a28da6",
+    "configs/extensions.yaml": "6a345a5fcf65c9ddea49c9f7b95eba33a8da3c80d16e013d94d3324c775e2d8d",
+    "docs/preregistration.md": "2a550dd69c23089d575e672032a92e8ca2300a05ff3b8546de3ffc02bbe11b68"
+  },
+  "snapshot_hash": "9fae1728fb88b2ceacb91c2775aa57a271d943b4cd45a937acaefd83d2d17f8b",
+  "calendar_hash": "49ac0b794d67b7971370e554645d08b041f6ef93fbe48bf1eca377b2757ed757",
+  "daily_hash": "a090fdd48c9d356784b875a63e79205ba83e592f0aae6b8038efad1aa26cf48d",
+  "snapshots": [
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/069500.KS?period1=1167606000&period2=1792191600&interval=1d&events=div%2Csplits",
+      "retrieved_at": "2026-10-17T18:16:37.460Z",
+      "sha256": "e9c778af0022ad9116fcd3530cebedb1176f9e8ce1dcd5aef18dde9f855a1c71",
+      "bytes": 310105,
+      "redistribution": "Raw data remain local; no open-data license is inferred from public access"
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/114260.KS?period1=1167606000&period2=1792191600&interval=1d&events=div%2Csplits",
+      "retrieved_at": "2026-10-17T18:16:37.093Z",
+      "sha256": "a63b274b63dd5d7d7642e85d2e10251c5823ed28348fa19138f07c4ab40b102e",
+      "bytes": 253436,
+      "redistribution": "Raw data remain local; no open-data license is inferred from public access"
+    },
+    {
+      "url": "https://www.samsungfund.com/api/v1/kodex/product-calculate/2ETF01.do?bDate=20090729&pAmount=1000000",
+      "retrieved_at": "2026-10-17T18:11:34.090Z",
+      "sha256": "07aa0d73c54adb18f6e5e9e908912df96c0eac5d3b727e8a096da3af69f882e9",
+      "bytes": 615091,
+      "redistribution": "Raw data remain local; no open-data license is inferred from public access"
+    },
+    {
+      "url": "https://www.samsungfund.com/api/v1/kodex/product-earning/2ETF01.do?srchTerm=0",
+      "retrieved_at": "2026-10-17T18:11:31.014Z",
+      "sha256": "32a0424f2a2b7256e15b4266cf3c56bd2b3fd71a6520b4dbd84dbb2acb2a6866",
+      "bytes": 153580,
+      "redistribution": "Raw data remain local; no open-data license is inferred from public access"
+    },
+    {
+      "url": "https://www.samsungfund.com/api/v1/kodex/product/2ETF01.do",
+      "retrieved_at": "2026-10-17T18:11:31.367Z",
+      "sha256": "e631b69620470430092cfdde60882116c4bd6a4b287b7e3a80669daea768dff3",
+      "bytes": 3692518,
+      "redistribution": "Raw data remain local; no open-data license is inferred from public access"
+    },
+    {
+      "url": "https://www.samsungfund.com/excel_standar.do?fId=2ETF01&gijunYMD=20261016",
+      "retrieved_at": "2026-10-17T18:11:31.956Z",
+      "sha256": "46fddaa80fe1d0019a59fbf31060dead7e20fb525c572e92be416770cc8509c6",
+      "bytes": 1203712,
+      "redistribution": "Raw data remain local; no open-data license is inferred from public access"
+    },
+    {
+      "url": "https://www.samsungfund.com/api/v1/kodex/product-calculate/2ETF19.do?bDate=20090729&pAmount=1000000",
+      "retrieved_at": "2026-10-17T18:11:34.092Z",
+      "sha256": "33d3199d5a667b070833c67acc2eec8e81bf2274004730d1a095e2c145c61678",
+      "bytes": 614066,
+      "redistribution": "Raw data remain local; no open-data license is inferred from public access"
+    },
+    {
+      "url": "https://www.samsungfund.com/api/v1/kodex/product-earning/2ETF19.do?srchTerm=0",
+      "retrieved_at": "2026-10-17T18:11:31.009Z",
+      "sha256": "785b590f8f608919b1e2dd1e65925166a15ef6c7e3711aa2ccc6cbb7ebfb943b",
+      "bytes": 109947,
+      "redistribution": "Raw data remain local; no open-data license is inferred from public access"
+    },
+    {
+      "url": "https://www.samsungfund.com/api/v1/kodex/product/2ETF19.do",
+      "retrieved_at": "2026-10-17T18:11:31.011Z",
+      "sha256": "b1f9cd6aa34dbc4c443c05b785f6f09e587c14d2b3a8faeae367990ed2302e71",
+      "bytes": 133647,
+      "redistribution": "Raw data remain local; no open-data license is inferred from public access"
+    },
+    {
+      "url": "https://www.samsungfund.com/excel_standar.do?fId=2ETF19&gijunYMD=20261016",
+      "retrieved_at": "2026-10-17T18:11:31.673Z",
+      "sha256": "320b190b4995114f3b3689109e383471e607e2b9b31cbf0817e0a396f63d463a",
+      "bytes": 864768,
+      "redistribution": "Raw data remain local; no open-data license is inferred from public access"
+    },
+    {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXKOUS",
+      "retrieved_at": "2026-10-17T18:16:40.334Z",
+      "sha256": "cfdbeade175fb16dd01f5ae8b61e6f822bec48b431e024f34ff51dcfb6bb8bbd",
+      "bytes": 217351,
+      "redistribution": "Raw data remain local; no open-data license is inferred from public access"
+    },
+    {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10",
+      "retrieved_at": "2026-10-17T18:16:40.129Z",
+      "sha256": "b972c9a2bbfbbe82596aeeef473dbee40490f2c6a773dbd228491df17306a04d",
+      "bytes": 269075,
+      "redistribution": "Raw data remain local; no open-data license is inferred from public access"
+    },
+    {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS",
+      "retrieved_at": "2026-10-17T18:16:40.456Z",
+      "sha256": "a7b6e593bf1c9dd6c4601c1bd52de979b148eb2e98679ce1cafcda789f372d59",
+      "bytes": 104637,
+      "redistribution": "Raw data remain local; no open-data license is inferred from public access"
+    },
+    {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=IR3TIB01KRM156N",
+      "retrieved_at": "2026-10-17T18:16:40.040Z",
+      "sha256": "d597dcc76e6d6f923ebf35e704b55c07cf21bd513c5d2086a13e5b284fe1b8a4",
+      "bytes": 6990,
+      "redistribution": "Raw data remain local; no open-data license is inferred from public access"
+    },
+    {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=IRLTLT01KRM156N",
+      "retrieved_at": "2026-10-17T18:16:40.066Z",
+      "sha256": "d9497dc8b8d22fb2c58b3cf128b16ba94d2d514320086d1814a75cc663d136df",
+      "bytes": 5337,
+      "redistribution": "Raw data remain local; no open-data license is inferred from public access"
+    },
+    {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=KORCPIALLMINMEI",
+      "retrieved_at": "2026-10-17T18:16:40.950Z",
+      "sha256": "afe1dadf5ecab52fb6bc32db7dbfbbc966a7c1fd91ae1fdd6b77c87eccff76e1",
+      "bytes": 22192,
+      "redistribution": "Raw data remain local; no open-data license is inferred from public access"
+    },
+    {
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=KORPRINTO01GYSAM",
+      "retrieved_at": "2026-10-17T18:16:38.494Z",
+      "sha256": "8444a99446f1c91cae8a68d6fb2b9e0e9500308f6fb02556aedfec76e55fbaa2",
+      "bytes": 12626,
+      "redistribution": "Raw data remain local; no open-data license is inferred from public access"
+    }
+  ],
+  "lightgbm_binary": {
+    "path": "Local native executable; not redistributed",
+    "sha256": "12fcb04e0cb9a025f44eb4b06d255507bd5a2d5812c72b20c313d9d99f7c72ec",
+    "version": "4.6.0",
+    "source_commit": "d02a01ac6f51d36c9e62388243bcb75c3b1b1774"
+  },
+  "stages": {
+    "P0": "reduced: actual ETF TR / revised-data pseudo-OOS",
+    "P1": "executed",
+    "P2": "executed",
+    "P3": "executed",
+    "P4": "executed",
+    "P5": "executed: theoretical ex-date reinvestment backtest",
+    "P6": "executed: native LightGBM + OOS TreeSHAP + ablations"
+  },
+  "sample": {
+    "predictive_complete_n": 205,
+    "forecast_months": 109,
+    "explanatory": [
+      {
+        "asset": "EQ_KR",
+        "n": 205,
+        "start": "2009-08",
+        "end": "2026-08"
+      },
+      {
+        "asset": "BOND_KR",
+        "n": 205,
+        "start": "2009-08",
+        "end": "2026-08"
+      }
+    ]
+  },
+  "h1": [
+    {
+      "asset": "EQ_KR",
+      "n": 205,
+      "start": "2009-08",
+      "end": "2026-08",
+      "domestic_adjusted_r2": -0.01261800352082032,
+      "full_adjusted_r2": 0.1481538994974051,
+      "delta_adjusted_r2": 0.16077190301822541,
+      "wald_statistic": 37.29220939989063,
+      "p_value": 3.990786690000192e-8,
+      "holm_p_value": 7.981573380000384e-8,
+      "assessment": "joint_association_detected_requires_sensitivity_review"
+    },
+    {
+      "asset": "BOND_KR",
+      "n": 205,
+      "start": "2009-08",
+      "end": "2026-08",
+      "domestic_adjusted_r2": 0.3419465269979879,
+      "full_adjusted_r2": 0.5019246418961294,
+      "delta_adjusted_r2": 0.1599781148981415,
+      "wald_statistic": 27.35166740080925,
+      "p_value": 0.000004967978403214168,
+      "holm_p_value": 0.000004967978403214168,
+      "assessment": "joint_association_detected_requires_sensitivity_review"
+    }
+  ],
+  "oos": [
+    {
+      "model": "HistoricalMean",
+      "n": 109,
+      "oos_r2": 0,
+      "rmse": 0.08401293423516615,
+      "mae": 0.0553985378485707,
+      "direction_accuracy": 0.5779816513761468,
+      "start": "2017-08",
+      "end": "2026-08",
+      "ci_low": 0,
+      "ci_high": 0,
+      "simultaneous_ci_low": 0,
+      "simultaneous_ci_high": 0,
+      "inference": "reference"
+    },
+    {
+      "model": "AR1",
+      "n": 109,
+      "oos_r2": -0.03824251981270255,
+      "rmse": 0.08560429571078565,
+      "mae": 0.05596406446056801,
+      "direction_accuracy": 0.5321100917431193,
+      "start": "2017-08",
+      "end": "2026-08",
+      "ci_low": -0.06061263713867635,
+      "ci_high": 0.0054791106255110125,
+      "simultaneous_ci_low": -0.06547832478546212,
+      "simultaneous_ci_high": 0.01405530313674634,
+      "inference": "descriptive paired block-bootstrap intervals; no universal nested-model p-value"
+    },
+    {
+      "model": "OLS",
+      "n": 109,
+      "oos_r2": -0.031172955934686497,
+      "rmse": 0.08531235103086872,
+      "mae": 0.057268232520577826,
+      "direction_accuracy": 0.4954128440366973,
+      "start": "2017-08",
+      "end": "2026-08",
+      "ci_low": -0.11219533028330889,
+      "ci_high": 0.0005566270755441252,
+      "simultaneous_ci_low": -0.13772270751353735,
+      "simultaneous_ci_high": 0.007457929400787815,
+      "inference": "descriptive paired block-bootstrap intervals; no universal nested-model p-value"
+    },
+    {
+      "model": "Ridge",
+      "n": 109,
+      "oos_r2": -0.017774503535430863,
+      "rmse": 0.08475628968906194,
+      "mae": 0.05651161632939168,
+      "direction_accuracy": 0.5229357798165137,
+      "start": "2017-08",
+      "end": "2026-08",
+      "ci_low": -0.06386597278342183,
+      "ci_high": 0.004407486080047571,
+      "simultaneous_ci_low": -0.07833506668224646,
+      "simultaneous_ci_high": 0.012347570463603203,
+      "inference": "descriptive paired block-bootstrap intervals; no universal nested-model p-value"
+    },
+    {
+      "model": "LightGBM",
+      "n": 109,
+      "oos_r2": 0.010580063404097562,
+      "rmse": 0.08356732136241012,
+      "mae": 0.05639621421720566,
+      "direction_accuracy": 0.47706422018348627,
+      "start": "2017-08",
+      "end": "2026-08",
+      "ci_low": -0.045018016386980726,
+      "ci_high": 0.04013303125578161,
+      "simultaneous_ci_low": -0.06168033847308308,
+      "simultaneous_ci_high": 0.050833154919807146,
+      "inference": "descriptive paired block-bootstrap intervals; no universal nested-model p-value"
+    }
+  ],
+  "allocation": {
+    "summary": [
+      {
+        "strategy": "SAA",
+        "n": 109,
+        "cagr": 0.10267338518815539,
+        "annualized_vol": 0.14298261814422078,
+        "sharpe_cash_proxy": 0.5999820262911244,
+        "mdd_daily": -0.21160981063741047,
+        "mdd_monthly": -0.18978236501520085,
+        "annualized_one_way_turnover": 0.16325702412744206,
+        "average_equity_weight": 0.5,
+        "average_drifted_equity_weight": 0.5016896018354717,
+        "total_trading_cost_initial_nav": 0.0044080076800011555,
+        "terminal_wealth": 2.429737025435349
+      },
+      {
+        "strategy": "NON_MACRO",
+        "n": 109,
+        "cagr": 0.11019675013728092,
+        "annualized_vol": 0.16761255107139048,
+        "sharpe_cash_proxy": 0.5744608744380897,
+        "mdd_daily": -0.2892738092618161,
+        "mdd_monthly": -0.2065210219223288,
+        "annualized_one_way_turnover": 0.19901920583578414,
+        "average_equity_weight": 0.5307734281751633,
+        "average_drifted_equity_weight": 0.5322873764364916,
+        "total_trading_cost_initial_nav": 0.004640937596669959,
+        "terminal_wealth": 2.5845378372213785
+      },
+      {
+        "strategy": "MACRO_TAA",
+        "n": 109,
+        "cagr": 0.10753415820895751,
+        "annualized_vol": 0.16898194085444646,
+        "sharpe_cash_proxy": 0.5567721077021881,
+        "mdd_daily": -0.29167278156061227,
+        "mdd_monthly": -0.20840493007115546,
+        "annualized_one_way_turnover": 0.34756860387934385,
+        "average_equity_weight": 0.5303193404119941,
+        "average_drifted_equity_weight": 0.5318465845878245,
+        "total_trading_cost_initial_nav": 0.007749413088200959,
+        "terminal_wealth": 2.5287773487072855
+      }
+    ],
+    "paired": {
+      "comparison": "MACRO_TAA - NON_MACRO",
+      "annualized_mean_difference": -0.0021971344444322825,
+      "annualized_mean_ci": [
+        -0.005617922859774294,
+        0.001182965617196601
+      ],
+      "cagr_difference": -0.00266259192832341,
+      "cagr_difference_ci": [
+        -0.006177446125714159,
+        0.0009250756364079178
+      ],
+      "exposure_difference": -0.0004540877631691309,
+      "volatility_difference": 0.0013693897830559798,
+      "inference": "Paired circular block bootstrap of realized net return paths; theoretical ex-date reinvestment; not live trading evidence"
+    },
+    "downside": [
+      {
+        "strategy": "SAA",
+        "months": 44,
+        "mean_monthly_return_in_saa_down_months": -0.024627750981403875
+      },
+      {
+        "strategy": "NON_MACRO",
+        "months": 44,
+        "mean_monthly_return_in_saa_down_months": -0.027140581816238442
+      },
+      {
+        "strategy": "MACRO_TAA",
+        "months": 44,
+        "mean_monthly_return_in_saa_down_months": -0.027431505264493027
+      }
+    ]
+  },
+  "regimes": [
+    {
+      "regime": "defensive",
+      "n": 4,
+      "mean_next_equity_return": 0.019216609573526083,
+      "mean_next_bond_return": 0.0012901322020009431,
+      "equity_vol": 0.04004844281871509,
+      "bond_vol": 0.0038827964882824223,
+      "mean_next_spread": 0.01792647737152514,
+      "interpretation": "Descriptive conditional next-month returns; fixed continuous signal bands, no causal or independent regime claim"
+    },
+    {
+      "regime": "balanced",
+      "n": 77,
+      "mean_next_equity_return": 0.012541781817937843,
+      "mean_next_bond_return": 0.0015526939662625782,
+      "equity_vol": 0.0626071864362351,
+      "bond_vol": 0.006777330442776055,
+      "mean_next_spread": 0.010989087851675265,
+      "interpretation": "Descriptive conditional next-month returns; fixed continuous signal bands, no causal or independent regime claim"
+    },
+    {
+      "regime": "pro_risk",
+      "n": 28,
+      "mean_next_equity_return": 0.02783339406789462,
+      "mean_next_bond_return": 0.0007238588742310902,
+      "equity_vol": 0.13159605049878154,
+      "bond_vol": 0.005576130452768649,
+      "mean_next_spread": 0.02710953519366353,
+      "interpretation": "Descriptive conditional next-month returns; fixed continuous signal bands, no causal or independent regime claim"
+    }
+  ],
+  "shap": {
+    "importance": [
+      {
+        "feature": "production_yoy",
+        "group": "domestic",
+        "mean_absolute_shap": 0.0007342122404078756,
+        "first_half_mean_absolute": 0.00010035805599604468,
+        "second_half_mean_absolute": 0.0013565418032849457
+      },
+      {
+        "feature": "kr_short_bp",
+        "group": "domestic",
+        "mean_absolute_shap": 0.0033500846302490775,
+        "first_half_mean_absolute": 0.0011394695602952453,
+        "second_half_mean_absolute": 0.005520506698931021
+      },
+      {
+        "feature": "kr_long_bp",
+        "group": "domestic",
+        "mean_absolute_shap": 0.005479766843641891,
+        "first_half_mean_absolute": 0.005445168970184715,
+        "second_half_mean_absolute": 0.005513735664854396
+      },
+      {
+        "feature": "us_rate_bp",
+        "group": "external",
+        "mean_absolute_shap": 0.0008933282763912065,
+        "first_half_mean_absolute": 0.0008734710427924779,
+        "second_half_mean_absolute": 0.0009128244693790494
+      },
+      {
+        "feature": "fx_change",
+        "group": "external",
+        "mean_absolute_shap": 0.0011050695009726344,
+        "first_half_mean_absolute": 0.0009391464655527709,
+        "second_half_mean_absolute": 0.001267975753930319
+      },
+      {
+        "feature": "dollar_change",
+        "group": "external",
+        "mean_absolute_shap": 0.0019030422453108135,
+        "first_half_mean_absolute": 0.002702746362278877,
+        "second_half_mean_absolute": 0.0011178782031967143
+      }
+    ],
+    "groups": [
+      {
+        "group": "domestic",
+        "members": [
+          "production_yoy",
+          "kr_short_bp",
+          "kr_long_bp"
+        ],
+        "mean_absolute_grouped_shap": 0.005907049636809169
+      },
+      {
+        "group": "external",
+        "members": [
+          "us_rate_bp",
+          "fx_change",
+          "dollar_change"
+        ],
+        "mean_absolute_grouped_shap": 0.002682740513407929
+      }
+    ],
+    "ablations": [
+      {
+        "removed_feature": "fx_change",
+        "model": "LightGBM",
+        "n": 109,
+        "oos_r2": 0.010494168327028874,
+        "rmse": 0.08357094867244436,
+        "mae": 0.05654559049923531,
+        "direction_accuracy": 0.47706422018348627,
+        "start": "2017-08",
+        "end": "2026-08",
+        "ci_low": -0.04787837946862964,
+        "ci_high": 0.04493234738523914,
+        "simultaneous_ci_low": -0.06789688644017275,
+        "simultaneous_ci_high": 0.05862055908025866,
+        "inference": "descriptive paired block-bootstrap intervals; no universal nested-model p-value"
+      },
+      {
+        "removed_feature": "dollar_change",
+        "model": "LightGBM",
+        "n": 109,
+        "oos_r2": 0.01777429862696367,
+        "rmse": 0.08326295119696366,
+        "mae": 0.055643044405567485,
+        "direction_accuracy": 0.5412844036697247,
+        "start": "2017-08",
+        "end": "2026-08",
+        "ci_low": -0.024412294207363853,
+        "ci_high": 0.06511827912646766,
+        "simultaneous_ci_low": -0.041380239169641266,
+        "simultaneous_ci_high": 0.0831790579232032,
+        "inference": "descriptive paired block-bootstrap intervals; no universal nested-model p-value"
+      }
+    ]
+  },
+  "power": {
+    "h1": [
+      {
+        "asset": "EQ_KR",
+        "n": 205,
+        "conservative_effective_n_ar1_approx": 184.2089048100682,
+        "adjusted_alpha": 0.025,
+        "desired_power": 0.8,
+        "minimum_detectable_partial_r2_approx": 0.06548604941293767,
+        "scenarios": [
+          {
+            "partial_r2": 0.02,
+            "iid_design_power_approx": 0.2726086642526657,
+            "conservative_ar1_design_power_approx": 0.24171599258496035
+          },
+          {
+            "partial_r2": 0.05,
+            "iid_design_power_approx": 0.7082310966055947,
+            "conservative_ar1_design_power_approx": 0.6503295582422578
+          },
+          {
+            "partial_r2": 0.1,
+            "iid_design_power_approx": 0.9760404421871367,
+            "conservative_ar1_design_power_approx": 0.9588401392092424
+          }
+        ],
+        "caveat": "Noncentral chi-square large-sample fixed-design approximation. AR1 effective-n adjustment is a sensitivity heuristic; HAC, collinearity and misspecification can change actual power. Not observed post-hoc power."
+      },
+      {
+        "asset": "BOND_KR",
+        "n": 205,
+        "conservative_effective_n_ar1_approx": 142.54987573513682,
+        "adjusted_alpha": 0.025,
+        "desired_power": 0.8,
+        "minimum_detectable_partial_r2_approx": 0.08303471057836978,
+        "scenarios": [
+          {
+            "partial_r2": 0.02,
+            "iid_design_power_approx": 0.2726086642526657,
+            "conservative_ar1_design_power_approx": 0.18199705106808195
+          },
+          {
+            "partial_r2": 0.05,
+            "iid_design_power_approx": 0.7082310966055947,
+            "conservative_ar1_design_power_approx": 0.5135294991903283
+          },
+          {
+            "partial_r2": 0.1,
+            "iid_design_power_approx": 0.9760404421871367,
+            "conservative_ar1_design_power_approx": 0.8873264776038301
+          }
+        ],
+        "caveat": "Noncentral chi-square large-sample fixed-design approximation. AR1 effective-n adjustment is a sensitivity heuristic; HAC, collinearity and misspecification can change actual power. Not observed post-hoc power."
+      }
+    ],
+    "forecasts": [
+      {
+        "model": "AR1",
+        "n": 109,
+        "block_length": 3,
+        "desired_power": 0.8,
+        "family_size": 4,
+        "minimum_detectable_oos_r2_normal_approx": 0.09593374686558569,
+        "scenarios": [
+          {
+            "assumed_oos_r2": 0.01,
+            "power_normal_approx": 0.018007747875583235
+          },
+          {
+            "assumed_oos_r2": 0.03,
+            "power_normal_approx": 0.07324867133077279
+          },
+          {
+            "assumed_oos_r2": 0.05,
+            "power_normal_approx": 0.22445482699383368
+          },
+          {
+            "assumed_oos_r2": 0.1,
+            "power_normal_approx": 0.8372361740456336
+          }
+        ],
+        "caveat": "Conditional design-sensitivity diagnostic using realized paired-loss variability, not an ex-ante guarantee or evidence for the null; percentile block intervals remain the reported uncertainty."
+      },
+      {
+        "model": "AR1",
+        "n": 109,
+        "block_length": 6,
+        "desired_power": 0.8,
+        "family_size": 4,
+        "minimum_detectable_oos_r2_normal_approx": 0.09683252895841864,
+        "scenarios": [
+          {
+            "assumed_oos_r2": 0.01,
+            "power_normal_approx": 0.017902881353083933
+          },
+          {
+            "assumed_oos_r2": 0.03,
+            "power_normal_approx": 0.07192083570558144
+          },
+          {
+            "assumed_oos_r2": 0.05,
+            "power_normal_approx": 0.21964724123909846
+          },
+          {
+            "assumed_oos_r2": 0.1,
+            "power_normal_approx": 0.8291605847259804
+          }
+        ],
+        "caveat": "Conditional design-sensitivity diagnostic using realized paired-loss variability, not an ex-ante guarantee or evidence for the null; percentile block intervals remain the reported uncertainty."
+      },
+      {
+        "model": "AR1",
+        "n": 109,
+        "block_length": 12,
+        "desired_power": 0.8,
+        "family_size": 4,
+        "minimum_detectable_oos_r2_normal_approx": 0.09762812577255456,
+        "scenarios": [
+          {
+            "assumed_oos_r2": 0.01,
+            "power_normal_approx": 0.01781255302880963
+          },
+          {
+            "assumed_oos_r2": 0.03,
+            "power_normal_approx": 0.07078134805597885
+          },
+          {
+            "assumed_oos_r2": 0.05,
+            "power_normal_approx": 0.21551403405899294
+          },
+          {
+            "assumed_oos_r2": 0.1,
+            "power_normal_approx": 0.821931286408722
+          }
+        ],
+        "caveat": "Conditional design-sensitivity diagnostic using realized paired-loss variability, not an ex-ante guarantee or evidence for the null; percentile block intervals remain the reported uncertainty."
+      },
+      {
+        "model": "OLS",
+        "n": 109,
+        "block_length": 3,
+        "desired_power": 0.8,
+        "family_size": 4,
+        "minimum_detectable_oos_r2_normal_approx": 0.05299973810214355,
+        "scenarios": [
+          {
+            "assumed_oos_r2": 0.01,
+            "power_normal_approx": 0.03178677252631362
+          },
+          {
+            "assumed_oos_r2": 0.03,
+            "power_normal_approx": 0.2717615769350017
+          },
+          {
+            "assumed_oos_r2": 0.05,
+            "power_normal_approx": 0.7429988182330516
+          },
+          {
+            "assumed_oos_r2": 0.1,
+            "power_normal_approx": 0.999928506105462
+          }
+        ],
+        "caveat": "Conditional design-sensitivity diagnostic using realized paired-loss variability, not an ex-ante guarantee or evidence for the null; percentile block intervals remain the reported uncertainty."
+      },
+      {
+        "model": "OLS",
+        "n": 109,
+        "block_length": 6,
+        "desired_power": 0.8,
+        "family_size": 4,
+        "minimum_detectable_oos_r2_normal_approx": 0.054710935378175174,
+        "scenarios": [
+          {
+            "assumed_oos_r2": 0.01,
+            "power_normal_approx": 0.030498402244922673
+          },
+          {
+            "assumed_oos_r2": 0.03,
+            "power_normal_approx": 0.25251145154855104
+          },
+          {
+            "assumed_oos_r2": 0.05,
+            "power_normal_approx": 0.7102398265946093
+          },
+          {
+            "assumed_oos_r2": 0.1,
+            "power_normal_approx": 0.9998444493726786
+          }
+        ],
+        "caveat": "Conditional design-sensitivity diagnostic using realized paired-loss variability, not an ex-ante guarantee or evidence for the null; percentile block intervals remain the reported uncertainty."
+      },
+      {
+        "model": "OLS",
+        "n": 109,
+        "block_length": 12,
+        "desired_power": 0.8,
+        "family_size": 4,
+        "minimum_detectable_oos_r2_normal_approx": 0.06234170549763072,
+        "scenarios": [
+          {
+            "assumed_oos_r2": 0.01,
+            "power_normal_approx": 0.026087206989949152
+          },
+          {
+            "assumed_oos_r2": 0.03,
+            "power_normal_approx": 0.1865495585000142
+          },
+          {
+            "assumed_oos_r2": 0.05,
+            "power_normal_approx": 0.5716354383305062
+          },
+          {
+            "assumed_oos_r2": 0.1,
+            "power_normal_approx": 0.9978736567734943
+          }
+        ],
+        "caveat": "Conditional design-sensitivity diagnostic using realized paired-loss variability, not an ex-ante guarantee or evidence for the null; percentile block intervals remain the reported uncertainty."
+      },
+      {
+        "model": "Ridge",
+        "n": 109,
+        "block_length": 3,
+        "desired_power": 0.8,
+        "family_size": 4,
+        "minimum_detectable_oos_r2_normal_approx": 0.03609427684184535,
+        "scenarios": [
+          {
+            "assumed_oos_r2": 0.01,
+            "power_normal_approx": 0.058222783222842744
+          },
+          {
+            "assumed_oos_r2": 0.03,
+            "power_normal_approx": 0.6094164649761116
+          },
+          {
+            "assumed_oos_r2": 0.05,
+            "power_normal_approx": 0.9833370179716999
+          },
+          {
+            "assumed_oos_r2": 0.1,
+            "power_normal_approx": 0.9999999999928075
+          }
+        ],
+        "caveat": "Conditional design-sensitivity diagnostic using realized paired-loss variability, not an ex-ante guarantee or evidence for the null; percentile block intervals remain the reported uncertainty."
+      },
+      {
+        "model": "Ridge",
+        "n": 109,
+        "block_length": 6,
+        "desired_power": 0.8,
+        "family_size": 4,
+        "minimum_detectable_oos_r2_normal_approx": 0.03656916990858977,
+        "scenarios": [
+          {
+            "assumed_oos_r2": 0.01,
+            "power_normal_approx": 0.05685787973158124
+          },
+          {
+            "assumed_oos_r2": 0.03,
+            "power_normal_approx": 0.595515137111281
+          },
+          {
+            "assumed_oos_r2": 0.05,
+            "power_normal_approx": 0.9806829147013056
+          },
+          {
+            "assumed_oos_r2": 0.1,
+            "power_normal_approx": 0.9999999999836457
+          }
+        ],
+        "caveat": "Conditional design-sensitivity diagnostic using realized paired-loss variability, not an ex-ante guarantee or evidence for the null; percentile block intervals remain the reported uncertainty."
+      },
+      {
+        "model": "Ridge",
+        "n": 109,
+        "block_length": 12,
+        "desired_power": 0.8,
+        "family_size": 4,
+        "minimum_detectable_oos_r2_normal_approx": 0.04057833676533491,
+        "scenarios": [
+          {
+            "assumed_oos_r2": 0.01,
+            "power_normal_approx": 0.04743853458534747
+          },
+          {
+            "assumed_oos_r2": 0.03,
+            "power_normal_approx": 0.4884703643395346
+          },
+          {
+            "assumed_oos_r2": 0.05,
+            "power_normal_approx": 0.9470566861777894
+          },
+          {
+            "assumed_oos_r2": 0.1,
+            "power_normal_approx": 0.999999995026442
+          }
+        ],
+        "caveat": "Conditional design-sensitivity diagnostic using realized paired-loss variability, not an ex-ante guarantee or evidence for the null; percentile block intervals remain the reported uncertainty."
+      },
+      {
+        "model": "LightGBM",
+        "n": 109,
+        "block_length": 3,
+        "desired_power": 0.8,
+        "family_size": 4,
+        "minimum_detectable_oos_r2_normal_approx": 0.06426864044675897,
+        "scenarios": [
+          {
+            "assumed_oos_r2": 0.01,
+            "power_normal_approx": 0.025232984477140397
+          },
+          {
+            "assumed_oos_r2": 0.03,
+            "power_normal_approx": 0.17390593846982083
+          },
+          {
+            "assumed_oos_r2": 0.05,
+            "power_normal_approx": 0.5399227337920344
+          },
+          {
+            "assumed_oos_r2": 0.1,
+            "power_normal_approx": 0.9965140420170993
+          }
+        ],
+        "caveat": "Conditional design-sensitivity diagnostic using realized paired-loss variability, not an ex-ante guarantee or evidence for the null; percentile block intervals remain the reported uncertainty."
+      },
+      {
+        "model": "LightGBM",
+        "n": 109,
+        "block_length": 6,
+        "desired_power": 0.8,
+        "family_size": 4,
+        "minimum_detectable_oos_r2_normal_approx": 0.060287556350600936,
+        "scenarios": [
+          {
+            "assumed_oos_r2": 0.01,
+            "power_normal_approx": 0.027097552256740154
+          },
+          {
+            "assumed_oos_r2": 0.03,
+            "power_normal_approx": 0.20159172022037264
+          },
+          {
+            "assumed_oos_r2": 0.05,
+            "power_normal_approx": 0.6071097307990293
+          },
+          {
+            "assumed_oos_r2": 0.1,
+            "power_normal_approx": 0.998822176845461
+          }
+        ],
+        "caveat": "Conditional design-sensitivity diagnostic using realized paired-loss variability, not an ex-ante guarantee or evidence for the null; percentile block intervals remain the reported uncertainty."
+      },
+      {
+        "model": "LightGBM",
+        "n": 109,
+        "block_length": 12,
+        "desired_power": 0.8,
+        "family_size": 4,
+        "minimum_detectable_oos_r2_normal_approx": 0.07020934549676522,
+        "scenarios": [
+          {
+            "assumed_oos_r2": 0.01,
+            "power_normal_approx": 0.02305691956719763
+          },
+          {
+            "assumed_oos_r2": 0.03,
+            "power_normal_approx": 0.14216576379233326
+          },
+          {
+            "assumed_oos_r2": 0.05,
+            "power_normal_approx": 0.4524067942683829
+          },
+          {
+            "assumed_oos_r2": 0.1,
+            "power_normal_approx": 0.9880438995869852
+          }
+        ],
+        "caveat": "Conditional design-sensitivity diagnostic using realized paired-loss variability, not an ex-ante guarantee or evidence for the null; percentile block intervals remain the reported uncertainty."
+      }
+    ],
+    "note": "Sensitivity/MDE only. No guarantee of adequate power for small effects; confidence intervals and source limitations govern conclusions."
+  },
+  "secondary": {
+    "cpi_with": [
+      {
+        "model": "HistoricalMean",
+        "n": 75,
+        "oos_r2": 0,
+        "rmse": 0.05431684383309901,
+        "mae": 0.04144823868230934,
+        "direction_accuracy": 0.5733333333333334,
+        "start": "2017-08",
+        "end": "2023-10",
+        "ci_low": 0,
+        "ci_high": 0,
+        "simultaneous_ci_low": 0,
+        "simultaneous_ci_high": 0,
+        "inference": "reference"
+      },
+      {
+        "model": "AR1",
+        "n": 75,
+        "oos_r2": -0.010581522078680905,
+        "rmse": 0.054603465047298246,
+        "mae": 0.041477541389716294,
+        "direction_accuracy": 0.56,
+        "start": "2017-08",
+        "end": "2023-10",
+        "ci_low": -0.05011600050167967,
+        "ci_high": 0.03252017184543303,
+        "simultaneous_ci_low": -0.05808831278619936,
+        "simultaneous_ci_high": 0.040224672147041424,
+        "inference": "descriptive paired block-bootstrap intervals; no universal nested-model p-value"
+      },
+      {
+        "model": "OLS",
+        "n": 75,
+        "oos_r2": -0.1055610644359033,
+        "rmse": 0.057111806076918986,
+        "mae": 0.04452011774305025,
+        "direction_accuracy": 0.4533333333333333,
+        "start": "2017-08",
+        "end": "2023-10",
+        "ci_low": -0.2134847214707063,
+        "ci_high": 0.002050497131166367,
+        "simultaneous_ci_low": -0.24734096448395052,
+        "simultaneous_ci_high": 0.026013030773532543,
+        "inference": "descriptive paired block-bootstrap intervals; no universal nested-model p-value"
+      },
+      {
+        "model": "Ridge",
+        "n": 75,
+        "oos_r2": -0.05263287509058334,
+        "rmse": 0.05572794023622892,
+        "mae": 0.04300442987955256,
+        "direction_accuracy": 0.49333333333333335,
+        "start": "2017-08",
+        "end": "2023-10",
+        "ci_low": -0.11750464489779999,
+        "ci_high": 0.023656962809090732,
+        "simultaneous_ci_low": -0.1339871959361753,
+        "simultaneous_ci_high": 0.0442893261035545,
+        "inference": "descriptive paired block-bootstrap intervals; no universal nested-model p-value"
+      }
+    ],
+    "cpi_without": [
+      {
+        "model": "HistoricalMean",
+        "n": 75,
+        "oos_r2": 0,
+        "rmse": 0.05431684383309901,
+        "mae": 0.04144823868230934,
+        "direction_accuracy": 0.5733333333333334,
+        "start": "2017-08",
+        "end": "2023-10",
+        "ci_low": 0,
+        "ci_high": 0,
+        "simultaneous_ci_low": 0,
+        "simultaneous_ci_high": 0,
+        "inference": "reference"
+      },
+      {
+        "model": "AR1",
+        "n": 75,
+        "oos_r2": -0.010581522078680905,
+        "rmse": 0.054603465047298246,
+        "mae": 0.041477541389716294,
+        "direction_accuracy": 0.56,
+        "start": "2017-08",
+        "end": "2023-10",
+        "ci_low": -0.05011600050167967,
+        "ci_high": 0.03252017184543303,
+        "simultaneous_ci_low": -0.05808831278619936,
+        "simultaneous_ci_high": 0.040224672147041424,
+        "inference": "descriptive paired block-bootstrap intervals; no universal nested-model p-value"
+      },
+      {
+        "model": "OLS",
+        "n": 75,
+        "oos_r2": -0.08695592143692998,
+        "rmse": 0.056629208688901145,
+        "mae": 0.04347066977095082,
+        "direction_accuracy": 0.5066666666666667,
+        "start": "2017-08",
+        "end": "2023-10",
+        "ci_low": -0.1858033315632383,
+        "ci_high": 0.0198964096554264,
+        "simultaneous_ci_low": -0.20981197043892238,
+        "simultaneous_ci_high": 0.04611308671144101,
+        "inference": "descriptive paired block-bootstrap intervals; no universal nested-model p-value"
+      },
+      {
+        "model": "Ridge",
+        "n": 75,
+        "oos_r2": -0.042818096822832,
+        "rmse": 0.055467527356334624,
+        "mae": 0.04253152321102144,
+        "direction_accuracy": 0.5333333333333333,
+        "start": "2017-08",
+        "end": "2023-10",
+        "ci_low": -0.10299044753005177,
+        "ci_high": 0.03255815215494646,
+        "simultaneous_ci_low": -0.11566409895744459,
+        "simultaneous_ci_high": 0.053288628931176855,
+        "inference": "descriptive paired block-bootstrap intervals; no universal nested-model p-value"
+      }
+    ],
+    "information_lag_plus_one_month": [
+      {
+        "model": "HistoricalMean",
+        "n": 109,
+        "oos_r2": 0,
+        "rmse": 0.08401293423516615,
+        "mae": 0.0553985378485707,
+        "direction_accuracy": 0.5779816513761468,
+        "start": "2017-08",
+        "end": "2026-08",
+        "ci_low": 0,
+        "ci_high": 0,
+        "simultaneous_ci_low": 0,
+        "simultaneous_ci_high": 0,
+        "inference": "reference"
+      },
+      {
+        "model": "AR1",
+        "n": 109,
+        "oos_r2": -0.03824251981270255,
+        "rmse": 0.08560429571078565,
+        "mae": 0.05596406446056801,
+        "direction_accuracy": 0.5321100917431193,
+        "start": "2017-08",
+        "end": "2026-08",
+        "ci_low": -0.06061263713867635,
+        "ci_high": 0.0054791106255110125,
+        "simultaneous_ci_low": -0.0646639653914073,
+        "simultaneous_ci_high": 0.012650966741054544,
+        "inference": "descriptive paired block-bootstrap intervals; no universal nested-model p-value"
+      },
+      {
+        "model": "OLS",
+        "n": 109,
+        "oos_r2": -0.020806417885863127,
+        "rmse": 0.08488243880934924,
+        "mae": 0.0577129018768622,
+        "direction_accuracy": 0.46788990825688076,
+        "start": "2017-08",
+        "end": "2026-08",
+        "ci_low": -0.09793708448489602,
+        "ci_high": 0.008567087754694187,
+        "simultaneous_ci_low": -0.11841122798612934,
+        "simultaneous_ci_high": 0.014688852673337959,
+        "inference": "descriptive paired block-bootstrap intervals; no universal nested-model p-value"
+      },
+      {
+        "model": "Ridge",
+        "n": 109,
+        "oos_r2": -0.010887317527133789,
+        "rmse": 0.08446903391603477,
+        "mae": 0.0568125754806885,
+        "direction_accuracy": 0.4954128440366973,
+        "start": "2017-08",
+        "end": "2026-08",
+        "ci_low": -0.06134049933313085,
+        "ci_high": 0.010493365528407093,
+        "simultaneous_ci_low": -0.07544729125385942,
+        "simultaneous_ci_high": 0.016838117082233674,
+        "inference": "descriptive paired block-bootstrap intervals; no universal nested-model p-value"
+      }
+    ]
+  },
+  "limitations": [
+    "ETF market TR proxies, not native long-run index TR",
+    "Revised macros with explicit eligibility assumptions, not recovered real-time vintages",
+    "No independent untouched confirmation sample",
+    "Ex-date reinvestment and close execution with assumed costs, no full payout settlement/capacity model",
+    "Only 109 primary OOS months: small effects may be underpowered; MDE and intervals reported",
+    "Raw snapshots stay local; exact reproduction requires the same licensed/public-access snapshots"
+  ]
+}

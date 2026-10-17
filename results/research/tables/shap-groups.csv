@@ -1,0 +1,3 @@
+group,members,mean_absolute_grouped_shap
+domestic,"[""production_yoy"",""kr_short_bp"",""kr_long_bp""]",0.005907049636809169
+external,"[""us_rate_bp"",""fx_change"",""dollar_change""]",0.002682740513407929

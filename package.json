@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Point-in-time macro factor research for Korean equity and government bond total returns",
+  "description": "Real-data Korean ETF macro factor research with revised-data pseudo-OOS forecasting, allocation and LightGBM/TreeSHAP",
   "engines": {
     "node": ">=22"
   },
@@ -17,6 +17,7 @@
     "acquire": "tsx src/ingestion/acquire.ts",
     "register": "tsx src/study.ts --register",
     "research": "tsx src/study.ts",
+    "verify:research": "tsx src/verifyStudy.ts",
     "research:custom": "tsx src/cli.ts run",
     "setup:lightgbm": "tsx src/setupLightgbm.ts",
     "fetch": "tsx src/cli.ts fetch",

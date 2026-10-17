@@ -1,0 +1,186 @@
+{
+  "title": {
+    "text": "Prediction beyond the historical mean",
+    "subtitle": [
+      "REAL ETF DATA · REVISED-DATA PSEUDO-OOS",
+      "OOS R² · pointwise 95% paired block intervals · not investable returns"
+    ]
+  },
+  "data": {
+    "values": [
+      {
+        "model": "HistoricalMean",
+        "n": 109,
+        "oos_r2": 0,
+        "rmse": 0.08401293423516615,
+        "mae": 0.0553985378485707,
+        "direction_accuracy": 0.5779816513761468,
+        "start": "2017-08",
+        "end": "2026-08",
+        "ci_low": 0,
+        "ci_high": 0,
+        "simultaneous_ci_low": 0,
+        "simultaneous_ci_high": 0,
+        "inference": "reference"
+      },
+      {
+        "model": "AR1",
+        "n": 109,
+        "oos_r2": -0.03824251981270255,
+        "rmse": 0.08560429571078565,
+        "mae": 0.05596406446056801,
+        "direction_accuracy": 0.5321100917431193,
+        "start": "2017-08",
+        "end": "2026-08",
+        "ci_low": -0.06061263713867635,
+        "ci_high": 0.0054791106255110125,
+        "simultaneous_ci_low": -0.06547832478546212,
+        "simultaneous_ci_high": 0.01405530313674634,
+        "inference": "descriptive paired block-bootstrap intervals; no universal nested-model p-value"
+      },
+      {
+        "model": "OLS",
+        "n": 109,
+        "oos_r2": -0.031172955934686497,
+        "rmse": 0.08531235103086872,
+        "mae": 0.057268232520577826,
+        "direction_accuracy": 0.4954128440366973,
+        "start": "2017-08",
+        "end": "2026-08",
+        "ci_low": -0.11219533028330889,
+        "ci_high": 0.0005566270755441252,
+        "simultaneous_ci_low": -0.13772270751353735,
+        "simultaneous_ci_high": 0.007457929400787815,
+        "inference": "descriptive paired block-bootstrap intervals; no universal nested-model p-value"
+      },
+      {
+        "model": "Ridge",
+        "n": 109,
+        "oos_r2": -0.017774503535430863,
+        "rmse": 0.08475628968906194,
+        "mae": 0.05651161632939168,
+        "direction_accuracy": 0.5229357798165137,
+        "start": "2017-08",
+        "end": "2026-08",
+        "ci_low": -0.06386597278342183,
+        "ci_high": 0.004407486080047571,
+        "simultaneous_ci_low": -0.07833506668224646,
+        "simultaneous_ci_high": 0.012347570463603203,
+        "inference": "descriptive paired block-bootstrap intervals; no universal nested-model p-value"
+      },
+      {
+        "model": "LightGBM",
+        "n": 109,
+        "oos_r2": 0.010580063404097562,
+        "rmse": 0.08356732136241012,
+        "mae": 0.05639621421720566,
+        "direction_accuracy": 0.47706422018348627,
+        "start": "2017-08",
+        "end": "2026-08",
+        "ci_low": -0.045018016386980726,
+        "ci_high": 0.04013303125578161,
+        "simultaneous_ci_low": -0.06168033847308308,
+        "simultaneous_ci_high": 0.050833154919807146,
+        "inference": "descriptive paired block-bootstrap intervals; no universal nested-model p-value"
+      }
+    ]
+  },
+  "width": 650,
+  "height": 260,
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3,
+        "size": 36
+      },
+      "encoding": {
+        "y": {
+          "field": "model",
+          "type": "nominal",
+          "sort": [
+            "HistoricalMean",
+            "AR1",
+            "OLS",
+            "Ridge"
+          ],
+          "title": null
+        },
+        "x": {
+          "field": "oos_r2",
+          "type": "quantitative",
+          "title": "OOS R² (relative to expanding historical mean)",
+          "axis": {
+            "format": ".0%"
+          }
+        },
+        "color": {
+          "condition": {
+            "test": "datum.oos_r2 >= 0",
+            "value": "#0f766e"
+          },
+          "value": "#be4a52"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#334155",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "y": {
+          "field": "model",
+          "type": "nominal",
+          "sort": [
+            "HistoricalMean",
+            "AR1",
+            "OLS",
+            "Ridge"
+          ]
+        },
+        "x": {
+          "field": "ci_low",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "ci_high"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#94a3b8",
+        "strokeDash": [
+          3,
+          3
+        ]
+      },
+      "encoding": {
+        "x": {
+          "datum": 0
+        }
+      }
+    }
+  ],
+  "background": "#ffffff",
+  "padding": 24,
+  "config": {
+    "font": "Arial",
+    "title": {
+      "fontSize": 18,
+      "anchor": "start"
+    },
+    "axis": {
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "gridColor": "#e5eaf0",
+      "domainColor": "#cbd5e1"
+    },
+    "view": {
+      "stroke": null
+    }
+  }
+}

@@ -25,7 +25,7 @@ export async function researchFigures(rolling: Record<string, unknown>[], summar
     resolve: { scale: { y: 'independent' } },
   } as TopLevelSpec, `${directory}/rolling-coefficients.svg`);
   await render({
-    title: { text: 'Prediction beyond the historical mean', subtitle: [warning, 'OOS R² · paired circular block bootstrap · bars are not investable returns'] },
+    title: { text: 'Prediction beyond the historical mean', subtitle: [warning, 'OOS R² · pointwise 95% paired block intervals · not investable returns'] },
     data: { values: summary }, width: 650, height: 260,
     layer: [
       { mark: { type: 'bar', cornerRadiusEnd: 3, size: 36 }, encoding: { y: { field: 'model', type: 'nominal', sort: ['HistoricalMean', 'AR1', 'OLS', 'Ridge'], title: null }, x: { field: 'oos_r2', type: 'quantitative', title: 'OOS R² (relative to expanding historical mean)', axis: { format: '.0%' } }, color: { condition: { test: 'datum.oos_r2 >= 0', value: '#0f766e' }, value: '#be4a52' } } },
