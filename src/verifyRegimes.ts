@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
 import { readFile, readdir } from 'node:fs/promises';
 import { verifyRegistration } from './validation/registration.js';
 import { sha256, writeJson } from './ingestion/io.js';
@@ -17,7 +18,13 @@ await verifyRegistration(config.id,Object.keys(registration.files));
 const predictions = await json<Prediction[]>(`${ROOT}/ARCHIVE/predictions.json`), rows = await json<BacktestRow[]>(`${ROOT}/ARCHIVE/allocation-monthly.json`);
 const manifest = await json<{id:string;registration_sha256:string;source_commit:string;source_tree:string;primary_forecast_months:number;primary_allocation_months:number;sensitivity_failures:number}>(`${ROOT}/manifest.json`);
 assert.equal(manifest.id,config.id);assert.equal(manifest.registration_sha256,sha256(await readFile(`configs/registrations/${config.id}.json`)));
-const mirrors=await json<{local_commit:string;tree_sha:string}[]>('docs/source_mirrors.json');assert.ok(mirrors.some(r=>r.local_commit===manifest.source_commit&&r.tree_sha===manifest.source_tree));
+const mirrors=await json<{local_commit:string;tree_sha:string}[]>('docs/source_mirrors.json');
+// API mirrors cover the original execution commit. A replay from a directly
+// available Git commit proves its own tree and registered scientific files.
+let sourceAvailable=false;
+try{execFileSync('git',['cat-file','-e',manifest.source_commit+'^{commit}'],{stdio:'ignore'});sourceAvailable=true;}catch{/* A shallow public checkout may contain only the publication commit. */}
+if(sourceAvailable){assert.equal(execFileSync('git',['rev-parse',manifest.source_commit+'^{tree}'],{encoding:'utf8'}).trim(),manifest.source_tree);for(const[path,expected]of Object.entries(registration.files))assert.equal(sha256(execFileSync('git',['show',manifest.source_commit+':'+path],{maxBuffer:2e6})),expected,`Execution source differs: ${path}`);}
+else assert.ok(mirrors.some(r=>r.local_commit===manifest.source_commit&&r.tree_sha===manifest.source_tree));
 if(process.argv.includes('--public')){const hashes=await json<Record<string,string>>(`${ROOT}/artifact-hashes.json`);for(const[path,expected]of Object.entries(hashes))assert.equal(sha256(await readFile(path)),expected,`Published artifact changed: ${path}`);}
 const scores = forecastMetrics(predictions), allocation = allocationMetrics(rows);
 assert.deepEqual(scores.summary,await json(`${ROOT}/ARCHIVE/forecast-summary.json`));

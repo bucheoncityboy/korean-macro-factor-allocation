@@ -302,7 +302,7 @@ CER은 개발 구간의 변동성으로 계산하면 최소효과 판별이 가�
 - 소스 커밋: \`${manifest.source_commit}\`, 트리 \`${manifest.source_tree}\`.
 - LightGBM: 공식 4.6.0, 소스 \`${manifest.binary.source_commit}\`, 실제 바이너리 해시 \`${manifest.binary.sha256}\`.
 - [등록 해시](../configs/registrations/${manifest.id}.json), [원천 해시](../configs/four_regime_sources.json), [실행 원장](../${ROOT}/run-log.jsonl), [실제 재검증](../${ROOT}/verification.json).
-- [동일 트리의 공개 소스](${mirrors.find(r=>r.local_commit===manifest.source_commit)?.remote_url ?? 'https://github.com/bucheoncityboy/korean-macro-factor-allocation'})는 로컬 실행 소스와 파일이 같고 Git tree도 일치한다. API 게시로 커밋 메타데이터가 달라진 내역은 [매핑](source_mirrors.json)에 기록했다.
+- [동일 트리의 공개 소스](${mirrors.find(r=>r.local_commit===manifest.source_commit)?.remote_url ?? 'https://github.com/bucheoncityboy/korean-macro-factor-allocation/commit/'+manifest.source_commit})는 로컬 실행 소스와 파일이 같고 Git tree도 일치한다. API 게시로 커밋 메타데이터가 달라진 내역은 [매핑](source_mirrors.json)에 기록했다.
 - 단위/통합 테스트의 합성 fixture는 회계·누수 경계를 검사한다. 실증 모형의 학습·성능·검정력에는 실제 자료만 사용했다.
 - 공개 접근을 원자료 재배포 허가로 해석하지 않는다. 원본·원자료를 직접 복원할 수 있는 입력 패널은 로컬에만 보관하고 자체 모형 산출물·통계·그림·취득 경로를 공개한다.
 
