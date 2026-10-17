@@ -1,0 +1,25 @@
+id: synthetic-demo-v1
+mode: synthetic
+status: locked
+registered_at: 2026-10-18T00:00:00Z
+primary_target: SPREAD_RET
+initial_train: 120
+inner_min_train: 72
+inner_validation_months: 12
+min_oos: 60
+oos_start: 2015-01
+oos_end: 2025-11
+min_residual_df: 24
+rolling_windows: [60, 48, 84]
+ridge_alphas: [0.1, 1, 10, 100]
+alpha: 0.05
+hac_lags: 3
+bootstrap:
+  repetitions: 2000
+  block_length: 6
+  seed: 20261018
+multiplicity: holm
+rationale: >-
+  Deterministic synthetic integration demo, never an empirical confirmatory experiment.
+  Six prespecified factors; 120 initial training months; 72 inner training months;
+  fixed monthly OOS; raw-unit rolling coefficients; HAC Bartlett lag 3 with n/(n-k).

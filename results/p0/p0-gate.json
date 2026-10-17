@@ -1,0 +1,12 @@
+{
+  "status": "reduced",
+  "label": "PSEUDO_OOS",
+  "reasons": [],
+  "warnings": [
+    "Revised-data pseudo-OOS: release lags do not eliminate revision bias"
+  ],
+  "scope": [
+    "P1–P4",
+    "P5/P6 not executed"
+  ]
+}

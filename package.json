@@ -1,0 +1,40 @@
+{
+  "name": "korean-macro-factor-allocation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Point-in-time macro factor research for Korean equity and government bond total returns",
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@11.25.0",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "harness": "tsx src/harness.ts",
+    "demo": "tsx src/cli.ts demo",
+    "gate": "tsx src/cli.ts gate",
+    "acquire": "tsx src/ingestion/acquire.ts",
+    "register": "tsx src/study.ts --register",
+    "research": "tsx src/study.ts",
+    "research:custom": "tsx src/cli.ts run",
+    "setup:lightgbm": "tsx src/setupLightgbm.ts",
+    "fetch": "tsx src/cli.ts fetch",
+    "check": "pnpm typecheck && pnpm test && pnpm harness"
+  },
+  "dependencies": {
+    "csv-parse": "^6.1.0",
+    "jstat": "^1.9.6",
+    "ml-matrix": "^6.12.1",
+    "vega": "^6.2.0",
+    "vega-lite": "^6.4.1",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
+    "yaml": "^2.8.1",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}

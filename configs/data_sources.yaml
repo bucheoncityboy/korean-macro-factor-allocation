@@ -1,0 +1,55 @@
+# Normalized series IDs are internal aliases, not claims of verified vendor identifiers.
+kind: empirical
+assets:
+  - id: EQ_KR
+    provider: KRX
+    series_id: 'UNVERIFIED: KOSPI 200 TR exact API identifier'
+    return_type: unverified
+    unit: decimal_monthly_return
+    reinvestment: 'Pending: verify dividend reinvestment and tax treatment'
+    maturity_duration: not_applicable
+    definition_verified: false
+    evidence_url: https://eindex.krx.co.kr/contents/GLB/05/0502/0502050600/GLB0502050600.jsp
+    checked_at: 2026-10-18T00:00:00Z
+    rights: { local_use: false, derived_publication: false, raw_redistribution: false, evidence: 'TR family page identified; no licensed history obtained' }
+  - id: BOND_KR
+    provider: KRX_or_licensed_bond_provider
+    series_id: 'UNVERIFIED: consistent 3–5 year Korean government bond TR'
+    return_type: unverified
+    unit: decimal_monthly_return
+    reinvestment: 'Pending: coupon reinvestment and roll methodology'
+    maturity_duration: 'Pending: tenor, duration, rebalance and index definition'
+    definition_verified: false
+    evidence_url: https://openapi.krx.co.kr/contents/OPP/DATA/OPPDATA002.jsp
+    checked_at: 2026-10-18T00:00:00Z
+    rights: { local_use: false, derived_publication: false, raw_redistribution: false, evidence: 'No eligible licensed TR history obtained; yields cannot replace TR' }
+  - id: CASH_KR
+    provider: Bank_of_Korea_ECOS
+    series_id: 'UNVERIFIED: CD91 quote, compounding and day count'
+    return_type: unverified
+    unit: decimal_monthly_return
+    reinvestment: 'Pending: annual quote to period return convention'
+    maturity_duration: 'Pending: CD91 convention is a proxy, not risk-free realized return'
+    definition_verified: false
+    evidence_url: https://ecos.bok.or.kr/api/
+    checked_at: 2026-10-18T00:00:00Z
+    rights: { local_use: false, derived_publication: false, raw_redistribution: false, evidence: 'API entry point only; series-level contract pending' }
+calendar_verified: false
+calendar_evidence: 'Official Korean trading calendar not supplied; weekday approximation is prohibited for empirical runs'
+information_timing_verified: false
+timing_evidence: 'Actual release and vendor availability history not supplied'
+vintage_verified: false
+vintage_evidence: 'No historical real-time vintages obtained'
+feature_rights:
+  - { series_id: KR_PRODUCTION, local_use: false, derived_publication: false, evidence: 'ECOS/KOSIS series, access and rights pending' }
+  - { series_id: KR_CPI, local_use: false, derived_publication: false, evidence: 'ECOS/KOSIS series, access and rights pending' }
+  - { series_id: KR_RATE, local_use: false, derived_publication: false, evidence: 'ECOS exact series and point-in-time timing pending' }
+  - { series_id: US_RATE, local_use: false, derived_publication: false, evidence: 'FRED DGS10 candidate; source-specific rights/timing pending' }
+  - { series_id: GLOBAL_RISK, local_use: false, derived_publication: false, evidence: 'FRED VIXCLS candidate; third-party Cboe copyright requires separate review' }
+  - { series_id: USDKRW, local_use: false, derived_publication: false, evidence: 'ECOS/FRED series and close convention pending' }
+language: TypeScript
+language_decision: >-
+  User requested implementation on 2026-10-18. Specification 6.4 explicitly permits
+  TypeScript as the compliant alternative. Ancestor Desktop/AGENTS.md and Desktop/SKILL.md
+  were absent when checked. Use native TypeScript, Node >=22, pnpm and tsx src/harness.ts;
+  no Python wrapper or inferred Python exception.

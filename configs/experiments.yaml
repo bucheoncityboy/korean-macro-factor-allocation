@@ -1,0 +1,26 @@
+# Empirical research is deliberately NOT registered until P0 evidence exists.
+id: kr-macro-empirical-v1
+mode: pseudo_oos
+status: draft
+registered_at: null
+primary_target: SPREAD_RET
+initial_train: 120
+inner_min_train: 72
+inner_validation_months: 12
+min_oos: 60
+oos_start: 2015-01
+oos_end: 2025-11
+min_residual_df: 24
+rolling_windows: [60, 48, 84]
+ridge_alphas: [0.1, 1, 10, 100]
+alpha: 0.05
+hac_lags: 3
+bootstrap:
+  repetitions: 2000
+  block_length: 6
+  seed: 20261018
+multiplicity: holm
+rationale: >-
+  DRAFT ONLY. Dates and minimum samples are proposals, not verified data coverage.
+  Freeze the feasible sample, feature set, timing evidence and exploratory/confirmatory
+  designation under a new experiment ID before any empirical model is run.

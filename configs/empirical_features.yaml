@@ -1,0 +1,8 @@
+# Coverage-first selection fixed BEFORE any empirical regression or OOS output.
+# Excludes stale CPI from main sample; CPI is a separately labeled shorter-sample sensitivity.
+- { id: production_yoy, series_id: KR_PRODUCTION, group: domestic, transform: level, max_age_months: 3 }
+- { id: kr_short_bp, series_id: KR_SHORT, group: domestic, transform: bp_change, max_age_months: 3 }
+- { id: kr_long_bp, series_id: KR_LONG, group: domestic, transform: bp_change, max_age_months: 3 }
+- { id: us_rate_bp, series_id: US_RATE, explanatory_series_id: US_RATE_EXPLANATORY, group: external, transform: bp_change, max_age_months: 0 }
+- { id: fx_change, series_id: USDKRW, explanatory_series_id: USDKRW_EXPLANATORY, group: external, transform: pct_change, max_age_months: 0 }
+- { id: dollar_change, series_id: DOLLAR, explanatory_series_id: DOLLAR_EXPLANATORY, group: external, transform: pct_change, max_age_months: 0 }

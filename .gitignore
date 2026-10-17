@@ -1,0 +1,14 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.DS_Store
+coverage/
+.cache/
+data/raw/**
+data/interim/**
+data/processed/**
+!data/**/.gitkeep
+results/private/
+results/demo/
+*.log

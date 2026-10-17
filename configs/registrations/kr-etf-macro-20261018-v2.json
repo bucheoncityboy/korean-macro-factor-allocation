@@ -1,0 +1,12 @@
+{
+  "id": "kr-etf-macro-20261018-v2",
+  "created_at": "2026-10-17T18:32:00.687Z",
+  "files": {
+    "configs/empirical.yaml": "eb4c68df6758bfb649138607c9da214d1acd75b77b0f910ff7aab407ad8bcc28",
+    "configs/empirical_contract.yaml": "c6cd708346172f2a377a399f6bd4cb5ea8c79220eeb117db5d63b251bfc0e3ea",
+    "configs/empirical_features.yaml": "afd7c09fbae89bf06e476a7158643f3e22bddb82ac62b7e4aa87e60989346a80",
+    "configs/extensions.yaml": "6a345a5fcf65c9ddea49c9f7b95eba33a8da3c80d16e013d94d3324c775e2d8d",
+    "docs/preregistration.md": "dc077efee35aa713a3f42cb55608a5eb737f36c2a4836a3e3ca2c6855890c7b4"
+  },
+  "note": "Locks configuration before this run; does not prove that historical data were never explored."
+}

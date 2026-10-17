@@ -1,0 +1,32 @@
+# Rates are percent quotes; bp_change multiplies a percentage-point difference by 100.
+# All return variables are decimal monthly total returns. No forward fills/backfills.
+- id: production_yoy
+  series_id: KR_PRODUCTION
+  group: domestic
+  transform: yoy
+  max_age_months: 2
+- id: cpi_yoy
+  series_id: KR_CPI
+  group: domestic
+  transform: yoy
+  max_age_months: 2
+- id: kr_rate_bp
+  series_id: KR_RATE
+  group: domestic
+  transform: bp_change
+  max_age_months: 1
+- id: us_rate_bp
+  series_id: US_RATE
+  group: external
+  transform: bp_change
+  max_age_months: 1
+- id: risk_level
+  series_id: GLOBAL_RISK
+  group: external
+  transform: level
+  max_age_months: 1
+- id: fx_change
+  series_id: USDKRW
+  group: external
+  transform: pct_change
+  max_age_months: 1

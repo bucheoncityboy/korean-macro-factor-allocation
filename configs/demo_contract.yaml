@@ -1,0 +1,57 @@
+kind: synthetic
+assets:
+  - id: EQ_KR
+    provider: SYNTHETIC_GENERATOR
+    series_id: synthetic-equity-v1
+    return_type: total_return
+    unit: decimal_monthly_return
+    reinvestment: 'Simulated return; not a real index or claim of actual reinvestment'
+    maturity_duration: not_applicable
+    definition_verified: true
+    evidence_url: https://github.com/bucheoncityboy/korean-macro-factor-allocation/blob/main/src/demo.ts
+    checked_at: 2026-10-18T00:00:00Z
+    rights: &rights
+      local_use: true
+      derived_publication: true
+      raw_redistribution: true
+      evidence: 'Project-generated synthetic fixture only; no third-party data'
+  - id: BOND_KR
+    provider: SYNTHETIC_GENERATOR
+    series_id: synthetic-bond-v1
+    return_type: total_return
+    unit: decimal_monthly_return
+    reinvestment: 'Simulated return, not derived from actual yields'
+    maturity_duration: 'No real bond portfolio; fixture does not validate an empirical 3–5Y index'
+    definition_verified: true
+    evidence_url: https://github.com/bucheoncityboy/korean-macro-factor-allocation/blob/main/src/demo.ts
+    checked_at: 2026-10-18T00:00:00Z
+    rights: *rights
+  - id: CASH_KR
+    provider: SYNTHETIC_GENERATOR
+    series_id: synthetic-cash-v1
+    return_type: cash_period_return
+    unit: decimal_monthly_return
+    reinvestment: 'Fixed synthetic monthly return; not an annual CD quote'
+    maturity_duration: not_applicable
+    definition_verified: true
+    evidence_url: https://github.com/bucheoncityboy/korean-macro-factor-allocation/blob/main/src/demo.ts
+    checked_at: 2026-10-18T00:00:00Z
+    rights: *rights
+calendar_verified: true
+calendar_evidence: 'Synthetic weekday month-end calendar only. Does not represent Korean exchange holidays.'
+information_timing_verified: true
+timing_evidence: 'Generator assigns fictional explicit timestamps; US-style closes intentionally follow Korean cutoff.'
+vintage_verified: false
+vintage_evidence: 'Synthetic generated versions only; never a claim of historical real-time data'
+feature_rights:
+  - { series_id: KR_PRODUCTION, local_use: true, derived_publication: true, evidence: 'Synthetic generator' }
+  - { series_id: KR_CPI, local_use: true, derived_publication: true, evidence: 'Synthetic generator' }
+  - { series_id: KR_RATE, local_use: true, derived_publication: true, evidence: 'Synthetic generator' }
+  - { series_id: US_RATE, local_use: true, derived_publication: true, evidence: 'Synthetic generator' }
+  - { series_id: GLOBAL_RISK, local_use: true, derived_publication: true, evidence: 'Synthetic generator' }
+  - { series_id: USDKRW, local_use: true, derived_publication: true, evidence: 'Synthetic generator' }
+language: TypeScript
+language_decision: >-
+  Native TypeScript chosen under specification 6.4 on user implementation request
+  dated 2026-10-18. No ancestor AGENTS.md or Desktop/SKILL.md was found. Verify with
+  pnpm typecheck, pnpm test, and tsx src/harness.ts. No Python subprocesses.

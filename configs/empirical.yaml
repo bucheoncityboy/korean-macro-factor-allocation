@@ -1,0 +1,44 @@
+id: kr-etf-macro-20261018-v3
+mode: pseudo_oos
+status: locked
+registered_at: 2026-10-17T18:33:38.486Z
+primary_target: SPREAD_RET
+initial_train: 96
+inner_min_train: 72
+inner_validation_months: 12
+min_oos: 96
+oos_start: 2017-08
+oos_end: 2026-08
+min_residual_df: 24
+rolling_windows: [60, 48, 84]
+ridge_alphas: [0.1, 1, 10, 100]
+alpha: 0.05
+hac_lags: 3
+bootstrap:
+  repetitions: 5000
+  block_length: 6
+  seed: 20261018
+multiplicity: holm
+rationale: >-
+  Exploratory retrospective real-data study, not an independent confirmatory trial.
+  Input coverage and source reconciliation only were viewed before registration.
+  Primary universe: actual KODEX 200 and KODEX 3Y Treasury ETF market total returns
+  from issuer closes and ex-date distributions, before investor tax, after fund expenses.
+  Native index history unavailable; this is a declared ETF proxy study from 2009-08.
+  Six factors chosen for economic meaning and uninterrupted definitions, never using
+  regression significance or OOS performance. Latest revised domestic monthly macros use
+  explicitly assumed two-month eligibility, not invented historical release/vintage evidence.
+  H10 weekly-release information with a 14-calendar-day predictive buffer and separate
+  contemporaneous explanatory FX/dollar series. H15 daily yields use a conservative
+  seven-day buffer because reference-date observations can be published the next US
+  business day. Descriptive H15 values also use their own series ID.
+  96 training observations leave 89 residual degrees of freedom and preserve 109 OOS
+  months for testing; 120 training months is a sensitivity with the same common OOS
+  comparison interval, not a promise of statistical power. Primary OOS period is fixed.
+  H1 family: two joint external-factor HAC Wald tests with Holm correction; adjusted
+  R2 and mechanically split first/second halves and leave-one-external-out sensitivity.
+  P4: paired circular block bootstrap, 5000 draws, 6-month blocks; also 3/12-month block
+  sensitivity. Four non-reference forecasts including LightGBM use Bonferroni simultaneous
+  intervals, not a universal DM p-value. P4 loss-path intervals are descriptive conditional
+  on realized forecasts. Report design sensitivity/MDE and never claim non-significance
+  proves no effect. CPI robustness uses its available shorter sample without splicing.

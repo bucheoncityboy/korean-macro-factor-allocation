@@ -1,0 +1,214 @@
+{
+  "acquired_at": "2026-10-17T18:33:40.300Z",
+  "equity": {
+    "fid": "2ETF01",
+    "daily_n": 4240,
+    "start": "2009-07-29",
+    "end": "2026-10-16",
+    "tr_source": "Issuer actual closing prices + historical Yahoo ex-date cash distributions + issuer-confirmed recent distributions; exact gross return (P_t + D_t)/P_(t-1)",
+    "benchmark_curve_crosscheck_n": 896,
+    "rebased_path_max_relative_error": 0.005321259462678141,
+    "distribution_count": 51,
+    "recent_distribution_checks": [
+      {
+        "record_date": "2026-07-31",
+        "ex_date": "2026-07-30",
+        "amount": 183,
+        "pay_date": "2026-08-04",
+        "vendor_had_event": true,
+        "correction": "matched"
+      },
+      {
+        "record_date": "2026-04-30",
+        "ex_date": "2026-04-29",
+        "amount": 446,
+        "pay_date": "2026-05-06",
+        "vendor_had_event": true,
+        "correction": "matched"
+      },
+      {
+        "record_date": "2026-01-30",
+        "ex_date": "2026-01-29",
+        "amount": 80,
+        "pay_date": "2026-02-03",
+        "vendor_had_event": true,
+        "correction": "matched"
+      },
+      {
+        "record_date": "2025-10-31",
+        "ex_date": "2025-10-30",
+        "amount": 140,
+        "pay_date": "2025-11-04",
+        "vendor_had_event": true,
+        "correction": "matched"
+      },
+      {
+        "record_date": "2025-07-31",
+        "ex_date": "2025-07-30",
+        "amount": 176,
+        "pay_date": "2025-08-04",
+        "vendor_had_event": true,
+        "correction": "matched"
+      },
+      {
+        "record_date": "2025-04-30",
+        "ex_date": "2025-04-29",
+        "amount": 429,
+        "pay_date": "2025-05-07",
+        "vendor_had_event": true,
+        "correction": "matched"
+      },
+      {
+        "record_date": "2025-01-31",
+        "ex_date": "2025-01-24",
+        "amount": 110,
+        "pay_date": "2025-02-04",
+        "vendor_had_event": true,
+        "correction": "matched"
+      },
+      {
+        "record_date": "2024-10-31",
+        "ex_date": "2024-10-30",
+        "amount": 120,
+        "pay_date": "2024-11-04",
+        "vendor_had_event": true,
+        "correction": "matched"
+      },
+      {
+        "record_date": "2024-07-31",
+        "ex_date": "2024-07-30",
+        "amount": 150,
+        "pay_date": "2024-08-02",
+        "vendor_had_event": true,
+        "correction": "matched"
+      },
+      {
+        "record_date": "2024-04-30",
+        "ex_date": "2024-04-29",
+        "amount": 440,
+        "pay_date": "2024-05-03",
+        "vendor_had_event": true,
+        "correction": "matched"
+      },
+      {
+        "record_date": "2024-01-31",
+        "ex_date": "2024-01-30",
+        "amount": 95,
+        "pay_date": "2024-02-02",
+        "vendor_had_event": true,
+        "correction": "matched"
+      },
+      {
+        "record_date": "2023-10-31",
+        "ex_date": "2023-10-30",
+        "amount": 100,
+        "pay_date": "2023-11-02",
+        "vendor_had_event": true,
+        "correction": "matched"
+      }
+    ],
+    "vendor_price_crosscheck_n": 4208,
+    "vendor_price_max_relative_error": 0,
+    "discarded_calculator_path_max_relative_disagreement": 0.04613920889652745,
+    "discarded_source_reason": "Calculator path shows unexplained jumps versus issuer NAV and published return chart; never used as study returns",
+    "market_tr_method": "ETF market total return with cash distributions reinvested at ex-date close, before investor tax; fund expenses already embedded",
+    "limitations": "Ex-date reinvestment is a conventional theoretical total-return assumption. Historical payment delays and receivable settlement are not modeled; no live-investability claim."
+  },
+  "bond": {
+    "fid": "2ETF19",
+    "daily_n": 4240,
+    "start": "2009-07-29",
+    "end": "2026-10-16",
+    "tr_source": "Issuer actual closing prices + historical Yahoo ex-date cash distributions + issuer-confirmed recent distributions; exact gross return (P_t + D_t)/P_(t-1)",
+    "benchmark_curve_crosscheck_n": 896,
+    "rebased_path_max_relative_error": 0.009353375868577096,
+    "distribution_count": 38,
+    "recent_distribution_checks": [
+      {
+        "record_date": "2025-12-15",
+        "ex_date": "2025-12-12",
+        "amount": 807,
+        "pay_date": "2025-12-17",
+        "vendor_had_event": false,
+        "correction": "add issuer-confirmed missing event"
+      }
+    ],
+    "vendor_price_crosscheck_n": 4210,
+    "vendor_price_max_relative_error": 0,
+    "discarded_calculator_path_max_relative_disagreement": 0.005067617465463137,
+    "discarded_source_reason": "Calculator path shows unexplained jumps versus issuer NAV and published return chart; never used as study returns",
+    "market_tr_method": "ETF market total return with cash distributions reinvested at ex-date close, before investor tax; fund expenses already embedded",
+    "limitations": "Ex-date reinvestment is a conventional theoretical total-return assumption. Historical payment delays and receivable settlement are not modeled; no live-investability claim."
+  },
+  "common_daily_n": 4240,
+  "common_start": "2009-07-29",
+  "common_end": "2026-10-16",
+  "month_end_calendar": "Intersection of actual issuer ETF trading-date records, not weekday approximation",
+  "macro_series": [
+    {
+      "internal_id": "KR_PRODUCTION",
+      "provider_id": "KORPRINTO01GYSAM",
+      "n": 428,
+      "first": "1991-01-01",
+      "last": "2026-08-01",
+      "release_timing": "Monthly values eligible from first day of reference month + 2 months; conservative assumption, not historical release evidence",
+      "vintage": "Current revised snapshot; pseudo-OOS only"
+    },
+    {
+      "internal_id": "KR_SHORT",
+      "provider_id": "IR3TIB01KRM156N",
+      "n": 429,
+      "first": "1991-01-01",
+      "last": "2026-09-01",
+      "release_timing": "Monthly values eligible from first day of reference month + 2 months; conservative assumption, not historical release evidence",
+      "vintage": "Current revised snapshot; pseudo-OOS only"
+    },
+    {
+      "internal_id": "KR_LONG",
+      "provider_id": "IRLTLT01KRM156N",
+      "n": 312,
+      "first": "2000-10-01",
+      "last": "2026-09-01",
+      "release_timing": "Monthly values eligible from first day of reference month + 2 months; conservative assumption, not historical release evidence",
+      "vintage": "Current revised snapshot; pseudo-OOS only"
+    },
+    {
+      "internal_id": "US_RATE",
+      "provider_id": "DGS10",
+      "n": 16182,
+      "first": "1962-01-02",
+      "last": "2026-10-15",
+      "release_timing": "H15 daily release can publish a reference observation the following US business day; predictive projection uses a conservative 7-calendar-day buffer; separate contemporaneous explanatory series",
+      "vintage": "Current revised snapshot; pseudo-OOS only"
+    },
+    {
+      "internal_id": "USDKRW",
+      "provider_id": "DEXKOUS",
+      "n": 11372,
+      "first": "1981-04-13",
+      "last": "2026-10-09",
+      "release_timing": "H10 daily observations are published weekly Monday 16:15 US (next business day on holiday); predictive features use 14-calendar-day buffer. Separate contemporaneous series for explanatory analysis.",
+      "vintage": "Current revised snapshot; pseudo-OOS only"
+    },
+    {
+      "internal_id": "DOLLAR",
+      "provider_id": "DTWEXBGS",
+      "n": 5208,
+      "first": "2006-01-02",
+      "last": "2026-10-09",
+      "release_timing": "H10 daily observations are published weekly Monday 16:15 US (next business day on holiday); predictive features use 14-calendar-day buffer. Separate contemporaneous series for explanatory analysis.",
+      "vintage": "Current revised snapshot; pseudo-OOS only"
+    },
+    {
+      "internal_id": "KR_CPI",
+      "provider_id": "KORCPIALLMINMEI",
+      "n": 767,
+      "first": "1960-01-01",
+      "last": "2023-11-01",
+      "release_timing": "Monthly values eligible from first day of reference month + 2 months; conservative assumption, not historical release evidence",
+      "vintage": "Current revised snapshot; pseudo-OOS only"
+    }
+  ],
+  "label": "REAL_DATA_REVISED_PSEUDO_OOS_ETF_MARKET_TR",
+  "data_choices_made_before_model_output": true
+}

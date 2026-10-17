@@ -1,0 +1,66 @@
+kind: empirical
+assets:
+  - id: EQ_KR
+    provider: 'Samsung Asset Management closing-price records; Yahoo historical ex-distributions cross-checked with issuer recent records'
+    series_id: 'KR7069500007 / KODEX 200 / 069500.KS / issuer 2ETF01'
+    return_type: total_return
+    unit: decimal_monthly_return
+    reinvestment: 'Daily (P_t + cash distribution_t) / P_(t-1), ex-date reinvestment before investor tax; fund expenses embedded'
+    maturity_duration: 'KOSPI 200 equity ETF; an actual-instrument proxy, not KOSPI200 TR index history'
+    definition_verified: true
+    evidence_url: https://www.samsungfund.com/etf/product/view.do?id=2ETF01
+    checked_at: 2026-10-17T18:18:25Z
+    rights: &rights
+      local_use: true
+      derived_publication: true
+      raw_redistribution: false
+      evidence: 'Public factual price/distribution records used for personal noncommercial analysis with source attribution. Publish original aggregate statistics/figures only; no raw-price, dividend, vendor workbook or reconstructible raw panel redistribution. No open license or provider endorsement claimed.'
+  - id: BOND_KR
+    provider: 'Samsung Asset Management closing-price records; Yahoo historical ex-distributions plus issuer-confirmed 2025 payment'
+    series_id: 'KR7114260003 / KODEX 국고채3년 / 114260.KS / issuer 2ETF19'
+    return_type: total_return
+    unit: decimal_monthly_return
+    reinvestment: 'Daily (P_t + coupon-funded cash distribution_t) / P_(t-1); 2025-12-12 missing vendor event corrected from issuer record (807 KRW, record 12/15, pay 12/17)'
+    maturity_duration: 'MKF 3Y Treasury TR benchmark: three deliverable government bonds, quarterly roll; ETF duration varies and is not fixed at 3 years'
+    definition_verified: true
+    evidence_url: https://www.samsungfund.com/etf/product/view.do?id=2ETF19
+    checked_at: 2026-10-17T18:18:25Z
+    rights: *rights
+  - id: CASH_KR
+    provider: 'OECD via FRED'
+    series_id: IR3TIB01KRM156N
+    return_type: cash_period_return
+    unit: decimal_monthly_return
+    reinvestment: 'Annual percent quote /100 * actual calendar days/365, simple ACT365. Proxy only; not a traded CD or risk-free realized return.'
+    maturity_duration: '3-month/90-day interbank rate; quoted monthly average, not verified CD91 realized returns'
+    definition_verified: true
+    evidence_url: https://fred.stlouisfed.org/series/IR3TIB01KRM156N
+    checked_at: 2026-10-17T18:18:25Z
+    rights:
+      local_use: true
+      derived_publication: true
+      raw_redistribution: false
+      evidence: 'OECD terms permit extraction/adaptation with attribution subject to series restrictions; FRED tags Citation Required. Aggregate derived results only, raw snapshots stay local.'
+calendar_verified: true
+calendar_evidence: 'Actual intersected issuer trading-date records, 4240 daily sessions from 2009-07-29 to 2026-10-16; cutoff monthly last common session 18:00 KST. Positive-volume execution check for P5.'
+information_timing_verified: true
+timing_evidence: 'Explicit conservative assumptions: monthly observation month+2 first day; H15 yields 7 calendar days to cover next-US-business-day publication; H10 weekly FX/dollar publication 14 calendar days. Schedules verified at federalreserve.gov/releases/h10/ and /h15/ plus FRED DGS10 observation/update timestamps. Historical release/vendor receipt times remain null; pseudo-OOS only. Separate descriptive US series cannot enter predictive features.'
+vintage_verified: false
+vintage_evidence: 'Latest revised OECD/FRED snapshots and retrospectively reconciled distributions; no claim of archived real-time vintages'
+feature_rights:
+  - &oecd { series_id: KR_PRODUCTION, local_use: true, derived_publication: true, evidence: 'OECD Main Economic Indicators, via FRED KORPRINTO01GYSAM; OECD data terms, attribution; aggregate derivatives only' }
+  - { series_id: KR_SHORT, local_use: true, derived_publication: true, evidence: 'OECD/FRED IR3TIB01KRM156N, Citation Required; no raw redistribution' }
+  - { series_id: KR_LONG, local_use: true, derived_publication: true, evidence: 'OECD/FRED IRLTLT01KRM156N, Citation Required; no raw redistribution' }
+  - { series_id: US_RATE, local_use: true, derived_publication: true, evidence: 'Board of Governors H15 via FRED DGS10, Public Domain Citation Requested' }
+  - { series_id: US_RATE_EXPLANATORY, local_use: true, derived_publication: true, evidence: 'Same DGS10 source, contemporaneous descriptive projection only' }
+  - { series_id: USDKRW, local_use: true, derived_publication: true, evidence: 'Board of Governors H10 via FRED DEXKOUS, Public Domain Citation Requested' }
+  - { series_id: DOLLAR, local_use: true, derived_publication: true, evidence: 'Board of Governors H10 via FRED DTWEXBGS, Public Domain Citation Requested' }
+  - { series_id: USDKRW_EXPLANATORY, local_use: true, derived_publication: true, evidence: 'Same DEXKOUS source, contemporaneous descriptive projection only' }
+  - { series_id: DOLLAR_EXPLANATORY, local_use: true, derived_publication: true, evidence: 'Same DTWEXBGS source, contemporaneous descriptive projection only' }
+language: TypeScript
+language_decision: >-
+  User authorized complete research and publication including P5/P6 on 2026-10-18.
+  Specification 6.4 permits native TypeScript. Ancestor AGENTS.md and Desktop/SKILL.md
+  were absent. Node24/pnpm/tsx research code, SheetJS read-only legacy XLS ingestion,
+  ml-matrix/jStat statistics, official LightGBM 4.6.0 native C++ CLI and TreeSHAP.
+  Required validation: pnpm typecheck, pnpm test, tsx src/harness.ts and real-data study.
