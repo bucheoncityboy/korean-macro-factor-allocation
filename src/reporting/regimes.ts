@@ -13,6 +13,8 @@ const korean=['골디락스','오버히트','리세션','스태그플레이션']
 const modelName:Record<string,string>={FREQ:'과거 빈도',PERSIST:'마지막 국면 지속',MARKOV:'국면 전이',MACRO_LOGIT:'로지스틱',MACRO_LGBM:'LightGBM'};
 const strategyName:Record<string,string>={SAA:'50/50 정적',POOLED:'국면 없는 정책',LAST_STATE:'마지막 국면',MARKOV_ALLOC:'국면 전이 배분',MACRO_ALLOC:'로지스틱 배분',LGBM_ALLOC:'LightGBM 배분',RETURN_TAA:'수익률 Ridge'};
 const mdTable=(headers:string[],rows:(string|number)[][])=>'| '+headers.join(' | ')+' |\n| '+headers.map(()=>'---').join(' | ')+' |\n'+rows.map(r=>'| '+r.join(' | ')+' |').join('\n')+'\n';
+// CommonMark does not close strong emphasis after punctuation before a Korean particle.
+const readableMarkdown=(s:string)=>s.replace(/\*\*([^*\n]*[^\p{L}\p{N}\s])\*\*(?=[\p{L}\p{N}])/gu,'<strong>$1</strong>');
 const subtitle='Historical exploratory study · archived macro snapshots + assumed availability · no prospective validation';
 const summary=await read('ARCHIVE/forecast-summary'),rawSummary=await read('ARCHIVE/forecast-summary-raw'),allocation=await read('ARCHIVE/allocation-summary'),comparisons=await read('primary-comparisons'),predictions=await read('ARCHIVE/predictions'),monthly=await read('ARCHIVE/allocation-monthly'),revisions=await read('data-revisions'),shap=await read('oos-shap'),power=await read('development-power'),episodes=await read('state-episodes'),scenarios=await read('scenario-summary'),policySensitivity=await read('policy-sensitivity'),transitions=await read('transition-summary');
 const manifest=JSON.parse(await readFile(`${ROOT}/manifest.json`,'utf8')) as Row;
@@ -176,7 +178,7 @@ pnpm report                 # 검증 후 표·그림·README 생성
 
 기존 수익률 요인 연구는 [이전 커밋](https://github.com/bucheoncityboy/korean-macro-factor-allocation/tree/d3506d47096a24e9f85e0ff7456b4703463d5a36)에 보존했다. 이 README와 \`results/four-regime/\`가 현재 4국면 연구의 결과다.
 `;
-await write('README.md',readme);
+await write('README.md',readableMarkdown(readme));
 const report=`# 한국 4국면 예측·ML·자산배분 실증 보고서
 
 - 연구 ID: \`${manifest.id}\`. 결과 생성일 ${manifest.completed_at}. 실행 소스 \`${manifest.source_commit}\`.
@@ -302,7 +304,7 @@ CER은 개발 구간의 변동성으로 계산하면 최소효과 판별이 가�
 - [Ke et al. (2017), LightGBM](https://proceedings.neurips.cc/paper_files/paper/2017/hash/6449f44a102fde848669bdd9eb6b76fa-Abstract.html) · [4.6.0 파라미터](https://lightgbm.readthedocs.io/en/v4.6.0/Parameters.html).
 - [OECD 월별 개정 아카이브](https://data-explorer.oecd.org/vis?df[ag]=OECD.SDD.STES&df[id]=DSD_STES_REVISIONS%40DF_STES_REVISIONS&df[vs]=4.0), [FRED/EIA 원유](https://fred.stlouisfed.org/series/DCOILWTICO), [연준 H10](https://www.federalreserve.gov/releases/h10/), [H15](https://www.federalreserve.gov/releases/h15/), [KODEX](https://www.samsungfund.com/etf/main.do).
 `;
-await write('docs/four_regime_results.md',report);
+await write('docs/four_regime_results.md',readableMarkdown(report));
 await write('docs/four_regime_data.md',`# 4국면 데이터 사전
 
 | 자료 | 공식 ID·단위 | 시점과 빈티지 |

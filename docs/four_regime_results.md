@@ -22,7 +22,7 @@ LightGBM 대 국면 전이: **국면 예측과 배분 효용의 추가 가치를
 
 [원자료 감사](../results/four-regime/data-audit.json)는 별도 공식 CPI flow의 441개월 비교와 산업생산 YoY의 428개월 비교를 포함한다. 주식·채권 ETF 이력은 공동 2009-07-29부터 2026-10-16까지 4,240 세션이며 상장 전으로 소급하지 않았다. 주 점수는 사전 고정한 2026-05까지 가용한 라벨만 사용한다. 추가 지연 부록의 말단 표본 차이 D1은 6절에 별도로 설명한다. 2026-06 이후의 예측 파일은 주 평가에 포함되지 않는다.
 
-**결과 후 수행한 구성 타당성 진단:** [IMF/FRED 실질 GDP](https://fred.stlouisfed.org/series/NGDPRSAXDCKRQ)의 최신 수정치와 67개 분기(2009-Q4–2026-Q2)를 대조했다. 산업생산 모멘텀의 분기 평균과 GDP YoY의 직전 분기 대비 변화의 상관은 **0.526**, 방향 일치는 **56.7%**였다. GDP가 전분기 대비 감소한 8개 분기 안에서 월간 리세션 라벨의 평균 비중은 45.8%, 나머지 59개 분기에서는 29.9%였다. [분기별 대조](../results/four-regime/construct-validity-quarterly.csv)와 [취득 해시·한계](../results/four-regime/construct-validity.json)를 공개한다.
+**결과 후 수행한 구성 타당성 진단:** [IMF/FRED 실질 GDP](https://fred.stlouisfed.org/series/NGDPRSAXDCKRQ)의 최신 수정치와 67개 분기(2009-Q4–2026-Q2)를 대조했다. 산업생산 모멘텀의 분기 평균과 GDP YoY의 직전 분기 대비 변화의 상관은 **0.526**, 방향 일치는 <strong>56.7%</strong>였다. GDP가 전분기 대비 감소한 8개 분기 안에서 월간 리세션 라벨의 평균 비중은 45.8%, 나머지 59개 분기에서는 29.9%였다. [분기별 대조](../results/four-regime/construct-validity-quarterly.csv)와 [취득 해시·한계](../results/four-regime/construct-validity.json)를 공개한다.
 
 이 관계는 산업생산을 경제 전체의 완전한 대리변수로 검증한 결과가 아니다. 월간 라벨을 GDP 음의 성장이나 공식 경기순환 연대기와 동일시하지 않는다. 분기 GDP를 세 달에 배정해 독립 GDP 관측 수를 부풀리지 않았고, 이 진단으로 국면 경계·피처·주 표본을 바꾸거나 신규 유의성 검정을 추가하지 않았다. GDP는 예측 입력이 아니다.
 
@@ -135,7 +135,7 @@ RETURN_TAA의 규제 후보는 0.01·0.1·1·10, 내부 검증은 과거 12개 o
 
 ARCHIVE의 201개 주 표본과 LONG_REVISED의 298개 장기 표본은 다른 실험이다. 장기 표본의 성과를 아카이브 성과로 바꿔 제시하지 않는다. REVISED_MATCHED는 역사적으로 있었던 관측월의 마스크·라벨 가용일을 유지하면서 최신 값과 최신 라벨을 사용한다. [최신치 모형을 첫 라벨로 채점](../results/four-regime/matched-latest-scored-on-first-label.csv)과 [아카이브 모형을 최신 라벨로 채점](../results/four-regime/archive-scored-on-latest-label.csv)도 남겨 타깃 정의의 차이를 분리해 살핀다.
 
-첫 공동 완성 아카이브 대비 최신치의 라벨은 **48/332개월(14.5%)**에서 다르다. 이 빈도는 자료의 개정과 아카이브 반올림/방법 변경의 영향을 함께 포함하며, 국가 최초 발표의 오류율이 아니다.
+첫 공동 완성 아카이브 대비 최신치의 라벨은 <strong>48/332개월(14.5%)</strong>에서 다르다. 이 빈도는 자료의 개정과 아카이브 반올림/방법 변경의 영향을 함께 포함하며, 국가 최초 발표의 오류율이 아니다.
 
 ![라벨 수정](../results/four-regime/figures/label-revisions.svg)
 
