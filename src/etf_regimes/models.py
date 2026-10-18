@@ -1,9 +1,9 @@
-"""Fixed-capacity classifiers and author's jump model, fitted on past data only."""
+"""Point-in-time regime models for paper reference A and controlled comparison B."""
 from __future__ import annotations
 
 import hashlib
 import json
-import warnings
+import pickle
 
 import numpy as np
 import pandas as pd
@@ -12,156 +12,176 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 from threadpoolctl import threadpool_limits
 
+from .common import ROOT, digest, require
+from .data import MACRO_COLS, MARKET_COLS, RETURN_COLS
+from .estimation import conditional_mean, monthly_weights
 from .runtime import prepare_openmp
 
 prepare_openmp()
 from xgboost import XGBClassifier
 
-from .common import config, require
-from .data import MACRO_COLS, MARKET_COLS, RETURN_COLS
+CACHE = ROOT / "results/private/model_cache"
 
 
-def monthly_weights(dates):
-    periods = pd.DatetimeIndex(dates).to_period("M")
-    counts = pd.Series(periods).value_counts()
-    return np.array([1 / counts[p] for p in periods])
+def cfg():
+    return json.loads((ROOT / "configs/protocol.json").read_text())
 
 
-def smooth(probabilities: np.ndarray, previous=None, halflife=4):
+def smooth(raw, halflife):
+    raw = np.asarray(raw)
+    if halflife == 0:
+        return raw.copy()
     alpha = 1 - 2 ** (-1 / halflife)
-    values = []
-    for row in probabilities:
-        previous = row.copy() if previous is None else (1 - alpha) * previous + alpha * row
-        values.append(previous.copy())
-    result = np.asarray(values)
-    require(np.allclose(result.sum(axis=1), 1) and (result >= 0).all(), "Invalid smoothed probability")
-    return result, previous
+    result = raw.copy()
+    for i in range(1, len(result)):
+        result[i] = (1 - alpha) * result[i - 1] + alpha * raw[i]
+    require(np.allclose(result.sum(axis=1), 1), "Paper probability mass failed")
+    return result
 
 
-def classify(train, labels, future, kind, n_classes, cfg=None, weight_dates=None):
-    cfg = config() if cfg is None else cfg
-    weights = monthly_weights(train.index if weight_dates is None else weight_dates)
-    counts = np.bincount(labels.astype(int), weights=weights, minlength=n_classes)
-    prior = (counts + 1) / (counts.sum() + n_classes)
-    classes = np.unique(labels).astype(int)
-    if len(classes) == 1:
-        return np.tile(prior, (len(future), 1)), {"single_class": True, "prior": prior.tolist()}, None
-    scaler = StandardScaler().fit(train)
-    x, out = scaler.transform(train), scaler.transform(future)
-    encoded = np.searchsorted(classes, labels)
+def frame_hash(frame):
+    return hashlib.sha256(pd.util.hash_pandas_object(frame, index=True).values.tobytes() +
+                          str(getattr(frame, "columns", "series")).encode()).hexdigest()
+
+
+def classify(x, y, future, kind, classes_count, dates, monthly, c):
+    weights = monthly_weights(dates) if monthly else np.ones(len(x))
+    counts = np.bincount(y, weights=weights, minlength=classes_count)
+    prior = (counts + 1) / (counts.sum() + classes_count)
+    observed = np.unique(y)
+    meta = {"single_class": len(observed) == 1, "prior": prior.tolist(),
+            "observed_classes": observed.tolist(), "n_train": len(y),
+            "sample_weight_sum": float(weights.sum()), "max_training_target": dates.max()}
+    if len(observed) == 1:
+        return np.tile(prior, (len(future), 1)), meta
+    scale = StandardScaler().fit(x)
+    encoded = np.searchsorted(observed, y)
     if kind == "logistic":
-        # L2 is the default; omitting the deprecated penalty keyword works with locked sklearn 1.9.
-        model = LogisticRegression(C=cfg["logistic"]["C"], max_iter=cfg["logistic"]["max_iter"],
-                                   solver="lbfgs", random_state=cfg["seed"])
+        model = LogisticRegression(**c["logistic"], solver="lbfgs", random_state=c["seed"])
     else:
-        model = XGBClassifier(**cfg["xgboost"], random_state=cfg["seed"], tree_method="hist",
-                              objective="binary:logistic" if len(classes) == 2 else "multi:softprob",
-                              eval_metric="logloss" if len(classes) == 2 else "mlogloss")
+        # No capacity overrides: actual defaults of the locked XGBoost 2.1.4 build.
+        model = XGBClassifier(**c["xgboost"], random_state=c["seed"],
+                              objective="binary:logistic" if len(observed) == 2 else "multi:softprob",
+                              eval_metric="logloss" if len(observed) == 2 else "mlogloss")
     with threadpool_limits(limits=1):
-        with warnings.catch_warnings():
-            warnings.filterwarnings("error", category=UserWarning, message=".*converge.*")
-            model.fit(x, encoded, sample_weight=weights)
-        raw = model.predict_proba(out)
-    # Retain fixed label space: absent classes receive their Laplace prior probability.
-    result = np.tile(prior, (len(out), 1))
-    missing = sorted(set(range(n_classes)) - set(classes))
-    result[:, classes] = raw * (1 - prior[missing].sum())
-    require(np.allclose(result.sum(axis=1), 1), "Classifier probability mass mismatch")
+        model.fit(scale.transform(x), encoded, sample_weight=weights)
+        raw = model.predict_proba(scale.transform(future))
+    missing = sorted(set(range(classes_count)) - set(observed))
+    result = np.tile(prior, (len(future), 1))
+    result[:, observed] = raw * (1 - prior[missing].sum())
+    require(np.isfinite(result).all() and (result >= 0).all() and np.allclose(result.sum(axis=1), 1),
+            "Invalid paper classifier probabilities")
     importance = np.abs(model.coef_).mean(axis=0) if kind == "logistic" else model.feature_importances_
-    return result, {"single_class": False, "prior": prior.tolist(), "observed_classes": classes.tolist(),
-                    "importance": dict(zip(train.columns, importance.tolist()))}, (scaler, model)
+    meta["importance"] = dict(zip(x.columns, importance.tolist()))
+    if kind == "xgb":
+        meta["resolved_config"] = json.loads(model.get_booster().save_config())
+    return result, meta
 
 
-def fit_jump(features, excess, penalty, cfg=None):
-    cfg = config() if cfg is None else cfg
-    scaler = StandardScaler().fit(features[RETURN_COLS])
-    z = pd.DataFrame(scaler.transform(features[RETURN_COLS]), index=features.index, columns=RETURN_COLS)
-    model = JumpModel(n_components=2, jump_penalty=penalty, n_init=cfg["jump_n_init"], random_state=cfg["seed"])
-    with threadpool_limits(limits=1):
-        model.fit(z, ret_ser=excess.reindex(features.index), sort_by="cumret")
-    labels = pd.Series(np.asarray(model.labels_), index=features.index, dtype=int)
-    sums = excess.reindex(labels.index).groupby(labels).sum().reindex([0, 1], fill_value=0)
-    # Library sorts cumret descending. Explicitly enforce canonical bull=0 at every boundary.
-    require(sums[0] >= sums[1] - 1e-10, "Jump class identity flipped")
-    return model, scaler, labels
-
-
-def conditional_mean(returns, labels, n_classes, shrink=12):
-    history = pd.concat([returns.rename("return"), labels.rename("label")], axis=1).dropna()
-    require(len(history) >= 252, "Insufficient known return/label pairs")
-    weights = monthly_weights(history.index)
-    overall = np.average(history["return"], weights=weights)
-    values = []
-    for state in range(n_classes):
-        mask = history.label.to_numpy() == state
-        values.append((np.sum(weights[mask] * history["return"].to_numpy()[mask]) + shrink * overall) /
-                      (weights[mask].sum() + shrink))
-    return np.asarray(values)
-
-
-def fold_forecast(asset, features, excess, returns_over_bil, macro_labels, signal_dates, target_dates,
-                  asof, definition, kind=None, penalty=None, remove_block=None, cfg=None):
-    cfg = config() if cfg is None else cfg
-    start = asof - pd.DateOffset(years=cfg["train_years"])
-    train = features.loc[(features.index >= start) & (features.index <= asof)]
-    require(len(train) >= 1200, f"Insufficient five-year training: {asset} {asof}: {len(train)}")
-    n_classes = 2 if definition == "asset2" else 4
-    identity = {"asset": asset, "definition": definition, "asof": str(asof), "penalty": penalty,
-                "protocol": cfg, "remove_block": remove_block}
-    model_id = hashlib.sha256(json.dumps(identity, sort_keys=True).encode()).hexdigest()[:20]
+def fit_fold(asset, features, excess, over_bil, labels, signals, targets, asof, penalty,
+             definition="asset2", mode="both", remove=None, ief_dd=False, use_cache=True):
+    """All learning stops at asof. Future labels below are evaluation-only outputs."""
+    c = cfg()
+    start = asof - pd.DateOffset(years=c["train_years"])
+    train = features.loc[start:asof]
+    require(features.index.min() <= start and len(train) >= 2700, "Incomplete 11-year model history")
+    signature = {"asset": asset, "asof": str(asof), "penalty": penalty, "definition": definition,
+                 "mode": mode, "remove": remove, "ief_dd": ief_dd,
+                 "source": digest(ROOT / "src/etf_regimes/models.py"),
+                 "data_source": digest(ROOT / "src/etf_regimes/data.py"),
+                 "estimation_source": digest(ROOT / "src/etf_regimes/estimation.py"),
+                 "protocol": digest(ROOT / "configs/protocol.json"),
+                 "features": frame_hash(features.loc[start:targets[-1]]),
+                 "excess": frame_hash(excess.loc[start:targets[-1]]),
+                 "over_bil": frame_hash(over_bil.loc[start:asof]), "labels": frame_hash(labels),
+                 "signals": signals.astype(str).tolist(), "targets": targets.astype(str).tolist()}
+    key = hashlib.sha256(json.dumps(signature, sort_keys=True).encode()).hexdigest()
+    path = CACHE / (key + ".pkl")
+    if use_cache and path.exists():
+        return pickle.loads(path.read_bytes())
+    n_states = 2 if definition == "asset2" else 4
     if definition == "asset2":
-        jm, jump_scaler, labels = fit_jump(train, excess, penalty, cfg)
-        all_features = features.loc[(features.index >= start) & (features.index <= target_dates[-1])]
-        z = pd.DataFrame(jump_scaler.transform(all_features[RETURN_COLS]), index=all_features.index,
-                         columns=RETURN_COLS)
+        cols = [col for col in RETURN_COLS if not (col.startswith("log_dd") and
+                asset in c["jump_exclude_dd_assets"] and not (asset == "IEF" and ief_dd))]
+        jump_key = hashlib.sha256(json.dumps([frame_hash(train[cols]), frame_hash(excess.reindex(train.index)),
+                                 penalty, c["seed"], c["jump_n_init"], signature["source"]]).encode()).hexdigest()
+        jump_path = CACHE / ("jump_" + jump_key + ".pkl")
+        if use_cache and jump_path.exists():
+            jm, scale, training_labels = pickle.loads(jump_path.read_bytes())
+        else:
+            scale = StandardScaler().fit(train[cols])
+            z = pd.DataFrame(scale.transform(train[cols]), index=train.index, columns=cols)
+            jm = JumpModel(n_components=2, jump_penalty=penalty, n_init=c["jump_n_init"], random_state=c["seed"])
+            with threadpool_limits(limits=1):
+                jm.fit(z, ret_ser=excess.reindex(train.index), sort_by="cumret")
+            training_labels = pd.Series(np.asarray(jm.labels_), index=train.index)
+            if use_cache:
+                CACHE.mkdir(parents=True, exist_ok=True)
+                # Identical fits may be submitted concurrently; each writer has its own temp name.
+                import os
+                temp = jump_path.with_suffix(f".{os.getpid()}.tmp")
+                temp.write_bytes(pickle.dumps((jm, scale, training_labels), protocol=5))
+                temp.replace(jump_path)
+        sums = excess.reindex(train.index).groupby(training_labels).sum().reindex([0, 1], fill_value=0)
+        require(sums[0] >= sums[1] - 1e-10, "Paper jump class identity flipped")
+        online_features = features.loc[start:targets[-1], cols]
+        zz = pd.DataFrame(scale.transform(online_features), index=online_features.index, columns=cols)
         with threadpool_limits(limits=1):
-            online = pd.Series(np.asarray(jm.predict_online(z)), index=z.index, dtype=int)
-        evaluation_labels = online.reindex(target_dates).to_numpy(dtype=int)
-        persistence = online.reindex(signal_dates).to_numpy(dtype=int)
-        available = target_dates
-        training_labels = labels
+            online = pd.Series(np.asarray(jm.predict_online(zz)), index=zz.index)
+            # Endpoint stability check exercises the actual author's online dynamic program.
+            prefix = np.asarray(jm.predict_online(zz.loc[:asof]))
+        require(np.array_equal(prefix, online.loc[:asof].to_numpy()), "Jump online future path dependence")
+        truth = online.reindex(targets).to_numpy(dtype=int)
+        persist = online.reindex(signals).to_numpy(dtype=int)
+        available = targets
     else:
         months = train.index.to_period("M").to_timestamp()
-        training_labels = pd.Series(macro_labels.label.reindex(months).to_numpy(), index=train.index)
-        availability = pd.Series(pd.to_datetime(macro_labels.available.reindex(months).to_numpy()), index=train.index)
-        training_labels[availability > asof] = np.nan
-        evaluation_labels = macro_labels.label.reindex(target_dates.to_period("M").to_timestamp()).to_numpy()
-        require(not pd.isna(evaluation_labels).any(), "Missing evaluation macro label")
-        available = pd.DatetimeIndex(macro_labels.available.reindex(target_dates.to_period("M").to_timestamp()))
-        known_labels = macro_labels.loc[macro_labels.available <= asof]
-        require(len(known_labels) > 0, "No known macro labels")
-        # Daily persistence baseline follows latest frozen label available at the signal, not target month truth.
-        source = macro_labels.sort_values("available")
-        p = pd.DatetimeIndex(source.available).searchsorted(signal_dates, side="right") - 1
-        persistence = source.label.iloc[p].to_numpy()
-    # Build next-session targets; a next target may only enter training if its label is available by asof.
-    index = features.index
-    loc = index.get_indexer(train.index) + 1
-    require((loc < len(index)).all(), "Training target beyond price calendar")
-    next_dates = index[loc]
+        training_labels = pd.Series(labels.label.reindex(months).to_numpy(dtype=float), index=train.index)
+        training_labels[pd.to_datetime(labels.available.reindex(months).to_numpy()) > asof] = np.nan
+        truth = labels.label.reindex(targets.to_period("M").to_timestamp()).to_numpy(dtype=int)
+        available = pd.DatetimeIndex(labels.available.reindex(targets.to_period("M").to_timestamp()))
+        source = labels.sort_values("available")
+        idx = pd.DatetimeIndex(source.available).searchsorted(signals, side="right") - 1
+        require((idx >= 0).all(), "No known persistence economic label")
+        persist = source.label.iloc[idx].to_numpy(dtype=int)
+    next_dates = features.index[features.index.get_indexer(train.index) + 1]
     if definition == "asset2":
-        target_y = training_labels.reindex(next_dates).to_numpy()
+        y = training_labels.reindex(next_dates).to_numpy(dtype=float)
     else:
-        next_month = next_dates.to_period("M").to_timestamp()
-        target_y = macro_labels.label.reindex(next_month).to_numpy(dtype=float)
-        target_avail = pd.to_datetime(macro_labels.available.reindex(next_month).to_numpy())
-        target_y[(target_avail > asof) | (next_dates > asof)] = np.nan
-    valid = ~pd.isna(target_y) & (next_dates <= asof)
-    x = train.loc[valid]
-    y = target_y[valid].astype(int)
-    require(len(y) >= 1000, f"Insufficient available classification labels: {asof}")
-    columns = list(features.columns)
-    remove = {"returns": RETURN_COLS, "market": MARKET_COLS, "macro": MACRO_COLS}.get(remove_block, [])
-    columns = [c for c in columns if c not in remove]
-    predictions, metadata = {}, {}
-    for name in ([kind] if kind else ["logistic", "xgb"]):
-        p, meta, _ = classify(x[columns], y, features.loc[signal_dates, columns], name, n_classes, cfg,
-                              weight_dates=next_dates[valid])
-        predictions[name] = p
-        metadata[name] = meta
-    means = conditional_mean(returns_over_bil.loc[train.index], training_labels, n_classes,
-                             cfg["conditional_shrink_months"])
-    return {"predictions": predictions, "labels": evaluation_labels.astype(int), "available": available,
-            "persistence": persistence, "means": means, "metadata": metadata, "model_id": model_id,
-            "train_start": train.index[0], "train_end": asof,
-            "max_training_target": next_dates[valid].max(), "n_train": len(y)}
+        months = next_dates.to_period("M").to_timestamp()
+        y = labels.label.reindex(months).to_numpy(dtype=float)
+        y[pd.to_datetime(labels.available.reindex(months).to_numpy()) > asof] = np.nan
+    valid = ~np.isnan(y) & (next_dates <= asof)
+    require(valid.sum() >= 2500, "Too few available next-session labels")
+    output = {"key": key, "signature": signature, "predictions": {}, "metadata": {},
+              "label": truth, "persistence": persist, "available": available,
+              "train_start": train.index.min(), "train_end": asof,
+              "max_training_target": next_dates[valid].max(),
+              "train_labels_sha256": frame_hash(training_labels),
+              "jump_columns": cols if definition == "asset2" else [],
+              "label_model_id": hashlib.sha256(json.dumps({k: signature[k] for k in
+                                  ["asset", "asof", "penalty", "definition", "ief_dd", "source", "protocol"]},
+                                  sort_keys=True).encode() + frame_hash(training_labels).encode()).hexdigest()[:24]}
+    modes = ["A", "B"] if mode == "both" else [mode]
+    for study in modes:
+        columns = RETURN_COLS + MARKET_COLS + (MACRO_COLS if study == "B" else [])
+        excluded = {"returns": RETURN_COLS, "market": MARKET_COLS, "macro": MACRO_COLS}.get(remove, [])
+        columns = [col for col in columns if col not in excluded]
+        for kind in (["xgb"] if study == "A" else ["logistic", "xgb"]):
+            name = study + "_" + kind
+            p, meta = classify(train.loc[valid, columns], y[valid].astype(int), features.loc[signals, columns],
+                               kind, n_states, next_dates[valid], study == "B", c)
+            output["predictions"][name], output["metadata"][name] = p, meta
+    history = pd.concat([excess.rename("return"), training_labels.rename("label")], axis=1).dropna()
+    means = history.groupby("label")["return"].mean().reindex(range(n_states))
+    # Empty state: use unconditional known mean, disclose it; no fabricated state observations.
+    output["empty_mean_states"] = means[means.isna()].index.tolist()
+    output["a_means"] = means.fillna(history["return"].mean()).to_numpy()
+    output["b_means"] = conditional_mean(over_bil.loc[train.index], training_labels, n_states, shrink=12)
+    output["bridge_means"] = conditional_mean(excess.loc[train.index], training_labels, n_states, shrink=12)
+    if use_cache:
+        CACHE.mkdir(parents=True, exist_ok=True)
+        tmp = path.with_suffix(".tmp")
+        tmp.write_bytes(pickle.dumps(output, protocol=5))
+        tmp.replace(path)
+    return output

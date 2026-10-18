@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "mode": "artifacts_only",
+  "accounts": {
+    "A": 61,
+    "A_ief_dd": 4,
+    "A_published": 4,
+    "B": 35,
+    "B_macro6": 4,
+    "B_without_macro": 4,
+    "B_without_market": 4,
+    "B_without_returns": 4
+  },
+  "predictions": 196328,
+  "candidate_predictions": 464401,
+  "smoothing_streams": 184
+}

@@ -288,35 +288,41 @@ def build_features(prices, width=3, macro=None, market=None):
     return features, excess, labels, daily_macro
 
 
-def audit() -> dict:
+
+def audit():
+    """Calendar, source, and feature eligibility only; never evaluates strategies."""
     cfg = config()
-    check_manifest()
+    manifest = check_manifest()
     prices, price_audit = read_prices()
-    features, _, labels, _ = build_features(prices)
-    initial_validation = pd.Timestamp(cfg["evaluation_start"]) - pd.DateOffset(years=cfg["validation_years"])
-    earliest_train = initial_validation - pd.DateOffset(years=cfg["train_years"])
-    failures = []
-    for asset, f in features.items():
-        if f.index.min() > earliest_train:
-            failures.append(f"{asset}: features begin {f.index.min().date()}, need {earliest_train.date()}")
-    if prices[cfg["cash"]].index.min() > initial_validation:
-        failures.append("BIL unavailable for initial validation trading")
-    end = pd.Timestamp(cfg["evaluation_end"])
-    expected_months = pd.period_range(cfg["evaluation_start"], end, freq="M")
-    require(len(expected_months) == cfg["requested_months"], "Requested month count differs")
-    target_months = pd.period_range(cfg["evaluation_start"], end, freq="M").to_timestamp()
-    missing_labels = target_months.difference(labels.index)
-    if len(missing_labels):
-        failures.append(f"Unpublished evaluation labels: {list(missing_labels)}")
-    result = {"status": "passed" if not failures else "failed", "failures": failures,
+    features, _, _, _ = build_features(prices)
+    calendar = sessions(cfg["raw_start"], cfg["evaluation_end"])
+    eligible = []
+    for boundary in pd.date_range(cfg["raw_start"], cfg["evaluation_end"], freq="6MS"):
+        targets = calendar[(calendar >= boundary) & (calendar < boundary + pd.DateOffset(months=6))]
+        if targets.empty or calendar.get_loc(targets[0]) == 0:
+            continue
+        asof = calendar[calendar.get_loc(targets[0]) - 1]
+        start = asof - pd.DateOffset(years=cfg["train_years"])
+        if all(f.index.min() <= start for f in features.values()):
+            eligible.append({"asof": asof, "boundary": boundary, "training_start": start,
+                             "first_target": targets[0], "last_target": targets[-1]})
+    require(eligible, "No complete training window")
+    evaluation = [f for f in eligible if f["boundary"] - pd.DateOffset(years=cfg["validation_years"]) >= eligible[0]["boundary"]]
+    require(evaluation and evaluation[0]["first_target"] == pd.Timestamp(cfg["evaluation_start"]), "Frozen evaluation start is ineligible")
+    require(eligible[0]["first_target"] == pd.Timestamp(cfg["validation_start"]), "Frozen validation start is ineligible")
+    months = pd.period_range(cfg["evaluation_start"], cfg["evaluation_end"], freq="M")
+    require(len(months) == cfg["requested_months"], "Wrong evaluation month count")
+    for width in [3, 6]:
+        _, target_labels = macro_tables(width)
+        require(months.to_timestamp().difference(target_labels.index).empty, "Missing economic evaluation labels")
+    require(prices[cfg["cash"]].index.min() < pd.Timestamp(cfg["validation_start"]), "Cash ETF unavailable for validation")
+    result = {"status": "calendar_eligibility_passed", "strategy_performance_computed": False,
               "raw_manifest_sha256": digest(MANIFEST), "protocol_sha256": digest(ROOT / "configs/protocol.json"),
-              "price_audit": price_audit, "feature_columns": RETURN_COLS + MARKET_COLS + MACRO_COLS,
-              "first_complete_features": {a: str(f.index.min().date()) for a, f in features.items()},
-              "initial_validation_start": str(initial_validation.date()),
-              "initial_training_start": str(earliest_train.date()), "evaluation_months": [str(m) for m in expected_months],
-              "macro_label_months": len(labels), "performance_computed": False}
-    write_json(ROOT / "results/data_audit.json", result)
-    PROCESSED.mkdir(parents=True, exist_ok=True)
-    labels.to_parquet(PROCESSED / "economic_labels.parquet")
-    require(not failures, "Data audit failed: " + "; ".join(failures))
-    return result
+              "first_complete_features": {a: f.index.min() for a, f in features.items()},
+              "train_years": cfg["train_years"], "validation_years": cfg["validation_years"],
+              "evaluation_start": cfg["evaluation_start"], "evaluation_end": cfg["evaluation_end"],
+              "evaluation_months": [str(m) for m in months], "eligible_folds": eligible,
+              "price_audit": price_audit, "historical_reanalysis_prior_results_viewed": True}
+    write_json(ROOT / "results/calendar_audit.json", result)
+    write_json(ROOT / "results/source_manifest.json", manifest)
+    return {k: result[k] for k in ["status", "evaluation_start", "evaluation_end", "evaluation_months"]}

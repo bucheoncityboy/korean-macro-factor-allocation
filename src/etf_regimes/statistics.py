@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 from scipy.stats import norm
 
-from .common import ROOT, config, require, write_json
+from .common import config, require
 
 
 def cer(values, gamma=5, axis=0):
@@ -105,24 +105,3 @@ def summarize_nav(nav, gamma=5):
                        "average_risk_exposure": float(frame.risk_exposure.mean()),
                        "annual_cost_fraction": float(frame.cost_fraction.sum() / years)})
     return pd.DataFrame(output), pd.concat(monthlies, ignore_index=True)
-
-
-def evaluate():
-    cfg = config()
-    for folder in sorted((ROOT / "results").iterdir()):
-        if not (folder / "nav.parquet").exists():
-            continue
-        nav = pd.read_parquet(folder / "nav.parquet")
-        summary, monthly = summarize_nav(nav, cfg["cer_risk_aversion"])
-        summary.to_csv(folder / "summary.csv", index=False)
-        monthly.to_csv(folder / "monthly.csv", index=False)
-        main = monthly[(monthly.cost_bp == 5) & ~monthly.strategy.str.contains("__")]
-        paths = main.pivot(index="date", columns="strategy", values="net_return")
-        write_json(folder / "inference.json", paired_inference(paths))
-        nav["year"] = nav.date.dt.year
-        annual = nav.groupby(["strategy", "cost_bp", "year"]).net_return.agg(lambda x: (1 + x).prod() - 1)
-        annual.to_csv(folder / "annual.csv")
-        extension = nav[(nav.date >= "2024-01-01") & (nav.cost_bp == 5)]
-        ext, _ = summarize_nav(extension, cfg["cer_risk_aversion"])
-        ext.to_csv(folder / "extension_2024_onward.csv", index=False)
-        print(f"evaluated {folder.name}", flush=True)

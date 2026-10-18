@@ -3,7 +3,6 @@ from __future__ import annotations
 
 from itertools import pairwise
 
-import cvxpy as cp
 import numpy as np
 import pandas as pd
 
@@ -83,30 +82,6 @@ def replay(targets: pd.DataFrame, prices: dict, cost_bp=5, detailed=True):
     return pd.DataFrame(rows).set_index("date"), pd.DataFrame(trade_rows)
 
 
-class Optimizer:
-    def __init__(self, n: int, cap: float, gamma: float):
-        self.weight = cp.Variable(n)
-        self.mean = cp.Parameter(n)
-        self.factor = cp.Parameter((n, n))
-        self.problem = cp.Problem(cp.Maximize(self.mean @ self.weight - gamma / 2 *
-                                             cp.sum_squares(self.factor @ self.weight)),
-                                  [self.weight >= 0, self.weight <= cap, cp.sum(self.weight) <= 1])
-        self.cap = cap
-
-    def solve(self, mean, covariance):
-        require(np.isfinite(mean).all() and np.isfinite(covariance).all(), "Nonfinite optimizer input")
-        self.mean.value = mean * 252
-        self.factor.value = np.linalg.cholesky((covariance + covariance.T) / 2 * 252).T
-        self.problem.solve(solver="OSQP", eps_abs=1e-8, eps_rel=1e-8, max_iter=20000,
-                           polishing=True, warm_start=True, enforce_dpp=True)
-        require(self.problem.status == "optimal", f"Optimization failed: {self.problem.status}")
-        risky = np.asarray(self.weight.value).ravel()
-        require(risky.min() >= -1e-6 and risky.max() <= self.cap + 1e-6 and risky.sum() <= 1 + 1e-6,
-                "Optimizer constraint violation")
-        risky = risky.clip(0, self.cap)
-        if risky.sum() > 1:
-            risky /= risky.sum()
-        return np.r_[risky, 1 - risky.sum()]
 
 
 def ewm_covariance(history: pd.DataFrame, halflife: float) -> np.ndarray:

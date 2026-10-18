@@ -1,0 +1,10 @@
+{
+  "status": "generated_after_actual_verification",
+  "report_source_sha256": "f709e0fc80da030ea22fec011e0091ac434fbf479ed7111f8ddec1b544ca6cca",
+  "document_sha256": "8a6ff65747525c561ba610a0f07e00e3c40ccb8fa79f36b1beea252bdd5ebcb2",
+  "statistics_source_sha256": "9201b0a70582d0e096917cf94cf754920a6aa7a30e04e09f6b4f6e5705aacaf0",
+  "extra_document_sha256": {
+    "README.md": "2c861d588df8b36aea24886bf07268bb7d95a26ae973a4f7ce5f2c25b536e4e8",
+    "docs/paper-comparison.md": "8e1b5adf4bf30fa4b75ea2c9ec5c1cb0500295e6ba0d9c87432a7247d7ddf0f5"
+  }
+}

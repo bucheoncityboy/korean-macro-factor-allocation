@@ -1,0 +1,192 @@
+{
+  "status": "passed",
+  "mode": "actual_raw_data",
+  "accounts": {
+    "A": 61,
+    "A_ief_dd": 4,
+    "A_published": 4,
+    "B": 35,
+    "B_macro6": 4,
+    "B_without_macro": 4,
+    "B_without_market": 4,
+    "B_without_returns": 4
+  },
+  "predictions": 196328,
+  "candidate_predictions": 464401,
+  "smoothing_streams": 184,
+  "fresh_fit_jobs_at_three_boundaries": 59,
+  "hostile_future": {
+    "cutoff": "2023-12-29",
+    "features": 8,
+    "definitions": 2,
+    "tuning_policies": 2,
+    "account_policies": 3
+  },
+  "independent_complete_paths": 120,
+  "optimality_certificates": [
+    {
+      "study": "A",
+      "strategy": "mv",
+      "date": "2021-07-01",
+      "daily_improvement_upper_bound": 2.675877314867181e-12
+    },
+    {
+      "study": "A",
+      "strategy": "minvar",
+      "date": "2021-07-01",
+      "daily_improvement_upper_bound": 1.072709358406615e-11
+    },
+    {
+      "study": "A",
+      "strategy": "mv_jmxgb_floor",
+      "date": "2021-07-01",
+      "daily_improvement_upper_bound": 2.6724553559703823e-13
+    },
+    {
+      "study": "A",
+      "strategy": "mv_jmxgb_cap",
+      "date": "2021-07-01",
+      "daily_improvement_upper_bound": 3.206058465585193e-13
+    },
+    {
+      "study": "A",
+      "strategy": "minvar_jmxgb",
+      "date": "2021-07-01",
+      "daily_improvement_upper_bound": 1.0940602807388289e-14
+    },
+    {
+      "study": "B",
+      "strategy": "asset2_xgb",
+      "date": "2021-07-01",
+      "daily_improvement_upper_bound": 7.079625514300192e-13
+    },
+    {
+      "study": "B",
+      "strategy": "asset2_logistic",
+      "date": "2021-07-01",
+      "daily_improvement_upper_bound": 1.851960967393096e-14
+    },
+    {
+      "study": "B",
+      "strategy": "economic4_xgb",
+      "date": "2021-07-01",
+      "daily_improvement_upper_bound": 1.2676251920969855e-13
+    },
+    {
+      "study": "B",
+      "strategy": "economic4_logistic",
+      "date": "2021-07-01",
+      "daily_improvement_upper_bound": 1.3339836674793482e-13
+    },
+    {
+      "study": "A",
+      "strategy": "mv",
+      "date": "2024-01-02",
+      "daily_improvement_upper_bound": 1.048677377574192e-11
+    },
+    {
+      "study": "A",
+      "strategy": "minvar",
+      "date": "2024-01-02",
+      "daily_improvement_upper_bound": 2.9904878486725073e-12
+    },
+    {
+      "study": "A",
+      "strategy": "mv_jmxgb_floor",
+      "date": "2024-01-02",
+      "daily_improvement_upper_bound": 5.21412492175688e-12
+    },
+    {
+      "study": "A",
+      "strategy": "mv_jmxgb_cap",
+      "date": "2024-01-02",
+      "daily_improvement_upper_bound": 3.8173424057180716e-11
+    },
+    {
+      "study": "A",
+      "strategy": "minvar_jmxgb",
+      "date": "2024-01-02",
+      "daily_improvement_upper_bound": 1.297252236187596e-13
+    },
+    {
+      "study": "B",
+      "strategy": "asset2_xgb",
+      "date": "2024-01-02",
+      "daily_improvement_upper_bound": 2.840851143735834e-12
+    },
+    {
+      "study": "B",
+      "strategy": "asset2_logistic",
+      "date": "2024-01-02",
+      "daily_improvement_upper_bound": 7.828519299826753e-12
+    },
+    {
+      "study": "B",
+      "strategy": "economic4_xgb",
+      "date": "2024-01-02",
+      "daily_improvement_upper_bound": 2.5156227952856922e-12
+    },
+    {
+      "study": "B",
+      "strategy": "economic4_logistic",
+      "date": "2024-01-02",
+      "daily_improvement_upper_bound": 3.6868912057456266e-12
+    },
+    {
+      "study": "A",
+      "strategy": "mv",
+      "date": "2025-07-01",
+      "daily_improvement_upper_bound": 1.1953197329508947e-11
+    },
+    {
+      "study": "A",
+      "strategy": "minvar",
+      "date": "2025-07-01",
+      "daily_improvement_upper_bound": 3.2442688943298825e-12
+    },
+    {
+      "study": "A",
+      "strategy": "mv_jmxgb_floor",
+      "date": "2025-07-01",
+      "daily_improvement_upper_bound": 7.882459875790948e-12
+    },
+    {
+      "study": "A",
+      "strategy": "mv_jmxgb_cap",
+      "date": "2025-07-01",
+      "daily_improvement_upper_bound": 3.753671115255819e-11
+    },
+    {
+      "study": "A",
+      "strategy": "minvar_jmxgb",
+      "date": "2025-07-01",
+      "daily_improvement_upper_bound": 2.775397153851472e-12
+    },
+    {
+      "study": "B",
+      "strategy": "asset2_xgb",
+      "date": "2025-07-01",
+      "daily_improvement_upper_bound": 4.493774384724258e-12
+    },
+    {
+      "study": "B",
+      "strategy": "asset2_logistic",
+      "date": "2025-07-01",
+      "daily_improvement_upper_bound": 2.9610311598482486e-12
+    },
+    {
+      "study": "B",
+      "strategy": "economic4_xgb",
+      "date": "2025-07-01",
+      "daily_improvement_upper_bound": 0.0
+    },
+    {
+      "study": "B",
+      "strategy": "economic4_logistic",
+      "date": "2025-07-01",
+      "daily_improvement_upper_bound": 0.0
+    }
+  ],
+  "verified_at_utc": "2026-10-18T20:05:58.407465+00:00",
+  "verification_source_sha256": "2ce139204b2f2019ef46e9490cf9911ab3ac80a16370615ba83b2d66e69da4a7"
+}

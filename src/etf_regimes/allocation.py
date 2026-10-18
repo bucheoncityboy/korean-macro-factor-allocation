@@ -1,7 +1,4 @@
-"""Paper-form daily objective and causal, account-state-dependent allocation.
-
-The v1 Optimizer/replay are preserved in trading.py for exact legacy verification.
-"""
+"""Daily paper objective and causal account-state-dependent allocation."""
 from __future__ import annotations
 
 import cvxpy as cp
@@ -30,12 +27,20 @@ class DailyOptimizer:
             - numeric_scale * trade_aversion * cost_bp / 10000 * turnover),
             [self.weight >= 0, self.weight <= cap, cp.sum(self.weight) <= 1])
         self.cap, self.scale = cap, numeric_scale
+        self.entry_cost = trade_aversion * cost_bp / 10000 * (2 if include_cash else 1)
+        self.exact_cash_days = 0
 
     def solve(self, mean, covariance, previous):
         mean, covariance, previous = map(np.asarray, (mean, covariance, previous))
         require(np.isfinite(mean).all() and np.isfinite(covariance).all() and np.isfinite(previous).all(),
                 "Nonfinite optimizer input")
         require(previous.min() >= -1e-9 and previous.sum() <= 1 + 1e-8, "Invalid signal-close weights")
+        if np.count_nonzero(previous) == 0 and np.all(mean <= self.entry_cost):
+            # With w_pre=0: (mu-c)'w - gamma*w'Sigma*w <= 0 for every feasible w.
+            # Zero is the exact global optimum. Validate covariance even on this branch.
+            np.linalg.cholesky((covariance + covariance.T) / 2)
+            self.exact_cash_days += 1
+            return np.r_[np.zeros(len(mean)), 1.]
         self.mean.value = mean * self.scale
         self.factor.value = np.linalg.cholesky((covariance + covariance.T) / 2 * self.scale).T
         self.previous.value = previous

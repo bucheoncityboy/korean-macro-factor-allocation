@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "same_raw_and_feature_matrices": true,
+  "hashes": {
+    "3": {
+      "features": {
+        "SPY": "50661de3bd58d2edf0d608bfc3621484cadd98c1a2f9879dbd4189c9b4da0942",
+        "EFA": "7404608c495323d7201dc65669c5f6ee94f3835abe0902891db00f6b8429a411",
+        "EEM": "25cc7d2376da398c16d2e82133b388b317aced049721c58d06e37b90c5e2bf1b",
+        "IEF": "9111daf162d2bf290bfb8c03a8b647b339be0aaf431a9f0494924debc92e376f",
+        "TLT": "d0ca64afb789e8d7844ee6eaea01e185dc9b805b7892c49d7fc29c7742323dc3",
+        "LQD": "a0ee159d2179a2b4459bf3253a705e015ea67d434a812f78291d3e91364df506",
+        "IYR": "1f7085aec6c841d86f6068d590b1ae7bcb8a148cb2f23af3b90912f9d43050e2",
+        "GLD": "581cac514a2d8d834427b081bf0b370e1aab9bdda4a120f896f751dfbeb49d32"
+      },
+      "excess": "269a70dc8bed08bb8e7748f898038a63b37fb7e9c7220c35a1052e56ce1eef07",
+      "labels": "306344404661aa357d2d91b84fabbf76184299ee6ee21055a4d9759ab6f420ea",
+      "macro": "7187dcb6b4ea5ae282582f3468f8af5873cfbb65e1a1a587ccc0f4c3bf72157e"
+    },
+    "6": {
+      "features": {
+        "SPY": "6b351084b5d2c24c053f804881b718f95f3f145a988c7e3c7483435fa316196c",
+        "EFA": "77c6f48148e69b41a2116055b0544c864c487edb9911747827dc9405ddca3eb5",
+        "EEM": "c2409af71116b14ab704eb7c4cb50a4a8ac662cdf2e679951fba97f8f8e8220a",
+        "IEF": "0510bc1be9ced20b3f006cb106f0a3fcac4b1ebda56e363fbb7900aaecb54100",
+        "TLT": "2b11cbf38b90d2b6f36bce3baff1806807551167a81bc4a635664d629a477251",
+        "LQD": "0633f7be7a7612eca0424ca74ed5aebb01f5d00b2f8e9ad623011f4ef46f7199",
+        "IYR": "826fc818a45f7c3313542d5760695eb4fc5a2232e5350bc751a9162c1399aa4d",
+        "GLD": "b28ea4e76aeb6b6b1ef951dd364e658f8ba6a59c664a70817bc6bc579101843a"
+      },
+      "excess": "269a70dc8bed08bb8e7748f898038a63b37fb7e9c7220c35a1052e56ce1eef07",
+      "labels": "14da50a35fc98d08ec692122d9da500e2e948e39b6b304c5feed1a0c79c7cccc",
+      "macro": "6541861dc0001ae4030fc050bc72271687393cb27ef407be25e395a7ddea63f2"
+    },
+    "raw_manifest_sha256": "65e9fb4f33450395f945677eb0a824ff7d7ddd12abae71441c952b1f546e1b73"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "status": "verified",
+  "execution_commit": "6c57e13b5a6ae26cc83f431d67dcea690fb4936b",
+  "contract_sha256": "9c66e54be5b83594fd01791d483a28821e54b40f7320c4dbf49134e0221c1d7e",
+  "source_sha256": {
+    "src/etf_regimes/data.py": "95714ca1cc94f027b7af3fd123a6ccf38af48ffac615b867f4850da1d6c01e0d",
+    "src/etf_regimes/models.py": "5581b862ad62a824a3593e056724b81a167effa785d8a13720ecf7abc52a41fe",
+    "src/etf_regimes/estimation.py": "977d9d41972d293014de352e14b730bd9b74626f05799941cd533dca793bc7b2",
+    "src/etf_regimes/study.py": "dc921566a042c81769aa1759288ec7b4bc400a88ed219d7c3e6a90b5c32cfef8",
+    "src/etf_regimes/allocation.py": "9047eb8050a955d41fe560137535f48600b9490075032020f54c163eb56c3455",
+    "src/etf_regimes/trading.py": "38178bf9d219693812719c76309dbdc73e906468e9e5e79ec87997ec9177aa90",
+    "src/etf_regimes/common.py": "969831ba3d4b22e5abb5cbb2fe0262f6588541a2aeaf6fb741fe554306650a63",
+    "src/etf_regimes/runtime.py": "b76c6b3ff2e66910bca06159db54f76923bc07e59dc36922837cdc82b42d188b",
+    "uv.lock": "e1b9ea1fec0d4674eca97d73c4be1c9d744a5ad428b22eb2017f2ac919d9d026",
+    "pyproject.toml": "07d6f06626f8445d39a85c890e7a6ddd3b875174702c4b12cfda2cf899bf9571",
+    "configs/protocol.json": "a5bb50a063de055fb2874b9b7371224808aa467d316bd66044c3c89c1343b203"
+  },
+  "started_at_utc": "2026-10-18T19:35:41.501063+00:00",
+  "python": "3.12.3",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "xgboost": "2.1.4",
+    "jumpmodels": "0.1.1",
+    "cvxpy": "1.9.3",
+    "osqp": "1.1.3"
+  },
+  "finished_at_utc": "2026-10-18T20:02:49.124096+00:00"
+}

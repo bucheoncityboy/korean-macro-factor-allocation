@@ -1,9 +1,7 @@
-"""Historical rolling forecasts, symmetric penalty selection and common allocation."""
+"""Frozen paper-reference A and symmetric extension B, with resumable model jobs."""
 from __future__ import annotations
 
-import hashlib
 import json
-import pickle
 import platform
 import subprocess
 from concurrent.futures import ProcessPoolExecutor
@@ -13,299 +11,381 @@ from importlib.metadata import version
 import numpy as np
 import pandas as pd
 
-from .common import ROOT, config, digest, git_head, require, write_json
+from .allocation import DailyOptimizer, sequential_account
+from .common import ROOT, digest, git_head, require, write_json
 from .data import MANIFEST, build_features, check_manifest, read_prices, sessions
-from .models import fold_forecast, smooth
-from .trading import Optimizer, ewm_covariance, replay
+from .models import cfg, fit_fold, smooth
+from .trading import ewm_covariance
 
-PRIMARY = [f"{definition}_{kind}" for definition in ["asset2", "economic4"] for kind in ["logistic", "xgb"]]
+BASE = ROOT / "results"
+OUT = BASE / "study"
+CONTRACT = ROOT / "configs/execution_contract.json"
 
 
-def freeze_contract():
-    audit = json.loads((ROOT / "results/data_audit.json").read_text())
-    require(audit["status"] == "passed" and not audit["performance_computed"], "Audit must pass before freeze")
-    manifest = check_manifest()
-    write_json(ROOT / "results/source_manifest.json", manifest)
-    contract = {"protocol_sha256": digest(ROOT / "configs/protocol.json"),
-                "raw_manifest_sha256": digest(MANIFEST),
-                "audit_sha256": digest(ROOT / "results/data_audit.json"),
-                "lock_sha256": digest(ROOT / "uv.lock"), "evaluation_months": audit["evaluation_months"],
-                "primary_comparisons": config()["primary_comparisons"],
-                "performance_computed": False}
-    write_json(ROOT / "configs/execution_contract.json", contract)
+def sources():
+    files = [ROOT / f"src/etf_regimes/{name}.py" for name in
+             ["data", "models", "estimation", "study", "allocation", "trading", "common", "runtime"]]
+    files += [ROOT / "uv.lock", ROOT / "pyproject.toml", ROOT / "configs/protocol.json"]
+    return {str(p.relative_to(ROOT)): digest(p) for p in files}
+
+
+def freeze():
+    check_manifest()
+    audit = json.loads((BASE / "calendar_audit.json").read_text())
+    require(audit["status"] == "calendar_eligibility_passed" and not (OUT / "run.json").exists(),
+            "Freeze must precede any reference strategy execution")
+    require(version("xgboost") == cfg()["xgboost_version"], "Unexpected XGBoost version")
+    write_json(CONTRACT, {"new_performance_computed": False, "frozen_at_utc": datetime.now(UTC).isoformat(),
+                         "raw_manifest_sha256": digest(MANIFEST), "audit_sha256": digest(BASE / "calendar_audit.json"),
+                         "source_sha256": sources(), "raw_snapshot_lock_sha256": digest(ROOT / "configs/source_snapshot.json"),
+                         "input_refactor_check_sha256": digest(BASE / "input_refactor_check.json"),
+                         "solver_diagnostics_sha256": digest(BASE / "solver_diagnostics.json"),
+                         "protocol": cfg()})
+
+
+def check_contract(raw=True):
+    contract = json.loads(CONTRACT.read_text())
+    require(contract["source_sha256"] == sources(), "Reference execution source changed after freeze")
+    require(digest(BASE / "calendar_audit.json") == contract["audit_sha256"], "Reference calendar audit changed")
+    require(digest(ROOT / "configs/source_snapshot.json") == contract["raw_snapshot_lock_sha256"], "Raw snapshot lock changed")
+    require(digest(BASE / "input_refactor_check.json") == contract["input_refactor_check_sha256"], "Input equivalence evidence changed")
+    require(digest(BASE / "solver_diagnostics.json") == contract["solver_diagnostics_sha256"], "Numerical repair evidence changed")
+    committed = subprocess.check_output(["git", "show", "HEAD:configs/execution_contract.json"], cwd=ROOT)
+    require(committed == CONTRACT.read_bytes(), "Commit reference execution contract before run")
+    dirty = subprocess.check_output(["git", "diff", "HEAD", "--", "src", "configs", "uv.lock"], cwd=ROOT)
+    require(not dirty, "Commit reference implementation before run")
+    if raw:
+        require(digest(MANIFEST) == contract["raw_manifest_sha256"], "Reference raw source changed")
+        check_manifest()
     return contract
 
 
-def check_contract():
-    contract_path = ROOT / "configs/execution_contract.json"
-    c = json.loads(contract_path.read_text())
-    for file, key in [(ROOT / "configs/protocol.json", "protocol_sha256"),
-                      (MANIFEST, "raw_manifest_sha256"), (ROOT / "uv.lock", "lock_sha256"),
-                      (ROOT / "results/data_audit.json", "audit_sha256")]:
-        require(digest(file) == c[key], f"Frozen execution contract changed: {file}")
-    committed = subprocess.check_output(["git", "show", "HEAD:configs/execution_contract.json"], cwd=ROOT)
-    require(committed == contract_path.read_bytes(), "Commit execution contract before any strategy evaluation")
-    check_manifest()
-    return c
+def fold_dates():
+    c = cfg()
+    calendar = sessions("2004-01-01", c["evaluation_end"])
+    for boundary in pd.date_range(c["validation_start"], c["evaluation_end"], freq="6MS"):
+        targets = calendar[(calendar >= boundary) & (calendar < boundary + pd.DateOffset(months=6))]
+        signals = calendar[calendar.get_indexer(targets) - 1]
+        yield signals[0], signals, targets
 
 
-def fold_cache_path(kwargs, source=None):
-    # Exposed for auditing the exact executed candidates, including unselected fits.
-    source = source or {"source": [digest(ROOT / f"src/etf_regimes/{m}.py") for m in ["models", "data"]],
-                        "raw": digest(MANIFEST)}
-    fingerprint = {**source,
-                   "args": {k: str(v) for k, v in kwargs.items() if k not in
-                            ["features", "excess", "returns_over_bil", "macro_labels", "signal_dates", "target_dates"]}}
-    key = hashlib.sha256(json.dumps(fingerprint, sort_keys=True).encode()).hexdigest()
-    return ROOT / "results/private/cache" / f"{key}.pkl"
+def binary_returns(probability, asset, prices, cost=5):
+    """Exact 0/1 next-open account; independent replay equality is unit-tested."""
+    dates = pd.DatetimeIndex(probability.index)
+    risky = (probability.to_numpy() >= .5).astype(int)
+    held = np.r_[0, risky[:-1]]
+    close = pd.DataFrame({"cash": prices["BIL"].adj_close, "risk": prices[asset].adj_close})
+    opening = pd.DataFrame({"cash": prices["BIL"].adj_open, "risk": prices[asset].adj_open})
+    overnight = (opening / close.shift()).loc[dates].to_numpy()
+    intraday = (close / opening).loc[dates].to_numpy()
+    require(np.isfinite(overnight).all() and np.isfinite(intraday).all(), "Missing validation quote")
+    i = np.arange(len(dates))
+    fee_factor = (1 - cost / 10000) / (1 + cost / 10000)
+    result = overnight[i, held] * intraday[i, risky] * np.where(held != risky, fee_factor, 1) - 1
+    return pd.Series(result, index=dates)
 
 
-def cached_fold(kwargs):
-    # Source hashes invalidate caches after implementation repairs; no stale model reuse.
-    path = fold_cache_path(kwargs)
-    if path.exists():
-        return pickle.loads(path.read_bytes())
-    # Identical jump fits are reused across feature ablations and the macro6 appendix.
-    # This changes only computation time; classifiers and all forecasts are refitted as specified.
-    from . import models
-    if not hasattr(models, "_uncached_fit_jump"):
-        models._uncached_fit_jump = models.fit_jump
-
-        def reusable_jump(features, excess, penalty, cfg):
-            from .data import RETURN_COLS
-            seed_features = features[RETURN_COLS]
-            seed_returns = excess.reindex(seed_features.index)
-            signature = hashlib.sha256(pd.util.hash_pandas_object(seed_features, index=True).values.tobytes() +
-                                       pd.util.hash_pandas_object(seed_returns, index=True).values.tobytes() +
-                                       json.dumps([penalty, cfg["seed"], cfg["jump_n_init"],
-                                                   digest(ROOT / "src/etf_regimes/models.py")]).encode()).hexdigest()
-            jump_path = ROOT / "results/private/jump_cache" / f"{signature}.pkl"
-            if jump_path.exists():
-                return pickle.loads(jump_path.read_bytes())
-            fit = models._uncached_fit_jump(features, excess, penalty, cfg)
-            jump_path.parent.mkdir(parents=True, exist_ok=True)
-            tmp = jump_path.with_suffix(".tmp")
-            tmp.write_bytes(pickle.dumps(fit, protocol=5))
-            tmp.replace(jump_path)
-            return fit
-
-        models.fit_jump = reusable_jump
-    result = fold_forecast(**kwargs)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    temp = path.with_suffix(".tmp")
-    temp.write_bytes(pickle.dumps(result, protocol=5))
-    temp.replace(path)
-    return result
+def score(path, asset, asof, prices):
+    start = asof - pd.DateOffset(years=5)
+    p = path.loc[(path.index > start) & (path.index <= asof)]
+    require(len(p) >= 1250 and p.index[-1] == asof, "Incomplete sequential five-year validation")
+    excess = binary_returns(p, asset, prices) - prices["BIL"].adj_close.pct_change().reindex(p.index)
+    std = excess.std(ddof=1)
+    return float(excess.mean() / std * np.sqrt(252)) if std > 1e-12 else 0.
 
 
-def folds(cfg):
-    initial = pd.Timestamp(cfg["evaluation_start"]).replace(month=1, day=1) - pd.DateOffset(years=3)
-    boundaries = pd.date_range(initial, cfg["evaluation_end"], freq="6MS")
-    calendar = sessions("2004-01-01", cfg["evaluation_end"])
-    for boundary in boundaries:
-        target_dates = calendar[(calendar >= boundary) & (calendar < boundary + pd.DateOffset(months=6))]
-        signal_dates = calendar[calendar.get_indexer(target_dates) - 1]
-        yield signal_dates[0], signal_dates, target_dates
+def choose(paths, asset, asof, prices, study, halflives):
+    records = []
+    for h in halflives:
+        for penalty in cfg()["jump_penalties"]:
+            kinds = ["xgb"] if study == "A" else ["logistic", "xgb"]
+            scores = [score(paths[(asset, penalty, study + "_" + kind, h)], asset, asof, prices) for kind in kinds]
+            records.append({"penalty": penalty, "halflife": h, "score": float(np.mean(scores)),
+                            "classifier_scores": dict(zip(kinds, scores))})
+    best = max(records, key=lambda r: (r["score"], -r["halflife"], -r["penalty"]))
+    return best, records
 
 
-def select_penalty(history, asset, asof, prices, cfg):
-    start = asof - pd.DateOffset(years=cfg["validation_years"])
-    scores = []
-    for penalty in cfg["jump_penalties"]:
-        model_scores = []
-        for kind in ["logistic", "xgb"]:
-            path = history[(asset, penalty, kind)]
-            probability = pd.concat(path).loc[lambda x: (x.index > start) & (x.index <= asof)]
-            require(len(probability) >= 740, f"Insufficient three-year validation: {asset} {asof}")
-            w = (probability >= 0.5).astype(float)
-            targets = pd.DataFrame({asset: w, cfg["cash"]: 1 - w})
-            nav, _ = replay(targets, prices, cfg["one_way_cost_bp"], detailed=False)
-            cash_return = prices[cfg["cash"]].adj_close.pct_change().reindex(nav.index)
-            excess = nav.net_return - cash_return
-            std = excess.std(ddof=1)
-            # All-cash (zero excess variance) is a valid zero-Sharpe validation outcome.
-            model_scores.append(float(np.sqrt(252) * excess.mean() / std) if std > 1e-12 else 0.0)
-        scores.append({"penalty": penalty, "score": float(np.mean(model_scores)),
-                       "logistic_net_sharpe": model_scores[0], "xgb_net_sharpe": model_scores[1]})
-    selected = max(scores, key=lambda x: (x["score"], -x["penalty"]))["penalty"]
-    return selected, scores
+def emit(rows, fit, asset, signals, targets, study, definition, model, probability, h, penalty):
+    for i, (signal, target) in enumerate(zip(signals, targets)):
+        row = {"study": study, "asset": asset, "definition": definition, "model": model,
+               "signal_date": signal, "target_date": target, "feature_available": signal,
+               "label": int(fit["label"][i]), "label_available": fit["available"][i],
+               "persistence_label": int(fit["persistence"][i]), "penalty": penalty, "halflife": h,
+               "train_start": fit["train_start"], "train_end": fit["train_end"],
+               "max_training_target": fit["max_training_target"], "label_model_id": fit["label_model_id"],
+               "fit_key": fit["key"]}
+        for k in range(4):
+            row[f"p{k}"] = float(probability[i, k]) if k < probability.shape[1] else 0.
+            for prefix in ["a", "b", "bridge"]:
+                means = fit[prefix + "_means"]
+                row[f"{prefix}_mean{k}"] = float(means[k]) if k < len(means) else 0.
+        rows.append(row)
 
 
-def forecast_study(cfg, prices, variant="main", remove_block=None, selections=None, workers=4):
-    features, excess, macro_labels, _ = build_features(prices, cfg["macro_smoothing_months"])
-    close = pd.DataFrame({a: prices[a].adj_close for a in cfg["assets"] + [cfg["cash"]]})
-    over_bil = close.pct_change(fill_method=None)[cfg["assets"]].subtract(
-        close[cfg["cash"]].pct_change(fill_method=None), axis=0)
-    history, candidate_prev, actual_prev = {}, {}, {}
-    rows, tuning, meta = [], [], []
-    with ProcessPoolExecutor(max_workers=workers) as pool:
-        for asof, signal_dates, target_dates in folds(cfg):
-            is_eval = target_dates[0] >= pd.Timestamp(cfg["evaluation_start"])
-            if remove_block and not is_eval:
-                continue
-            jobs = {}
-            for asset in cfg["assets"]:
-                base = {"asset": asset, "features": features[asset], "excess": excess[asset],
-                        "returns_over_bil": over_bil[asset], "macro_labels": macro_labels,
-                        "signal_dates": signal_dates, "target_dates": target_dates, "asof": asof,
-                        "remove_block": remove_block, "cfg": cfg}
-                penalties = cfg["jump_penalties"] if not remove_block else [selections[(asset, str(asof.date()))]]
-                for penalty in penalties:
-                    args = {**base, "definition": "asset2", "penalty": penalty}
-                    jobs[(asset, "asset2", penalty)] = pool.submit(cached_fold, args)
-                if is_eval:
-                    jobs[(asset, "economic4", None)] = pool.submit(cached_fold, {**base, "definition": "economic4"})
-            output = {key: future.result() for key, future in jobs.items()}
-            chosen = {}
-            if is_eval:
-                for asset in cfg["assets"]:
-                    if remove_block:
-                        chosen[asset] = selections[(asset, str(asof.date()))]
-                    else:
-                        chosen[asset], scores = select_penalty(history, asset, asof, prices, cfg)
-                        tuning.append({"asof": asof, "asset": asset, "selected": chosen[asset], "scores": scores})
-            for (asset, definition, penalty), fit in output.items():
-                for kind, raw in fit["predictions"].items():
-                    key = (asset, penalty, kind)
-                    if definition == "asset2" and not remove_block:
-                        smoothed, candidate_prev[key] = smooth(raw, candidate_prev.get(key), cfg["probability_halflife"])
-                        history.setdefault(key, []).append(pd.Series(smoothed[:, 0], index=target_dates))
-                    if not is_eval or (definition == "asset2" and penalty != chosen[asset]):
-                        continue
-                    actual_key = (asset, definition, kind)
-                    p, actual_prev[actual_key] = smooth(raw, actual_prev.get(actual_key), cfg["probability_halflife"])
-                    metadata = fit["metadata"][kind]
-                    meta.append({"asset": asset, "definition": definition, "model": kind, "asof": asof,
-                                 "label_model_id": fit["model_id"], "penalty": penalty,
-                                 "train_start": fit["train_start"], "train_end": fit["train_end"],
-                                 "n_train": fit["n_train"], **metadata})
-                    for i, (signal, target) in enumerate(zip(signal_dates, target_dates)):
-                        record = {"signal_date": signal, "target_date": target, "asset": asset,
-                                  "definition": definition, "model": kind, "label_model_id": fit["model_id"],
-                                  "label": int(fit["labels"][i]), "label_available": fit["available"][i],
-                                  "persistence_label": int(fit["persistence"][i]),
-                                  "train_start": fit["train_start"], "train_end": fit["train_end"],
-                                  "max_training_target": fit["max_training_target"],
-                                  "feature_available": signal, "penalty": penalty,
-                                  "expected_excess": float(p[i] @ fit["means"]),
-                                  "oracle_excess": float(fit["means"][fit["labels"][i]])}
-                        for state in range(4):
-                            record[f"p{state}"] = float(p[i, state]) if state < len(p[i]) else 0.0
-                            record[f"raw_p{state}"] = float(raw[i, state]) if state < len(p[i]) else 0.0
-                            record[f"prior{state}"] = metadata["prior"][state] if state < len(p[i]) else 0.0
-                        rows.append(record)
-            print(f"{variant}: forecast through {target_dates[-1].date()}", flush=True)
-    out = ROOT / "results" / variant
-    out.mkdir(parents=True, exist_ok=True)
-    forecasts = pd.DataFrame(rows)
-    forecasts.to_parquet(out / "predictions.parquet", index=False)
-    write_json(out / "tuning.json", tuning)
-    write_json(out / "fits.json", meta)
-    macro_labels.to_csv(out / "economic_labels.csv")
-    return forecasts, tuning
-
-
-def allocate(forecasts, prices, cfg, variant="main"):
-    assets = cfg["assets"]
+def forecast(prices, workers):
+    c = cfg()
+    features, excess, labels, _ = build_features(prices)
+    _, _, labels6, _ = build_features(prices, width=6)
+    features6, _, _, _ = build_features(prices, width=6)
     close = pd.DataFrame({a: p.adj_close for a, p in prices.items()})
-    returns = close.pct_change(fill_method=None)
-    over_bil = returns[assets].subtract(returns[cfg["cash"]], axis=0)
-    dates = pd.DatetimeIndex(sorted(forecasts.target_date.unique()))
-    mu = {name: frame.pivot(index="target_date", columns="asset", values="expected_excess").reindex(columns=assets)
-          for name, frame in forecasts.groupby(forecasts.definition + "_" + forecasts.model)}
-    oracle = {name: frame.pivot(index="target_date", columns="asset", values="oracle_excess").reindex(columns=assets)
-              for name, frame in forecasts.groupby(forecasts.definition + "_" + forecasts.model)}
-    bull = {name: frame.pivot(index="target_date", columns="asset", values="p0").reindex(columns=assets)
-            for name, frame in forecasts.groupby(forecasts.definition + "_" + forecasts.model)}
-    target_rows = {name: [] for name in PRIMARY}
-    for name in ["equal_weight", "spy_ief_60_40", "unconditional_mv", "trend", "bil"]:
-        target_rows[name] = []
-    if variant == "main":
-        for name in PRIMARY:
-            target_rows[name + "__oracle"] = []
-            target_rows[name + "__equal_positive"] = []
-        for kind in ["logistic", "xgb"]:
-            target_rows[f"asset2_{kind}__paper_cash"] = []
-    opt = Optimizer(len(assets), cfg["asset_cap"], cfg["allocation_risk_aversion"])
-    mean200 = close[assets].rolling(200).mean()
-    for date in dates:
-        i = close.index.get_loc(date)
-        signal = close.index[i - 1]
-        history = over_bil.loc[(over_bil.index >= signal - pd.DateOffset(years=5)) & (over_bil.index <= signal)]
-        covariance = ewm_covariance(history, cfg["covariance_halflife"])
-        for name in PRIMARY:
-            weight = opt.solve(mu[name].loc[date].to_numpy(), covariance)
-            target_rows[name].append(weight)
-            if variant == "main":
-                target_rows[name + "__oracle"].append(opt.solve(oracle[name].loc[date].to_numpy(), covariance))
-                positive = (mu[name].loc[date].to_numpy() > 0).astype(float)
-                positive *= min(1 / positive.sum(), cfg["asset_cap"]) if positive.sum() else 0
-                target_rows[name + "__equal_positive"].append(np.r_[positive, 1 - positive.sum()])
-                if name.startswith("asset2"):
-                    cash = np.r_[np.zeros(8), 1.0]
-                    target_rows[name + "__paper_cash"].append(weight if (bull[name].loc[date] >= .5).sum() >= 4 else cash)
-        target_rows["equal_weight"].append(np.r_[np.full(8, 1 / 8), 0])
-        target_rows["spy_ief_60_40"].append(np.array([.6, 0, 0, .4, 0, 0, 0, 0, 0]))
-        target_rows["bil"].append(np.r_[np.zeros(8), 1.0])
-        target_rows["unconditional_mv"].append(opt.solve(history.mean().to_numpy(), covariance))
-        positive = (close.loc[signal, assets] > mean200.loc[signal]).to_numpy().astype(float) / 8
-        target_rows["trend"].append(np.r_[positive, 1 - positive.sum()])
-    # Ex-post diagnostics are named explicitly and never counted as implementable primary strategies.
-    if variant == "main":
-        for name in PRIMARY:
-            avg = np.asarray(target_rows[name])[:, :8].sum(axis=1).mean()
-            target_rows[name + "__exposure_matched"] = [np.r_[np.full(8, avg / 8), 1 - avg]] * len(dates)
-    out = ROOT / "results" / variant
-    target_frames, nav_frames, trades = [], [], []
-    for name, rows in target_rows.items():
-        targets = pd.DataFrame(rows, index=dates, columns=assets + [cfg["cash"]])
-        targets.index.name = "date"
-        frame = targets.reset_index().melt(id_vars="date", var_name="asset", value_name="weight")
-        frame["strategy"] = name
-        target_frames.append(frame)
-        costs = [cfg["one_way_cost_bp"]] + (cfg["sensitivities"]["cost_bp"] if variant == "main" and name in PRIMARY else [])
-        for cost in costs:
-            nav, trade = replay(targets, prices, cost, detailed=cost == cfg["one_way_cost_bp"])
-            nav["strategy"], nav["cost_bp"] = name, cost
-            nav_frames.append(nav.reset_index())
-            if not trade.empty:
-                trade["strategy"] = name
-                trades.append(trade)
-    pd.concat(target_frames, ignore_index=True).to_parquet(out / "targets.parquet", index=False)
-    pd.concat(nav_frames, ignore_index=True).to_parquet(out / "nav.parquet", index=False)
-    pd.concat(trades, ignore_index=True).to_parquet(out / "trades.parquet", index=False)
+    over_bil = close[c["assets"]].pct_change(fill_method=None).subtract(close.BIL.pct_change(), axis=0)
+    fits, alternative, rows, tuning, all_meta, selections, raw_tables = {}, {}, [], [], [], {}, []
+
+    def record_fit(fit, asset, targets):
+        all_meta.append({k: v for k, v in fit.items() if k not in
+                         ["predictions", "label", "persistence", "available", "a_means", "b_means", "bridge_means"]})
+        for name, probability in fit["predictions"].items():
+            table = pd.DataFrame({"fit_key": fit["key"], "classifier": name, "asset": asset, "target_date": targets})
+            for k in range(4):
+                table[f"raw_p{k}"] = probability[:, k] if k < probability.shape[1] else 0.
+            raw_tables.append(table)
+    with ProcessPoolExecutor(max_workers=workers) as pool:
+        for asof, signals, targets in fold_dates():
+            jobs = {}
+            is_eval = targets[0] >= pd.Timestamp(c["evaluation_start"])
+            for asset in c["assets"]:
+                base = {"asset": asset, "features": features[asset], "excess": excess[asset], "over_bil": over_bil[asset],
+                        "labels": labels, "signals": signals, "targets": targets, "asof": asof}
+                for penalty in c["jump_penalties"]:
+                    jobs[(asset, penalty, "both")] = pool.submit(fit_fold, **base, penalty=penalty)
+                    if asset == "IEF":
+                        jobs[(asset, penalty, "ief_dd")] = pool.submit(fit_fold, **base, penalty=penalty,
+                                                                     mode="A", ief_dd=True)
+                jobs[(asset, None, "economic4")] = pool.submit(fit_fold, **base, penalty=None,
+                                                              definition="economic4", mode="B")
+            for (asset, penalty, mode), future in jobs.items():
+                fit = future.result()
+                record_fit(fit, asset, targets)
+                target = alternative if mode == "ief_dd" else fits
+                target[(asset, penalty, str(asof.date()))] = (signals, targets, fit)
+            if is_eval:
+                # Every candidate path is causal and extends continuously from the first validation forecast.
+                paths, altpaths = {}, {}
+                for store, destination in [(fits, paths), (alternative, altpaths)]:
+                    for asset in (c["assets"] if store is fits else ["IEF"]):
+                        for penalty in c["jump_penalties"]:
+                            sequence = [item for (a, p, _), item in store.items() if a == asset and p == penalty]
+                            for name in sequence[0][2]["predictions"]:
+                                raw = np.concatenate([item[2]["predictions"][name] for item in sequence])
+                                dates = pd.DatetimeIndex(np.concatenate([item[1].values for item in sequence]))
+                                for h in (c["a"]["halflives"] if name.startswith("A") else [c["b"]["halflife"]]):
+                                    destination[(asset, penalty, name, h)] = pd.Series(smooth(raw, h)[:, 0], index=dates)
+                extra_jobs = {}
+                for asset in c["assets"]:
+                    initial = (asset, "h") not in selections
+                    ah = c["a"]["halflives"] if initial else [selections[(asset, "h")]]
+                    best, records = choose(paths, asset, asof, prices, "A", ah)
+                    selections[(asset, "h")] = best["halflife"]
+                    choices = {"A": best}
+                    choices["B"], b_records = choose(paths, asset, asof, prices, "B", [4])
+                    choices["A_published"], pub_records = choose(paths, asset, asof, prices, "A",
+                                                                 [c["a"]["published_halflives"][asset]])
+                    tuning.append({"asset": asset, "asof": asof, "initial_halflife_selection": initial,
+                                   "A": best, "A_scores": records, "B": choices["B"], "B_scores": b_records,
+                                   "A_published": choices["A_published"], "A_published_scores": pub_records})
+                    if asset == "IEF":
+                        hs = c["a"]["halflives"] if initial else [selections[(asset, "ief_h")]]
+                        choices["A_ief_dd"], ar = choose(altpaths, asset, asof, prices, "A", hs)
+                        selections[(asset, "ief_h")] = choices["A_ief_dd"]["halflife"]
+                        tuning[-1].update(A_ief_dd=choices["A_ief_dd"], A_ief_dd_scores=ar)
+                    for study, selected in choices.items():
+                        p, h = selected["penalty"], selected["halflife"]
+                        source = alternative if study == "A_ief_dd" else fits
+                        fit = source[(asset, p, str(asof.date()))][2]
+                        for kind in (["logistic", "xgb"] if study == "B" else ["xgb"]):
+                            path_source = altpaths if study == "A_ief_dd" else paths
+                            prob0 = path_source[(asset, p, ("B" if study == "B" else "A") + "_" + kind, h)].loc[targets]
+                            emit(rows, fit, asset, signals, targets, study, "asset2", kind,
+                                 np.column_stack([prob0, 1 - prob0]), h, p)
+                    b_penalty = choices["B"]["penalty"]
+                    for variant, remove, fs, ls in [("without_returns", "returns", features, labels),
+                                                     ("without_market", "market", features, labels),
+                                                     ("without_macro", "macro", features, labels),
+                                                     ("macro6", None, features6, labels6)]:
+                        for definition, penalty in [("asset2", b_penalty), ("economic4", None)]:
+                            extra_jobs[(asset, variant, definition)] = pool.submit(
+                                fit_fold, asset, fs[asset], excess[asset], over_bil[asset], ls, signals, targets,
+                                asof, penalty, definition=definition, mode="B", remove=remove)
+                    econ = fits[(asset, None, str(asof.date()))][2]
+                    for kind in ["logistic", "xgb"]:
+                        sequence = [item for (a, p, _), item in fits.items() if a == asset and p is None]
+                        raw = np.concatenate([item[2]["predictions"]["B_" + kind] for item in sequence])
+                        prob = smooth(raw, 4)[-len(targets):]
+                        emit(rows, econ, asset, signals, targets, "B", "economic4", kind,
+                             prob, 4, None)
+                # Economic and appendix smoothing is applied once to its full chronological stream below.
+                for (asset, variant, definition), future in extra_jobs.items():
+                    fit = future.result()
+                    record_fit(fit, asset, targets)
+                    for kind in ["logistic", "xgb"]:
+                        emit(rows, fit, asset, signals, targets, "B_" + variant, definition, kind,
+                             fit["predictions"]["B_" + kind], 4, fit["signature"]["penalty"])
+            print(f"reference forecasts: {targets[-1].date()} ({'evaluation' if is_eval else 'validation'})", flush=True)
+    frame = pd.DataFrame(rows)
+    # Both main definitions have the same validation warmup. Appendix streams start together at OOS.
+    mask = frame.study.str.startswith("B_")
+    for indices in frame[mask].groupby(["study", "asset", "definition", "model"], sort=False).groups.values():
+        indices = frame.loc[indices].sort_values("target_date").index
+        frame.loc[indices, [f"p{k}" for k in range(4)]] = smooth(frame.loc[indices, [f"p{k}" for k in range(4)]].to_numpy(), 4)
+    # IEF sensitivity shares all other assets' original A predictions.
+    other = frame[(frame.study == "A") & (frame.asset != "IEF")].copy()
+    other["study"] = "A_ief_dd"
+    frame = pd.concat([frame, other], ignore_index=True)
+    frame.to_parquet(OUT / "predictions.parquet", index=False)
+    pd.concat(raw_tables, ignore_index=True).to_parquet(OUT / "candidate_probabilities.parquet", index=False)
+    write_json(OUT / "tuning.json", tuning)
+    write_json(OUT / "fits.json", all_meta)
+    labels.to_csv(OUT / "economic_labels.csv")
+    labels6.to_csv(OUT / "economic_labels_6.csv")
+    return frame, prices, excess
 
 
-def run(scope="primary", workers=4):
-    check_contract()
-    source_paths = [*sorted((ROOT / "src/etf_regimes").glob("*.py")), ROOT / "pyproject.toml",
-                    ROOT / "uv.lock", ROOT / "configs/protocol.json", ROOT / "configs/execution_contract.json"]
-    source_hashes = {str(p.relative_to(ROOT)): digest(p) for p in source_paths}
-    changed = subprocess.check_output(["git", "diff", "HEAD", "--", "src", "configs", "pyproject.toml",
-                                       "uv.lock"], cwd=ROOT)
-    require(not changed, "Commit implementation before strategy evaluation")
-    metadata = {"status": "running_unverified", "scope": scope, "execution_commit": git_head(),
-                "started_at_utc": datetime.now(UTC).isoformat(), "source_sha256": source_hashes,
-                "python": platform.python_version(), "platform": platform.platform(),
-                "packages": {name: version(name) for name in
-                             ["numpy", "pandas", "scikit-learn", "xgboost", "jumpmodels", "cvxpy", "osqp"]},
-                "contract_sha256": digest(ROOT / "configs/execution_contract.json"),
-                "protocol_sha256": digest(ROOT / "configs/protocol.json"), "raw_manifest_sha256": digest(MANIFEST)}
-    write_json(ROOT / "results/run.json", metadata)
-    cfg = config()
+def prepare(frame, prices, excess):
+    c = cfg()
+    dates = pd.DatetimeIndex(sorted(frame.target_date.unique()))
+    close = pd.DataFrame({a: p.adj_close for a, p in prices.items()})
+    r = excess[c["assets"]]
+    signals = close.index[close.index.get_indexer(dates) - 1]
+    covariance = [ewm_covariance(r.loc[s - pd.DateOffset(years=11):s], 252) for s in signals]
+    baseline = excess[c["assets"]].ewm(halflife=1260, adjust=False, min_periods=252).mean().reindex(signals).to_numpy()
+    mean200 = close[c["assets"]].rolling(200).mean()
+    trend = (close.loc[signals, c["assets"]] > mean200.loc[signals]).to_numpy().astype(float) / 8
+    payload = {"dates": dates, "signals": signals, "prices": prices, "assets": c["assets"] + ["BIL"],
+               "covariance": covariance, "baseline": baseline, "trend": trend, "streams": {}}
+    for (study, definition, model), f in frame.groupby(["study", "definition", "model"]):
+        columns = [f"p{k}" for k in range(4)] + [f"{p}_mean{k}" for p in ["a", "b", "bridge"] for k in range(4)]
+        stream = {col: f.pivot(index="target_date", columns="asset", values=col).reindex(index=dates, columns=c["assets"]).to_numpy()
+                  for col in columns + ["label", "persistence_label"]}
+        payload["streams"][(study, definition + "_" + model)] = stream
+    return payload
+
+
+def execute(payload, spec):
+    c = cfg()
+    assets, dates = payload["assets"], payload["dates"]
+    study, name, cost = spec["study"], spec["strategy"], spec["cost_bp"]
+    base = name.split("__")[0]
+    stream = payload["streams"].get((study, base if study.startswith("B") else "asset2_xgb"))
+    quadratic = 5 if name == "mv" else 10
+    trade = 0 if name in ["mv", "minvar", "unconditional_mv"] else 1
+    optimizer = DailyOptimizer(8, .4, quadratic, trade, cost)
+    cash = np.r_[np.zeros(8), 1.]
+
+    def decide(i, signal, previous):
+        if name == "bil":
+            return cash
+        if name in ["equal_weight", "fix_mix_60_40", "spy_ief_60_40", "trend"]:
+            risky = {"equal_weight": np.full(8, 1 / 8), "fix_mix_60_40": np.array([c["fix_mix_weights"][a] for a in assets[:-1]]),
+                     "spy_ief_60_40": np.array([.6, 0, 0, .4, 0, 0, 0, 0]), "trend": payload["trend"][i]}[name]
+            return np.r_[risky, 1 - risky.sum()]
+        if name.startswith("single_"):
+            _, kind, asset = name.split("_")
+            j = assets.index(asset)
+            source = payload["streams"][("A", "asset2_xgb")]
+            bull = kind == "bh" or (source["p0"][i, j] >= .5 if kind == "xgb" else source["persistence_label"][i, j] == 0)
+            w = cash.copy()
+            if bull:
+                w[j], w[-1] = 1, 0
+            return w
+        if name.endswith("__exposure_matched"):
+            risk = spec["matched_exposure"]
+            return np.r_[np.full(8, risk / 8), 1 - risk]
+        if name in ["mv", "minvar", "unconditional_mv"]:
+            mean = np.full(8, .001) if name == "minvar" else payload["baseline"][i]
+        else:
+            bull = stream["p0"][i] >= .5
+            if study.startswith("A"):
+                if "no_cash" not in name and "common" not in name and bull.sum() <= 3:
+                    return cash
+                if name == "ew_jmxgb":
+                    w = bull.astype(float) / bull.sum()
+                    return np.r_[w, 0]
+                state = (~bull).astype(int)
+                mean = np.array([stream[f"a_mean{state[j]}"][i, j] for j in range(8)])
+                if "floor" in name:
+                    mean[~bull] = np.maximum(mean[~bull], -.001)
+                if "cap" in name:
+                    mean[~bull] = np.minimum(mean[~bull], -.001)
+                if name == "minvar_jmxgb":
+                    mean = bull.astype(float) * .001
+                if "common" in name:
+                    mean = sum(stream[f"p{k}"][i] * stream[f"bridge_mean{k}"][i] for k in range(2))
+            else:
+                n = 2 if base.startswith("asset2") else 4
+                if name.endswith("__paper_cash") and bull.sum() <= 3:
+                    return cash
+                mean = sum(stream[f"p{k}"][i] * stream[f"b_mean{k}"][i] for k in range(n))
+                if name.endswith("__oracle"):
+                    mean = np.array([stream[f"b_mean{int(stream['label'][i, j])}"][i, j] for j in range(8)])
+                if name.endswith("__equal_positive"):
+                    w = (mean > 0).astype(float)
+                    w *= min(1 / w.sum(), .4) if w.sum() else 0
+                    return np.r_[w, 1 - w.sum()]
+        return optimizer.solve(mean, payload["covariance"][i], previous[:8])
+
+    nav, targets, trades = sequential_account(dates, payload["prices"], assets, decide, cost)
+    for table in [nav, targets, trades]:
+        for key, value in spec.items():
+            table[key] = value
+        table["signal_time_et"], table["execution_time_et"], table["valuation_time_et"] = "after close", "09:30", "close"
+        table["optimizer_exact_cash_days"] = optimizer.exact_cash_days
+    return nav, targets, trades
+
+
+def allocate(payload, workers):
+    c = cfg()
+    specs = []
+    a_main = ["mv", "minvar", "equal_weight", "fix_mix_60_40", "bil", "mv_jmxgb_floor", "mv_jmxgb_cap", "minvar_jmxgb", "ew_jmxgb"]
+    for study in ["A", "A_published", "A_ief_dd"]:
+        names = list(a_main) if study == "A" else ["mv_jmxgb_floor", "mv_jmxgb_cap", "minvar_jmxgb", "ew_jmxgb"]
+        if study == "A":
+            names += ["mv_jmxgb_unbounded", "mv_jmxgb_floor__no_cash", "mv_jmxgb__common", "spy_ief_60_40"]
+            names += [f"single_{kind}_{asset}" for asset in c["assets"] for kind in ["bh", "jm", "xgb"]]
+        for name in names:
+            for cost in ([5, *c["cost_sensitivities_bp"]] if study == "A" and name in a_main and name != "bil" else [5]):
+                specs.append({"study": study, "strategy": name, "cost_bp": cost})
+    primary = ["asset2_xgb", "asset2_logistic", "economic4_xgb", "economic4_logistic"]
+    for study in ["B", "B_without_returns", "B_without_market", "B_without_macro", "B_macro6"]:
+        for name in primary + (["bil", "equal_weight", "unconditional_mv", "trend", "spy_ief_60_40"] if study == "B" else []):
+            for cost in ([5, *c["cost_sensitivities_bp"]] if study == "B" and name in primary else [5]):
+                specs.append({"study": study, "strategy": name, "cost_bp": cost})
+        if study == "B":
+            for name in primary:
+                for suffix in ["__oracle", "__equal_positive"] + (["__paper_cash"] if name.startswith("asset2") else []):
+                    specs.append({"study": study, "strategy": name + suffix, "cost_bp": 5})
+    navs, targets, trades = [], [], []
+    with ProcessPoolExecutor(max_workers=workers) as pool:
+        pending = [(spec, pool.submit(execute, payload, spec)) for spec in specs]
+        for spec, future in pending:
+            n, t, tr = future.result()
+            navs.append(n)
+            targets.append(t)
+            trades.append(tr)
+            print(f"reference account: {spec}", flush=True)
+        for name in primary:
+            path = next(n for n in navs if n.study.iloc[0] == "B" and n.strategy.iloc[0] == name and n.cost_bp.iloc[0] == 5)
+            spec = {"study": "B", "strategy": name + "__exposure_matched", "cost_bp": 5,
+                    "matched_exposure": float(path.risk_exposure.mean())}
+            n, t, tr = execute(payload, spec)
+            navs.append(n)
+            targets.append(t)
+            trades.append(tr)
+    for name, tables in [("nav", navs), ("targets", targets), ("trades", trades)]:
+        pd.concat(tables, ignore_index=True).to_parquet(OUT / f"{name}.parquet", index=False)
+
+
+def run(workers=4):
+    contract = check_contract()
+    record = {"status": "running_unverified", "execution_commit": git_head(), "contract_sha256": digest(CONTRACT),
+              "source_sha256": contract["source_sha256"], "started_at_utc": datetime.now(UTC).isoformat(),
+              "python": platform.python_version(), "packages": {p: version(p) for p in
+              ["numpy", "pandas", "scikit-learn", "xgboost", "jumpmodels", "cvxpy", "osqp"]}}
+    write_json(OUT / "run.json", record)
     prices, _ = read_prices()
-    forecasts, tuning = forecast_study(cfg, prices, workers=workers)
-    allocate(forecasts, prices, cfg)
-    if scope == "full":
-        selections = {(x["asset"], str(pd.Timestamp(x["asof"]).date())): x["selected"] for x in tuning}
-        for block in cfg["sensitivities"]["remove_input_blocks"]:
-            variant = f"without_{block}"
-            f, _ = forecast_study(cfg, prices, variant, block, selections, workers)
-            allocate(f, prices, cfg, variant)
-        cfg6 = {**cfg, "macro_smoothing_months": 6}
-        f, _ = forecast_study(cfg6, prices, "macro6", workers=workers)
-        allocate(f, prices, cfg6, "macro6")
-    require(git_head() == metadata["execution_commit"], "Execution commit changed during run")
-    require(all(digest(ROOT / name) == sha for name, sha in source_hashes.items()), "Source changed during run")
-    metadata.update(status="executed_unverified", finished_at_utc=datetime.now(UTC).isoformat())
-    write_json(ROOT / "results/run.json", metadata)
+    frame, prices, excess = forecast(prices, workers)
+    allocate(prepare(frame, prices, excess), workers)
+    check_contract()
+    require(git_head() == record["execution_commit"], "Execution commit changed during reference run")
+    record.update(status="executed_unverified", finished_at_utc=datetime.now(UTC).isoformat())
+    write_json(OUT / "run.json", record)
