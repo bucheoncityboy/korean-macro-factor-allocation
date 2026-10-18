@@ -1,0 +1,16 @@
+{
+  "executed_classifier_fits": 2400,
+  "executed_single_class_fits": 0,
+  "validation_used_classifier_fits": 2320,
+  "validation_used_single_class_fits": 0,
+  "selected_asset2_classifier_fits": 384,
+  "selected_asset2_single_class_fits": 0,
+  "source_fingerprint": {
+    "source": [
+      "6af92d3f1acfc0eb6e2808943506463d91b1ab9becd1065e44bf28403c7299ba",
+      "57eea84cb8461e51c1996137324119ad23fb299c68cbb0021cfb7c99ace64dbe"
+    ],
+    "raw": "65e9fb4f33450395f945677eb0a824ff7d7ddd12abae71441c952b1f546e1b73"
+  },
+  "note": "Selected asset2 fits are a subset of executed candidates; counts must not be added. Final-fold candidates execute but cannot enter a later tuning window."
+}

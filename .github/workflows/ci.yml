@@ -1,5 +1,5 @@
 name: Python research verification
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 jobs:
   public-checks:
     runs-on: ubuntu-latest
@@ -10,7 +10,7 @@ jobs:
           version: "0.11.19"
           enable-cache: true
       - run: uv sync --frozen --python 3.12
-      - run: uv run ruff check src tests
+      - run: uv run ruff check src scripts tests
       - run: uv run pytest -q
       - run: uv run etf-study verify --artifacts-only
         env:

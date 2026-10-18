@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+from datetime import UTC, datetime
 
 import matplotlib
 import numpy as np
@@ -10,8 +11,9 @@ import pandas as pd
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-from .common import ROOT, require
+from .common import ROOT, config, digest, require, write_json
 from .data import MACRO_COLS, MARKET_COLS, RETURN_COLS
+from .fit_audit import candidate_fit_audit
 from .models import monthly_weights
 from .statistics import evaluate
 from .study import PRIMARY
@@ -93,11 +95,12 @@ def figures():
     economic = p[(p.asset == "SPY") & (p.definition == "economic4") & (p.model == "xgb")]
     fig, axs = plt.subplots(2, 1, figsize=(11, 5), sharex=True)
     names = ["Goldilocks", "Overheating", "Recession", "Stagflation"]
+    colors = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728"]
     axs[0].stackplot(economic.target_date, economic[[f"p{i}" for i in range(4)]].to_numpy().T,
-                     labels=names, alpha=.8)
+                     labels=names, colors=colors, alpha=.8)
     axs[0].set(ylabel="Probability", ylim=(0, 1))
-    axs[0].legend(ncol=4, fontsize=8)
-    axs[1].scatter(economic.target_date, economic.label, c=economic.label, cmap="tab10", s=2)
+    axs[0].legend(ncol=4, fontsize=8, loc="lower center", bbox_to_anchor=(.5, 1.02), frameon=False)
+    axs[1].scatter(economic.target_date, economic.label, c=[colors[int(s)] for s in economic.label], s=2)
     axs[1].set(yticks=range(4), yticklabels=names, ylabel="First joint vintage")
     fig.suptitle("Economic regime estimation | example classifier: SPY XGBoost")
     fig.savefig(out / "economic_regimes.png")
@@ -163,13 +166,18 @@ def result_documents():
                               "연 CER": ext.annual_cer.map(lambda x: f"{x:.2%}"),
                               "CAGR": ext.cagr.map(lambda x: f"{x:.2%}")})
     fallback = pd.read_csv(folder / "single_class_fits.csv")
+    candidates = json.loads((folder / "candidate_fit_audit.json").read_text())
     text = "# 실제 순차 평가 결과\n\n"
     text += "평가: 2014-01-02–2025-09-30, 141개월. 기본 편도 비용 5bp, 월별 CER 위험회피 5.\n\n"
     text += markdown_table(table) + "\n\n## 세 주요 비교\n\n" + markdown_table(contrast)
     text += "\n\n구간은 세 비교를 함께 보정했다. 0을 포함하면 우위 미확인이며 동등성의 증거가 아니다. "
     text += "검정력은 연 CER 0.50%p 효과에 대한 조건부 추정이다. 블록 3·12개월과 분산 불확실성 범위는 [전체 검정](../results/main/inference.json)에 있다.\n\n"
     text += "## 원논문 표본 이후 확장\n\n2024-01–2025-09의 21개월이며 미열람 전향 검증이 아니다.\n\n" + markdown_table(ext_table)
-    text += f"\n\n## 분류와 입력\n\n단일 클래스 빈도 대체는 {int(fallback.single_class.sum())}/{len(fallback)}회다. "
+    text += f"\n\n## 분류와 입력\n\n선택된 배분용 분류기의 단일 클래스 빈도 대체는 {int(fallback.single_class.sum())}/{len(fallback)}회다. "
+    text += f"별도로, Jump 벌점 후보의 실제 분류기 적합 {candidates['executed_classifier_fits']:,}회 중 대체는 "
+    text += f"{candidates['executed_single_class_fits']}회이며, 후속 검증 창에 사용된 적합은 {candidates['validation_used_classifier_fits']:,}회다. "
+    text += "선택된 2국면 적합은 후보 적합의 부분집합이므로 횟수를 더하지 않는다. "
+    text += "[후보별 기록](../results/main/candidate_fits.csv)과 [6개월 부록 집계](../results/macro6/candidate_fit_audit.json)를 공개한다. "
     text += "[정의별·자산별 분류 성능](../results/main/classification.csv)에서 빈도·국면 유지와 비교한다. 2국면과 4국면 손실을 직접 비교하지 않는다. "
     text += "[입력 기여도](../results/main/input_importance.csv)는 로지스틱 절대 표준화 계수와 XGB 분할 중요도의 블록 내 정규화 요약이다. 인과효과나 모형 간 공통 척도가 아니다.\n\n"
     text += "## 사전 부록\n\n[전체 비용·단순 배분·현금 규칙·사후 노출·미래 정답 진단](../results/main/summary.csv). "
@@ -228,8 +236,17 @@ def report():
     for folder in (ROOT / "results").iterdir():
         if (folder / "predictions.parquet").exists():
             classification(folder)
+            if folder.name in ["main", "macro6"]:
+                cfg = config()
+                if folder.name == "macro6":
+                    cfg = {**cfg, "macro_smoothing_months": 6}
+                candidate_fit_audit(folder, cfg)
     decomposition()
     figures()
     result_documents()
+    write_json(ROOT / "results/report.json", {
+        "generated_at_utc": datetime.now(UTC).isoformat(), "execution_commit": run["execution_commit"],
+        "source_sha256": {str(p.relative_to(ROOT)): digest(p) for p in sorted((ROOT / "src/etf_regimes").glob("*.py"))},
+        "note": "Post-execution candidate-fit disclosure and reporting; forecasts, allocations and NAV unchanged."})
     seal_artifacts()
     print("Report complete: docs/results.md", flush=True)

@@ -35,5 +35,6 @@ macOS에서는 XGBoost 2.1.4의 OpenMP 의존 경로만 같은 잠금 파일의 
 - `economic_labels.csv`, `classification.csv`, `input_importance.csv`, `single_class_fits.csv`, `figures/`: 라벨의 최초 판·가용일, 정의 내부 예측 비교와 해석 자료.
 - `results/without_returns`, `without_market`, `without_macro`, `macro6`: 고정된 사전 부록의 같은 형식 결과.
 - `results/verification.json`: 실제 원자료 재검증. `verification_artifacts.json`은 공개 CI에서 가능한 별도 검사다.
+- `candidate_fits.csv`, `candidate_fit_audit.json`: 주 분석·6개월 부록에서 실제 적합한 모든 Jump 후보 분류기의 단일 클래스 대체와 후속 검증 사용 여부. 선택 적합과 중복되는 집계다. `results/report.json`은 원래 실행 소스와 후처리 소스를 구별한다.
 
 전체 실행은 수천 번의 저자 Jump/분류기 적합과 일별 최적화를 포함한다. 검증이 실패하면 `report`는 완료 실증을 생성하지 않는다. 실패를 해결할 때 설정이나 평가기간을 성과에 맞춰 바꾸지 않는다.

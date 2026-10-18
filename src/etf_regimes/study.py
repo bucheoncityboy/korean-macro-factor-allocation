@@ -49,14 +49,20 @@ def check_contract():
     return c
 
 
-def cached_fold(kwargs):
-    # Source hashes invalidate caches after implementation repairs; no stale model reuse.
-    fingerprint = {"source": [digest(ROOT / f"src/etf_regimes/{m}.py") for m in ["models", "data"]],
-                   "raw": digest(MANIFEST),
+def fold_cache_path(kwargs, source=None):
+    # Exposed for auditing the exact executed candidates, including unselected fits.
+    source = source or {"source": [digest(ROOT / f"src/etf_regimes/{m}.py") for m in ["models", "data"]],
+                        "raw": digest(MANIFEST)}
+    fingerprint = {**source,
                    "args": {k: str(v) for k, v in kwargs.items() if k not in
                             ["features", "excess", "returns_over_bil", "macro_labels", "signal_dates", "target_dates"]}}
     key = hashlib.sha256(json.dumps(fingerprint, sort_keys=True).encode()).hexdigest()
-    path = ROOT / "results/private/cache" / f"{key}.pkl"
+    return ROOT / "results/private/cache" / f"{key}.pkl"
+
+
+def cached_fold(kwargs):
+    # Source hashes invalidate caches after implementation repairs; no stale model reuse.
+    path = fold_cache_path(kwargs)
     if path.exists():
         return pickle.loads(path.read_bytes())
     # Identical jump fits are reused across feature ablations and the macro6 appendix.
