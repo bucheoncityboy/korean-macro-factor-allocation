@@ -13,9 +13,12 @@ def main():
     run_parser = sub.add_parser("run")
     run_parser.add_argument("--scope", choices=["primary", "full"], default="full")
     run_parser.add_argument("--workers", type=int, default=4)
+    run_parser.add_argument("--revision", choices=["v1", "v2"], default="v2")
     verify_parser = sub.add_parser("verify")
     verify_parser.add_argument("--artifacts-only", action="store_true")
-    sub.add_parser("report")
+    verify_parser.add_argument("--revision", choices=["v1", "v2"], default="v2")
+    report_parser = sub.add_parser("report")
+    report_parser.add_argument("--revision", choices=["v1", "v2"], default="v2")
     args = parser.parse_args()
     if args.command == "acquire":
         from .data import acquire
@@ -33,13 +36,23 @@ def main():
             freeze_contract()
             print("Execution contract saved; commit it before run")
     elif args.command == "run":
-        from .study import run
-        run(args.scope, args.workers)
+        if args.revision == "v2":
+            from .correction import run
+            run(args.workers)
+        else:
+            from .study import run
+            run(args.scope, args.workers)
     elif args.command == "verify":
-        from .verification import verify
+        if args.revision == "v2":
+            from .correction_checks import verify
+        else:
+            from .verification import verify
         print(json.dumps(verify(args.artifacts_only), indent=2, default=str))
     elif args.command == "report":
-        from .reporting import report
+        if args.revision == "v2":
+            from .correction_report import report
+        else:
+            from .reporting import report
         report()
 
 

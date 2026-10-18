@@ -1,3 +1,5 @@
+> **v1 보존 문서.** 배분 위험항과 거래 벌점을 수정한 현재 방법·결과는 [v2 결과](results_v2.md), [수식 대조](paper_implementation_audit_v2.md), [v2 재현](reproduction_v2.md)을 확인하십시오. 아래 실행 명령은 v1 태그의 별도 체크아웃에 적용합니다.
+
 # 실행 기록
 
 날짜는 사용자 시간대인 Asia/Seoul 기준이다.

@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "before_corrected_performance": true,
+  "checks": [
+    {
+      "strategy": "asset2_logistic",
+      "maximum_target_absolute_difference": 0.0,
+      "maximum_nav_absolute_difference": 0.0
+    },
+    {
+      "strategy": "asset2_xgb",
+      "maximum_target_absolute_difference": 7.692457781871553e-14,
+      "maximum_nav_absolute_difference": 5.995204332975845e-15
+    },
+    {
+      "strategy": "economic4_logistic",
+      "maximum_target_absolute_difference": 1.8412181501670233e-13,
+      "maximum_nav_absolute_difference": 1.474376176702208e-13
+    },
+    {
+      "strategy": "economic4_xgb",
+      "maximum_target_absolute_difference": 1.9137469386976136e-13,
+      "maximum_nav_absolute_difference": 1.9451107391432743e-13
+    },
+    {
+      "strategy": "unconditional_mv",
+      "maximum_target_absolute_difference": 1.9877155477132646e-13,
+      "maximum_nav_absolute_difference": 1.794120407794253e-13
+    }
+  ],
+  "tolerance": {
+    "target_absolute": 2e-06,
+    "nav_absolute": 2e-05,
+    "nav_relative": 2e-05
+  }
+}

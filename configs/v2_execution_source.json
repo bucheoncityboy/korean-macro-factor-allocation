@@ -1,0 +1,8 @@
+{
+  "path": "archive/v2_execution_source.bundle",
+  "sha256": "e45f237286405484cb08eda6954db2857467c00c8fc15d8e6f4b19a462253413",
+  "execution_commit": "ddc1c3128a11154ba3e000186d7dfe4bd9b2a566",
+  "prerequisite_commit": "babba10b277496387acd600cf417262a69154cb1",
+  "bundle_ref": "refs/heads/codex/paper-allocation-correction",
+  "purpose": "Exact allocation execution source before lossless table packaging and independent LP verification additions"
+}

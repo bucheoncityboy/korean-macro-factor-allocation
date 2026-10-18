@@ -1,0 +1,200 @@
+[
+  {
+    "left": "asset2_xgb",
+    "right": "economic4_xgb",
+    "block_months": 6,
+    "difference_annual_cer": 0.015181989599768499,
+    "simultaneous_95_interval": [
+      -0.01015920264946945,
+      0.04052318184900645
+    ],
+    "bootstrap_standard_error": 0.01067682846901728,
+    "family_max_t_critical": 2.373475636774973,
+    "adjusted_p_value": 0.39143042847857606,
+    "finding": "우위 미확인",
+    "fixed_effect_annual_cer": 0.005,
+    "conditional_power": 0.0287,
+    "variance_uncertainty_power_band": [
+      0.02564694306525913,
+      0.03656400736549876
+    ],
+    "replicates": 20000,
+    "months": 141
+  },
+  {
+    "left": "asset2_xgb",
+    "right": "asset2_logistic",
+    "block_months": 6,
+    "difference_annual_cer": 0.011311097104193452,
+    "simultaneous_95_interval": [
+      -0.0046363633623151684,
+      0.02725855757070207
+    ],
+    "bootstrap_standard_error": 0.00671903272121962,
+    "family_max_t_critical": 2.373475636774973,
+    "adjusted_p_value": 0.24933753312334384,
+    "finding": "우위 미확인",
+    "fixed_effect_annual_cer": 0.005,
+    "conditional_power": 0.0576,
+    "variance_uncertainty_power_band": [
+      0.03740892285672531,
+      0.14194796261242262
+    ],
+    "replicates": 20000,
+    "months": 141
+  },
+  {
+    "left": "economic4_xgb",
+    "right": "economic4_logistic",
+    "block_months": 6,
+    "difference_annual_cer": -0.0027008285121504563,
+    "simultaneous_95_interval": [
+      -0.00736672287027253,
+      0.0019650658459716176
+    ],
+    "bootstrap_standard_error": 0.001965848852976637,
+    "family_max_t_critical": 2.373475636774973,
+    "adjusted_p_value": 0.42307884605769713,
+    "finding": "우위 미확인",
+    "fixed_effect_annual_cer": 0.005,
+    "conditional_power": 0.5683,
+    "variance_uncertainty_power_band": [
+      0.4425426506472651,
+      0.9131882672920472
+    ],
+    "replicates": 20000,
+    "months": 141
+  },
+  {
+    "left": "asset2_xgb",
+    "right": "economic4_xgb",
+    "block_months": 3,
+    "difference_annual_cer": 0.015181989599768499,
+    "simultaneous_95_interval": [
+      -0.012811958711468539,
+      0.04317593791100553
+    ],
+    "bootstrap_standard_error": 0.011705790587970888,
+    "family_max_t_critical": 2.391461567747863,
+    "adjusted_p_value": 0.4761261936903155,
+    "finding": "우위 미확인",
+    "fixed_effect_annual_cer": 0.005,
+    "conditional_power": 0.02975,
+    "variance_uncertainty_power_band": [
+      0.023684782335631465,
+      0.031179186333998167
+    ],
+    "replicates": 20000,
+    "months": 141
+  },
+  {
+    "left": "asset2_xgb",
+    "right": "asset2_logistic",
+    "block_months": 3,
+    "difference_annual_cer": 0.011311097104193452,
+    "simultaneous_95_interval": [
+      -0.003900042178342354,
+      0.026522236386729257
+    ],
+    "bootstrap_standard_error": 0.006360603694275864,
+    "family_max_t_critical": 2.391461567747863,
+    "adjusted_p_value": 0.2072896355182241,
+    "finding": "우위 미확인",
+    "fixed_effect_annual_cer": 0.005,
+    "conditional_power": 0.05995,
+    "variance_uncertainty_power_band": [
+      0.03782905938007901,
+      0.10759290992838533
+    ],
+    "replicates": 20000,
+    "months": 141
+  },
+  {
+    "left": "economic4_xgb",
+    "right": "economic4_logistic",
+    "block_months": 3,
+    "difference_annual_cer": -0.0027008285121504563,
+    "simultaneous_95_interval": [
+      -0.006826563953825021,
+      0.001424906929524108
+    ],
+    "bootstrap_standard_error": 0.0017251941228392553,
+    "family_max_t_critical": 2.391461567747863,
+    "adjusted_p_value": 0.31153442327883607,
+    "finding": "우위 미확인",
+    "fixed_effect_annual_cer": 0.005,
+    "conditional_power": 0.6914,
+    "variance_uncertainty_power_band": [
+      0.5330307116201204,
+      0.8836208841065609
+    ],
+    "replicates": 20000,
+    "months": 141
+  },
+  {
+    "left": "asset2_xgb",
+    "right": "economic4_xgb",
+    "block_months": 12,
+    "difference_annual_cer": 0.015181989599768499,
+    "simultaneous_95_interval": [
+      -0.009287415978529445,
+      0.03965139517806644
+    ],
+    "bootstrap_standard_error": 0.010293947748342608,
+    "family_max_t_critical": 2.37706720264222,
+    "adjusted_p_value": 0.35813209339533025,
+    "finding": "우위 미확인",
+    "fixed_effect_annual_cer": 0.005,
+    "conditional_power": 0.03395,
+    "variance_uncertainty_power_band": [
+      0.02540217025042727,
+      0.044882777899250784
+    ],
+    "replicates": 20000,
+    "months": 141
+  },
+  {
+    "left": "asset2_xgb",
+    "right": "asset2_logistic",
+    "block_months": 12,
+    "difference_annual_cer": 0.011311097104193452,
+    "simultaneous_95_interval": [
+      -0.0052969895765424165,
+      0.02791918378492932
+    ],
+    "bootstrap_standard_error": 0.006986797286284212,
+    "family_max_t_critical": 2.37706720264222,
+    "adjusted_p_value": 0.2781360931953402,
+    "finding": "우위 미확인",
+    "fixed_effect_annual_cer": 0.005,
+    "conditional_power": 0.05505,
+    "variance_uncertainty_power_band": [
+      0.03374145526722841,
+      0.20404194810319146
+    ],
+    "replicates": 20000,
+    "months": 141
+  },
+  {
+    "left": "economic4_xgb",
+    "right": "economic4_logistic",
+    "block_months": 12,
+    "difference_annual_cer": -0.0027008285121504563,
+    "simultaneous_95_interval": [
+      -0.007848841142714636,
+      0.002447184118413723
+    ],
+    "bootstrap_standard_error": 0.002165699238474169,
+    "family_max_t_critical": 2.37706720264222,
+    "adjusted_p_value": 0.5064746762661867,
+    "finding": "우위 미확인",
+    "fixed_effect_annual_cer": 0.005,
+    "conditional_power": 0.47285,
+    "variance_uncertainty_power_band": [
+      0.3393524244485667,
+      0.9231304129437428
+    ],
+    "replicates": 20000,
+    "months": 141
+  }
+]

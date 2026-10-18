@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "refits": 48,
+  "future_perturbation": "future prices/FRED/vintages/unpublished labels: features, tuning, asof forecasts and past NAV invariant",
+  "raw_manifest_sha256": "65e9fb4f33450395f945677eb0a824ff7d7ddd12abae71441c952b1f546e1b73",
+  "forecast_sha256": "ecc6b987a3f8d4d098d5543336dd6fca2ed3420f83c6e8d2bbe222732c9c7076",
+  "models_sha256": "6af92d3f1acfc0eb6e2808943506463d91b1ab9becd1065e44bf28403c7299ba",
+  "data_sha256": "57eea84cb8461e51c1996137324119ad23fb299c68cbb0021cfb7c99ace64dbe",
+  "verification_sha256": "36357a4228e2a96cf52a771b0e16be3374942539bda4a7bb6187fe173e4a2416",
+  "execution_commit": "ddc1c3128a11154ba3e000186d7dfe4bd9b2a566"
+}
