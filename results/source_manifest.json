@@ -1,0 +1,901 @@
+{
+  "status": "acquired",
+  "objects": [
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0000.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2003-01-16%2C2003-02-21%2C2003-03-21%2C2003-04-16%2C2003-05-16%2C2003-06-17%2C2003-07-16%2C2003-08-15%2C2003-09-16%2C2003-10-16%2C2003-11-18%2C2003-12-16",
+      "downloaded_at_utc": "2026-10-18T10:00:41.196622+00:00",
+      "sha256": "3c6fa37c27a16e0ff96cd4430fcef8c363cd9d2dc4d031969cf5b94d1787b535",
+      "bytes": 59454,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0012.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2004-01-15%2C2004-02-20%2C2004-03-17%2C2004-04-14%2C2004-05-14%2C2004-06-15%2C2004-07-16%2C2004-08-17%2C2004-09-16%2C2004-10-19%2C2004-11-17%2C2004-12-17",
+      "downloaded_at_utc": "2026-10-18T10:00:41.132040+00:00",
+      "sha256": "8ab4ac797126fe1d8e0ef2237f6a52c13de05596343241f7baae3653aabe3385",
+      "bytes": 60594,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0024.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2005-01-19%2C2005-02-18%2C2005-02-23%2C2005-03-23%2C2005-04-20%2C2005-05-18%2C2005-06-15%2C2005-07-14%2C2005-08-16%2C2005-09-15%2C2005-10-14%2C2005-11-16",
+      "downloaded_at_utc": "2026-10-18T10:00:40.881499+00:00",
+      "sha256": "e57874edbce39de328b7fd957d99bf5216ae59581fd6776d42330d9ceadfa72b",
+      "bytes": 61645,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0036.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2005-12-15%2C2006-01-18%2C2006-02-17%2C2006-02-22%2C2006-03-16%2C2006-04-19%2C2006-05-17%2C2006-06-14%2C2006-07-19%2C2006-08-16%2C2006-09-15%2C2006-10-18",
+      "downloaded_at_utc": "2026-10-18T10:00:41.380409+00:00",
+      "sha256": "91fce22aaade63c988dd1fc8973fd19451be166debf7ec38f2d24448cba3fe4e",
+      "bytes": 62696,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0048.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2006-11-16%2C2006-12-15%2C2007-01-18%2C2007-02-16%2C2007-02-21%2C2007-03-16%2C2007-04-17%2C2007-05-15%2C2007-06-15%2C2007-07-18%2C2007-08-15%2C2007-09-19",
+      "downloaded_at_utc": "2026-10-18T10:00:42.055814+00:00",
+      "sha256": "f783e23ef2397e205a8eb0f88d2f8e83ee43648d3ae94f2e18b1e098d79959f7",
+      "bytes": 69543,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0060.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2007-10-17%2C2007-11-15%2C2007-12-14%2C2008-01-16%2C2008-02-15%2C2008-02-20%2C2008-03-14%2C2008-04-16%2C2008-05-14%2C2008-06-13%2C2008-07-16%2C2008-08-14",
+      "downloaded_at_utc": "2026-10-18T10:00:42.424300+00:00",
+      "sha256": "b48bcce3088d83cbc7246887f5726cf113afa2d00d684a51bb063c3a227d3199",
+      "bytes": 73604,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0072.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2008-09-16%2C2008-10-16%2C2008-11-19%2C2008-12-16%2C2009-01-16%2C2009-02-18%2C2009-02-20%2C2009-03-18%2C2009-04-15%2C2009-05-15%2C2009-06-17%2C2009-07-15",
+      "downloaded_at_utc": "2026-10-18T10:00:42.528365+00:00",
+      "sha256": "f5473a486a5f2f6482fbc262a27a6bea9ea293142b9de327959159607e31ead8",
+      "bytes": 74788,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0084.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2009-08-14%2C2009-09-16%2C2009-10-15%2C2009-11-18%2C2009-12-16%2C2010-01-15%2C2010-02-17%2C2010-02-19%2C2010-03-18%2C2010-04-14%2C2010-05-19%2C2010-06-17",
+      "downloaded_at_utc": "2026-10-18T10:00:42.585399+00:00",
+      "sha256": "8140a119698f9d7d227d11aa6b6f93b7aab695cb7accdaf47e6dc00d852bed36",
+      "bytes": 75972,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0096.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2010-07-16%2C2010-08-13%2C2010-09-17%2C2010-10-15%2C2010-11-17%2C2010-12-15%2C2011-01-14%2C2011-02-15%2C2011-02-17%2C2011-03-17%2C2011-04-15%2C2011-05-13",
+      "downloaded_at_utc": "2026-10-18T10:00:43.503646+00:00",
+      "sha256": "ccbc01c759eda3c462822e9277e3a716064bcbb1cb3ff7727acbe3c10f93ac0c",
+      "bytes": 77156,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0108.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2011-06-15%2C2011-07-15%2C2011-08-18%2C2011-09-15%2C2011-10-19%2C2011-11-16%2C2011-12-16%2C2012-01-19%2C2012-02-15%2C2012-02-17%2C2012-03-16%2C2012-04-13",
+      "downloaded_at_utc": "2026-10-18T10:00:43.712282+00:00",
+      "sha256": "0dbc41a3a5ea96ea027135ecd64a743f01d1d927e93186571200020acb064cfe",
+      "bytes": 78340,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0120.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2012-05-15%2C2012-06-14%2C2012-07-17%2C2012-08-15%2C2012-09-14%2C2012-10-16%2C2012-11-15%2C2012-12-14%2C2013-01-16%2C2013-02-19%2C2013-02-21%2C2013-03-15",
+      "downloaded_at_utc": "2026-10-18T10:00:43.862813+00:00",
+      "sha256": "ce5b4d366d0b6f9e2c3290bb6fe89bef7de0af3cdb4cac68eff945911ed2e350",
+      "bytes": 79524,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0132.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2013-04-16%2C2013-05-16%2C2013-06-18%2C2013-07-16%2C2013-08-15%2C2013-09-17%2C2013-10-30%2C2013-11-20%2C2013-12-17%2C2014-01-16%2C2014-02-18%2C2014-02-20",
+      "downloaded_at_utc": "2026-10-18T10:00:43.850309+00:00",
+      "sha256": "f6a10d9dce8d5e835009a89998021d81f7e6f234cd10e98c6b0e2bed5d13e842",
+      "bytes": 80708,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0144.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2014-03-18%2C2014-04-15%2C2014-05-15%2C2014-06-17%2C2014-07-22%2C2014-08-19%2C2014-09-17%2C2014-10-22%2C2014-11-20%2C2014-12-17%2C2015-01-16%2C2015-02-20",
+      "downloaded_at_utc": "2026-10-18T10:00:45.250598+00:00",
+      "sha256": "b0e730103846ad7b5bd792fa3ee8733d5290461d5e8dc6bfedda00bf918d8dfc",
+      "bytes": 81892,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0156.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2015-02-26%2C2015-03-24%2C2015-04-17%2C2015-05-22%2C2015-06-18%2C2015-07-17%2C2015-08-19%2C2015-09-16%2C2015-10-15%2C2015-11-17%2C2015-12-15%2C2016-01-20",
+      "downloaded_at_utc": "2026-10-18T10:00:45.016311+00:00",
+      "sha256": "b25b5038c9e3f4e51dfca1b6b3f443b12076bcd30bada185b1e29cffd440bb6b",
+      "bytes": 83099,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0168.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2016-02-19%2C2016-03-16%2C2016-04-14%2C2016-05-17%2C2016-06-16%2C2016-07-15%2C2016-08-16%2C2016-09-16%2C2016-10-18%2C2016-11-17%2C2016-12-15%2C2017-01-18",
+      "downloaded_at_utc": "2026-10-18T10:00:45.154218+00:00",
+      "sha256": "9ee969b61ca8615c8770731aaae5209047a22530b4d109c6d9f0d865d2fefa3d",
+      "bytes": 84383,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0180.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2017-02-13%2C2017-02-15%2C2017-03-15%2C2017-04-14%2C2017-05-12%2C2017-06-14%2C2017-07-14%2C2017-08-11%2C2017-09-14%2C2017-10-13%2C2017-11-15%2C2017-12-13",
+      "downloaded_at_utc": "2026-10-18T10:00:45.016952+00:00",
+      "sha256": "8b1a4a6c263458bb753a5350d48a4cff1d48981ac91ad1f4b0f0eabf967b1f4d",
+      "bytes": 85560,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0192.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2018-01-12%2C2018-02-14%2C2018-03-13%2C2018-04-11%2C2018-05-10%2C2018-06-12%2C2018-07-12%2C2018-08-10%2C2018-09-13%2C2018-10-11%2C2018-11-14%2C2018-12-12",
+      "downloaded_at_utc": "2026-10-18T10:00:46.208132+00:00",
+      "sha256": "e5a9b08797416fda7e2080405ee6c66f4fdeb56dcd225777051cb3331891a58f",
+      "bytes": 86844,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0204.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2019-01-11%2C2019-02-11%2C2019-02-13%2C2019-03-12%2C2019-04-10%2C2019-05-10%2C2019-06-12%2C2019-07-11%2C2019-08-13%2C2019-09-12%2C2019-10-10%2C2019-11-13",
+      "downloaded_at_utc": "2026-10-18T10:00:46.215646+00:00",
+      "sha256": "d7cf716a53c11b7daa04efb322b77d468e0e308134129e569bef8a70430d04d7",
+      "bytes": 88028,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0216.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2019-12-11%2C2020-01-14%2C2020-02-11%2C2020-02-13%2C2020-03-11%2C2020-04-10%2C2020-05-12%2C2020-06-10%2C2020-07-14%2C2020-08-12%2C2020-09-11%2C2020-10-13",
+      "downloaded_at_utc": "2026-10-18T10:00:46.324271+00:00",
+      "sha256": "4da09e5e7d2969c6fd705889a81efa107a64b7015d7b5302d4bab6c9a9775ade",
+      "bytes": 89212,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0228.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2020-11-12%2C2020-12-10%2C2021-01-13%2C2021-02-08%2C2021-02-10%2C2021-03-10%2C2021-04-13%2C2021-05-12%2C2021-06-10%2C2021-07-13%2C2021-08-11%2C2021-09-14",
+      "downloaded_at_utc": "2026-10-18T10:00:46.383493+00:00",
+      "sha256": "9cb7752a0df16cade5d5d342b560c9034c6c7259d5461b8215ccc0a1c94360b4",
+      "bytes": 90396,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0240.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2021-10-13%2C2021-11-10%2C2021-12-10%2C2022-01-12%2C2022-02-08%2C2022-02-10%2C2022-03-10%2C2022-04-12%2C2022-05-11%2C2022-06-10%2C2022-07-13%2C2022-08-10",
+      "downloaded_at_utc": "2026-10-18T10:00:47.388499+00:00",
+      "sha256": "c83ba7047287ef676eb0e7545cea1fc3efda321ea42eb2625971eed2d0239bc0",
+      "bytes": 91580,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0252.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2022-09-13%2C2022-10-13%2C2022-11-10%2C2022-12-13%2C2023-01-12%2C2023-02-10%2C2023-02-14%2C2023-03-14%2C2023-04-12%2C2023-05-10%2C2023-06-13%2C2023-07-12",
+      "downloaded_at_utc": "2026-10-18T10:00:47.542829+00:00",
+      "sha256": "a243227979cffdadd11ad6cd5aae34e03f5754d1f88359ecc3e5893e2e4a7e78",
+      "bytes": 92764,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0264.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2023-08-10%2C2023-09-13%2C2023-10-12%2C2023-11-14%2C2023-12-12%2C2024-01-11%2C2024-02-09%2C2024-02-13%2C2024-03-12%2C2024-04-10%2C2024-05-15%2C2024-06-12",
+      "downloaded_at_utc": "2026-10-18T10:00:47.590600+00:00",
+      "sha256": "32bb2e0ea4169eb3614326c283b716902076cddceac51b00513bcd7bb56fb196",
+      "bytes": 93948,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0276.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2024-07-11%2C2024-08-14%2C2024-09-11%2C2024-10-10%2C2024-11-13%2C2024-12-11%2C2025-01-15%2C2025-02-12%2C2025-03-12%2C2025-04-10%2C2025-05-13%2C2025-06-11",
+      "downloaded_at_utc": "2026-10-18T10:00:47.707924+00:00",
+      "sha256": "12f19daa65df66ecf42a812d38071375a9a073b2b0a810dbb8b89ad76afb2d8f",
+      "bytes": 95190,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0288.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2025-07-15%2C2025-08-12%2C2025-09-11%2C2025-10-24%2C2025-12-18%2C2026-01-13%2C2026-02-13%2C2026-03-11%2C2026-04-10%2C2026-05-12%2C2026-06-10%2C2026-07-14",
+      "downloaded_at_utc": "2026-10-18T10:00:48.632791+00:00",
+      "sha256": "f80f47cdb90db915de20dc000cd91893b2a46e45cfc5575395978c4a166d9e95",
+      "bytes": 96497,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_0300.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL%2CCPIAUCSL%2CCPIAUCSL&vintage_date=2026-08-12%2C2026-09-11%2C2026-10-14",
+      "downloaded_at_utc": "2026-10-18T10:00:48.772606+00:00",
+      "sha256": "d01f5a639c4b5575c6154d7ba088da24dc96d79b8ad6e30ae0ff686199a32ae4",
+      "bytes": 32207,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/CPIAUCSL_vintages.html",
+      "url": "https://alfred.stlouisfed.org/series/downloaddata?seid=CPIAUCSL",
+      "downloaded_at_utc": "2026-10-18T10:00:19.015847+00:00",
+      "sha256": "f0e23bd615c6dc48abece231ed93ceb74cd27a27a0fb98b77bcb1b5918fda817",
+      "bytes": 84946,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0000.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2003-01-17%2C2003-02-14%2C2003-03-14%2C2003-04-15%2C2003-05-15%2C2003-06-17%2C2003-07-16%2C2003-08-15%2C2003-09-15%2C2003-10-16%2C2003-11-10%2C2003-11-14",
+      "downloaded_at_utc": "2026-10-18T10:00:29.749394+00:00",
+      "sha256": "9d95f10a9e494a45b9bf8e6d79b6b334c6e383280dcec85f4ff791efc6a4d817",
+      "bytes": 92047,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0012.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2003-12-16%2C2004-01-16%2C2004-02-17%2C2004-03-15%2C2004-04-16%2C2004-05-14%2C2004-06-16%2C2004-07-15%2C2004-08-17%2C2004-09-15%2C2004-10-15%2C2004-11-17",
+      "downloaded_at_utc": "2026-10-18T10:00:29.780845+00:00",
+      "sha256": "4c8205b0adc5409d20a0483db2c8b017a387b1b81c5c9256f9c542a94feaf439",
+      "bytes": 93769,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0024.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2004-12-14%2C2004-12-22%2C2005-01-14%2C2005-02-16%2C2005-03-16%2C2005-04-15%2C2005-05-17%2C2005-06-15%2C2005-07-15%2C2005-08-16%2C2005-09-14%2C2005-10-14",
+      "downloaded_at_utc": "2026-10-18T10:00:30.147765+00:00",
+      "sha256": "d36af8b92d00b7ed5ac0358ee70f3bbad6b877f64071768cf0426adab89dec5d",
+      "bytes": 94953,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0036.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2005-11-07%2C2005-11-17%2C2005-12-15%2C2006-01-17%2C2006-02-15%2C2006-03-17%2C2006-04-14%2C2006-05-16%2C2006-06-15%2C2006-07-17%2C2006-08-16%2C2006-09-15",
+      "downloaded_at_utc": "2026-10-18T10:00:30.655355+00:00",
+      "sha256": "4c02df2a7b0eda8be22a70d7fbe5809c861262f25c2a0eb5da9459bd6ec28e27",
+      "bytes": 101556,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0048.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2006-10-17%2C2006-11-16%2C2006-12-11%2C2006-12-15%2C2007-01-17%2C2007-02-15%2C2007-03-16%2C2007-04-17%2C2007-05-16%2C2007-06-15%2C2007-07-17%2C2007-08-15",
+      "downloaded_at_utc": "2026-10-18T10:00:31.525772+00:00",
+      "sha256": "74b801dd8f0766840a75f9da12b636df0df74206f16afd24a6a9ad4f1e9e6657",
+      "bytes": 109018,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0060.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2007-09-14%2C2007-10-16%2C2007-11-16%2C2007-12-14%2C2008-01-16%2C2008-02-15%2C2008-03-17%2C2008-03-28%2C2008-04-16%2C2008-05-15%2C2008-06-17%2C2008-07-16",
+      "downloaded_at_utc": "2026-10-18T10:00:31.640547+00:00",
+      "sha256": "2b84c39b0c134f80fdec3c0773de5cbec6aa13c94282892206bda576e918f1d4",
+      "bytes": 111648,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0072.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2008-08-15%2C2008-09-15%2C2008-10-16%2C2008-11-17%2C2008-12-15%2C2009-01-16%2C2009-02-18%2C2009-03-16%2C2009-03-27%2C2009-04-15%2C2009-05-15%2C2009-06-16",
+      "downloaded_at_utc": "2026-10-18T10:00:31.867405+00:00",
+      "sha256": "f126d753009bed87bed5c08830588536366efa23f67a1a1a10f8de8882368986",
+      "bytes": 113969,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0084.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2009-07-15%2C2009-08-14%2C2009-09-16%2C2009-10-16%2C2009-11-17%2C2009-12-15%2C2010-01-15%2C2010-02-17%2C2010-03-15%2C2010-04-15%2C2010-05-14%2C2010-06-16",
+      "downloaded_at_utc": "2026-10-18T10:00:32.281816+00:00",
+      "sha256": "aca8b8ca4c41dd5066dbfc3ede8d41baa1adf8a2adcca32fb9884b07bb8277c3",
+      "bytes": 115239,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0096.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2010-06-25%2C2010-07-15%2C2010-08-17%2C2010-09-15%2C2010-10-18%2C2010-11-16%2C2010-12-15%2C2011-01-14%2C2011-02-16%2C2011-03-17%2C2011-03-25%2C2011-04-15",
+      "downloaded_at_utc": "2026-10-18T10:00:33.472470+00:00",
+      "sha256": "1a2b810c2e418fe67aeac10b8f801c105f3706f2cf9725eac6b32ea426861949",
+      "bytes": 115198,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0108.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2011-05-17%2C2011-06-15%2C2011-07-15%2C2011-08-16%2C2011-09-15%2C2011-10-17%2C2011-11-16%2C2011-12-15%2C2012-01-18%2C2012-02-15%2C2012-03-16%2C2012-03-30",
+      "downloaded_at_utc": "2026-10-18T10:00:33.039772+00:00",
+      "sha256": "7eff8f3e232ab4c2347c49fa1da3f535f36903a121347013b9fe5228fc785b6c",
+      "bytes": 116402,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0120.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2012-04-17%2C2012-05-16%2C2012-06-15%2C2012-07-17%2C2012-08-15%2C2012-09-14%2C2012-10-16%2C2012-11-16%2C2012-12-14%2C2013-01-16%2C2013-02-15%2C2013-03-15",
+      "downloaded_at_utc": "2026-10-18T10:00:33.597292+00:00",
+      "sha256": "cb87ae8a59381a52df31b6094cd90c0e4c8b37cb013ac4901d3e2a4c7d2bc00e",
+      "bytes": 117609,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0132.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2013-03-22%2C2013-04-16%2C2013-05-15%2C2013-06-14%2C2013-07-16%2C2013-08-15%2C2013-09-16%2C2013-10-28%2C2013-11-15%2C2013-12-16%2C2014-01-17%2C2014-02-14",
+      "downloaded_at_utc": "2026-10-18T10:00:34.262929+00:00",
+      "sha256": "9e66822cc9075cfc89ad07aa05f8442991e3d958b53386e37e075a9ab10e992b",
+      "bytes": 118812,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0144.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2014-03-17%2C2014-04-16%2C2014-05-15%2C2014-06-16%2C2014-07-16%2C2014-08-15%2C2014-09-15%2C2014-10-16%2C2014-11-17%2C2014-12-15%2C2015-01-16%2C2015-02-18",
+      "downloaded_at_utc": "2026-10-18T10:00:34.917104+00:00",
+      "sha256": "3f161e7637678b3f857fda3ce32f4a7ca671d623129f4ec3e4737f8b5540669a",
+      "bytes": 120209,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0156.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2015-03-16%2C2015-04-15%2C2015-05-15%2C2015-06-15%2C2015-07-15%2C2015-07-21%2C2015-08-14%2C2015-09-15%2C2015-10-16%2C2015-11-17%2C2015-12-16%2C2016-01-15",
+      "downloaded_at_utc": "2026-10-18T10:00:35.495772+00:00",
+      "sha256": "a5734a49dc1ecd4819b4cb7e3e26a4a300164f389c61a4e58d2b1f6cc7d1195b",
+      "bytes": 121830,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0168.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2016-02-17%2C2016-03-16%2C2016-04-01%2C2016-04-15%2C2016-05-17%2C2016-06-15%2C2016-07-15%2C2016-08-16%2C2016-09-15%2C2016-10-17%2C2016-11-16%2C2016-12-14",
+      "downloaded_at_utc": "2026-10-18T10:00:35.605554+00:00",
+      "sha256": "77b31f7c25a7e64d6aaedd965af4da32911503629ddd9374fe311bbc7df07a6b",
+      "bytes": 123370,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0180.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2017-01-18%2C2017-02-15%2C2017-03-17%2C2017-03-31%2C2017-04-18%2C2017-05-16%2C2017-06-15%2C2017-07-14%2C2017-08-17%2C2017-09-15%2C2017-10-17%2C2017-11-16",
+      "downloaded_at_utc": "2026-10-18T10:00:35.798909+00:00",
+      "sha256": "bc0e04e4c6c16a3011e15ec1d59d4dea76a56f126f3d1e79ac83e2cc97e4b962",
+      "bytes": 124663,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0192.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2017-12-15%2C2018-01-17%2C2018-02-15%2C2018-03-16%2C2018-03-23%2C2018-04-17%2C2018-05-16%2C2018-06-15%2C2018-07-17%2C2018-08-15%2C2018-09-14%2C2018-10-16",
+      "downloaded_at_utc": "2026-10-18T10:00:36.817972+00:00",
+      "sha256": "51c0806c483b6f783fdbeab964fd9c0bc6e8deea10ca91bd709f8a913db7b804",
+      "bytes": 125952,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0204.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2018-11-16%2C2018-12-14%2C2019-01-18%2C2019-02-15%2C2019-03-15%2C2019-03-27%2C2019-04-16%2C2019-05-15%2C2019-06-14%2C2019-07-16%2C2019-08-15%2C2019-09-17",
+      "downloaded_at_utc": "2026-10-18T10:00:37.815637+00:00",
+      "sha256": "c435db79260ed1a0bb6c32e253ef9a5ecaaa3ddf464a4dbbd9f0c87ba718a2df",
+      "bytes": 127261,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0216.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2019-10-17%2C2019-11-15%2C2019-12-17%2C2020-01-17%2C2020-02-14%2C2020-03-17%2C2020-04-15%2C2020-05-15%2C2020-06-16%2C2020-07-15%2C2020-08-14%2C2020-09-15",
+      "downloaded_at_utc": "2026-10-18T10:00:37.113941+00:00",
+      "sha256": "73e59086ad2faaa3ba2c3a7ae3fce0da2bb77e9f099114564441b8a00a7cee0c",
+      "bytes": 128637,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0228.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2020-10-16%2C2020-11-17%2C2020-12-15%2C2021-01-15%2C2021-02-17%2C2021-03-16%2C2021-04-15%2C2021-05-14%2C2021-05-28%2C2021-06-15%2C2021-07-15%2C2021-08-17",
+      "downloaded_at_utc": "2026-10-18T10:00:37.843065+00:00",
+      "sha256": "a9194b500d2c78a894eea4780e1c855a7a085f9d3b5f0062cfed4f69527b62ee",
+      "bytes": 129735,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0240.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2021-09-15%2C2021-10-18%2C2021-11-16%2C2021-12-16%2C2022-01-14%2C2022-02-16%2C2022-03-17%2C2022-04-15%2C2022-05-17%2C2022-06-17%2C2022-06-28%2C2022-07-15",
+      "downloaded_at_utc": "2026-10-18T10:00:38.609839+00:00",
+      "sha256": "d337baed9e7972f30d5924bab188e5d076ce2f276e7a17e535be554649df3ba6",
+      "bytes": 130543,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0252.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2022-08-16%2C2022-09-15%2C2022-10-18%2C2022-11-16%2C2022-12-15%2C2023-01-18%2C2023-02-15%2C2023-03-17%2C2023-03-28%2C2023-04-14%2C2023-05-16%2C2023-06-15",
+      "downloaded_at_utc": "2026-10-18T10:00:38.566226+00:00",
+      "sha256": "5ac5afe18d119717906477ad23755b33de20cc84eb14139d1ec438cae2a5d6b2",
+      "bytes": 131808,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0264.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2023-07-18%2C2023-08-16%2C2023-09-15%2C2023-10-17%2C2023-11-16%2C2023-12-15%2C2024-01-17%2C2024-02-15%2C2024-03-15%2C2024-04-16%2C2024-05-16%2C2024-06-18",
+      "downloaded_at_utc": "2026-10-18T10:00:39.412487+00:00",
+      "sha256": "b6d09c072940a34049c323012a65ab2d744009d298f9b4a011660a5cd26aac49",
+      "bytes": 133164,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0276.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2024-06-28%2C2024-07-17%2C2024-08-15%2C2024-09-17%2C2024-10-17%2C2024-11-15%2C2024-12-17%2C2025-01-17%2C2025-02-14%2C2025-03-18%2C2025-04-16%2C2025-05-15",
+      "downloaded_at_utc": "2026-10-18T10:00:39.497726+00:00",
+      "sha256": "a49ff001559bd9eadf88812e41983b3583428de8ea8ef4ae8d30cb14b0b16a10",
+      "bytes": 134461,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0288.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2025-06-17%2C2025-07-16%2C2025-08-15%2C2025-09-16%2C2025-11-24%2C2025-12-03%2C2025-12-23%2C2026-01-16%2C2026-02-18%2C2026-03-16%2C2026-04-16%2C2026-05-15",
+      "downloaded_at_utc": "2026-10-18T10:00:40.114556+00:00",
+      "sha256": "4778b37afc93a329e8a168dcc7dad5c1d47c2b3f5c4e4c85be1dc42b04100002",
+      "bytes": 135857,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_0300.csv",
+      "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=INDPRO%2CINDPRO%2CINDPRO%2CINDPRO%2CINDPRO&vintage_date=2026-06-15%2C2026-07-17%2C2026-08-18%2C2026-09-18%2C2026-10-16",
+      "downloaded_at_utc": "2026-10-18T10:00:39.569527+00:00",
+      "sha256": "cd4c83f08e246f71ac6f2f699a0601acf438b66a1da1c0a646fa94f29dff9d16",
+      "bytes": 65305,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/alfred/INDPRO_vintages.html",
+      "url": "https://alfred.stlouisfed.org/series/downloaddata?seid=INDPRO",
+      "downloaded_at_utc": "2026-10-18T10:00:18.307700+00:00",
+      "sha256": "ecb8a8c8de276233ea01af76f8d2796fe9e1006c479f6bf733105ab7f4390926",
+      "bytes": 128602,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "path": "data/raw/fred/DGS2.csv",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2&cosd=2003-12-01&coed=2026-09-30",
+      "downloaded_at_utc": "2026-10-18T10:00:27.717560+00:00",
+      "sha256": "e4d267464f38959500dfed568aa3381d583fafc7a754f65a27867e1d6e9afc84",
+      "bytes": 94370,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/fred/DGS3MO.csv",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS3MO&cosd=2003-12-01&coed=2026-09-30",
+      "downloaded_at_utc": "2026-10-18T10:00:28.866890+00:00",
+      "sha256": "7e9a822f74b270110d45c2c979f7703dd3947dc2e90cbe1eab5b818c51365fc1",
+      "bytes": 94372,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/fred/T10Y2Y.csv",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=T10Y2Y&cosd=2003-12-01&coed=2026-09-30",
+      "downloaded_at_utc": "2026-10-18T10:00:28.398486+00:00",
+      "sha256": "c411411ca731b465700b177365163bff891aa924de619d417e5b7561ec2589c9",
+      "bytes": 95154,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/fred/VIXCLS.csv",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS&cosd=2003-12-01&coed=2026-09-30",
+      "downloaded_at_utc": "2026-10-18T10:00:28.259084+00:00",
+      "sha256": "6555fc1a8b842dd74f831cac87e2e0263eb20ef2c8b03a36a3c4635bacb08550",
+      "bytes": 100347,
+      "content_type": "application/csv"
+    },
+    {
+      "path": "data/raw/yahoo/BIL_2004.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/BIL?period1=1072915200&period2=1199145600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:26.363631+00:00",
+      "sha256": "605ffc031cef90342a0f5778382b8fd01e85b2d04601d2561596de0ebc66460d",
+      "bytes": 17402,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/BIL_2008.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/BIL?period1=1199145600&period2=1325376000&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:26.469055+00:00",
+      "sha256": "dd1640e0b53997729016ca23e966d8fa891242f4ec03aaf903801673b2c36705",
+      "bytes": 110736,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/BIL_2012.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/BIL?period1=1325376000&period2=1451606400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:26.416494+00:00",
+      "sha256": "679050d01c30345d762370c546df0c703f7863e247357cba618ffd4da0e05f39",
+      "bytes": 105963,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/BIL_2016.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/BIL?period1=1451606400&period2=1577836800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:26.628539+00:00",
+      "sha256": "975487f4ca8cdc26fafe2d2fa8923ef53ff6441dd7d0938a1d44375448f87828",
+      "bytes": 108895,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/BIL_2020.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/BIL?period1=1577836800&period2=1704067200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:26.923611+00:00",
+      "sha256": "5252943df355f38d914124f55a6405ff4e3b4390ebb568378a2d3a53555569ab",
+      "bytes": 108821,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/BIL_2024.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/BIL?period1=1704067200&period2=1790812800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:27.048629+00:00",
+      "sha256": "cf4a47ac6d4f99baee3f7dca968b331e18f80d1f85367e5387796e80fa021cc2",
+      "bytes": 75902,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/EEM_2004.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/EEM?period1=1072915200&period2=1199145600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:21.372051+00:00",
+      "sha256": "24a61cebea268687a3ffc22a639838366ec600ff709eba9ec9168fcf98649c56",
+      "bytes": 112671,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/EEM_2008.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/EEM?period1=1199145600&period2=1325376000&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:21.390057+00:00",
+      "sha256": "6b67aa9f9b70402da2c705d18501afc8ae65fe9bf18cc7c9a4276ffa9f90e824",
+      "bytes": 112682,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/EEM_2012.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/EEM?period1=1325376000&period2=1451606400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:21.390704+00:00",
+      "sha256": "ace4351b713cfa0b062e8d0a5582fb24eeeedb365d24b1c01b9045d113178f46",
+      "bytes": 112165,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/EEM_2016.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/EEM?period1=1451606400&period2=1577836800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:21.434491+00:00",
+      "sha256": "2820c55ff0d6391d2733048eb8e3bca9292928a41d20b5dad4dc3a74728322bd",
+      "bytes": 112242,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/EEM_2020.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/EEM?period1=1577836800&period2=1704067200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:21.950780+00:00",
+      "sha256": "69a4b4a99fea81d70b3536e2d7333a805b7d8fdcd1f1d371408d296d0951a571",
+      "bytes": 111711,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/EEM_2024.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/EEM?period1=1704067200&period2=1790812800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:21.936705+00:00",
+      "sha256": "1e4aa0bd58567b047aa604eec5ec8a1b29006ffe8a4321c9bff8bdd502728383",
+      "bytes": 76542,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/EFA_2004.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/EFA?period1=1072915200&period2=1199145600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:20.324820+00:00",
+      "sha256": "a4a8e85e1f69d371d73c08143519d49505695c5a56a4ae01df58c043d3549d79",
+      "bytes": 109063,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/EFA_2008.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/EFA?period1=1199145600&period2=1325376000&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:20.280125+00:00",
+      "sha256": "e668a18011f14a1457cb000c6a43deb771c99022d4787ac7024374a9cfd3280a",
+      "bytes": 111449,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/EFA_2012.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/EFA?period1=1325376000&period2=1451606400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:20.799264+00:00",
+      "sha256": "253d79e94d40064f97db4f80d1937589bd3deb7d7c540e09f6d7558df39272b6",
+      "bytes": 111071,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/EFA_2016.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/EFA?period1=1451606400&period2=1577836800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:20.826496+00:00",
+      "sha256": "41a1b4c61899cfa37dba225cc8c844bd5ec65653eb1817540c29cac6ac4c211d",
+      "bytes": 110446,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/EFA_2020.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/EFA?period1=1577836800&period2=1704067200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:20.842637+00:00",
+      "sha256": "db2900d673afcbe999144d8a4e6729cffdf928d2c68a20e46f9e8f54cc2def67",
+      "bytes": 109946,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/EFA_2024.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/EFA?period1=1704067200&period2=1790812800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:20.861549+00:00",
+      "sha256": "1cdb81f3f1a9f4d61bab7e746f6e52881e6828a703ae87713d2afec228132dd6",
+      "bytes": 75810,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/GLD_2004.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/GLD?period1=1072915200&period2=1199145600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:25.461455+00:00",
+      "sha256": "3a513d1a02044598fcd23694016f37364d2fc26b0fc62d2ae578e496d0128cc5",
+      "bytes": 84288,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/GLD_2008.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/GLD?period1=1199145600&period2=1325376000&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:25.385192+00:00",
+      "sha256": "b9d63dfafe44c955ef548b60b04e1d4b1afee6b030b913ea17181387f4de1162",
+      "bytes": 110161,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/GLD_2012.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/GLD?period1=1325376000&period2=1451606400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:25.889650+00:00",
+      "sha256": "325d46b089eed48316751973ab98a69a403b043607fa8c44a060dc7a7cac4902",
+      "bytes": 112219,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/GLD_2016.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/GLD?period1=1451606400&period2=1577836800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:25.907165+00:00",
+      "sha256": "b3547e8a204f5185c119a008cac87acc1323e8d05b5bded0493ff036371d82c7",
+      "bytes": 112557,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/GLD_2020.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/GLD?period1=1577836800&period2=1704067200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:25.925922+00:00",
+      "sha256": "ccd947b87bdbe1a586341b4a684efbb762f3e06dbe1b98dbc0b7d14d5a11f8b6",
+      "bytes": 111884,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/GLD_2024.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/GLD?period1=1704067200&period2=1790812800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:25.999395+00:00",
+      "sha256": "51203b8be7a59a064f5128b1876b303b73698a70ba24d760633c1ad65d88fb79",
+      "bytes": 75825,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/IEF_2004.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/IEF?period1=1072915200&period2=1199145600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:21.993890+00:00",
+      "sha256": "fd8a00019fb83d743c6c30e33e55e0973881ad2d70a9f11bf1bf8fb2a7656a0f",
+      "bytes": 108946,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/IEF_2008.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/IEF?period1=1199145600&period2=1325376000&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:21.982554+00:00",
+      "sha256": "619ce3b06d8333bae9d0ab7e2f38d5e32938df108fe71dfb9a56e4eddc427952",
+      "bytes": 110355,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/IEF_2012.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/IEF?period1=1325376000&period2=1451606400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:22.532472+00:00",
+      "sha256": "7a5e41f7f4d7d5473fb6d56caafd9ebfe65020b910a7ec760bfc1bea2c5703af",
+      "bytes": 113223,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/IEF_2016.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/IEF?period1=1451606400&period2=1577836800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:22.515624+00:00",
+      "sha256": "71628a4d8bbeddfd7f1dd85aaec9ef9a4ca5d308dd3b5c7d56b66df8dd39f532",
+      "bytes": 113803,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/IEF_2020.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/IEF?period1=1577836800&period2=1704067200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:22.570900+00:00",
+      "sha256": "415e0d7a46c33fef7de48e5c74378af84fda5a54eecb214a7704e6c8af6151d1",
+      "bytes": 113474,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/IEF_2024.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/IEF?period1=1704067200&period2=1790812800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:22.564021+00:00",
+      "sha256": "023015ba9c61c26207190c45655b332b8cd88fbd20ff5209e19291626d6b80df",
+      "bytes": 75916,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/IYR_2004.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/IYR?period1=1072915200&period2=1199145600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:24.782946+00:00",
+      "sha256": "5be548baf57dca22595dc3666d6e6c4fafacf8520979385203e119eec35471da",
+      "bytes": 105262,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/IYR_2008.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/IYR?period1=1199145600&period2=1325376000&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:24.800720+00:00",
+      "sha256": "732718bd354acbc01565d618ec3be327a636fc941ede37bca23137e0196fd39f",
+      "bytes": 111316,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/IYR_2012.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/IYR?period1=1325376000&period2=1451606400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:24.850000+00:00",
+      "sha256": "1135a4c68a2e25636fcc38b460c8116d8cddd9f41ef08f41c567db9506fc6953",
+      "bytes": 109427,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/IYR_2016.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/IYR?period1=1451606400&period2=1577836800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:24.843328+00:00",
+      "sha256": "c4b3a828376a5548cbf9903cd48843679c2c6661042bc1d69f69627d8e6c7a6a",
+      "bytes": 108740,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/IYR_2020.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/IYR?period1=1577836800&period2=1704067200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:25.361074+00:00",
+      "sha256": "20be843e0f6bc10f321c8e3ed1a91f59dbe3ca48902f2fa0444486facc7d5d90",
+      "bytes": 109811,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/IYR_2024.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/IYR?period1=1704067200&period2=1790812800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:25.354135+00:00",
+      "sha256": "c49d5af3de0b8e1d85c6c0673dcfef4fc6900fb75f2931354a4e1660b4adcfa2",
+      "bytes": 75409,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/LQD_2004.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/LQD?period1=1072915200&period2=1199145600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:23.682873+00:00",
+      "sha256": "40c96bc4687aeb8aa00117c13367f7da3f61bdfbffe6082f297396d5244a1e41",
+      "bytes": 111131,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/LQD_2008.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/LQD?period1=1199145600&period2=1325376000&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:23.742012+00:00",
+      "sha256": "35bbd5b2e3eabc1c77c6e1096e3cff2b56a254219d49a0de99f27323a5b117d2",
+      "bytes": 111339,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/LQD_2012.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/LQD?period1=1325376000&period2=1451606400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:24.213391+00:00",
+      "sha256": "79ba6e779c811ac68b2eaa9e4321129cd602bdd3df9a97f12b8b8ea5dd7f035b",
+      "bytes": 113259,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/LQD_2016.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/LQD?period1=1451606400&period2=1577836800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:24.223950+00:00",
+      "sha256": "31333eb24b47608155b613f5535392a4d4ab79156ee1c0ab7158ad9e26b93412",
+      "bytes": 114124,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/LQD_2020.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/LQD?period1=1577836800&period2=1704067200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:24.280716+00:00",
+      "sha256": "04dd6e4f517267fe680ac462e0e7a31bcb57a5110cc754b43e3a2b9093f8d3a0",
+      "bytes": 115390,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/LQD_2024.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/LQD?period1=1704067200&period2=1790812800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:24.296810+00:00",
+      "sha256": "83d4fe52961a8809404c66c8e1a9248c8c51ec6cf0717edcb25e2bad7f7a0ed8",
+      "bytes": 79886,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/SPY_2004.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/SPY?period1=1072915200&period2=1199145600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:19.629617+00:00",
+      "sha256": "0e932ed5fb2357e6115f133c5790bf15955318e46d7ab268bd868552c4dc2c52",
+      "bytes": 113233,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/SPY_2008.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/SPY?period1=1199145600&period2=1325376000&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:19.710537+00:00",
+      "sha256": "ec673edd358eb4c87971f01f674467497de3e5bd555d8a32e4dce4737c161f6b",
+      "bytes": 114018,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/SPY_2012.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/SPY?period1=1325376000&period2=1451606400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:19.701078+00:00",
+      "sha256": "f067d9de31196e450af9f334338493564aebc7dfbf6800fabd7d9e205ebfb802",
+      "bytes": 114512,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/SPY_2016.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/SPY?period1=1451606400&period2=1577836800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:19.605648+00:00",
+      "sha256": "a40f89a70d22c67c0305d784b4fd4566f3fea584cd24e26f5f85f766ddc04047",
+      "bytes": 112478,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/SPY_2020.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/SPY?period1=1577836800&period2=1704067200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:20.264478+00:00",
+      "sha256": "e96f96dafae7a91608aa62440e7ea56f5ed5b075a76edec2dbccf5047d15c7b6",
+      "bytes": 111558,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/SPY_2024.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/SPY?period1=1704067200&period2=1790812800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:20.207045+00:00",
+      "sha256": "c17e2711317d5650b8451a79d48ff97308fab64e25bb31058b6fd4a573a1b115",
+      "bytes": 75312,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/TLT_2004.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/TLT?period1=1072915200&period2=1199145600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:23.085023+00:00",
+      "sha256": "284e9e8464c600320e27bf943bdeffcb29c99e8272b4f982803ba3cd6fe9b7f0",
+      "bytes": 109187,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/TLT_2008.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/TLT?period1=1199145600&period2=1325376000&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:23.093528+00:00",
+      "sha256": "685106a3d4eaa4e886ef59f928952106b70c213b0fd8b20c7714318a9e063fb5",
+      "bytes": 111812,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/TLT_2012.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/TLT?period1=1325376000&period2=1451606400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:23.138720+00:00",
+      "sha256": "cd789d989aff645148c8d69bebdd513e1a851ab09ae8f15bd2a2473a5ea8245c",
+      "bytes": 114460,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/TLT_2016.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/TLT?period1=1451606400&period2=1577836800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:23.162840+00:00",
+      "sha256": "c8c8e2c61307269671d5e3133296ee43d516826b54461a52483a0ad2b6a76649",
+      "bytes": 114697,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/TLT_2020.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/TLT?period1=1577836800&period2=1704067200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:23.655308+00:00",
+      "sha256": "aa9ee7c39a1dd9740a1a1d3fe0b398bc9ecfb5ba1e4245ea764cca474dd07c41",
+      "bytes": 114365,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/yahoo/TLT_2024.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/TLT?period1=1704067200&period2=1790812800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-18T10:00:23.649923+00:00",
+      "sha256": "0f2bb2d38765c05238670217ceb9ddc26649c42f54ff617f0f5c2828e92ab725",
+      "bytes": 76504,
+      "content_type": "application/json;charset=utf-8"
+    }
+  ]
+}

@@ -1,0 +1,6392 @@
+{
+  "status": "passed",
+  "failures": [],
+  "raw_manifest_sha256": "65e9fb4f33450395f945677eb0a824ff7d7ddd12abae71441c952b1f546e1b73",
+  "protocol_sha256": "60051aa71290888126cbe97afebaf5d4e5c39c6c478540034d4bf140f7486b57",
+  "price_audit": [
+    {
+      "asset": "SPY",
+      "first": "2004-01-02",
+      "last": "2026-09-30",
+      "rows": 5722,
+      "actual_frequency": "exchange daily",
+      "missing_sessions": 0,
+      "events": [
+        {
+          "type": "dividends",
+          "amount": 0.395,
+          "date": 1079706600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.414,
+          "date": 1087565400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.469,
+          "date": 1095427800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.351,
+          "date": 1100529000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.568,
+          "date": 1103293800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.467,
+          "date": 1111156200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.488,
+          "date": 1119015000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.522,
+          "date": 1126877400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.672,
+          "date": 1134743400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.519,
+          "date": 1142605800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.555,
+          "date": 1150464600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.579,
+          "date": 1158327000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.793,
+          "date": 1166193000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.551,
+          "date": 1174051800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.656,
+          "date": 1181914200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.719,
+          "date": 1190381400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.775,
+          "date": 1198247400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.642,
+          "date": 1206019800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.669,
+          "date": 1213968600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.691,
+          "date": 1221831000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.719,
+          "date": 1229697000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.561,
+          "date": 1237555800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.518,
+          "date": 1245418200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.508,
+          "date": 1253280600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.59,
+          "date": 1261146600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.48,
+          "date": 1269005400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.531,
+          "date": 1276867800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.602,
+          "date": 1284730200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.653,
+          "date": 1292596200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.553,
+          "date": 1300455000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.628,
+          "date": 1308317400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.625,
+          "date": 1316179800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.77,
+          "date": 1324045800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.614,
+          "date": 1331904600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.688,
+          "date": 1339767000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.779,
+          "date": 1348234200
+        },
+        {
+          "type": "dividends",
+          "amount": 1.022,
+          "date": 1356100200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.694,
+          "date": 1363354200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.839,
+          "date": 1371821400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.838,
+          "date": 1379683800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.98,
+          "date": 1387549800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.825,
+          "date": 1395408600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.937,
+          "date": 1403271000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.939,
+          "date": 1411133400
+        },
+        {
+          "type": "dividends",
+          "amount": 1.135,
+          "date": 1418999400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.931,
+          "date": 1426858200
+        },
+        {
+          "type": "dividends",
+          "amount": 1.03,
+          "date": 1434720600
+        },
+        {
+          "type": "dividends",
+          "amount": 1.033,
+          "date": 1442583000
+        },
+        {
+          "type": "dividends",
+          "amount": 1.212,
+          "date": 1450449000
+        },
+        {
+          "type": "dividends",
+          "amount": 1.05,
+          "date": 1458307800
+        },
+        {
+          "type": "dividends",
+          "amount": 1.078,
+          "date": 1466170200
+        },
+        {
+          "type": "dividends",
+          "amount": 1.082,
+          "date": 1474032600
+        },
+        {
+          "type": "dividends",
+          "amount": 1.329,
+          "date": 1481898600
+        },
+        {
+          "type": "dividends",
+          "amount": 1.033,
+          "date": 1489757400
+        },
+        {
+          "type": "dividends",
+          "amount": 1.183,
+          "date": 1497619800
+        },
+        {
+          "type": "dividends",
+          "amount": 1.235,
+          "date": 1505482200
+        },
+        {
+          "type": "dividends",
+          "amount": 1.351,
+          "date": 1513348200
+        },
+        {
+          "type": "dividends",
+          "amount": 1.097,
+          "date": 1521207000
+        },
+        {
+          "type": "dividends",
+          "amount": 1.246,
+          "date": 1529069400
+        },
+        {
+          "type": "dividends",
+          "amount": 1.323,
+          "date": 1537536600
+        },
+        {
+          "type": "dividends",
+          "amount": 1.435,
+          "date": 1545402600
+        },
+        {
+          "type": "dividends",
+          "amount": 1.233,
+          "date": 1552656600
+        },
+        {
+          "type": "dividends",
+          "amount": 1.432,
+          "date": 1561123800
+        },
+        {
+          "type": "dividends",
+          "amount": 1.384,
+          "date": 1568986200
+        },
+        {
+          "type": "dividends",
+          "amount": 1.57,
+          "date": 1576852200
+        },
+        {
+          "type": "dividends",
+          "amount": 1.406,
+          "date": 1584711000
+        },
+        {
+          "type": "dividends",
+          "amount": 1.366,
+          "date": 1592573400
+        },
+        {
+          "type": "dividends",
+          "amount": 1.339,
+          "date": 1600435800
+        },
+        {
+          "type": "dividends",
+          "amount": 1.58,
+          "date": 1608301800
+        },
+        {
+          "type": "dividends",
+          "amount": 1.278,
+          "date": 1616160600
+        },
+        {
+          "type": "dividends",
+          "amount": 1.376,
+          "date": 1624023000
+        },
+        {
+          "type": "dividends",
+          "amount": 1.428,
+          "date": 1631885400
+        },
+        {
+          "type": "dividends",
+          "amount": 1.633,
+          "date": 1639751400
+        },
+        {
+          "type": "dividends",
+          "amount": 1.366,
+          "date": 1647610200
+        },
+        {
+          "type": "dividends",
+          "amount": 1.577,
+          "date": 1655472600
+        },
+        {
+          "type": "dividends",
+          "amount": 1.596,
+          "date": 1663335000
+        },
+        {
+          "type": "dividends",
+          "amount": 1.781,
+          "date": 1671201000
+        },
+        {
+          "type": "dividends",
+          "amount": 1.506,
+          "date": 1679059800
+        },
+        {
+          "type": "dividends",
+          "amount": 1.638,
+          "date": 1686922200
+        },
+        {
+          "type": "dividends",
+          "amount": 1.583,
+          "date": 1694784600
+        },
+        {
+          "type": "dividends",
+          "amount": 1.906,
+          "date": 1702650600
+        },
+        {
+          "type": "dividends",
+          "amount": 1.595,
+          "date": 1710509400
+        },
+        {
+          "type": "dividends",
+          "amount": 1.759,
+          "date": 1718976600
+        },
+        {
+          "type": "dividends",
+          "amount": 1.746,
+          "date": 1726839000
+        },
+        {
+          "type": "dividends",
+          "amount": 1.966,
+          "date": 1734705000
+        },
+        {
+          "type": "dividends",
+          "amount": 1.696,
+          "date": 1742563800
+        },
+        {
+          "type": "dividends",
+          "amount": 1.761,
+          "date": 1750426200
+        },
+        {
+          "type": "dividends",
+          "amount": 1.831,
+          "date": 1758288600
+        },
+        {
+          "type": "dividends",
+          "amount": 1.993,
+          "date": 1766154600
+        },
+        {
+          "type": "dividends",
+          "amount": 1.797,
+          "date": 1774013400
+        },
+        {
+          "type": "dividends",
+          "amount": 1.904,
+          "date": 1781789400
+        },
+        {
+          "type": "dividends",
+          "amount": 1.889,
+          "date": 1789738200
+        }
+      ],
+      "max_distribution_reconciliation_error": 0.0002520073729318506
+    },
+    {
+      "asset": "EFA",
+      "first": "2004-01-02",
+      "last": "2026-09-30",
+      "rows": 5722,
+      "actual_frequency": "exchange daily",
+      "missing_sessions": 0,
+      "events": [
+        {
+          "type": "dividends",
+          "amount": 0.803,
+          "date": 1103812200
+        },
+        {
+          "type": "dividends",
+          "amount": 1.11,
+          "date": 1135348200
+        },
+        {
+          "type": "dividends",
+          "amount": 1.533,
+          "date": 1166711400
+        },
+        {
+          "type": "dividends",
+          "amount": 2.0,
+          "date": 1198506600
+        },
+        {
+          "type": "splits",
+          "date": 1118323800,
+          "numerator": 3.0,
+          "denominator": 1.0,
+          "splitRatio": "3:1"
+        },
+        {
+          "type": "dividends",
+          "amount": 1.308,
+          "date": 1214400600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.541,
+          "date": 1230042600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.945,
+          "date": 1245763800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.496,
+          "date": 1261492200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.859,
+          "date": 1277299800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.538,
+          "date": 1292941800
+        },
+        {
+          "type": "dividends",
+          "amount": 1.141,
+          "date": 1308749400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.569,
+          "date": 1324391400
+        },
+        {
+          "type": "dividends",
+          "amount": 1.149,
+          "date": 1340285400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.61,
+          "date": 1355841000
+        },
+        {
+          "type": "dividends",
+          "amount": 1.152,
+          "date": 1372339800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.552,
+          "date": 1387377000
+        },
+        {
+          "type": "dividends",
+          "amount": 1.676,
+          "date": 1403703000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.585,
+          "date": 1418826600
+        },
+        {
+          "type": "dividends",
+          "amount": 1.111,
+          "date": 1435239000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.508,
+          "date": 1450708200
+        },
+        {
+          "type": "dividends",
+          "amount": 1.175,
+          "date": 1466602200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.596,
+          "date": 1482330600
+        },
+        {
+          "type": "dividends",
+          "amount": 1.062,
+          "date": 1497965400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.743,
+          "date": 1513693800
+        },
+        {
+          "type": "dividends",
+          "amount": 1.354,
+          "date": 1529415000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.638,
+          "date": 1545143400
+        },
+        {
+          "type": "dividends",
+          "amount": 1.376,
+          "date": 1560778200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.776,
+          "date": 1576506600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.858,
+          "date": 1592227800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.694,
+          "date": 1607956200
+        },
+        {
+          "type": "dividends",
+          "amount": 1.102,
+          "date": 1623331800
+        },
+        {
+          "type": "dividends",
+          "amount": 1.352,
+          "date": 1639405800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.163,
+          "date": 1640874600
+        },
+        {
+          "type": "dividends",
+          "amount": 1.498,
+          "date": 1654781400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.268,
+          "date": 1670941800
+        },
+        {
+          "type": "dividends",
+          "amount": 1.311,
+          "date": 1686144600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.931,
+          "date": 1703082600
+        },
+        {
+          "type": "dividends",
+          "amount": 1.393,
+          "date": 1718112600
+        },
+        {
+          "type": "dividends",
+          "amount": 1.057,
+          "date": 1734445800
+        },
+        {
+          "type": "dividends",
+          "amount": 1.519,
+          "date": 1750080600
+        },
+        {
+          "type": "dividends",
+          "amount": 1.728,
+          "date": 1765895400
+        },
+        {
+          "type": "dividends",
+          "amount": 1.636,
+          "date": 1781530200
+        }
+      ],
+      "max_distribution_reconciliation_error": 0.0005957040996038554
+    },
+    {
+      "asset": "EEM",
+      "first": "2004-01-02",
+      "last": "2026-09-30",
+      "rows": 5722,
+      "actual_frequency": "exchange daily",
+      "missing_sessions": 0,
+      "events": [
+        {
+          "type": "dividends",
+          "amount": 0.013444,
+          "date": 1072881000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.268111,
+          "date": 1103812200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.329333,
+          "date": 1135348200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.524333,
+          "date": 1166625000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.649,
+          "date": 1198506600
+        },
+        {
+          "type": "splits",
+          "date": 1118323800,
+          "numerator": 3.0,
+          "denominator": 1.0,
+          "splitRatio": "3:1"
+        },
+        {
+          "type": "dividends",
+          "amount": 0.517333,
+          "date": 1214400600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.34,
+          "date": 1230042600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.247,
+          "date": 1245763800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.323,
+          "date": 1261492200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.012,
+          "date": 1262097000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.262,
+          "date": 1277299800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.359,
+          "date": 1292941800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.025,
+          "date": 1293633000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.461,
+          "date": 1308749400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.347,
+          "date": 1324391400
+        },
+        {
+          "type": "splits",
+          "date": 1216906200,
+          "numerator": 3.0,
+          "denominator": 1.0,
+          "splitRatio": "3:1"
+        },
+        {
+          "type": "dividends",
+          "amount": 0.468,
+          "date": 1340285400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.262,
+          "date": 1355841000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.014,
+          "date": 1356618600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.493,
+          "date": 1372339800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.366,
+          "date": 1387377000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.341,
+          "date": 1403703000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.535,
+          "date": 1418826600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.301,
+          "date": 1435239000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.501,
+          "date": 1450708200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.266,
+          "date": 1466602200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.396,
+          "date": 1482330600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.192,
+          "date": 1497965400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.697,
+          "date": 1513693800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.29,
+          "date": 1529415000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.584,
+          "date": 1545143400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.311,
+          "date": 1560778200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.929,
+          "date": 1576506600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.23,
+          "date": 1592227800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.519,
+          "date": 1607956200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.241,
+          "date": 1623331800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.707,
+          "date": 1639405800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.026,
+          "date": 1640874600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.362,
+          "date": 1654781400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.584,
+          "date": 1670941800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.31,
+          "date": 1686144600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.748,
+          "date": 1703082600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.29,
+          "date": 1718112600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.727,
+          "date": 1734445800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.452,
+          "date": 1750080600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.763,
+          "date": 1765895400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.351,
+          "date": 1781530200
+        }
+      ],
+      "max_distribution_reconciliation_error": 0.00043257849539091175
+    },
+    {
+      "asset": "IEF",
+      "first": "2004-01-02",
+      "last": "2026-09-30",
+      "rows": 5722,
+      "actual_frequency": "exchange daily",
+      "missing_sessions": 0,
+      "events": [
+        {
+          "type": "dividends",
+          "amount": 0.279,
+          "date": 1072881000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.255,
+          "date": 1075732200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.251,
+          "date": 1078151400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.256,
+          "date": 1080829800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.268,
+          "date": 1083591000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.279,
+          "date": 1086096600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.273,
+          "date": 1088688600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.273,
+          "date": 1091453400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.266,
+          "date": 1094045400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.257,
+          "date": 1096637400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.265,
+          "date": 1099319400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.262,
+          "date": 1101911400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.271,
+          "date": 1104503400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.261,
+          "date": 1107268200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.231,
+          "date": 1109687400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.279,
+          "date": 1112365800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.267,
+          "date": 1115040600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.264,
+          "date": 1117632600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.264,
+          "date": 1120224600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.271,
+          "date": 1122903000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.274,
+          "date": 1125581400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.277,
+          "date": 1128346200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.288,
+          "date": 1130855400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.283,
+          "date": 1133447400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.292,
+          "date": 1135780200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.264,
+          "date": 1138804200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.267,
+          "date": 1141223400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.26,
+          "date": 1144071000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.294,
+          "date": 1146490200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.294,
+          "date": 1149168600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.312,
+          "date": 1151933400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.319,
+          "date": 1154439000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.312,
+          "date": 1157117400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.316,
+          "date": 1159795800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.308,
+          "date": 1162391400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.304,
+          "date": 1164983400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.239,
+          "date": 1167229800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.311,
+          "date": 1170340200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.275,
+          "date": 1172759400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.322,
+          "date": 1175520600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.314,
+          "date": 1178026200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.329,
+          "date": 1180704600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.313,
+          "date": 1183383000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.322,
+          "date": 1185975000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.334,
+          "date": 1188912600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.31,
+          "date": 1191245400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.297,
+          "date": 1193923800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.295,
+          "date": 1196692200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.313,
+          "date": 1198765800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.281,
+          "date": 1201876200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.28,
+          "date": 1204554600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.311,
+          "date": 1207056600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.28,
+          "date": 1209648600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.307,
+          "date": 1212413400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.292,
+          "date": 1214919000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.304,
+          "date": 1217597400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.295,
+          "date": 1220362200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.305,
+          "date": 1222867800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.32,
+          "date": 1225722600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.313,
+          "date": 1228141800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.369,
+          "date": 1230561000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.266,
+          "date": 1233585000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.248,
+          "date": 1236004200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.276,
+          "date": 1238592600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.28,
+          "date": 1241184600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.272,
+          "date": 1243863000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.252,
+          "date": 1246455000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.264,
+          "date": 1249306200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.257,
+          "date": 1251811800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.253,
+          "date": 1254403800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.77,
+          "date": 1257172200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.208,
+          "date": 1259677800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.164,
+          "date": 1262097000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.3,
+          "date": 1265034600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.244,
+          "date": 1267453800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.255,
+          "date": 1270128600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.273,
+          "date": 1272893400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.26,
+          "date": 1275399000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.248,
+          "date": 1277991000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.253,
+          "date": 1280755800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.247,
+          "date": 1283347800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.233,
+          "date": 1285939800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.235,
+          "date": 1288618200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.239,
+          "date": 1291213800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.248,
+          "date": 1293546600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.235,
+          "date": 1296570600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.216,
+          "date": 1298989800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.248,
+          "date": 1301664600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.241,
+          "date": 1304343000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.244,
+          "date": 1306935000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.231,
+          "date": 1309527000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.238,
+          "date": 1312205400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.229,
+          "date": 1314883800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.211,
+          "date": 1317648600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.209,
+          "date": 1320154200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.2,
+          "date": 1322749800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.189,
+          "date": 1324996200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.191,
+          "date": 1328106600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.17,
+          "date": 1330612200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.177,
+          "date": 1333373400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.168,
+          "date": 1335879000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.171,
+          "date": 1338557400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.16,
+          "date": 1341235800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.162,
+          "date": 1343827800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.151,
+          "date": 1346765400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.141,
+          "date": 1349098200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.145,
+          "date": 1351776600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.137,
+          "date": 1354545000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.151,
+          "date": 1356532200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.14,
+          "date": 1359729000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.127,
+          "date": 1362148200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.145,
+          "date": 1364823000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.135,
+          "date": 1367415000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.142,
+          "date": 1370266200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.139,
+          "date": 1372685400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.141,
+          "date": 1375363800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.151,
+          "date": 1378215000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.153,
+          "date": 1380634200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.161,
+          "date": 1383312600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.164,
+          "date": 1385994600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.164,
+          "date": 1388068200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.175,
+          "date": 1391437800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.166,
+          "date": 1393857000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.19,
+          "date": 1396359000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.194,
+          "date": 1398951000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.175,
+          "date": 1401715800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.192,
+          "date": 1404221400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.196,
+          "date": 1406899800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.181,
+          "date": 1409664600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.189,
+          "date": 1412170200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.181,
+          "date": 1415025000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.18,
+          "date": 1417444200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.156,
+          "date": 1419431400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.182,
+          "date": 1422887400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.17,
+          "date": 1425306600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.175,
+          "date": 1427895000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.163,
+          "date": 1430487000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.169,
+          "date": 1433165400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.162,
+          "date": 1435757400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.164,
+          "date": 1438608600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.167,
+          "date": 1441114200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.164,
+          "date": 1443706200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.163,
+          "date": 1446474600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.165,
+          "date": 1448980200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.164,
+          "date": 1450967400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.159,
+          "date": 1454337000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.157,
+          "date": 1456842600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.168,
+          "date": 1459517400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.161,
+          "date": 1462195800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.163,
+          "date": 1464787800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.158,
+          "date": 1467379800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.158,
+          "date": 1470058200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.155,
+          "date": 1472736600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.15,
+          "date": 1475501400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.154,
+          "date": 1478007000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.149,
+          "date": 1480602600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.165,
+          "date": 1482417000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.159,
+          "date": 1485959400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.145,
+          "date": 1488378600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.159,
+          "date": 1491226200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.16,
+          "date": 1493645400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.164,
+          "date": 1496323800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.159,
+          "date": 1499088600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.165,
+          "date": 1501594200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.162,
+          "date": 1504272600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.159,
+          "date": 1506951000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.164,
+          "date": 1509543000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.16,
+          "date": 1512138600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.164,
+          "date": 1513866600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.168,
+          "date": 1517495400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.159,
+          "date": 1519914600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.175,
+          "date": 1522675800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.191,
+          "date": 1525181400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.202,
+          "date": 1527859800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.19,
+          "date": 1530538200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.2,
+          "date": 1533130200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.206,
+          "date": 1536067800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.204,
+          "date": 1538400600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.216,
+          "date": 1541079000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.212,
+          "date": 1543847400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.213,
+          "date": 1545143400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.22,
+          "date": 1549031400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.199,
+          "date": 1551450600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.218,
+          "date": 1554125400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.212,
+          "date": 1556717400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.213,
+          "date": 1559568600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.192,
+          "date": 1561987800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.194,
+          "date": 1564666200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.19,
+          "date": 1567517400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.171,
+          "date": 1569936600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.168,
+          "date": 1572615000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.16,
+          "date": 1575297000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.156,
+          "date": 1576765800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.153,
+          "date": 1580740200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.14,
+          "date": 1583159400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.144,
+          "date": 1585747800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.128,
+          "date": 1588339800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.122,
+          "date": 1591018200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.11,
+          "date": 1593610200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.1,
+          "date": 1596461400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.088,
+          "date": 1598967000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.079,
+          "date": 1601559000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.076,
+          "date": 1604327400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.08,
+          "date": 1606833000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.073,
+          "date": 1608215400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.078,
+          "date": 1612189800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.07,
+          "date": 1614609000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.07,
+          "date": 1617283800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.074,
+          "date": 1620048600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.079,
+          "date": 1622554200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.077,
+          "date": 1625146200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.076,
+          "date": 1627911000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.08,
+          "date": 1630503000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.08,
+          "date": 1633095000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.081,
+          "date": 1635773400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.088,
+          "date": 1638369000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.106,
+          "date": 1639665000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.108,
+          "date": 1643725800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.101,
+          "date": 1646145000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.121,
+          "date": 1648819800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.125,
+          "date": 1651498200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.129,
+          "date": 1654090200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.155,
+          "date": 1656682200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.184,
+          "date": 1659360600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.179,
+          "date": 1662039000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.187,
+          "date": 1664803800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.203,
+          "date": 1667309400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.194,
+          "date": 1669905000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.192,
+          "date": 1671114600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.212,
+          "date": 1675261800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.196,
+          "date": 1677681000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.196,
+          "date": 1680528600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.239,
+          "date": 1682947800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.232,
+          "date": 1685626200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.232,
+          "date": 1688391000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.242,
+          "date": 1690896600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.242,
+          "date": 1693575000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.239,
+          "date": 1696253400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.249,
+          "date": 1698845400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.249,
+          "date": 1701441000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.282,
+          "date": 1702564200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.236,
+          "date": 1706797800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.249,
+          "date": 1709303400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.276,
+          "date": 1711978200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.271,
+          "date": 1714570200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.276,
+          "date": 1717421400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.285,
+          "date": 1719840600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.289,
+          "date": 1722519000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.288,
+          "date": 1725370200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.286,
+          "date": 1727789400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.292,
+          "date": 1730467800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.292,
+          "date": 1733149800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.308,
+          "date": 1734532200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.296,
+          "date": 1738593000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.275,
+          "date": 1741012200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.304,
+          "date": 1743514200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.313,
+          "date": 1746106200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.31,
+          "date": 1748871000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.303,
+          "date": 1751376600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.309,
+          "date": 1754055000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.314,
+          "date": 1756819800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.294,
+          "date": 1759325400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.304,
+          "date": 1762180200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.288,
+          "date": 1764599400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.313,
+          "date": 1766154600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.312,
+          "date": 1770042600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.283,
+          "date": 1772461800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.317,
+          "date": 1775050200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.312,
+          "date": 1777642200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.317,
+          "date": 1780320600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.311,
+          "date": 1782912600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.318,
+          "date": 1785763800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.332,
+          "date": 1788269400
+        }
+      ],
+      "max_distribution_reconciliation_error": 4.885909660568011e-05
+    },
+    {
+      "asset": "TLT",
+      "first": "2004-01-02",
+      "last": "2026-09-30",
+      "rows": 5722,
+      "actual_frequency": "exchange daily",
+      "missing_sessions": 0,
+      "events": [
+        {
+          "type": "dividends",
+          "amount": 0.4,
+          "date": 1072881000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.358,
+          "date": 1075732200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.356,
+          "date": 1078151400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.348,
+          "date": 1080829800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.325,
+          "date": 1083591000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.322,
+          "date": 1086096600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.336,
+          "date": 1088688600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.33,
+          "date": 1091453400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.35,
+          "date": 1094045400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.361,
+          "date": 1096637400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.366,
+          "date": 1099319400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.355,
+          "date": 1101911400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.335,
+          "date": 1104503400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.345,
+          "date": 1107268200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.282,
+          "date": 1109687400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.33,
+          "date": 1112365800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.33,
+          "date": 1115040600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.349,
+          "date": 1117632600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.332,
+          "date": 1120224600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.345,
+          "date": 1122903000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.334,
+          "date": 1125581400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.362,
+          "date": 1128346200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.397,
+          "date": 1130855400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.39,
+          "date": 1133447400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.383,
+          "date": 1135780200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.321,
+          "date": 1138804200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.32,
+          "date": 1141223400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.328,
+          "date": 1144071000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.33,
+          "date": 1146490200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.332,
+          "date": 1149168600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.327,
+          "date": 1151933400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.342,
+          "date": 1154439000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.35,
+          "date": 1157117400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.354,
+          "date": 1159795800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.345,
+          "date": 1162391400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.342,
+          "date": 1164983400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.303,
+          "date": 1167229800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.355,
+          "date": 1170340200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.343,
+          "date": 1172759400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.326,
+          "date": 1175520600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.324,
+          "date": 1178026200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.338,
+          "date": 1180704600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.326,
+          "date": 1183383000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.341,
+          "date": 1185975000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.362,
+          "date": 1188912600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.345,
+          "date": 1191245400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.394,
+          "date": 1193923800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.376,
+          "date": 1196692200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.362,
+          "date": 1198765800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.329,
+          "date": 1201876200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.348,
+          "date": 1204554600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.406,
+          "date": 1207056600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.336,
+          "date": 1209648600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.327,
+          "date": 1212413400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.332,
+          "date": 1214919000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.332,
+          "date": 1217597400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.34,
+          "date": 1220362200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.29,
+          "date": 1222867800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.37,
+          "date": 1225722600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.355,
+          "date": 1228141800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.405,
+          "date": 1230561000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.285,
+          "date": 1233585000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.282,
+          "date": 1236004200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.302,
+          "date": 1238592600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.297,
+          "date": 1241184600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.305,
+          "date": 1243863000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.303,
+          "date": 1246455000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.318,
+          "date": 1249306200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.307,
+          "date": 1251811800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.307,
+          "date": 1254403800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.308,
+          "date": 1257172200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.307,
+          "date": 1259677800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.318,
+          "date": 1262097000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.325,
+          "date": 1265034600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.29,
+          "date": 1267453800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.332,
+          "date": 1270128600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.32,
+          "date": 1272893400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.326,
+          "date": 1275399000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.31,
+          "date": 1277991000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.324,
+          "date": 1280755800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.322,
+          "date": 1283347800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.392,
+          "date": 1285939800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.319,
+          "date": 1288618200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.34,
+          "date": 1291213800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.32,
+          "date": 1293546600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.32,
+          "date": 1296570600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.297,
+          "date": 1298989800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.386,
+          "date": 1301664600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.4,
+          "date": 1304343000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.352,
+          "date": 1306935000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.32,
+          "date": 1309527000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.325,
+          "date": 1312205400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.322,
+          "date": 1314883800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.306,
+          "date": 1317648600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.299,
+          "date": 1320154200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.29,
+          "date": 1322749800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.38,
+          "date": 1324996200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.289,
+          "date": 1328106600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.267,
+          "date": 1330612200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.29,
+          "date": 1333373400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.283,
+          "date": 1335879000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.263,
+          "date": 1338557400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.269,
+          "date": 1341235800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.273,
+          "date": 1343827800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.272,
+          "date": 1346765400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.26,
+          "date": 1349098200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.245,
+          "date": 1354545000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.268,
+          "date": 1356532200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.26,
+          "date": 1359729000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.254,
+          "date": 1362148200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.255,
+          "date": 1364823000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.261,
+          "date": 1367415000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.275,
+          "date": 1370266200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.252,
+          "date": 1372685400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.27,
+          "date": 1375363800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.279,
+          "date": 1378215000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.278,
+          "date": 1380634200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.288,
+          "date": 1383312600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.31,
+          "date": 1385994600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.335,
+          "date": 1388068200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.276,
+          "date": 1391437800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.263,
+          "date": 1393857000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.28,
+          "date": 1396359000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.269,
+          "date": 1398951000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.294,
+          "date": 1401715800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.292,
+          "date": 1404221400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.3,
+          "date": 1406899800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.271,
+          "date": 1409664600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.289,
+          "date": 1412170200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.29,
+          "date": 1415025000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.277,
+          "date": 1417444200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.261,
+          "date": 1419431400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.279,
+          "date": 1422887400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.252,
+          "date": 1425306600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.273,
+          "date": 1427895000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.258,
+          "date": 1430487000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.264,
+          "date": 1433165400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.258,
+          "date": 1435757400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.267,
+          "date": 1438608600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.263,
+          "date": 1441114200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.256,
+          "date": 1443706200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.267,
+          "date": 1446474600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.257,
+          "date": 1448980200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.254,
+          "date": 1450967400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.241,
+          "date": 1454337000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.248,
+          "date": 1456842600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.27,
+          "date": 1459517400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.26,
+          "date": 1462195800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.267,
+          "date": 1464787800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.255,
+          "date": 1467379800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.258,
+          "date": 1470058200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.254,
+          "date": 1472736600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.247,
+          "date": 1475501400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.25,
+          "date": 1478007000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.243,
+          "date": 1480602600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.309,
+          "date": 1482417000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.259,
+          "date": 1485959400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.234,
+          "date": 1488378600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.255,
+          "date": 1491226200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.255,
+          "date": 1493645400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.263,
+          "date": 1496323800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.258,
+          "date": 1499088600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.269,
+          "date": 1501594200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.263,
+          "date": 1504272600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.252,
+          "date": 1506951000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.263,
+          "date": 1509543000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.255,
+          "date": 1512138600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.262,
+          "date": 1513866600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.255,
+          "date": 1517495400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.239,
+          "date": 1519914600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.26,
+          "date": 1522675800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.262,
+          "date": 1525181400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.281,
+          "date": 1527859800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.275,
+          "date": 1530538200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.267,
+          "date": 1533130200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.272,
+          "date": 1536067800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.261,
+          "date": 1538400600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.275,
+          "date": 1541079000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.267,
+          "date": 1543847400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.282,
+          "date": 1545143400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.275,
+          "date": 1549031400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.253,
+          "date": 1551450600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.278,
+          "date": 1554125400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.259,
+          "date": 1556717400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.27,
+          "date": 1559568600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.26,
+          "date": 1561987800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.264,
+          "date": 1564666200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.26,
+          "date": 1567517400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.25,
+          "date": 1569936600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.246,
+          "date": 1572615000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.241,
+          "date": 1575297000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.218,
+          "date": 1576765800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.242,
+          "date": 1580740200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.229,
+          "date": 1583159400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.238,
+          "date": 1585747800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.216,
+          "date": 1588339800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.21,
+          "date": 1591018200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.192,
+          "date": 1593610200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.19,
+          "date": 1596461400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.183,
+          "date": 1598967000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.169,
+          "date": 1601559000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.169,
+          "date": 1604327400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.163,
+          "date": 1606833000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.164,
+          "date": 1608215400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.176,
+          "date": 1612189800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.172,
+          "date": 1614609000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.185,
+          "date": 1617283800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.203,
+          "date": 1620048600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.199,
+          "date": 1622554200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.188,
+          "date": 1625146200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.182,
+          "date": 1627911000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.189,
+          "date": 1630503000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.183,
+          "date": 1633095000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.188,
+          "date": 1635773400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.184,
+          "date": 1638369000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.168,
+          "date": 1639665000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.198,
+          "date": 1643725800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.185,
+          "date": 1646145000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.202,
+          "date": 1648819800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.203,
+          "date": 1651498200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.207,
+          "date": 1654090200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.227,
+          "date": 1656682200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.213,
+          "date": 1659360600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.236,
+          "date": 1662039000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.244,
+          "date": 1664803800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.236,
+          "date": 1667309400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.244,
+          "date": 1669905000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.261,
+          "date": 1671114600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.275,
+          "date": 1675261800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.25,
+          "date": 1677681000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.269,
+          "date": 1680528600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.268,
+          "date": 1682947800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.273,
+          "date": 1685626200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.278,
+          "date": 1688391000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.275,
+          "date": 1690896600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.289,
+          "date": 1693575000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.28,
+          "date": 1696253400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.286,
+          "date": 1698845400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.289,
+          "date": 1701441000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.311,
+          "date": 1702564200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.31,
+          "date": 1706797800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.295,
+          "date": 1709303400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.312,
+          "date": 1711978200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.308,
+          "date": 1714570200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.308,
+          "date": 1717421400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.291,
+          "date": 1719840600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.315,
+          "date": 1722519000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.313,
+          "date": 1725370200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.316,
+          "date": 1727789400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.311,
+          "date": 1730467800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.325,
+          "date": 1733149800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.351,
+          "date": 1734532200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.312,
+          "date": 1738593000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.29,
+          "date": 1741012200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.326,
+          "date": 1743514200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.328,
+          "date": 1746106200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.32,
+          "date": 1748871000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.328,
+          "date": 1751376600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.331,
+          "date": 1754055000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.328,
+          "date": 1756819800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.31,
+          "date": 1759325400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.325,
+          "date": 1762180200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.321,
+          "date": 1764599400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.342,
+          "date": 1766154600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.332,
+          "date": 1770042600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.301,
+          "date": 1772461800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.345,
+          "date": 1775050200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.315,
+          "date": 1777642200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.336,
+          "date": 1780320600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.318,
+          "date": 1782912600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.33,
+          "date": 1785763800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.315,
+          "date": 1788269400
+        }
+      ],
+      "max_distribution_reconciliation_error": 0.0001295635434159781
+    },
+    {
+      "asset": "LQD",
+      "first": "2004-01-02",
+      "last": "2026-09-30",
+      "rows": 5722,
+      "actual_frequency": "exchange daily",
+      "missing_sessions": 0,
+      "events": [
+        {
+          "type": "dividends",
+          "amount": 0.455,
+          "date": 1072881000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.44,
+          "date": 1075732200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.435,
+          "date": 1078151400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.431,
+          "date": 1080829800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.432,
+          "date": 1083591000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.436,
+          "date": 1086096600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.436,
+          "date": 1088688600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.433,
+          "date": 1091453400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.437,
+          "date": 1094045400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.427,
+          "date": 1096637400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.431,
+          "date": 1099319400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.424,
+          "date": 1101911400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.432,
+          "date": 1104503400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.427,
+          "date": 1107268200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.429,
+          "date": 1109687400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.44,
+          "date": 1112365800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.428,
+          "date": 1115040600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.431,
+          "date": 1117632600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.427,
+          "date": 1120224600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.448,
+          "date": 1122903000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.455,
+          "date": 1125581400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.436,
+          "date": 1128346200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.412,
+          "date": 1130855400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.393,
+          "date": 1133447400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.401,
+          "date": 1135780200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.409,
+          "date": 1138804200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.437,
+          "date": 1141223400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.438,
+          "date": 1144071000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.462,
+          "date": 1146490200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.431,
+          "date": 1149168600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.453,
+          "date": 1151933400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.456,
+          "date": 1154439000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.474,
+          "date": 1157117400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.475,
+          "date": 1159795800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.463,
+          "date": 1162391400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.447,
+          "date": 1164983400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.427,
+          "date": 1167229800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.457,
+          "date": 1170340200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.451,
+          "date": 1172759400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.492,
+          "date": 1175520600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.48,
+          "date": 1178026200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.496,
+          "date": 1180704600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.472,
+          "date": 1183383000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.492,
+          "date": 1185975000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.488,
+          "date": 1188912600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.483,
+          "date": 1191245400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.476,
+          "date": 1193923800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.457,
+          "date": 1196692200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.465,
+          "date": 1198765800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.494,
+          "date": 1201876200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.448,
+          "date": 1204554600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.513,
+          "date": 1207056600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.463,
+          "date": 1209648600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.473,
+          "date": 1212413400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.434,
+          "date": 1214919000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.466,
+          "date": 1217597400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.457,
+          "date": 1220362200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.405,
+          "date": 1222867800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.435,
+          "date": 1225722600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.452,
+          "date": 1228141800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.422,
+          "date": 1230561000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.491,
+          "date": 1233585000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.482,
+          "date": 1236004200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.519,
+          "date": 1238592600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.468,
+          "date": 1241184600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.488,
+          "date": 1243863000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.445,
+          "date": 1246455000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.492,
+          "date": 1249306200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.494,
+          "date": 1251811800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.472,
+          "date": 1254403800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.484,
+          "date": 1257172200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.456,
+          "date": 1259677800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.435,
+          "date": 1262097000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.452,
+          "date": 1265034600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.445,
+          "date": 1267453800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.469,
+          "date": 1270128600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.452,
+          "date": 1272893400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.443,
+          "date": 1275399000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.44,
+          "date": 1277991000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.437,
+          "date": 1280755800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.424,
+          "date": 1283347800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.434,
+          "date": 1285939800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.432,
+          "date": 1288618200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.426,
+          "date": 1291213800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.428,
+          "date": 1293546600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.427,
+          "date": 1296570600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.432,
+          "date": 1298989800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.429,
+          "date": 1301664600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.427,
+          "date": 1304343000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.425,
+          "date": 1306935000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.426,
+          "date": 1309527000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.421,
+          "date": 1312205400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.413,
+          "date": 1314883800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.418,
+          "date": 1317648600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.402,
+          "date": 1320154200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.386,
+          "date": 1322749800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.388,
+          "date": 1324996200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.391,
+          "date": 1328106600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.403,
+          "date": 1330612200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.397,
+          "date": 1333373400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.389,
+          "date": 1335879000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.396,
+          "date": 1338557400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.392,
+          "date": 1341235800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.385,
+          "date": 1343827800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.385,
+          "date": 1346765400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.384,
+          "date": 1349098200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.375,
+          "date": 1354545000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.362,
+          "date": 1356532200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.371,
+          "date": 1359729000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.374,
+          "date": 1362148200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.368,
+          "date": 1364823000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.362,
+          "date": 1367415000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.361,
+          "date": 1370266200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.363,
+          "date": 1372685400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.35,
+          "date": 1375363800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.366,
+          "date": 1378215000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.366,
+          "date": 1380634200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.38,
+          "date": 1383312600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.368,
+          "date": 1385994600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.348,
+          "date": 1388068200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.348,
+          "date": 1391437800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.346,
+          "date": 1393857000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.34,
+          "date": 1396359000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.344,
+          "date": 1398951000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.338,
+          "date": 1401715800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.33,
+          "date": 1404221400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.339,
+          "date": 1406899800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.338,
+          "date": 1409664600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.335,
+          "date": 1412170200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.335,
+          "date": 1415025000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.335,
+          "date": 1417444200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.322,
+          "date": 1419431400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.335,
+          "date": 1422887400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.327,
+          "date": 1425306600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.329,
+          "date": 1427895000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.33,
+          "date": 1430487000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.329,
+          "date": 1433165400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.33,
+          "date": 1435757400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.33,
+          "date": 1438608600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.335,
+          "date": 1441114200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.334,
+          "date": 1443706200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.331,
+          "date": 1446474600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.329,
+          "date": 1448980200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.322,
+          "date": 1450967400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.337,
+          "date": 1454337000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.335,
+          "date": 1456842600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.332,
+          "date": 1459517400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.325,
+          "date": 1462195800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.334,
+          "date": 1464787800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.331,
+          "date": 1467379800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.323,
+          "date": 1470058200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.32,
+          "date": 1472736600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.322,
+          "date": 1475501400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.318,
+          "date": 1478007000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.317,
+          "date": 1480602600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.318,
+          "date": 1482417000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.316,
+          "date": 1485959400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.321,
+          "date": 1488378600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.318,
+          "date": 1491226200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.322,
+          "date": 1493645400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.316,
+          "date": 1496323800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.32,
+          "date": 1499088600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.318,
+          "date": 1501594200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.32,
+          "date": 1504272600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.323,
+          "date": 1506951000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.321,
+          "date": 1509543000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.322,
+          "date": 1512138600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.254,
+          "date": 1513866600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.321,
+          "date": 1517495400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.33,
+          "date": 1519914600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.337,
+          "date": 1522675800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.329,
+          "date": 1525181400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.359,
+          "date": 1527859800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.345,
+          "date": 1530538200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.343,
+          "date": 1533130200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.348,
+          "date": 1536067800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.352,
+          "date": 1538400600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.369,
+          "date": 1541079000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.353,
+          "date": 1543847400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.352,
+          "date": 1545143400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.353,
+          "date": 1549031400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.358,
+          "date": 1551450600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.358,
+          "date": 1554125400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.352,
+          "date": 1556717400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.371,
+          "date": 1559568600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.355,
+          "date": 1561987800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.348,
+          "date": 1564666200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.349,
+          "date": 1567517400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.336,
+          "date": 1569936600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.345,
+          "date": 1572615000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.346,
+          "date": 1575297000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.336,
+          "date": 1576765800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.337,
+          "date": 1580740200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.349,
+          "date": 1583159400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.31,
+          "date": 1585747800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.32,
+          "date": 1588339800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.322,
+          "date": 1591018200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.31,
+          "date": 1593610200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.295,
+          "date": 1596461400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.295,
+          "date": 1598967000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.294,
+          "date": 1601559000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.283,
+          "date": 1604327400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.276,
+          "date": 1606833000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.28,
+          "date": 1608215400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.267,
+          "date": 1612189800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.269,
+          "date": 1614609000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.254,
+          "date": 1617283800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.255,
+          "date": 1620048600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.257,
+          "date": 1622554200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.253,
+          "date": 1625146200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.243,
+          "date": 1627911000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.234,
+          "date": 1630503000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.255,
+          "date": 1633095000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.262,
+          "date": 1635773400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.239,
+          "date": 1638369000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.256,
+          "date": 1639665000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.242,
+          "date": 1643725800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.256,
+          "date": 1646145000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.255,
+          "date": 1648819800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.254,
+          "date": 1651498200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.274,
+          "date": 1654090200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.297,
+          "date": 1656682200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.276,
+          "date": 1659360600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.304,
+          "date": 1662039000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.339,
+          "date": 1664803800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.307,
+          "date": 1667309400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.344,
+          "date": 1669905000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.332,
+          "date": 1671114600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.342,
+          "date": 1675261800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.372,
+          "date": 1677681000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.34,
+          "date": 1680528600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.372,
+          "date": 1682947800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.349,
+          "date": 1685626200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.348,
+          "date": 1688391000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.369,
+          "date": 1690896600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.377,
+          "date": 1693575000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.399,
+          "date": 1696253400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.364,
+          "date": 1698845400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.395,
+          "date": 1701441000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.393,
+          "date": 1702564200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.389,
+          "date": 1706797800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.393,
+          "date": 1709303400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.411,
+          "date": 1711978200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.415,
+          "date": 1714570200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.405,
+          "date": 1717421400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.376,
+          "date": 1719840600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.392,
+          "date": 1722519000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.405,
+          "date": 1725370200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.411,
+          "date": 1727789400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.385,
+          "date": 1730467800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.383,
+          "date": 1733149800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.385,
+          "date": 1734532200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.389,
+          "date": 1738593000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.415,
+          "date": 1741012200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.417,
+          "date": 1743514200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.432,
+          "date": 1746106200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.396,
+          "date": 1748871000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.402,
+          "date": 1751376600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.444,
+          "date": 1754055000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.384,
+          "date": 1756819800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.406,
+          "date": 1759325400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.402,
+          "date": 1762180200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.413,
+          "date": 1764599400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.436,
+          "date": 1766154600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.408,
+          "date": 1770042600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.383,
+          "date": 1772461800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.446,
+          "date": 1775050200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.425,
+          "date": 1777642200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.413,
+          "date": 1780320600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.382,
+          "date": 1782912600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.458,
+          "date": 1785763800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.444,
+          "date": 1788269400
+        }
+      ],
+      "max_distribution_reconciliation_error": 7.860376212032172e-05
+    },
+    {
+      "asset": "IYR",
+      "first": "2004-01-02",
+      "last": "2026-09-30",
+      "rows": 5722,
+      "actual_frequency": "exchange daily",
+      "missing_sessions": 0,
+      "events": [
+        {
+          "type": "dividends",
+          "amount": 0.691,
+          "date": 1080311400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.6505,
+          "date": 1088170200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.615,
+          "date": 1096032600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.647,
+          "date": 1103812200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.645,
+          "date": 1111674600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.643,
+          "date": 1119274200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.662,
+          "date": 1127482200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.859,
+          "date": 1135261800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.45,
+          "date": 1143210600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.644,
+          "date": 1150983000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.708,
+          "date": 1159277400
+        },
+        {
+          "type": "dividends",
+          "amount": 1.086,
+          "date": 1166625000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.677,
+          "date": 1174656600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.746,
+          "date": 1183037400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.688,
+          "date": 1190727000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.781,
+          "date": 1198765800
+        },
+        {
+          "type": "splits",
+          "date": 1118323800,
+          "numerator": 2.0,
+          "denominator": 1.0,
+          "splitRatio": "2:1"
+        },
+        {
+          "type": "dividends",
+          "amount": 0.75,
+          "date": 1206451800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.636,
+          "date": 1214400600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.78,
+          "date": 1222263000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.91,
+          "date": 1230042600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.573,
+          "date": 1237987800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.467,
+          "date": 1245850200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.391,
+          "date": 1253626200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.501,
+          "date": 1261578600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.489,
+          "date": 1269523800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.428,
+          "date": 1277386200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.464,
+          "date": 1285248600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.592,
+          "date": 1293028200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.503,
+          "date": 1301059800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.536,
+          "date": 1308922200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.549,
+          "date": 1316784600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.587,
+          "date": 1324564200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.533,
+          "date": 1332768600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.551,
+          "date": 1340112600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.523,
+          "date": 1348579800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.79,
+          "date": 1355927400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.584,
+          "date": 1364218200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.606,
+          "date": 1372253400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.604,
+          "date": 1380029400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.589,
+          "date": 1387809000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.769,
+          "date": 1395754200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.603,
+          "date": 1403616600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.63,
+          "date": 1411565400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.81,
+          "date": 1419431400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.66,
+          "date": 1427290200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.658,
+          "date": 1435152600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.666,
+          "date": 1443187800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.96,
+          "date": 1450967400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.905,
+          "date": 1458739800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.715,
+          "date": 1466515800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.696,
+          "date": 1474896600
+        },
+        {
+          "type": "dividends",
+          "amount": 1.076,
+          "date": 1482330600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.745,
+          "date": 1490362200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.721,
+          "date": 1498570200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.682,
+          "date": 1506432600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.87,
+          "date": 1513693800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.618,
+          "date": 1521725400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.775,
+          "date": 1530019800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.782,
+          "date": 1537968600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.472,
+          "date": 1545057000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.603,
+          "date": 1553088600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.685,
+          "date": 1560778200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.664,
+          "date": 1569331800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.886,
+          "date": 1576506600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.597,
+          "date": 1585143000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.533,
+          "date": 1592227800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.479,
+          "date": 1600867800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.601,
+          "date": 1607956200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.444,
+          "date": 1616679000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.524,
+          "date": 1623331800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.29,
+          "date": 1632490200
+        },
+        {
+          "type": "dividends",
+          "amount": 1.137,
+          "date": 1639405800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.433,
+          "date": 1648128600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.345,
+          "date": 1654781400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.893,
+          "date": 1664199000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.784,
+          "date": 1670941800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.451,
+          "date": 1679578200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.396,
+          "date": 1686144600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.9,
+          "date": 1695735000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.767,
+          "date": 1703082600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.337,
+          "date": 1711027800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.546,
+          "date": 1718112600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.713,
+          "date": 1727271000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.798,
+          "date": 1734445800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.359,
+          "date": 1742304600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.495,
+          "date": 1750080600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.615,
+          "date": 1758029400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.862,
+          "date": 1765895400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.275,
+          "date": 1773754200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.51,
+          "date": 1781530200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.738,
+          "date": 1789479000
+        }
+      ],
+      "max_distribution_reconciliation_error": 0.0005247370292684739
+    },
+    {
+      "asset": "GLD",
+      "first": "2004-11-18",
+      "last": "2026-09-30",
+      "rows": 5500,
+      "actual_frequency": "exchange daily",
+      "missing_sessions": 0,
+      "events": [],
+      "max_distribution_reconciliation_error": 0.0
+    },
+    {
+      "asset": "BIL",
+      "first": "2007-05-30",
+      "last": "2026-09-30",
+      "rows": 4866,
+      "actual_frequency": "exchange daily",
+      "missing_sessions": 0,
+      "events": [
+        {
+          "type": "dividends",
+          "amount": 0.406,
+          "date": 1183383000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.37,
+          "date": 1185975000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.354,
+          "date": 1188912600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.32,
+          "date": 1191245400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.302,
+          "date": 1193923800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.278,
+          "date": 1196692200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.258,
+          "date": 1198852200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.23,
+          "date": 1201876200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.174,
+          "date": 1204554600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.14,
+          "date": 1207056600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.108,
+          "date": 1209648600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.094,
+          "date": 1212413400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.112,
+          "date": 1214919000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.132,
+          "date": 1217597400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.126,
+          "date": 1220362200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.126,
+          "date": 1222867800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.094,
+          "date": 1225722600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.052,
+          "date": 1228141800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.056,
+          "date": 1230561000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.016,
+          "date": 1233585000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.014,
+          "date": 1236004200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.016,
+          "date": 1238592600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.01,
+          "date": 1241184600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.008,
+          "date": 1243863000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.002,
+          "date": 1246455000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.004,
+          "date": 1249306200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.004,
+          "date": 1251811800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.004,
+          "date": 1254403800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.002,
+          "date": 1257172200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.008,
+          "date": 1262097000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.004,
+          "date": 1325082600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.042,
+          "date": 1480602600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.018,
+          "date": 1482935400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.026,
+          "date": 1485959400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.024,
+          "date": 1488378600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.028,
+          "date": 1491226200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.034,
+          "date": 1493645400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.054,
+          "date": 1496323800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.05,
+          "date": 1499088600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.064,
+          "date": 1501594200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.066,
+          "date": 1504272600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.064,
+          "date": 1506951000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.07,
+          "date": 1509543000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.066,
+          "date": 1512138600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.082,
+          "date": 1513693800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.086,
+          "date": 1517495400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.079,
+          "date": 1519914600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.105,
+          "date": 1522675800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.107,
+          "date": 1525181400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.126,
+          "date": 1527859800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.127,
+          "date": 1530538200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.135,
+          "date": 1533130200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.138,
+          "date": 1536067800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.146,
+          "date": 1538400600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.15,
+          "date": 1541079000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.157,
+          "date": 1543847400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.16,
+          "date": 1545229800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.179,
+          "date": 1549031400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.17,
+          "date": 1551450600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.176,
+          "date": 1554125400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.174,
+          "date": 1556717400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.176,
+          "date": 1559568600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.165,
+          "date": 1561987800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.155,
+          "date": 1564666200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.168,
+          "date": 1567517400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.137,
+          "date": 1569936600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.139,
+          "date": 1572615000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.117,
+          "date": 1575297000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.115,
+          "date": 1576852200
+        },
+        {
+          "type": "splits",
+          "date": 1512052200,
+          "numerator": 1.0,
+          "denominator": 2.0,
+          "splitRatio": "1:2"
+        },
+        {
+          "type": "dividends",
+          "amount": 0.108,
+          "date": 1580740200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.097,
+          "date": 1583159400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.052,
+          "date": 1585747800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.014,
+          "date": 1588339800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.003,
+          "date": 1606833000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.022,
+          "date": 1646145000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.031,
+          "date": 1654090200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.053,
+          "date": 1656682200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.097,
+          "date": 1659360600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.139,
+          "date": 1662039000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.155,
+          "date": 1664803800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.208,
+          "date": 1667309400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.26,
+          "date": 1669905000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.271,
+          "date": 1671460200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.336,
+          "date": 1675261800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.255,
+          "date": 1677681000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.372,
+          "date": 1680528600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.353,
+          "date": 1682947800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.371,
+          "date": 1685626200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.373,
+          "date": 1688391000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.394,
+          "date": 1690896600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.405,
+          "date": 1693575000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.394,
+          "date": 1696253400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.408,
+          "date": 1698845400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.419,
+          "date": 1701441000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.421,
+          "date": 1702909800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.406,
+          "date": 1706797800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.355,
+          "date": 1709303400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.405,
+          "date": 1711978200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.388,
+          "date": 1714570200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.405,
+          "date": 1717421400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.392,
+          "date": 1719840600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.402,
+          "date": 1722519000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.396,
+          "date": 1725370200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.371,
+          "date": 1727789400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.359,
+          "date": 1730467800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.335,
+          "date": 1733149800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.383,
+          "date": 1734618600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.326,
+          "date": 1738593000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.289,
+          "date": 1741012200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.321,
+          "date": 1743514200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.312,
+          "date": 1746106200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.316,
+          "date": 1748871000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.306,
+          "date": 1751376600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.319,
+          "date": 1754055000
+        },
+        {
+          "type": "dividends",
+          "amount": 0.322,
+          "date": 1756819800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.311,
+          "date": 1759325400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.303,
+          "date": 1762180200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.281,
+          "date": 1764599400
+        },
+        {
+          "type": "dividends",
+          "amount": 0.365,
+          "date": 1766068200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.274,
+          "date": 1770042600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.243,
+          "date": 1772461800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.264,
+          "date": 1775050200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.27,
+          "date": 1777642200
+        },
+        {
+          "type": "dividends",
+          "amount": 0.269,
+          "date": 1780320600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.268,
+          "date": 1782912600
+        },
+        {
+          "type": "dividends",
+          "amount": 0.273,
+          "date": 1785763800
+        },
+        {
+          "type": "dividends",
+          "amount": 0.28,
+          "date": 1788269400
+        }
+      ],
+      "max_distribution_reconciliation_error": 4.222270705067643e-06
+    }
+  ],
+  "feature_columns": [
+    "log_dd_5",
+    "log_dd_21",
+    "mean_5",
+    "mean_10",
+    "mean_21",
+    "sortino_5",
+    "sortino_10",
+    "sortino_21",
+    "yield2_change",
+    "slope",
+    "slope_change",
+    "vix_change",
+    "stock_bond_corr",
+    "growth",
+    "inflation",
+    "ip_age",
+    "cpi_age"
+  ],
+  "first_complete_features": {
+    "SPY": "2005-01-03",
+    "EFA": "2005-01-03",
+    "EEM": "2005-01-03",
+    "IEF": "2005-01-03",
+    "TLT": "2005-01-03",
+    "LQD": "2005-01-03",
+    "IYR": "2005-01-03",
+    "GLD": "2005-02-18"
+  },
+  "initial_validation_start": "2011-01-02",
+  "initial_training_start": "2006-01-02",
+  "evaluation_months": [
+    "2014-01",
+    "2014-02",
+    "2014-03",
+    "2014-04",
+    "2014-05",
+    "2014-06",
+    "2014-07",
+    "2014-08",
+    "2014-09",
+    "2014-10",
+    "2014-11",
+    "2014-12",
+    "2015-01",
+    "2015-02",
+    "2015-03",
+    "2015-04",
+    "2015-05",
+    "2015-06",
+    "2015-07",
+    "2015-08",
+    "2015-09",
+    "2015-10",
+    "2015-11",
+    "2015-12",
+    "2016-01",
+    "2016-02",
+    "2016-03",
+    "2016-04",
+    "2016-05",
+    "2016-06",
+    "2016-07",
+    "2016-08",
+    "2016-09",
+    "2016-10",
+    "2016-11",
+    "2016-12",
+    "2017-01",
+    "2017-02",
+    "2017-03",
+    "2017-04",
+    "2017-05",
+    "2017-06",
+    "2017-07",
+    "2017-08",
+    "2017-09",
+    "2017-10",
+    "2017-11",
+    "2017-12",
+    "2018-01",
+    "2018-02",
+    "2018-03",
+    "2018-04",
+    "2018-05",
+    "2018-06",
+    "2018-07",
+    "2018-08",
+    "2018-09",
+    "2018-10",
+    "2018-11",
+    "2018-12",
+    "2019-01",
+    "2019-02",
+    "2019-03",
+    "2019-04",
+    "2019-05",
+    "2019-06",
+    "2019-07",
+    "2019-08",
+    "2019-09",
+    "2019-10",
+    "2019-11",
+    "2019-12",
+    "2020-01",
+    "2020-02",
+    "2020-03",
+    "2020-04",
+    "2020-05",
+    "2020-06",
+    "2020-07",
+    "2020-08",
+    "2020-09",
+    "2020-10",
+    "2020-11",
+    "2020-12",
+    "2021-01",
+    "2021-02",
+    "2021-03",
+    "2021-04",
+    "2021-05",
+    "2021-06",
+    "2021-07",
+    "2021-08",
+    "2021-09",
+    "2021-10",
+    "2021-11",
+    "2021-12",
+    "2022-01",
+    "2022-02",
+    "2022-03",
+    "2022-04",
+    "2022-05",
+    "2022-06",
+    "2022-07",
+    "2022-08",
+    "2022-09",
+    "2022-10",
+    "2022-11",
+    "2022-12",
+    "2023-01",
+    "2023-02",
+    "2023-03",
+    "2023-04",
+    "2023-05",
+    "2023-06",
+    "2023-07",
+    "2023-08",
+    "2023-09",
+    "2023-10",
+    "2023-11",
+    "2023-12",
+    "2024-01",
+    "2024-02",
+    "2024-03",
+    "2024-04",
+    "2024-05",
+    "2024-06",
+    "2024-07",
+    "2024-08",
+    "2024-09",
+    "2024-10",
+    "2024-11",
+    "2024-12",
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09"
+  ],
+  "macro_label_months": 279,
+  "performance_computed": false
+}

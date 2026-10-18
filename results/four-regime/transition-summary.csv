@@ -1,6 +1,0 @@
-model,true_transition_n,detected_episode_n,predicted_change_n,false_alarm_n,definition
-FREQ,72,18,5,5,"False alarm = predicted argmax changes while realized state stays; delay = first correct argmax within the new realized episode, null if never correct. Retrospective diagnostic, not a live trade trigger."
-PERSIST,72,24,68,45,"False alarm = predicted argmax changes while realized state stays; delay = first correct argmax within the new realized episode, null if never correct. Retrospective diagnostic, not a live trade trigger."
-MARKOV,72,25,69,44,"False alarm = predicted argmax changes while realized state stays; delay = first correct argmax within the new realized episode, null if never correct. Retrospective diagnostic, not a live trade trigger."
-MACRO_LOGIT,72,22,59,38,"False alarm = predicted argmax changes while realized state stays; delay = first correct argmax within the new realized episode, null if never correct. Retrospective diagnostic, not a live trade trigger."
-MACRO_LGBM,72,30,95,56,"False alarm = predicted argmax changes while realized state stays; delay = first correct argmax within the new realized episode, null if never correct. Retrospective diagnostic, not a live trade trigger."
