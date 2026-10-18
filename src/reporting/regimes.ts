@@ -17,7 +17,6 @@ const mdTable=(headers:string[],rows:(string|number)[][])=>'| '+headers.join(' |
 const readableMarkdown=(s:string)=>s.replace(/\*\*([^*\n]*[^\p{L}\p{N}\s])\*\*(?=[\p{L}\p{N}])/gu,'<strong>$1</strong>');
 const subtitle='Historical exploratory study · archived macro snapshots + assumed availability · no prospective validation';
 const summary=await read('ARCHIVE/forecast-summary'),rawSummary=await read('ARCHIVE/forecast-summary-raw'),allocation=await read('ARCHIVE/allocation-summary'),comparisons=await read('primary-comparisons'),predictions=await read('ARCHIVE/predictions'),monthly=await read('ARCHIVE/allocation-monthly'),revisions=await read('data-revisions'),shap=await read('oos-shap'),power=await read('development-power'),episodes=await read('state-episodes'),scenarios=await read('scenario-summary'),policySensitivity=await read('policy-sensitivity'),transitions=await read('transition-summary');
-const powerFragment=await readFile('results/private/power-retry-readme-fragment.md','utf8');
 const mirrors=JSON.parse(await readFile('docs/source_mirrors.json','utf8')) as Row[];
 const manifest=JSON.parse(await readFile(`${ROOT}/manifest.json`,'utf8')) as Row;
 const verification=JSON.parse(await readFile(`${ROOT}/verification.json`,'utf8')) as Row;
@@ -65,126 +64,53 @@ const downside=mainStrategies.map(strategy=>{const r=monthly.filter(r=>r.strateg
 await writeJson(`${ROOT}/downside-performance.json`,downside);await write(`${ROOT}/downside-performance.csv`,csv(downside));
 const allocationTable=mdTable(['전략','순 CAGR','연 순 CER','일별 MDD','평균 주식 비중'],allocation.filter(r=>mainStrategies.includes(r.strategy)).map(r=>[strategyName[r.strategy],pct(r.cagr),pct(r.cer_annual),pct(r.mdd_daily),pct(r.average_equity_weight,1)]));
 const effectsTable=mdTable(['비교: 앞 모형−뒤 모형','로그손실 개선 [동시 95% 구간]','연 순 CER 개선 [동시 95% 구간]'],['MACRO_LOGIT - MARKOV','MACRO_LGBM - MARKOV','MACRO_LGBM - MACRO_LOGIT'].map(name=>{const l=comparisons.find(r=>r.comparison===name&&r.endpoint==='log_loss_improvement')!,c=comparisons.find(r=>r.comparison===name&&r.endpoint==='net_CER_improvement')!;return[name.replaceAll('MACRO_LOGIT','로지스틱').replaceAll('MACRO_LGBM','LightGBM').replaceAll('MARKOV','국면 전이'),`${num(l.estimate)} [${num(l.simultaneous_ci_low)}, ${num(l.simultaneous_ci_high)}]`,`${pp(c.estimate)} [${pp(c.simultaneous_ci_low)}, ${pp(c.simultaneous_ci_high)}]`]}));
+const expandedForecast=await read('power-retry/forecast-summary'),expandedAllocation=await read('power-retry/allocation-summary');
+const expandedComparisons=(await read('power-retry/comparisons')).filter(r=>r.mask==='expanded'&&r.block_months===6);
+const expandedPower=(await read('power-retry/precision')).filter(r=>r.variance_window==='all'&&r.hac_lag===6);
+const forecastML=expandedForecast.find(r=>r.model==='MACRO_LGBM')!,forecastLogit=expandedForecast.find(r=>r.model==='MACRO_LOGIT')!,forecastFrequency=expandedForecast.find(r=>r.model==='FREQ')!;
+const allocationML=expandedAllocation.find(r=>r.strategy==='LGBM_ALLOC')!,allocationLogit=expandedAllocation.find(r=>r.strategy==='MACRO_ALLOC')!,allocationSAA=expandedAllocation.find(r=>r.strategy==='SAA')!,allocationRidge=expandedAllocation.find(r=>r.strategy==='RETURN_TAA')!;
+const cerPower=expandedPower.filter(r=>r.endpoint==='annual_CER'),lossPower=expandedPower.filter(r=>r.endpoint==='log_loss');
+const allIntervalsContainZero=expandedComparisons.every(r=>r.simultaneous_ci_low<=0&&r.simultaneous_ci_high>=0);
 const readme=`# 한국 4국면 예측과 자산배분
 
-**다음 달의 성장·물가 국면을 예측하면, 한국 주식·국채 배분이 실제로 나아지는가?**
+성장·물가로 정의한 네 국면을 예측하고, 그 확률을 한국 주식·국채 ETF 비중으로 연결해 검증했다.
 
-골디락스·오버히트·리세션·스태그플레이션의 확률을 예측하고, 그 확률을 ETF 비중으로 연결한 실증 연구다. **규제 로지스틱과 LightGBM을 동등한 주 모형으로 비교**한다. 예측을 잘하는지와 돈을 더 잘 배분하는지를 각각 검증한다.
+## 핵심 결과
 
-- **장기 자료:** 1990년부터의 산업생산·CPI 지수, 1991년부터 구성 가능한 거시 입력. 수정치 기반 장기 예측 평가는 **2001-10–2026-07, 298개월**.
-- **표본 확대 재검증:** 예측 237개월·실제 ETF 배분 140개월, 기존 결과와 같은 구간의 확률 일치·12개 비교 보정.
-- **기존 고정 비교:** OECD 월별 아카이브 **333개**로 당시 성장·물가 정보를 복원. 공통 예측 **201개월**, 실제 ETF 배분 **115개월**.
-- **공정한 ML 비교:** 같은 입력·가용 시점·내부 검증·정책·체결·비용. 주 비교 6개의 불확실성을 함께 보정.
-- **연구 상태:** 실제 자료에 근거한 역사 탐색 연구. 아카이브 가용일 가정과 일부 시장변수의 수정치 사용이 남아 있으며, 전향 검증을 마친 성과가 아니다.
+아래는 **확대 재검증** 결과다. 국면 예측은 **2006-09–2026-05, ${forecastML.n}개월**, ETF 배분은 **2014-10–2026-05, ${allocationML.n}구간**을 평가했다.
 
-## 무엇을 발견했나
+- **ML의 추가 가치:** ${allIntervalsContainZero?'확인하지 못했다. 예측 손실·배분 효용을 평가한 6개 비교의 보정 95% 구간이 모두 0을 포함했다.':'비교별 보정 95% 구간과 판정을 [전체 결과](docs/power_retry_results.md)에 공개했다.'}
+- **국면 예측:** 로그손실은 LightGBM **${num(forecastML.log_loss,4)}**, 로지스틱 **${num(forecastLogit.log_loss,4)}**, 단순 과거 빈도 **${num(forecastFrequency.log_loss,4)}**였다. 낮을수록 좋으며, 이 표본에서는 단순 과거 빈도가 두 학습모형보다 나았다.
+- **배분 수익:** 비용 차감 연복리 수익률은 LightGBM **${pct(allocationML.cagr)}**, 로지스틱 **${pct(allocationLogit.cagr)}**, 정적 50/50 **${pct(allocationSAA.cagr)}**, 수익률 Ridge **${pct(allocationRidge.cagr)}**였다.
+- **위험을 감안한 성과:** 연 순 CER은 LightGBM **${pct(allocationML.cer_annual)}**, 로지스틱 **${pct(allocationLogit.cer_annual)}**, 정적 50/50 **${pct(allocationSAA.cer_annual)}**, 수익률 Ridge **${pct(allocationRidge.cer_annual)}**였다. CER은 평균 수익과 변동성을 함께 반영한 효용 지표다.
+- **낙폭과 주식 노출:** 최대낙폭은 LightGBM **${pct(allocationML.mdd_daily)}**, 정적 50/50 **${pct(allocationSAA.mdd_daily)}**였다. 평균 주식 비중도 **${pct(allocationML.average_equity_weight,1)} / ${pct(allocationSAA.average_equity_weight,1)}**로 달라, 낙폭 차이에는 노출 차이도 함께 봐야 한다.
 
-- LightGBM 로그손실은 **${num(ml.log_loss)}**, 단순 과거 빈도는 **${num(frequency.log_loss)}**다. 이 표본에서 ML이 가장 단순한 확률 기준도 넘지 못했다.
-- LightGBM 배분의 순 CAGR은 **${pct(mlAllocation.cagr)}**, 연 순 CER은 **${pct(mlAllocation.cer_annual)}**다. 50/50 정적 배분의 **${pct(saa.cagr)} / ${pct(saa.cer_annual)}**보다 낮았다. 주식 노출과 위험도 달라 수익률만으로 원인을 단정하지 않는다.
-- 발표 시차도 크다. 이번 아카이브 가용 가정에서 최근 알려진 국면과 예측 타깃은 **${horizons[0]}–${horizons.at(-1)}개월** 떨어져 있다. 완료 에피소드 ${completeEpisodes.length}개 중 ${expired}개는 첫 라벨의 가용 시점에 이미 끝나 있었다. 이 사후 진단은 **OECD 판에 둔 지연 가정**의 결과이며 국내 최초 발표의 실제 지연을 뜻하지 않는다.
+## 검정력 재검토 결과
 
-**LightGBM 대 국면 전이:** ${verdict(mlLoss,mlCer)}
+- **평가 표본을 늘렸다:** 예측 **201→${forecastML.n}개월**, 실제 ETF 배분 **115→${allocationML.n}구간**으로 확대했다. 같은 평가월의 예측확률은 최초 분석과 정확히 일치했다.
+- **배분 검정력은 일부 개선됐다:** 연 CER **0.50%p** 효과를 탐지하는 근사 검정력에서 **${cerPower.filter(r=>r.adequate_for_fixed_effect).length}/3개 비교**가 목표 80%를 충족했다. 같은 보정·분산 추정법으로 평가한 최초 구간은 0/3개였다.
+- **국면 예측의 검정력은 여전히 부족하다:** 로그손실 **0.02 nat** 효과 기준의 근사 검정력은 **${pct(Math.min(...lossPower.map(r=>r.approximate_power_at_fixed_effect)),1)}–${pct(Math.max(...lossPower.map(r=>r.approximate_power_at_fixed_effect)),1)}**로, 세 비교 모두 목표 80%에 못 미쳤다.
+- **조건부 추정이다:** 월별 의존성을 반영하고 최초 6개+확대 6개, 총 12개 비교를 함께 보정했다. 과거 분산을 이용한 근사값이며, 분산 추정·블록 길이에 따른 불확실성이 남는다. [계산·구간·민감도 전체](docs/power_retry_results.md)
 
-**LightGBM 대 로지스틱:** ${verdict(linearLoss,linearCer)}
+## 연구 구성
 
-${effectsTable}
-모든 값은 앞 모형의 개선이 양수다. 로그손실은 nat/월, CER은 연 %p다. 20,000회·6개월 블록 재표집으로 6개 주 비교 전체에 Bonferroni 95% 동시 구간을 적용했다. 구간이 0을 포함하면 개선으로 판정하지 않는다. CER은 위험을 감안한 평균-분산 효용 지표이며 CAGR과 다르다.
+- **국면:** 산업생산·CPI 모멘텀의 상승/하락으로 골디락스·오버히트·리세션·스태그플레이션을 구분했다. 여기서 리세션은 성장·물가 모멘텀의 동반 둔화이며 공식 경기침체 판정이 아니다.
+- **자료:** OECD 월별 아카이브 **333개**와 실제 ETF 가격·분배금을 사용했다. 최신 수정치 기반 **298개월** 장기 예측 검증은 별도 부록에 남겼다.
+- **모형:** 규제 로지스틱과 LightGBM에 같은 8개 입력과 과거 순서의 내부 검증을 적용했다. 입력은 성장·물가·금리·환율·원유·관측시차이며, 비교 기준은 과거 빈도·국면 전이다.
+- **배분 조건:** KODEX 200(069500)·KODEX 국고채3년(114260), 주식 **30–70%**, 나머지 국채, 매수·매도 각각 **10bp** 비용을 적용했다. 수익률 Ridge는 과거 수익만 쓰는 별도 비교군이다.
 
-![주 비교와 불확실성](${FIG}/primary-effects.svg)
+## 해석·검증 범위
 
-${powerFragment}
-## 네 국면을 어떻게 정하나
+- 최초 고정 분석 **201개월 / 115구간**을 수행한 뒤 평가 기간을 확대한 역사 재분석이다. [최초 분석과 전체 부록](docs/four_regime_results.md)을 보존했으며 미열람 전향 검증은 아직 수행하지 않았다.
+- OECD 판의 가용일 가정과 시장변수 일부의 최신 수정치 사용이 남는다. 종가 체결·배당락일 재투자를 가정한 백테스트이며, 투자자 세금은 제외했다.
+- 실제 자료 재학습, 미래 라벨·아카이브 교란, 전체 비중·비용·NAV 재생 검증을 통과했다. 소프트웨어 테스트 **15개**도 통과했다. [주 검증](results/four-regime/verification.json) · [확대 검증](results/four-regime/power-retry/verification.json)
 
-성장은 **산업생산의 전년동월 성장률**, 물가는 **CPI의 전년동월 상승률**로 측정한다. 각각 최근 3개월 평균에서 직전 3개월 평균을 뺀 값으로 방향을 정한다. 두 방향을 조합하며, 성과를 보고 경계나 국면 수를 바꾸지 않는다.
+## 전체 결과·재현
 
-| 국면 | 성장 모멘텀 | 물가 모멘텀 |
-|---|---|---|
-| 골디락스 | 상승 | 하락 |
-| 오버히트 | 상승 | 상승 |
-| 리세션 | 하락 | 하락 |
-| 스태그플레이션 | 하락 | 상승 |
-
-정확히 0이면 상승으로 분류한다. 여기서 리세션은 **성장·물가 모멘텀의 동반 둔화**를 뜻하며 공식 경기침체 판정이 아니다. 산업생산을 GDP로, 인플레이션 둔화를 물가 지수 하락으로 해석하지 않는다.
-
-## 입력에서 투자 비중까지
-
-\`\`\`mermaid
-flowchart LR
-  A[월말까지 가용한 거시정보] --> B[로지스틱 / LightGBM / 국면 전이]
-  B --> C[다음 달 네 국면의 확률]
-  D[과거에 확정된 라벨과 ETF 수익] --> E[공통 국면별 배분정책]
-  C --> F[확률로 정책 비중을 혼합]
-  E --> F
-  F --> G[다음 실제 거래일 종가 체결]
-\`\`\`
-
-- 입력 8개: 성장·물가 모멘텀, 한국 단기금리 3개월 변화, 미국 10년 금리 변화, 원/달러 변화, 원유 변화, 성장·물가 관측월의 나이.
-- 각 월말 **18시 KST**에 다음 관측월을 예측한다. 미공개 현재 국면을 이미 아는 것처럼 쓰지 않는다.
-- 과거에 확정된 국면별 ETF 수익으로 네 정책 비중을 학습한다. 작은 국면의 평균은 전체 평균 쪽으로 수축한다.
-- 세 예측모형은 매월 **동일한 네 정책**을 공유한다. 확률만 달라지므로 예측모형이 배분에 주는 차이를 비교할 수 있다.
-- 주식은 30–70%, 나머지는 국채다. 첫 공동 거래 세션 종가 이후의 수익부터 새 비중에 귀속하고, 매수·매도 금액 각각에 기본 10bp 비용을 차감한다.
-
-실제 예: **${examplePeriod} 월말** LightGBM의 다음 달 확률은 ${example.p.map((p:number,k:number)=>`${korean[k]} ${pct(p,1)}`).join(', ')}였다. 당시 학습된 정책을 혼합한 주식 비중은 **${pct(exampleSignals.find(r=>r.strategy==='LGBM_ALLOC')!.equity_weight,1)}**였다. 이는 사후 정답 국면을 넣어 고른 비중이 아니다. [월별 확률](${ROOT}/ARCHIVE/predictions.csv) · [공통 정책](${ROOT}/policies.csv) · [비중](${ROOT}/signals.csv)
-
-## 예측과 배분 성과
-
-**국면 예측: 2009-09–2026-05 판단월, 201개 공통 OOS 사례.**
-
-${forecastTable}
-로그손실은 실제로 발생한 국면에 낮은 확률을 줄수록 커진다. 과신한 오답도 벌점에 반영된다. 네 국면에 항상 25%씩 주면 로그손실은 약 1.386이다. 높은 단순 정확도만으로 모형을 평가하지 않는다. ‘국면 전이’는 마지막으로 알 수 있었던 국면에서 목표월까지 필요한 횟수만큼 전이시킨 기준모형이다.
-
-**ETF 배분: 2016-11–2026-05 판단월, 115개 공통 체결 구간.**
-
-${allocationTable}
-KODEX 200(069500)과 KODEX 국고채3년(114260)의 실제 종가·분배금을 사용한다. MDD는 일별 경로에서 계산한다. 배당락일 종가 재투자·종가 체결을 가정한 이론적 백테스트이며 실제 주문 체결 기록은 아니다. 보수는 가격에 내재하고 투자자 세금은 제외했다.
-
-![비용 차감 누적 자산](${FIG}/allocation-nav.svg)
-
-## 편향과 과적합을 어떻게 점검했나
-
-- **미래정보:** 학습 라벨과 정책 수익의 가용일을 각각 검사. 미래 아카이브를 바꿔도 과거 입력·학습 행이 달라지지 않는지 실제 자료로 확인.
-- **튜닝 누수:** 랜덤 CV 대신 과거 방향 24개 내부 origin. 표준화·후보 선택·확률 온도 보정은 학습 안에서만 수행.
-- **과도한 탐색:** 주 학습모형 2개, 기본 후보 각 4개, 온도 3개로 고정. 미리 정한 민감도 전부 공개.
-- **기간·사례 선택:** 추가 발표 지연 실험까지 가능한 공통 구간을 결과 전에 고정. 불리한 국면·실패한 전환도 보존.
-- **수정치 편향:** 첫 완성 아카이브와 최신치 사이 국면 라벨 **${changed}/${revisions.length}개월(${pct(changed/revisions.length,1)})**이 달랐다. 수정치만 쓴 장기 성과를 주 아카이브 성과와 구분.
-- **참조 설계 감사에서 확인한 표본 차이:** 한 판 추가 지연 부록은 마지막 라벨이 미공개여서 200개월이다. 해당 예측 비교는 기본안도 같은 200개월로 맞췄다. [계획과의 차이·처리](results/four-regime/protocol-deviations.json)를 공개했고 주 분석 201개월의 결과는 바꾸지 않았다.
-- **검정력:** 일별 가격 수를 독립 표본 수로 부풀리지 않는다. 개발 구간 MDE와 국면별 에피소드 수를 공개한다. ${power.some(r=>!r.adequate_for_minimum)?'사전 최소효과를 판별하기에 부족한 비교가 있어 작은 효과에 대한 결론은 제한된다.':'개발자료 기반 근사 검정력은 전향 검증의 보장이 아니다.'}
-
-이 검사들이 **모든 편향이나 과적합의 부재를 증명하지는 않는다.** 아카이브 판의 과거 배포시각은 가정이며, 시장통제변수 일부는 최신 수정치다. 이전 연구에서 같은 ETF 수익을 이미 봤다. 한국·두 ETF·한 역사 경로에 한정되고, 향후 시점에 미리 기록한 예측으로 재검증해야 한다.
-
-OECD 판의 보수적 가용 가정은 국내 최초 공표보다 늦을 수 있어 실시간 예측 가능성을 과소평가할 수 있다. 따라서 이 결과로 모든 국면 예측 방법이나 더 신속한 국내 원천의 가능성을 부정하지 않는다.
-
-## 재현과 문서
-
-Node.js 24, pnpm 11, 공식 LightGBM 4.6.0 C++ CLI를 사용한다. 연구 코드는 TypeScript다.
-
-\`\`\`bash
-pnpm install --frozen-lockfile
-pnpm setup:lightgbm
-pnpm check
-pnpm verify:published       # 공개 산출물·등록 코드 검증, 원자료 불필요
-pnpm verify:power -- --public # 확대 분석 공개 검증
-pnpm acquire                # 공식 원천 취득, 원자료는 로컬에 보관
-pnpm research               # 등록된 동일 스냅샷으로 전체 실증 재실행
-pnpm research:power         # 237/140개월 확대 실험·검정력 민감도
-pnpm research:validity      # GDP와의 사후 구성 타당성 대조, 예측모형에 사용 안 함
-pnpm verify:research        # 동일 스냅샷·환경에서 실제 입력·예측·체결을 재검증
-pnpm verify:power           # 확대 분석의 실제 입력·예측·체결 재검증
-pnpm report                 # 검증 후 모든 표·그림·README 생성
-\`\`\`
-
-공급자 자료는 갱신될 수 있다. 취득한 자료의 해시가 [고정 스냅샷](configs/four_regime_sources.json)과 다르면 같은 연구로 실행하지 않고 중단한다. 공개 저장소는 원자료 대신 취득 코드·출처·해시·자체 통계와 모형 산출물을 제공한다. **원자료 취득 없이 과거 실행과 숫자가 완전히 재현된다고 주장하지 않는다.**
-
-| 읽을 내용 | 위치 |
-|---|---|
-| 결과 해석·전체 부록·민감도·실패 사례 | [연구 보고서](docs/four_regime_results.md) |
-| 결과 전 고정한 규칙·변경 근거·잔여 편향 | [실행 계약](docs/four_regime_preregistration.md) |
-| 출처·단위·빈티지·가용 시각 | [데이터 사전](docs/four_regime_data.md) |
-| 실행 증거·소스 커밋·검증 | [실행 manifest](${ROOT}/manifest.json) · [검증](${ROOT}/verification.json) |
-| 확대 실험·검정력·필요 표본 수 | [재시도 결과](docs/power_retry_results.md) · [설계](docs/power_retry_protocol.md) |
-| 핵심 구현 | [자료/라벨](src/regimes/data.ts) · [분류/내부 검증](src/regimes/models.ts) · [배분](src/regimes/allocation.ts) · [체결](src/backtest/engine.ts) |
-
-현재 작업 트리에는 4국면 연구의 코드·문서·산출물만 유지한다.
+- [확대 결과·검정력·모든 민감도](docs/power_retry_results.md)
+- [최초 고정 분석·ML 해석·전체 부록](docs/four_regime_results.md)
+- [설치·검증·실증 재현 명령](docs/reproduction.md)
+- [데이터·실행 계약·연구 기록](docs/README.md)
 `;
 await write('README.md',readableMarkdown(readme));
 const report=`# 한국 4국면 예측·ML·자산배분 실증 보고서
@@ -347,6 +273,6 @@ await write('docs/four_regime_data.md',`# 4국면 데이터 사전
 await write('docs/four_regime_data.md',(await readFile('docs/four_regime_data.md','utf8'))+`\n## 사후 GDP 대조 자료\n\nIMF International Financial Statistics의 계절조정 실질 GDP를 FRED 시리즈 [NGDPRSAXDCKRQ](https://fred.stlouisfed.org/series/NGDPRSAXDCKRQ)로 취득했다. 단위는 자국 통화 백만, 빈도는 분기다. 최신 수정치이며 예측 입력·라벨 정의·튜닝에는 사용하지 않았다. 실제 비교는 2009-Q4–2026-Q2의 67개 완성 분기다. 세 달의 산업생산 모멘텀을 분기 평균해 GDP YoY의 직전 분기 대비 변화와 대조한다. 국가의 공식 경기순환 연대기를 검증한 결과로 표시하지 않는다. 원본은 로컬에 보관하고 취득 UTC·SHA256·해석 한계는 [진단 결과](../results/four-regime/construct-validity.json)에 기록했다.\n`);
 const paths:string[]=[];
 async function collect(dir:string){for(const entry of await readdir(dir,{withFileTypes:true})){const p=dir+'/'+entry.name;if(entry.isDirectory())await collect(p);else if(p!==`${ROOT}/artifact-hashes.json`)paths.push(p);}}
-await collect(ROOT);paths.push('README.md','docs/four_regime_results.md','docs/four_regime_data.md','docs/four_regime_experiment_log.md','docs/source_mirrors.json','docs/README.md','results/README.md','docs/power_retry_results.md','docs/power_retry_protocol.md');
+await collect(ROOT);paths.push('README.md','docs/four_regime_results.md','docs/four_regime_data.md','docs/four_regime_experiment_log.md','docs/source_mirrors.json','docs/README.md','results/README.md','docs/power_retry_results.md','docs/power_retry_protocol.md','docs/reproduction.md');
 await writeJson(`${ROOT}/artifact-hashes.json`,Object.fromEntries(await Promise.all(paths.map(async p=>[p,sha256(await readFile(p))]))));
 console.log(`Reported ${manifest.id}: ${paths.length} artifacts and documents; empirical values read from verified outputs.`);

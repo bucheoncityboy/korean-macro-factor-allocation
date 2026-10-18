@@ -198,13 +198,14 @@
   "results/four-regime/tuning-trace.json": "88d505040bc3d5f03f527aabc0fbc228f6d0458847c4f8c5cfd733f68447a27d",
   "results/four-regime/verification-initial-failure.txt": "17714133ff8a557ef7b2fd81e75569489bd5689ae0598cddc3e5d566586bd3f6",
   "results/four-regime/verification.json": "de7096287280904acf5c93b04514c6338af492c5c63334adc788894e351fb75a",
-  "README.md": "b702f4f960a9f6020f47dc43518917b57996e74015703979f03d453cd7c3184e",
+  "README.md": "cea55894bf9fdce9c662f22015ad1a5bc6106e0bba9ea4175baf0cd974d10f4f",
   "docs/four_regime_results.md": "980f70ab763b4a4cc00b440223f4a1128dfbde43c1a8c2f9d0f77fc1919f5ec7",
   "docs/four_regime_data.md": "da5227545953faa41a2bd7199e7557c26d9891af2a004cb1fe9b5a228d14d262",
   "docs/four_regime_experiment_log.md": "8fb88f73908ce528df3d330148a07b3f75ca470e095dbdae969de515f8ef0984",
   "docs/source_mirrors.json": "709cbd3f140a2f75051fc35ceadf776f04412c93353688063b33dedcfee7a722",
-  "docs/README.md": "aa74a06e88f25471be7ca21b06ae9487a84cd659da0777a73d813585a04300d4",
+  "docs/README.md": "4d4e1c86affed187d2f3b21d2be89f177c4893d18be5e1b52dcb082e8de55ccf",
   "results/README.md": "d40dbd413093376c815746bd1ea92ab9d67226b8b42aa6cbb42a3f15d842076f",
   "docs/power_retry_results.md": "c89614904afd2956006fb1b8c84fd52d3c436ec8aa2ed1face40669255c6afb5",
-  "docs/power_retry_protocol.md": "39ebaf56f01a73158511ec8933dff3a8342cd4ebf4dadfe00b42e2cca6176965"
+  "docs/power_retry_protocol.md": "39ebaf56f01a73158511ec8933dff3a8342cd4ebf4dadfe00b42e2cca6176965",
+  "docs/reproduction.md": "7b384a3642c32371e084b2dbab45a92253c5d15ded847c4e4e96a324b68debd6"
 }
