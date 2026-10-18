@@ -13,6 +13,14 @@ def settle(holdings: np.ndarray, weights: np.ndarray, rate: float):
     require(np.isfinite(weights).all() and weights.min() >= -1e-9, "Invalid target weights")
     require(abs(weights.sum() - 1) < 1e-8, "Targets must sum to one")
     total = holdings.sum()
+    if np.count_nonzero(weights) == 1:
+        # Exact solution for the 0/1 validation policies and all-BIL days, including both ETF legs.
+        j = int(np.argmax(weights))
+        nav = (total * (1 - rate) + 2 * rate * holdings[j]) / (1 + rate)
+        traded = weights * nav - holdings
+        fee = rate * np.abs(traded).sum()
+        require(abs(nav + fee - total) < 1e-10 * max(1, total), "Self-financing identity failed")
+        return weights * nav, fee, traded
     low, high = total * (1 - 2 * rate), total
     for _ in range(45):
         mid = (low + high) / 2

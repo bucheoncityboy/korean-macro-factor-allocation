@@ -26,6 +26,14 @@ def seal_artifacts():
 
 def check_artifacts(check_hashes=True):
     cfg = config()
+    contract = json.loads((ROOT / "configs/execution_contract.json").read_text())
+    for file, key in [(ROOT / "configs/protocol.json", "protocol_sha256"),
+                      (ROOT / "uv.lock", "lock_sha256"),
+                      (ROOT / "results/data_audit.json", "audit_sha256"),
+                      (ROOT / "results/source_manifest.json", "raw_manifest_sha256")]:
+        require(digest(file) == contract[key], f"Public execution contract mismatch: {file}")
+    snapshot = json.loads((ROOT / "configs/source_snapshot.json").read_text())
+    require(digest(ROOT / snapshot["path"]) == snapshot["sha256"], "Archived public-response hash mismatch")
     if check_hashes:
         hashes = json.loads((ROOT / "results/artifact_manifest.json").read_text())
         for name, expected in hashes.items():
@@ -165,7 +173,15 @@ def future_perturbation(prices):
     for x in altered.values():
         x.loc[x.index > cutoff, ["adj_close", "adj_open"]] *= 1.5
     vintage = [read_vintages("INDPRO"), read_vintages("CPIAUCSL")]
-    altered_vintage = [{d: (v * 1.2 if d > cutoff else v.copy()) for d, v in source.items()} for source in vintage]
+    altered_vintage = []
+    for source in vintage:
+        changed_source = {}
+        for date, values in source.items():
+            values = values.copy()
+            if date > cutoff:
+                values.iloc[-24:] *= np.linspace(.6, 1.7, min(24, len(values)))
+            changed_source[date] = values
+        altered_vintage.append(changed_source)
     macro_altered = macro_tables(3, altered_vintage)
     market = {}
     for series in ["DGS2", "T10Y2Y", "VIXCLS", "DGS3MO"]:

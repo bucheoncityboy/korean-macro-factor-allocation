@@ -43,6 +43,14 @@ def test_cost_equation_handles_drift_and_bil_leg():
     assert after / after.sum() == pytest.approx([.2, .4, .4])
     with pytest.raises(RuntimeError):
         settle(holding, np.array([.5, .5, .5]), .0025)
+    from scipy.optimize import brentq
+    rng = np.random.default_rng(42)
+    for _ in range(25):
+        h = rng.dirichlet([1, 1, 1])
+        w = np.eye(3)[rng.integers(0, 3)]
+        actual, _, _ = settle(h, w, .0025)
+        independent = brentq(lambda x, w=w, h=h: x + .0025 * np.abs(w * x - h).sum() - h.sum(), .99, 1.001)
+        assert actual.sum() == pytest.approx(independent, abs=1e-12)
 
 
 def test_monthly_weights_and_missing_class_prior():
