@@ -67,8 +67,14 @@ def test_unpublished_labels_and_future_input_cannot_change_first_prediction():
     revised = fit_fold("SPY", changed_f, excess, excess - .0001, changed_labels, signals, targets,
                        asof, None, definition="economic4", mode="B", use_cache=False)
     for kind in ["B_xgb", "B_logistic"]:
-        np.testing.assert_array_equal(original["predictions"][kind][0], revised["predictions"][kind][0])
+        first, changed = original["predictions"][kind][0], revised["predictions"][kind][0]
+        # Linux SIMD/BLAS alignment can change the final float64 bit (observed: 1 ULP).
+        # Permit only machine rounding, rather than a statistical/economic tolerance.
+        np.testing.assert_array_max_ulp(first, changed, maxulp=8)
+        assert first.argmax() == changed.argmax()
     np.testing.assert_array_equal(original["b_means"], revised["b_means"])
+    assert original["train_labels_sha256"] == revised["train_labels_sha256"]
+    assert original["max_training_target"] == revised["max_training_target"]
     assert original["label_model_id"] == revised["label_model_id"]
     assert original["max_training_target"] <= asof
     json.dumps(original["metadata"], default=str)
