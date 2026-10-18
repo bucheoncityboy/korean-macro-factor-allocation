@@ -1,0 +1,18 @@
+name: Python research verification
+on: [push, pull_request]
+jobs:
+  public-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.11.19"
+          enable-cache: true
+      - run: uv sync --frozen --python 3.12
+      - run: uv run ruff check src tests
+      - run: uv run pytest -q
+      - run: uv run etf-study verify --artifacts-only
+        env:
+          OMP_NUM_THREADS: "1"
+          OPENBLAS_NUM_THREADS: "1"

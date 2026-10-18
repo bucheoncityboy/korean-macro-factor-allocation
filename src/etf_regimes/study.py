@@ -55,6 +55,31 @@ def cached_fold(kwargs):
     path = ROOT / "results/private/cache" / f"{key}.pkl"
     if path.exists():
         return pickle.loads(path.read_bytes())
+    # Identical jump fits are reused across feature ablations and the macro6 appendix.
+    # This changes only computation time; classifiers and all forecasts are refitted as specified.
+    from . import models
+    if not hasattr(models, "_uncached_fit_jump"):
+        models._uncached_fit_jump = models.fit_jump
+
+        def reusable_jump(features, excess, penalty, cfg):
+            from .data import RETURN_COLS
+            seed_features = features[RETURN_COLS]
+            seed_returns = excess.reindex(seed_features.index)
+            signature = hashlib.sha256(pd.util.hash_pandas_object(seed_features, index=True).values.tobytes() +
+                                       pd.util.hash_pandas_object(seed_returns, index=True).values.tobytes() +
+                                       json.dumps([penalty, cfg["seed"], cfg["jump_n_init"],
+                                                   digest(ROOT / "src/etf_regimes/models.py")]).encode()).hexdigest()
+            jump_path = ROOT / "results/private/jump_cache" / f"{signature}.pkl"
+            if jump_path.exists():
+                return pickle.loads(jump_path.read_bytes())
+            fit = models._uncached_fit_jump(features, excess, penalty, cfg)
+            jump_path.parent.mkdir(parents=True, exist_ok=True)
+            tmp = jump_path.with_suffix(".tmp")
+            tmp.write_bytes(pickle.dumps(fit, protocol=5))
+            tmp.replace(jump_path)
+            return fit
+
+        models.fit_jump = reusable_jump
     result = fold_forecast(**kwargs)
     path.parent.mkdir(parents=True, exist_ok=True)
     temp = path.with_suffix(".tmp")
@@ -183,7 +208,7 @@ def allocate(forecasts, prices, cfg, variant="main"):
     bull = {name: frame.pivot(index="target_date", columns="asset", values="p0").reindex(columns=assets)
             for name, frame in forecasts.groupby(forecasts.definition + "_" + forecasts.model)}
     target_rows = {name: [] for name in PRIMARY}
-    for name in ["equal_weight", "spy_ief_60_40", "unconditional_mv", "trend"]:
+    for name in ["equal_weight", "spy_ief_60_40", "unconditional_mv", "trend", "bil"]:
         target_rows[name] = []
     if variant == "main":
         for name in PRIMARY:
@@ -211,6 +236,7 @@ def allocate(forecasts, prices, cfg, variant="main"):
                     target_rows[name + "__paper_cash"].append(weight if (bull[name].loc[date] >= .5).sum() >= 4 else cash)
         target_rows["equal_weight"].append(np.r_[np.full(8, 1 / 8), 0])
         target_rows["spy_ief_60_40"].append(np.array([.6, 0, 0, .4, 0, 0, 0, 0, 0]))
+        target_rows["bil"].append(np.r_[np.zeros(8), 1.0])
         target_rows["unconditional_mv"].append(opt.solve(history.mean().to_numpy(), covariance))
         positive = (close.loc[signal, assets] > mean200.loc[signal]).to_numpy().astype(float) / 8
         target_rows["trend"].append(np.r_[positive, 1 - positive.sum()])

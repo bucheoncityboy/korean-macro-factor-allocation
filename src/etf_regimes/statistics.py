@@ -81,6 +81,8 @@ def paired_inference(monthly: pd.DataFrame, cfg=None):
 
 def summarize_nav(nav, gamma=5):
     output, monthlies = [], []
+    bil = nav[(nav.strategy == "bil") & (nav.cost_bp == 5)].set_index("date").net_return.sort_index()
+    bil_monthly = (1 + bil).resample("ME").prod() - 1
     for (strategy, cost), frame in nav.groupby(["strategy", "cost_bp"]):
         frame = frame.sort_values("date").set_index("date")
         daily = frame.net_return
@@ -91,11 +93,13 @@ def summarize_nav(nav, gamma=5):
         wealth = (1 + daily).cumprod()
         peak = wealth.cummax().clip(lower=1)
         volatility = monthly.std(ddof=1)
+        excess = monthly - bil_monthly.reindex(monthly.index)
+        excess_volatility = excess.std(ddof=1)
         output.append({"strategy": strategy, "cost_bp": int(cost), "months": len(monthly),
                        "annual_cer": float(cer(monthly.to_numpy(), gamma)),
                        "cagr": float(wealth.iloc[-1] ** (1 / years) - 1),
                        "annual_volatility": float(volatility * np.sqrt(12)),
-                       "sharpe_zero_rate": float(monthly.mean() / volatility * np.sqrt(12)) if volatility else None,
+                       "sharpe": float(excess.mean() / excess_volatility * np.sqrt(12)) if excess_volatility > 1e-12 else 0,
                        "max_drawdown": float((wealth / peak - 1).min()),
                        "annual_turnover_two_leg": float(frame.turnover.sum() / years),
                        "average_risk_exposure": float(frame.risk_exposure.mean()),

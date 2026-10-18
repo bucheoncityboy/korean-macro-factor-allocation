@@ -38,9 +38,9 @@ def smooth(probabilities: np.ndarray, previous=None, halflife=4):
     return result, previous
 
 
-def classify(train, labels, future, kind, n_classes, cfg=None):
+def classify(train, labels, future, kind, n_classes, cfg=None, weight_dates=None):
     cfg = config() if cfg is None else cfg
-    weights = monthly_weights(train.index)
+    weights = monthly_weights(train.index if weight_dates is None else weight_dates)
     counts = np.bincount(labels.astype(int), weights=weights, minlength=n_classes)
     prior = (counts + 1) / (counts.sum() + n_classes)
     classes = np.unique(labels).astype(int)
@@ -155,7 +155,8 @@ def fold_forecast(asset, features, excess, returns_over_bil, macro_labels, signa
     columns = [c for c in columns if c not in remove]
     predictions, metadata = {}, {}
     for name in ([kind] if kind else ["logistic", "xgb"]):
-        p, meta, _ = classify(x[columns], y, features.loc[signal_dates, columns], name, n_classes, cfg)
+        p, meta, _ = classify(x[columns], y, features.loc[signal_dates, columns], name, n_classes, cfg,
+                              weight_dates=next_dates[valid])
         predictions[name] = p
         metadata[name] = meta
     means = conditional_mean(returns_over_bil.loc[train.index], training_labels, n_classes,
