@@ -91,6 +91,9 @@ def check_artifacts(check_hashes=True):
         counts[folder.name] = {"predictions": len(p), "nav_rows": len(nav), "trades": len(trades)}
         checks.append(folder.name + ": timing/simplex/shared labels/smoothing/NAV/costs/drift/caps")
     require("main" in counts, "Missing primary artifacts")
+    run = json.loads((ROOT / "results/run.json").read_text())
+    expected = {"main", "without_returns", "without_market", "without_macro", "macro6"}
+    require(run["scope"] != "full" or expected <= set(counts), "Missing preregistered sensitivity artifacts")
     return {"status": "passed", "mode": "artifacts_only", "checks": checks, "counts": counts}
 
 
@@ -149,7 +152,8 @@ def independent_refits(prices):
             for definition in ["asset2", "economic4"]:
                 saved = p[(p.asset == asset) & (p.definition == definition) & (p.train_end == asof)]
                 require(not saved.empty, f"Missing independent refit reference: {asof}")
-                penalty = float(saved.penalty.iloc[0]) if definition == "asset2" else None
+                penalty = next(v for v in cfg["jump_penalties"] if float(v) == float(saved.penalty.iloc[0])) \
+                    if definition == "asset2" else None
                 fit = fold_forecast(asset, f[asset], excess[asset], over_bil[asset], labels,
                                     signals, targets, asof, definition, penalty=penalty, cfg=cfg)
                 for kind in ["logistic", "xgb"]:

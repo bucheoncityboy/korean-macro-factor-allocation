@@ -22,7 +22,7 @@ def hac_se(influence, lag):
     n = len(x)
     variance = (x * x).mean(axis=0)
     for k in range(1, min(lag + 1, n)):
-        variance += 2 * (1 - k / (lag + 1)) * (x[k:] * x[:-k]).mean(axis=0)
+        variance += 2 * (1 - k / (lag + 1)) * (x[k:] * x[:-k]).sum(axis=0) / n
     return np.sqrt(np.maximum(variance, 1e-16) / n)
 
 
@@ -124,5 +124,5 @@ def evaluate():
         annual.to_csv(folder / "annual.csv")
         extension = nav[(nav.date >= "2024-01-01") & (nav.cost_bp == 5)]
         ext, _ = summarize_nav(extension, cfg["cer_risk_aversion"])
-        ext.to_csv(folder / "extension_2024_2026.csv", index=False)
+        ext.to_csv(folder / "extension_2024_onward.csv", index=False)
         print(f"evaluated {folder.name}", flush=True)

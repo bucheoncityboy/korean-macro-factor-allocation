@@ -1,6 +1,8 @@
 """One self-financing adjusted-open engine for every implementable strategy."""
 from __future__ import annotations
 
+from itertools import pairwise
+
 import cvxpy as cp
 import numpy as np
 import pandas as pd
@@ -13,6 +15,9 @@ def settle(holdings: np.ndarray, weights: np.ndarray, rate: float):
     require(np.isfinite(weights).all() and weights.min() >= -1e-9, "Invalid target weights")
     require(abs(weights.sum() - 1) < 1e-8, "Targets must sum to one")
     total = holdings.sum()
+    require(0 <= rate < .5, "Invalid one-way transaction cost")
+    if rate == 0:
+        return weights * total, 0.0, weights * total - holdings
     if np.count_nonzero(weights) == 1:
         # Exact solution for the 0/1 validation policies and all-BIL days, including both ETF legs.
         j = int(np.argmax(weights))
@@ -22,14 +27,17 @@ def settle(holdings: np.ndarray, weights: np.ndarray, rate: float):
         require(abs(nav + fee - total) < 1e-10 * max(1, total), "Self-financing identity failed")
         return weights * nav, fee, traded
     low, high = total * (1 - 2 * rate), total
-    for _ in range(45):
-        mid = (low + high) / 2
-        fee = rate * np.abs(weights * mid - holdings).sum()
-        if mid + fee > total:
-            high = mid
-        else:
-            low = mid
-    nav = (low + high) / 2
+    positive = weights > 0
+    ratios = holdings[positive] / weights[positive]
+    points = np.unique(np.r_[low, ratios[(ratios > low) & (ratios < high)], high])
+    nav = None
+    for left, right in pairwise(points):
+        signs = np.sign(weights * ((left + right) / 2) - holdings)
+        candidate = (total + rate * (signs @ holdings)) / (1 + rate * (signs @ weights))
+        if left - total * 1e-12 <= candidate <= right + total * 1e-12:
+            nav = candidate
+            break
+    require(nav is not None, "No root of piecewise-linear self-financing equation")
     traded = weights * nav - holdings
     fee = rate * np.abs(traded).sum()
     require(abs(nav + fee - total) < 1e-10 * max(1, total), "Self-financing identity failed")
@@ -79,18 +87,18 @@ class Optimizer:
     def __init__(self, n: int, cap: float, gamma: float):
         self.weight = cp.Variable(n)
         self.mean = cp.Parameter(n)
-        self.covariance = cp.Parameter((n, n), PSD=True)
+        self.factor = cp.Parameter((n, n))
         self.problem = cp.Problem(cp.Maximize(self.mean @ self.weight - gamma / 2 *
-                                             cp.quad_form(self.weight, self.covariance)),
+                                             cp.sum_squares(self.factor @ self.weight)),
                                   [self.weight >= 0, self.weight <= cap, cp.sum(self.weight) <= 1])
         self.cap = cap
 
     def solve(self, mean, covariance):
         require(np.isfinite(mean).all() and np.isfinite(covariance).all(), "Nonfinite optimizer input")
         self.mean.value = mean * 252
-        self.covariance.value = (covariance + covariance.T) / 2 * 252
+        self.factor.value = np.linalg.cholesky((covariance + covariance.T) / 2 * 252).T
         self.problem.solve(solver="OSQP", eps_abs=1e-8, eps_rel=1e-8, max_iter=20000,
-                           polishing=True, warm_start=True, ignore_dpp=True)
+                           polishing=True, warm_start=True, enforce_dpp=True)
         require(self.problem.status == "optimal", f"Optimization failed: {self.problem.status}")
         risky = np.asarray(self.weight.value).ravel()
         require(risky.min() >= -1e-6 and risky.max() <= self.cap + 1e-6 and risky.sum() <= 1 + 1e-6,

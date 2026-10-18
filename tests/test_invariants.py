@@ -7,7 +7,7 @@ import pytest
 from etf_regimes.common import ROOT
 from etf_regimes.data import RETURN_COLS, macro_tables, momentum
 from etf_regimes.models import classify, fit_jump, monthly_weights, smooth
-from etf_regimes.statistics import cer, circular_indices, paired_inference
+from etf_regimes.statistics import cer, circular_indices, hac_se, paired_inference
 from etf_regimes.trading import Optimizer, replay, settle
 
 
@@ -51,6 +51,13 @@ def test_cost_equation_handles_drift_and_bil_leg():
         actual, _, _ = settle(h, w, .0025)
         independent = brentq(lambda x, w=w, h=h: x + .0025 * np.abs(w * x - h).sum() - h.sum(), .99, 1.001)
         assert actual.sum() == pytest.approx(independent, abs=1e-12)
+    for _ in range(100):
+        h = rng.dirichlet(np.ones(9))
+        w = rng.dirichlet(np.ones(9))
+        actual, cost, _ = settle(h, w, .0025)
+        independent = brentq(lambda x, w=w, h=h: x + .0025 * np.abs(w * x - h).sum() - h.sum(), .99, 1.001)
+        assert actual.sum() == pytest.approx(independent, abs=1e-12)
+        assert actual.sum() + cost == pytest.approx(h.sum(), abs=1e-12)
 
 
 def test_monthly_weights_and_missing_class_prior():
@@ -134,6 +141,13 @@ def test_optimizer_obeys_common_constraints_and_stops_on_invalid_input():
     assert weight.min() >= 0 and weight[:-1].max() <= .400001
     with pytest.raises(RuntimeError):
         opt.solve(np.full(8, np.nan), np.eye(8))
+    rng = np.random.default_rng(22)
+    matrix = rng.normal(size=(8, 8))
+    sigma = (matrix @ matrix.T + np.eye(8)) * .0001
+    interior = np.full(8, .05)
+    solved = opt.solve(10 * sigma @ interior, sigma)
+    assert solved[:-1] == pytest.approx(interior, abs=1e-7)
+    assert opt.problem.is_dpp()
 
 
 def test_paired_bootstrap_and_cer_use_months_as_unit():
@@ -151,6 +165,8 @@ def test_paired_bootstrap_and_cer_use_months_as_unit():
     idx = circular_indices(141, 6, 3, rng)
     assert idx.shape == (3, 141)
     assert np.all((np.diff(idx[:, :6], axis=1) % 141) == 1)
+    # Bartlett HAC uses denominator n for all lags, preserving its positive-semidefinite kernel.
+    assert hac_se(np.array([[-1.], [1.]]), 1)[0] == pytest.approx(.5)
 
 
 def test_snapshot_restores_exact_bytes_and_rejects_changed_local_sources(tmp_path, monkeypatch):

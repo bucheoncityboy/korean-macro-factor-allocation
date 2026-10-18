@@ -157,7 +157,7 @@ def result_documents():
                               "연 CER 차이 (%p)": f"{x['difference_annual_cer'] * 100:.3f}",
                               "동시 95% 구간 (%p)": "[" + ", ".join(f"{z * 100:.3f}" for z in x["simultaneous_95_interval"]) + "]",
                               "판정": x["finding"], "조건부 검정력": f"{x['conditional_power']:.1%}"} for x in primary])
-    extended = pd.read_csv(folder / "extension_2024_2026.csv")
+    extended = pd.read_csv(folder / "extension_2024_onward.csv")
     ext = extended[extended.strategy.isin(PRIMARY)]
     ext_table = pd.DataFrame({"전략": ext.strategy.map(LABELS), "개월": ext.months.astype(str),
                               "연 CER": ext.annual_cer.map(lambda x: f"{x:.2%}"),
