@@ -215,43 +215,43 @@ def paper_comparison_document(p):
 
 def readme(summary, inference, verification):
     a = summary[(summary.study == "A") & (summary.cost_bp == 5)].set_index("strategy")
-    b = summary[(summary.study == "B") & (summary.cost_bp == 5)].set_index("strategy")
-    lines = ["# 글로벌 ETF: 자산 국면과 경제 국면의 비교", "",
-             "- **실제 자료 실행·독립 검증을 완료한 역사적 응용 연구입니다.** 양의 수익이나 유의성 확보를 성공 기준으로 삼지 않았습니다.",
-             "- 질문: 자산별2국면과 경제4국면 중 어떤 정의가 배분에 유용하며, XGBoost가 로지스틱보다 추가 가치를 주는가?",
-             "- [Shu·Yu·Mulvey 원문](https://arxiv.org/html/2406.09578v2)의 확인 가능한 조건을 A에 적용하고, B에서 국면 정의·분류기를 공통 조건으로 비교합니다.",
-             "- 평가: **2021-07-01–2025-09-30, 51개월**. 원문 중첩30개월과 이후 확장21개월을 따로 공개합니다.",
-             "- 실제 ETF8개+BIL, 11년 학습·직전5년 순차 검증·반년 갱신. 상장 전 수익은 만들지 않았습니다.", "",
-             "- **A: 원문과 개선 방향 비교** — 아래는 일별 BIL 초과수익 샤프의 점 추정이며 통계적으로 확인된 우위가 아닙니다."]
-    for base, enhanced, label in [("mv", "mv_jmxgb_floor", "MV, 약세 하한 해석"),
-                                   ("mv", "mv_jmxgb_cap", "MV, 약세 상한 해석"),
-                                   ("minvar", "minvar_jmxgb", "MinVar"), ("equal_weight", "ew_jmxgb", "EW")]:
-        lines.append(f"- {label}: {a.loc[base, 'daily_sharpe']:.2f} → {a.loc[enhanced, 'daily_sharpe']:.2f}.")
-    lines += ["- 원문은 MV0.37→1.02, MinVar0.70→1.12, EW0.51→0.91입니다. [조건 차이와 기간별 비교](docs/paper-comparison.md)", "",
-              "- **B: 세 주요 대비** — 주 지표는 월별 순수익의 연 CER(위험회피5), 단위는 %p입니다."]
+    names = {"asset2_xgb": "자산 2국면 XGBoost", "asset2_logistic": "자산 2국면 로지스틱",
+             "economic4_xgb": "경제 4국면 XGBoost", "economic4_logistic": "경제 4국면 로지스틱"}
+    lines = ["# 글로벌 ETF 자산배분: 자산별 국면 예측의 실증 분석", "",
+             "- **연구 목적:** [Shu·Yu·Mulvey 논문](https://arxiv.org/html/2406.09578v2)의 자산별 국면 예측이 실제 ETF에서도 배분 성과를 개선하는지 검증합니다.",
+             "- **분석 구조:** Jump Model로 강세·약세를 식별하고, XGBoost로 다음 거래일 국면을 예측해 평균분산(MV)·최소분산(MinVar)·동일가중(EW) 배분에 반영합니다.",
+             "- **자료와 기간:** SPY·EFA·EEM·IEF·TLT·LQD·IYR·GLD와 현금 BIL, **2021-07-01–2025-09-30의 51개월**입니다. 상장 이후 실제 자료만 사용합니다.",
+             "- **원문에 맞춘 조건:** 11년 학습·직전 5년 순차 검증·6개월 갱신, 자산별 벌점 선택, 초기 검증에서 확률 평활 선택, 자산 상한 40%와 현금 대피 규칙을 적용합니다.",
+             "- **체결과 비용:** 종가 후 판단 → 다음 조정 시가 체결 → 종가 평가. 편도 5bp를 BIL 포함 모든 ETF 매매에 부과합니다.", "",
+             "- **원문 실증:** 2007–2023년 12개 지수에서 JM-XGB 결합 후 샤프가 MV **0.37→1.02**, MinVar **0.70→1.12**, EW **0.51→0.91**로 개선됐습니다.",
+             "- **이번 ETF 실증:** 아래는 기본 전략 → JM-XGB 결합 전략의 일별 BIL 초과수익 샤프와 최대낙폭입니다."]
+    for base, enhanced, label in [("mv", "mv_jmxgb_floor", "평균분산, 약세 평균 −10bp 하한 해석"),
+                                   ("mv", "mv_jmxgb_cap", "평균분산, 약세 평균 −10bp 상한 해석"),
+                                   ("minvar", "minvar_jmxgb", "최소분산"),
+                                   ("equal_weight", "ew_jmxgb", "동일가중")]:
+        before, after = a.loc[base], a.loc[enhanced]
+        lines.append(f"- {label}: 샤프 **{before.daily_sharpe:.2f}→{after.daily_sharpe:.2f}**, 최대낙폭 **{before.max_drawdown:.2%}→{after.max_drawdown:.2%}**.")
+    mv, regime_mv = a.loc["mv"], a.loc["mv_jmxgb_floor"]
+    lines += ["- **주요 관찰:** 전체 표본에서 낙폭은 줄었지만 원문의 샤프 개선 방향은 유지되지 않았습니다. 위 차이는 점 추정이며 통계적으로 확인된 우위를 뜻하지 않습니다.",
+              f"- 평균분산 전략의 실제 평균 위험노출은 {mv.average_closing_risk_exposure:.1%}→{regime_mv.average_closing_risk_exposure:.1%}, 연 비용/NAV는 {mv.annual_cost_fraction:.2%}→{regime_mv.annual_cost_fraction:.2%}였습니다. [노출·비용·기간별 해석](docs/interpretation.md)",
+              "- 원문과 겹치는 **30개월**과 이후 확장 **21개월**을 분리해 보고합니다. [원문 대응·기간별 비교](docs/paper-comparison.md) · [전체 결과와 NAV](docs/results.md)", "",
+              "- **추가 실증:** 공통 입력·평균 추정·배분 아래 자산별 2국면/경제 4국면 × 로지스틱/XGBoost를 비교해 국면 정의와 ML의 추가 가치를 구분합니다.",
+              "- 주 지표는 월별 순수익의 연 CER(위험회피 5)입니다. 세 대비에 월 쌍체 블록 부트스트랩 20,000회와 동시 95% 구간을 적용했습니다."]
     for r in inference["B"]:
         if r["block_months"] != 6:
             continue
         lo, hi = r["simultaneous_95_interval"]
-        lines.append(f"- {r['left']} − {r['right']}: **{r['difference_annual_cer'] * 100:+.2f}%p**, 동시95% 구간 [{lo * 100:+.2f}, {hi * 100:+.2f}]%p — **{r['finding']}**.")
-    lines += [f"- 네 조합의 CER: XGB2 {b.loc['asset2_xgb', 'annual_cer']:.2%}, 로지스틱2 {b.loc['asset2_logistic', 'annual_cer']:.2%}, XGB4 {b.loc['economic4_xgb', 'annual_cer']:.2%}, 로지스틱4 {b.loc['economic4_logistic', 'annual_cer']:.2%}.",
-              "- 20,000회 월 쌍체 블록 부트스트랩, 기본6개월·민감도3/12개월, 세 대비 max-T 동시 보정입니다.",
-              "- 우위 미확인은 동등성이나 충분한 검정력을 뜻하지 않습니다. [결과표·검정력·부록](docs/results.md)", "",
-              "- 위험자산: SPY·EFA·EEM·IEF·TLT·LQD·IYR·GLD. 현금: BIL. 미국 상장 ETF의 달러 총수익을 평가합니다.",
-              "- 종가 후 판단 → 다음 조정 시가 체결 → 종가 평가. 편도5bp, BIL 포함 모든 ETF 다리에 비용을 부과합니다.",
-              "- A: 원문형 경성 국면 평균·MV/MinVar/EW·현금 규칙. B: 동일17개 입력·월 가중치·평활4일·축소 평균·공통 MVO.",
-              "- 누락·잘못된 빈도·해시 불일치·최적화 실패는 실행을 중단합니다. ALFRED 첫 완성 빈티지 라벨과 가용일을 보존합니다.",
-              f"- 검증: 대표 세 시점 독립 적합{verification['fresh_fit_jobs_at_three_boundaries']}건, 계정{verification['independent_complete_paths']}개 전체 경로 재생, 미래 정보 교란·확률·체결·비용·NAV 검사 통과.",
-              "- 공개 CI는 원자료 없는 산출물 검증을 실행합니다. [실제 원자료 검증](results/study/verification.json) · [산출물 봉인](results/study/artifact_manifest.json)", "",
-              "- 한계: 원문12개 지수·204개월과 이번8개 ETF·51개월은 다릅니다. BIL·다음 시가 체결·일부 원문 세부 규칙의 미확정 차이가 남습니다.",
-              "- 이전 결과를 열람한 뒤 재설계한 역사적 분석입니다. 재표집은 전체 재학습·설계 수정의 불확실성을 포함하지 않습니다.",
-              "- 기존 실험·결과·버전별 CLI는 활성 트리에서 제거했습니다. 이전 작업은 Git 이력에 남습니다.",
-              "- [방법](docs/methodology.md) · [자료 감사·출처](docs/data.md) · [재현과 정확한 실행 소스](docs/reproduction.md) · [고정 계약](configs/execution_contract.json)", "",
+        lines.append(f"- {names[r['left']]} − {names[r['right']]}: CER **{r['difference_annual_cer'] * 100:+.2f}%p**, 동시 95% 구간 [{lo * 100:+.2f}, {hi * 100:+.2f}]%p — **{r['finding']}**.")
+    lines += ["- 우위 미확인은 동등성이나 충분한 검정력을 뜻하지 않습니다. 입력 제거·경제 6개월 정의·비용·현금 규칙 등 사전 고정 부록은 [전체 결과](docs/results.md)에 연결했습니다.", "",
+              "- **해석의 한계:** 원문의 12개 지수·204개월과 이번 8개 ETF·51개월은 다릅니다. BIL, 다음 시가 체결과 원문 세부 규칙의 미확정 차이가 있어 수치의 정확한 재현으로 제시하지 않습니다.",
+              "- 이전 결과를 열람한 뒤 재설계한 역사적 순차 분석입니다. 전향 검증이 아니며 재표집은 전체 재학습·설계 수정 불확실성을 포함하지 않습니다.",
+              f"- **검증:** 독립 재학습 {verification['fresh_fit_jobs_at_three_boundaries']}건·전체 계정 {verification['independent_complete_paths']}개 독립 재생, 미래 정보 교란·확률·시점·비용·NAV 검사 통과. [실제 원자료 검증](results/study/verification.json) · [공개 CI](https://github.com/bucheoncityboy/korean-macro-factor-allocation/actions)",
+              "- **문서:** [방법](docs/methodology.md) · [자료·출처](docs/data.md) · [재현 안내](docs/reproduction.md) · [고정 계약](configs/execution_contract.json)", "",
+              "- **재현:** Python 3.12와 잠근 의존성을 사용합니다. 기존 계약을 재현할 때 `audit --freeze`로 덮어쓰지 않습니다.", "",
               "```bash", "uv sync --frozen --python 3.12", "uv run etf-study acquire", "uv run etf-study audit",
               "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 uv run etf-study run --workers 4",
               "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 uv run etf-study verify", "uv run etf-study report",
-              "uv run pytest -q", "uv run etf-study verify --artifacts-only", "```", "",
-              "- 기존 고정 계약을 재현할 때 `audit --freeze`로 계약을 덮어쓰지 않습니다."]
+              "uv run etf-study verify --artifacts-only", "```"]
     (ROOT / "README.md").write_text("\n".join(lines) + "\n")
 
 
