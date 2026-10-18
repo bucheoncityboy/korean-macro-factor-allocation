@@ -10,7 +10,7 @@ from scipy.optimize import brentq
 from .common import ROOT, config, digest, require, write_json
 from .data import build_features, macro_tables, read_prices, read_vintages
 from .models import fold_forecast, smooth
-from .study import PRIMARY, check_contract, folds
+from .study import PRIMARY, cached_fold, check_contract, folds, select_penalty
 
 
 def artifact_paths():
@@ -190,7 +190,46 @@ def future_perturbation(prices):
         require(np.array_equal(original["predictions"][kind], revised["predictions"][kind]),
                 "Unpublished economic label changed model prediction")
         require(np.array_equal(original["means"], revised["means"]), "Unpublished label changed conditional mean")
-    return "future ETF prices, FRED inputs, ALFRED vintages, unpublished economic labels: passed"
+    # Rebuild a real historical candidate history and call the tuner after appending hostile future rows.
+    history, previous = {}, {}
+    for train_asof, signal_dates, target_dates in folds(cfg):
+        if train_asof >= asof:
+            break
+        for penalty in cfg["jump_penalties"]:
+            fit = cached_fold({"asset": "SPY", "features": baseline["SPY"], "excess": excess.SPY,
+                               "returns_over_bil": over_bil, "macro_labels": labels,
+                               "signal_dates": signal_dates, "target_dates": target_dates, "asof": train_asof,
+                               "remove_block": None, "cfg": cfg, "definition": "asset2", "penalty": penalty})
+            for kind in ["logistic", "xgb"]:
+                key = ("SPY", penalty, kind)
+                filtered, previous[key] = smooth(fit["predictions"][kind], previous.get(key))
+                history.setdefault(key, []).append(pd.Series(filtered[:, 0], index=target_dates))
+    selected, scores = select_penalty(history, "SPY", asof, prices, cfg)
+    hostile = {key: value + [pd.Series([0., 1., 0.], index=pd.bdate_range("2021-01-01", periods=3))]
+               for key, value in history.items()}
+    selected_changed, scores_changed = select_penalty(hostile, "SPY", asof, altered, cfg)
+    require(selected == selected_changed and scores == scores_changed, "Future values changed penalty tuning")
+    saved_tuning = json.loads((ROOT / "results/main/tuning.json").read_text())
+    reference = next(x for x in saved_tuning if x["asset"] == "SPY" and pd.Timestamp(x["asof"]) == asof)
+    require(selected == reference["selected"] and np.allclose([s["score"] for s in scores],
+                                                             [s["score"] for s in reference["scores"]]),
+            "Historical tuning replay differs")
+    # Altered post-cutoff inputs must not change the first asof forecast in either definition.
+    for definition in ["asset2", "economic4"]:
+        penalty = selected if definition == "asset2" else None
+        original_fit = fold_forecast(*args, labels, signal, target, asof, definition, penalty=penalty, cfg=cfg)
+        changed_fit = fold_forecast("SPY", changed["SPY"], excess.SPY, over_bil, changed_labels,
+                                    signal, target, asof, definition, penalty=penalty, cfg=cfg)
+        for kind in ["logistic", "xgb"]:
+            require(np.array_equal(original_fit["predictions"][kind][0], changed_fit["predictions"][kind][0]),
+                    "Future input changed earlier prediction")
+    saved_targets = pd.read_parquet(ROOT / "results/main/targets.parquet")
+    for strategy in PRIMARY:
+        target_frame = saved_targets[(saved_targets.strategy == strategy) & (saved_targets.date <= cutoff)]
+        target_frame = target_frame.pivot(index="date", columns="asset", values="weight")[cfg["assets"] + ["BIL"]]
+        require(np.array_equal(independent_replay(target_frame, prices, 5),
+                               independent_replay(target_frame, altered, 5)), "Future quote changed earlier trades")
+    return "future prices/FRED/vintages/unpublished labels: features, tuning, asof forecasts and past NAV invariant"
 
 
 def verify(artifacts_only=False):

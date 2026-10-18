@@ -19,6 +19,9 @@ def main():
     args = parser.parse_args()
     if args.command == "acquire":
         from .data import acquire
+        from .snapshots import restore_raw_snapshot
+        if restore_raw_snapshot():
+            print("Restored the exact archived public-response snapshot")
         result = acquire()
         print(f"Acquired {len(result['objects'])} immutable source objects")
     elif args.command == "audit":

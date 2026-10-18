@@ -199,6 +199,11 @@ def report():
     verification = json.loads((ROOT / "results/verification.json").read_text())
     require(verification["status"] == "passed" and verification["mode"] == "actual_raw_data",
             "Actual-data verification must pass before reporting completed empirical results")
+    run = json.loads((ROOT / "results/run.json").read_text())
+    require(run["scope"] == "full" and run["status"] == "verified", "Full verified study required for final report")
+    require(all((ROOT / "results" / name / "nav.parquet").exists() for name in
+                ["main", "without_returns", "without_market", "without_macro", "macro6"]),
+            "Prespecified appendices are incomplete")
     evaluate()
     for folder in (ROOT / "results").iterdir():
         if (folder / "predictions.parquet").exists():

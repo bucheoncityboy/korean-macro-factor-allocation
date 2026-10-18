@@ -225,9 +225,8 @@ def macro_tables(width: int = 3, vintages=None) -> tuple[pd.DataFrame, pd.DataFr
                                  "available": available, "growth": pair.growth, "inflation": pair.inflation,
                                  "ip_vintage": last[0]["vintage"], "cpi_vintage": last[1]["vintage"]}
         require(not joint.empty, f"No joint macro history: {date}")
-        month = joint.index[-1]
-        rows.append({"available": available, "release_date": date, "growth": joint.iloc[-1].growth,
-                     "inflation": joint.iloc[-1].inflation, "ip_month": last[0]["values"].dropna().index[-1],
+        rows.append({"available": available, "release_date": date, "growth": last[0]["values"].dropna().iloc[-1],
+                     "inflation": last[1]["values"].dropna().iloc[-1], "ip_month": last[0]["values"].dropna().index[-1],
                      "cpi_month": last[1]["values"].dropna().index[-1],
                      "ip_vintage": last[0]["vintage"], "cpi_vintage": last[1]["vintage"]})
     table = pd.DataFrame(rows).sort_values(["available", "release_date"]).drop_duplicates("available", keep="last")

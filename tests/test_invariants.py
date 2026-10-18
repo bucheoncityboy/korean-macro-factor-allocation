@@ -85,7 +85,7 @@ def test_jump_online_prefix_and_canonical_classes():
     assert np.array_equal(expected[:250], np.asarray(jm.predict_online(z[:250])))
     z[250:] *= -4
     assert np.array_equal(expected[:250], np.asarray(jm.predict_online(z))[:250])
-    # Refit with raw feature columns permuted; bull is still sorted by cumulative excess return.
+    # Refit on an expanded history; bull is still sorted by cumulative excess return.
     _, _, labels2 = fit_jump(x.iloc[:250], r, 10)
     totals2 = r.reindex(labels2.index).groupby(labels2).sum()
     assert totals2[0] >= totals2[1]
@@ -107,7 +107,10 @@ def test_first_joint_vintage_label_is_frozen_and_available_next_session():
           pd.Timestamp("2003-02-18"): base.loc[:"2003-01-01"] * 1.01}
     cpi = {pd.Timestamp("2003-02-14"): base.loc[:"2003-01-01"],
            pd.Timestamp("2003-03-18"): base.loc[:"2003-02-01"] * 2}
-    _, labels = macro_tables(3, (ip, cpi))
+    features, labels = macro_tables(3, (ip, cpi))
+    assert features.iloc[0].ip_month == pd.Timestamp("2002-12-01")
+    assert features.iloc[0].cpi_month == pd.Timestamp("2003-01-01")
+    assert features.iloc[0].inflation == pytest.approx(momentum(cpi[pd.Timestamp("2003-02-14")], 3).iloc[-1])
     january = labels.loc["2003-01-01"]
     assert january.release_date == pd.Timestamp("2003-02-18")
     assert january.available == pd.Timestamp("2003-02-19")
@@ -140,3 +143,23 @@ def test_paired_bootstrap_and_cer_use_months_as_unit():
     idx = circular_indices(141, 6, 3, rng)
     assert idx.shape == (3, 141)
     assert np.all((np.diff(idx[:, :6], axis=1) % 141) == 1)
+
+
+def test_snapshot_restores_exact_bytes_and_rejects_changed_local_sources(tmp_path, monkeypatch):
+    import hashlib
+    from zipfile import ZipFile
+
+    from etf_regimes import snapshots
+    monkeypatch.setattr(snapshots, "ROOT", tmp_path)
+    archive = tmp_path / "snapshot.zip"
+    with ZipFile(archive, "w") as source:
+        source.writestr("data/raw/test.csv", "date,value\n2004-01-01,1\n")
+    (tmp_path / "configs").mkdir()
+    (tmp_path / "configs/source_snapshot.json").write_text(json.dumps({
+        "path": "snapshot.zip", "sha256": hashlib.sha256(archive.read_bytes()).hexdigest()}))
+    assert snapshots.restore_raw_snapshot()
+    data = tmp_path / "data/raw/test.csv"
+    assert data.read_text() == "date,value\n2004-01-01,1\n"
+    data.write_text("tampered")
+    with pytest.raises(RuntimeError, match="differs"):
+        snapshots.restore_raw_snapshot()

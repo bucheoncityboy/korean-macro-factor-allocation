@@ -4,7 +4,11 @@ from __future__ import annotations
 import hashlib
 import json
 import pickle
+import platform
+import subprocess
 from concurrent.futures import ProcessPoolExecutor
+from datetime import UTC, datetime
+from importlib.metadata import version
 
 import numpy as np
 import pandas as pd
@@ -36,9 +40,9 @@ def check_contract():
     contract_path = ROOT / "configs/execution_contract.json"
     c = json.loads(contract_path.read_text())
     for file, key in [(ROOT / "configs/protocol.json", "protocol_sha256"),
-                      (MANIFEST, "raw_manifest_sha256"), (ROOT / "uv.lock", "lock_sha256")]:
+                      (MANIFEST, "raw_manifest_sha256"), (ROOT / "uv.lock", "lock_sha256"),
+                      (ROOT / "results/data_audit.json", "audit_sha256")]:
         require(digest(file) == c[key], f"Frozen execution contract changed: {file}")
-    import subprocess
     committed = subprocess.check_output(["git", "show", "HEAD:configs/execution_contract.json"], cwd=ROOT)
     require(committed == contract_path.read_bytes(), "Commit execution contract before any strategy evaluation")
     check_manifest()
@@ -268,6 +272,20 @@ def allocate(forecasts, prices, cfg, variant="main"):
 
 def run(scope="primary", workers=4):
     check_contract()
+    source_paths = [*sorted((ROOT / "src/etf_regimes").glob("*.py")), ROOT / "pyproject.toml",
+                    ROOT / "uv.lock", ROOT / "configs/protocol.json", ROOT / "configs/execution_contract.json"]
+    source_hashes = {str(p.relative_to(ROOT)): digest(p) for p in source_paths}
+    changed = subprocess.check_output(["git", "diff", "HEAD", "--", "src", "configs", "pyproject.toml",
+                                       "uv.lock"], cwd=ROOT)
+    require(not changed, "Commit implementation before strategy evaluation")
+    metadata = {"status": "running_unverified", "scope": scope, "execution_commit": git_head(),
+                "started_at_utc": datetime.now(UTC).isoformat(), "source_sha256": source_hashes,
+                "python": platform.python_version(), "platform": platform.platform(),
+                "packages": {name: version(name) for name in
+                             ["numpy", "pandas", "scikit-learn", "xgboost", "jumpmodels", "cvxpy", "osqp"]},
+                "contract_sha256": digest(ROOT / "configs/execution_contract.json"),
+                "protocol_sha256": digest(ROOT / "configs/protocol.json"), "raw_manifest_sha256": digest(MANIFEST)}
+    write_json(ROOT / "results/run.json", metadata)
     cfg = config()
     prices, _ = read_prices()
     forecasts, tuning = forecast_study(cfg, prices, workers=workers)
@@ -281,6 +299,7 @@ def run(scope="primary", workers=4):
         cfg6 = {**cfg, "macro_smoothing_months": 6}
         f, _ = forecast_study(cfg6, prices, "macro6", workers=workers)
         allocate(f, prices, cfg6, "macro6")
-    write_json(ROOT / "results/run.json", {"status": "executed_unverified", "scope": scope,
-               "execution_commit": git_head(), "contract_sha256": digest(ROOT / "configs/execution_contract.json"),
-               "protocol_sha256": digest(ROOT / "configs/protocol.json"), "raw_manifest_sha256": digest(MANIFEST)})
+    require(git_head() == metadata["execution_commit"], "Execution commit changed during run")
+    require(all(digest(ROOT / name) == sha for name, sha in source_hashes.items()), "Source changed during run")
+    metadata.update(status="executed_unverified", finished_at_utc=datetime.now(UTC).isoformat())
+    write_json(ROOT / "results/run.json", metadata)
