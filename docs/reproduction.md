@@ -12,6 +12,7 @@ pnpm setup:lightgbm
 pnpm check
 pnpm verify:published
 pnpm verify:power -- --public
+pnpm verify:causes -- --public
 ```
 
 ## 실제 자료로 재실행
@@ -25,6 +26,8 @@ pnpm research:power         # 예측 237개월·ETF 배분 140구간 확대 실�
 pnpm research:validity      # GDP와의 사후 대조, 예측모형에 사용 안 함
 pnpm verify:research        # 실제 입력·예측·비용·NAV 재검증
 pnpm verify:power           # 확대 분석의 실제 자료 재검증
+pnpm research:causes        # 원인 사후 진단: 후보 8개 재학습·동일 비중·미래 정답 진단
+pnpm verify:causes          # 원인 진단 입력 해시·확률·회계 항등식 검증
 pnpm report                 # 검증 결과에서 README·보고서·그림 생성
 ```
 
@@ -32,3 +35,5 @@ pnpm report                 # 검증 결과에서 README·보고서·그림 생�
 - 등록한 과학 코드·설정·원천을 바꾸면 새 연구 ID와 실행 계약을 만들어야 한다. [최초 계약](four_regime_preregistration.md) · [확대 계약](power_retry_protocol.md)
 - README의 결과 숫자는 검증된 JSON에서 생성한다. [문서 생성 코드](../src/reporting/regimes.ts)
 - 데이터 단위·빈티지·가용시점은 [데이터 사전](four_regime_data.md), 실제 수행 기록은 [실행 기록](four_regime_experiment_log.md)에 있다.
+
+원인 진단은 기존 결과를 본 뒤 범위를 고정한 탐색 분석이다. 깨끗한 Git 작업 트리에서 실행하며, 미래 국면 정답과 전 기간 평균 비중을 쓰는 두 비교군은 거래할 수 있는 전략이 아니다. 기존 주 결과를 대체하지 않는다. [진단 설계](cause_audit_protocol.md) · [원인 분석 결과](cause_audit_results.md)

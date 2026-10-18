@@ -17,13 +17,16 @@
     "verify:research": "tsx src/verifyRegimes.ts",
     "setup:lightgbm": "tsx src/setupLightgbm.ts",
     "check": "pnpm typecheck && pnpm test",
-    "report": "tsx src/reporting/powerRetry.ts && tsx src/reporting/regimes.ts",
+    "report": "tsx src/reporting/powerRetry.ts && tsx src/reporting/causes.ts && tsx src/reporting/regimes.ts",
     "research:prepare": "tsx src/regimes/study.ts --prepare",
     "verify:published": "tsx src/verifyRegimes.ts --public",
     "research:validity": "tsx src/reporting/regimeValidity.ts",
     "research:power": "tsx src/regimes/powerRetry.ts",
     "verify:power": "tsx src/verifyPower.ts",
-    "report:power": "tsx src/reporting/powerRetry.ts"
+    "report:power": "tsx src/reporting/powerRetry.ts",
+    "research:causes": "tsx src/diagnostics/causes.ts",
+    "verify:causes": "tsx src/verifyCauses.ts",
+    "report:causes": "tsx src/reporting/causes.ts"
   },
   "dependencies": {
     "csv-parse": "^6.1.0",

@@ -71,6 +71,8 @@ const forecastML=expandedForecast.find(r=>r.model==='MACRO_LGBM')!,forecastLogit
 const allocationML=expandedAllocation.find(r=>r.strategy==='LGBM_ALLOC')!,allocationLogit=expandedAllocation.find(r=>r.strategy==='MACRO_ALLOC')!,allocationSAA=expandedAllocation.find(r=>r.strategy==='SAA')!,allocationRidge=expandedAllocation.find(r=>r.strategy==='RETURN_TAA')!;
 const cerPower=expandedPower.filter(r=>r.endpoint==='annual_CER'),lossPower=expandedPower.filter(r=>r.endpoint==='log_loss');
 const allIntervalsContainZero=expandedComparisons.every(r=>r.simultaneous_ci_low<=0&&r.simultaneous_ci_high>=0);
+const causeAllocation=JSON.parse(await readFile(`${ROOT}/cause-audit/allocation-summary.json`,'utf8')) as Row[];
+const causeOracle=causeAllocation.find(r=>r.window==='EXPANDED_ARCHIVE'&&r.strategy==='FUTURE_STATE_ORACLE_UNTRADEABLE'&&r.cost_bps===10)!,causeConstant=causeAllocation.find(r=>r.window==='EXPANDED_ARCHIVE'&&r.strategy==='STATIC_MEAN_ML_EXPOST'&&r.cost_bps===10)!;
 const readme=`# 한국 4국면 예측과 자산배분
 
 성장·물가로 정의한 네 국면을 예측하고, 그 확률을 한국 주식·국채 ETF 비중으로 연결해 검증했다.
@@ -84,6 +86,12 @@ const readme=`# 한국 4국면 예측과 자산배분
 - **배분 수익:** 비용 차감 연복리 수익률은 LightGBM **${pct(allocationML.cagr)}**, 로지스틱 **${pct(allocationLogit.cagr)}**, 정적 50/50 **${pct(allocationSAA.cagr)}**, 수익률 Ridge **${pct(allocationRidge.cagr)}**였다.
 - **위험을 감안한 성과:** 연 순 CER은 LightGBM **${pct(allocationML.cer_annual)}**, 로지스틱 **${pct(allocationLogit.cer_annual)}**, 정적 50/50 **${pct(allocationSAA.cer_annual)}**, 수익률 Ridge **${pct(allocationRidge.cer_annual)}**였다. CER은 평균 수익과 변동성을 함께 반영한 효용 지표다.
 - **낙폭과 주식 노출:** 최대낙폭은 LightGBM **${pct(allocationML.mdd_daily)}**, 정적 50/50 **${pct(allocationSAA.mdd_daily)}**였다. 평균 주식 비중도 **${pct(allocationML.average_equity_weight,1)} / ${pct(allocationSAA.average_equity_weight,1)}**로 달라, 낙폭 차이에는 노출 차이도 함께 봐야 한다.
+
+## 성과가 약했던 이유
+
+- **배분정책이 병목이었다:** 미래 국면 정답을 준 진단도 순 CAGR **${pct(causeOracle.cagr)}**로 50/50보다 낮았다. 미래 정답을 사용한 거래 불가 진단이며 성과 상한은 아니다.
+- **낮은 주식 노출과 비중 변경이 모두 불리했다:** ML과 같은 평균 주식 비중을 고정한 사후 비교는 **${pct(causeConstant.cagr)}**, 실제 ML 배분은 **${pct(allocationML.cagr)}**였다.
+- **국면의 시간 척도도 중요했다:** 6개월 평활 부록에서는 예측이 개선됐지만 배분은 50/50에 못 미쳤다. [실제 재학습·경로 분해·전체 원인 진단](docs/cause_audit_results.md)
 
 ## 검정력 재검토 결과
 
@@ -107,6 +115,7 @@ const readme=`# 한국 4국면 예측과 자산배분
 
 ## 전체 결과·재현
 
+- [성과 부진 원인·ML 선택·배분 경로 분해](docs/cause_audit_results.md)
 - [확대 결과·검정력·모든 민감도](docs/power_retry_results.md)
 - [최초 고정 분석·ML 해석·전체 부록](docs/four_regime_results.md)
 - [설치·검증·실증 재현 명령](docs/reproduction.md)
@@ -273,6 +282,6 @@ await write('docs/four_regime_data.md',`# 4국면 데이터 사전
 await write('docs/four_regime_data.md',(await readFile('docs/four_regime_data.md','utf8'))+`\n## 사후 GDP 대조 자료\n\nIMF International Financial Statistics의 계절조정 실질 GDP를 FRED 시리즈 [NGDPRSAXDCKRQ](https://fred.stlouisfed.org/series/NGDPRSAXDCKRQ)로 취득했다. 단위는 자국 통화 백만, 빈도는 분기다. 최신 수정치이며 예측 입력·라벨 정의·튜닝에는 사용하지 않았다. 실제 비교는 2009-Q4–2026-Q2의 67개 완성 분기다. 세 달의 산업생산 모멘텀을 분기 평균해 GDP YoY의 직전 분기 대비 변화와 대조한다. 국가의 공식 경기순환 연대기를 검증한 결과로 표시하지 않는다. 원본은 로컬에 보관하고 취득 UTC·SHA256·해석 한계는 [진단 결과](../results/four-regime/construct-validity.json)에 기록했다.\n`);
 const paths:string[]=[];
 async function collect(dir:string){for(const entry of await readdir(dir,{withFileTypes:true})){const p=dir+'/'+entry.name;if(entry.isDirectory())await collect(p);else if(p!==`${ROOT}/artifact-hashes.json`)paths.push(p);}}
-await collect(ROOT);paths.push('README.md','docs/four_regime_results.md','docs/four_regime_data.md','docs/four_regime_experiment_log.md','docs/source_mirrors.json','docs/README.md','results/README.md','docs/power_retry_results.md','docs/power_retry_protocol.md','docs/reproduction.md');
+await collect(ROOT);paths.push('README.md','docs/four_regime_results.md','docs/four_regime_data.md','docs/four_regime_experiment_log.md','docs/source_mirrors.json','docs/README.md','results/README.md','docs/power_retry_results.md','docs/power_retry_protocol.md','docs/reproduction.md','docs/cause_audit_results.md','docs/cause_audit_protocol.md');
 await writeJson(`${ROOT}/artifact-hashes.json`,Object.fromEntries(await Promise.all(paths.map(async p=>[p,sha256(await readFile(p))]))));
 console.log(`Reported ${manifest.id}: ${paths.length} artifacts and documents; empirical values read from verified outputs.`);

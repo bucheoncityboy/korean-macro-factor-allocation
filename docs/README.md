@@ -5,6 +5,7 @@
 - [실행 계약](four_regime_preregistration.md)
 - [검정력 재시도 설계](power_retry_protocol.md)
 - [검정력 재시도 결과](power_retry_results.md)
+- [성과 부진 원인 진단](cause_audit_results.md) · [사후 진단 설계](cause_audit_protocol.md)
 - [설치·검증·실증 재현](reproduction.md)
 - [실행 기록](four_regime_experiment_log.md)
 

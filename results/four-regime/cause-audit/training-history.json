@@ -1,0 +1,1898 @@
+[
+  {
+    "period": "2006-09",
+    "model_training_n": 87,
+    "baseline_label_n": 181,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2006-10",
+    "model_training_n": 88,
+    "baseline_label_n": 182,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2006-11",
+    "model_training_n": 89,
+    "baseline_label_n": 183,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2006-12",
+    "model_training_n": 90,
+    "baseline_label_n": 184,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2007-01",
+    "model_training_n": 91,
+    "baseline_label_n": 185,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2007-02",
+    "model_training_n": 92,
+    "baseline_label_n": 186,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2007-03",
+    "model_training_n": 93,
+    "baseline_label_n": 187,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2007-04",
+    "model_training_n": 94,
+    "baseline_label_n": 188,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2007-05",
+    "model_training_n": 95,
+    "baseline_label_n": 189,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2007-06",
+    "model_training_n": 96,
+    "baseline_label_n": 190,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2007-07",
+    "model_training_n": 97,
+    "baseline_label_n": 191,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2007-08",
+    "model_training_n": 98,
+    "baseline_label_n": 192,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2007-09",
+    "model_training_n": 99,
+    "baseline_label_n": 193,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2007-10",
+    "model_training_n": 100,
+    "baseline_label_n": 194,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2007-11",
+    "model_training_n": 101,
+    "baseline_label_n": 195,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2007-12",
+    "model_training_n": 102,
+    "baseline_label_n": 196,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2008-01",
+    "model_training_n": 102,
+    "baseline_label_n": 196,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2008-02",
+    "model_training_n": 104,
+    "baseline_label_n": 198,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2008-03",
+    "model_training_n": 105,
+    "baseline_label_n": 199,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2008-04",
+    "model_training_n": 105,
+    "baseline_label_n": 199,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2008-05",
+    "model_training_n": 107,
+    "baseline_label_n": 201,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2008-06",
+    "model_training_n": 108,
+    "baseline_label_n": 202,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2008-07",
+    "model_training_n": 109,
+    "baseline_label_n": 203,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2008-08",
+    "model_training_n": 110,
+    "baseline_label_n": 204,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2008-09",
+    "model_training_n": 111,
+    "baseline_label_n": 205,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2008-10",
+    "model_training_n": 112,
+    "baseline_label_n": 206,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2008-11",
+    "model_training_n": 113,
+    "baseline_label_n": 207,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2008-12",
+    "model_training_n": 114,
+    "baseline_label_n": 208,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2009-01",
+    "model_training_n": 115,
+    "baseline_label_n": 209,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2009-02",
+    "model_training_n": 116,
+    "baseline_label_n": 210,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2009-03",
+    "model_training_n": 117,
+    "baseline_label_n": 211,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2009-04",
+    "model_training_n": 118,
+    "baseline_label_n": 212,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2009-05",
+    "model_training_n": 119,
+    "baseline_label_n": 213,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2009-06",
+    "model_training_n": 120,
+    "baseline_label_n": 214,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2009-07",
+    "model_training_n": 120,
+    "baseline_label_n": 214,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2009-08",
+    "model_training_n": 122,
+    "baseline_label_n": 216,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2009-09",
+    "model_training_n": 123,
+    "baseline_label_n": 217,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2009-10",
+    "model_training_n": 124,
+    "baseline_label_n": 218,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2009-11",
+    "model_training_n": 125,
+    "baseline_label_n": 219,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2009-12",
+    "model_training_n": 126,
+    "baseline_label_n": 220,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2010-01",
+    "model_training_n": 127,
+    "baseline_label_n": 221,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2010-02",
+    "model_training_n": 128,
+    "baseline_label_n": 222,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2010-03",
+    "model_training_n": 129,
+    "baseline_label_n": 223,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2010-04",
+    "model_training_n": 129,
+    "baseline_label_n": 223,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2010-05",
+    "model_training_n": 131,
+    "baseline_label_n": 225,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2010-06",
+    "model_training_n": 132,
+    "baseline_label_n": 226,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2010-07",
+    "model_training_n": 133,
+    "baseline_label_n": 227,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2010-08",
+    "model_training_n": 134,
+    "baseline_label_n": 228,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2010-09",
+    "model_training_n": 135,
+    "baseline_label_n": 229,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2010-10",
+    "model_training_n": 136,
+    "baseline_label_n": 230,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2010-11",
+    "model_training_n": 137,
+    "baseline_label_n": 231,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2010-12",
+    "model_training_n": 138,
+    "baseline_label_n": 232,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2011-01",
+    "model_training_n": 139,
+    "baseline_label_n": 233,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2011-02",
+    "model_training_n": 140,
+    "baseline_label_n": 234,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2011-03",
+    "model_training_n": 141,
+    "baseline_label_n": 235,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2011-04",
+    "model_training_n": 142,
+    "baseline_label_n": 236,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2011-05",
+    "model_training_n": 143,
+    "baseline_label_n": 237,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2011-06",
+    "model_training_n": 144,
+    "baseline_label_n": 238,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2011-07",
+    "model_training_n": 145,
+    "baseline_label_n": 239,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2011-08",
+    "model_training_n": 146,
+    "baseline_label_n": 240,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2011-09",
+    "model_training_n": 147,
+    "baseline_label_n": 241,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2011-10",
+    "model_training_n": 148,
+    "baseline_label_n": 242,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2011-11",
+    "model_training_n": 149,
+    "baseline_label_n": 243,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2011-12",
+    "model_training_n": 150,
+    "baseline_label_n": 244,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2012-01",
+    "model_training_n": 151,
+    "baseline_label_n": 245,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2012-02",
+    "model_training_n": 152,
+    "baseline_label_n": 246,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2012-03",
+    "model_training_n": 153,
+    "baseline_label_n": 247,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2012-04",
+    "model_training_n": 154,
+    "baseline_label_n": 248,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2012-05",
+    "model_training_n": 155,
+    "baseline_label_n": 249,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2012-06",
+    "model_training_n": 155,
+    "baseline_label_n": 249,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2012-07",
+    "model_training_n": 157,
+    "baseline_label_n": 251,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2012-08",
+    "model_training_n": 158,
+    "baseline_label_n": 252,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2012-09",
+    "model_training_n": 159,
+    "baseline_label_n": 253,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2012-10",
+    "model_training_n": 160,
+    "baseline_label_n": 254,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2012-11",
+    "model_training_n": 160,
+    "baseline_label_n": 254,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2012-12",
+    "model_training_n": 162,
+    "baseline_label_n": 256,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2013-01",
+    "model_training_n": 163,
+    "baseline_label_n": 257,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2013-02",
+    "model_training_n": 164,
+    "baseline_label_n": 258,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2013-03",
+    "model_training_n": 165,
+    "baseline_label_n": 259,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2013-04",
+    "model_training_n": 166,
+    "baseline_label_n": 260,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2013-05",
+    "model_training_n": 167,
+    "baseline_label_n": 261,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2013-06",
+    "model_training_n": 168,
+    "baseline_label_n": 262,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2013-07",
+    "model_training_n": 169,
+    "baseline_label_n": 263,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2013-08",
+    "model_training_n": 169,
+    "baseline_label_n": 263,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2013-09",
+    "model_training_n": 171,
+    "baseline_label_n": 265,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2013-10",
+    "model_training_n": 171,
+    "baseline_label_n": 265,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2013-11",
+    "model_training_n": 173,
+    "baseline_label_n": 267,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2013-12",
+    "model_training_n": 174,
+    "baseline_label_n": 268,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2014-01",
+    "model_training_n": 175,
+    "baseline_label_n": 269,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2014-02",
+    "model_training_n": 175,
+    "baseline_label_n": 269,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2014-03",
+    "model_training_n": 177,
+    "baseline_label_n": 271,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2014-04",
+    "model_training_n": 178,
+    "baseline_label_n": 272,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2014-05",
+    "model_training_n": 179,
+    "baseline_label_n": 273,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2014-06",
+    "model_training_n": 180,
+    "baseline_label_n": 274,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2014-07",
+    "model_training_n": 181,
+    "baseline_label_n": 275,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2014-08",
+    "model_training_n": 182,
+    "baseline_label_n": 276,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2014-09",
+    "model_training_n": 183,
+    "baseline_label_n": 277,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2014-10",
+    "model_training_n": 184,
+    "baseline_label_n": 278,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2014-11",
+    "model_training_n": 185,
+    "baseline_label_n": 279,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2014-12",
+    "model_training_n": 186,
+    "baseline_label_n": 280,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2015-01",
+    "model_training_n": 187,
+    "baseline_label_n": 281,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2015-02",
+    "model_training_n": 188,
+    "baseline_label_n": 282,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2015-03",
+    "model_training_n": 189,
+    "baseline_label_n": 283,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2015-04",
+    "model_training_n": 190,
+    "baseline_label_n": 284,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2015-05",
+    "model_training_n": 191,
+    "baseline_label_n": 285,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2015-06",
+    "model_training_n": 192,
+    "baseline_label_n": 286,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2015-07",
+    "model_training_n": 193,
+    "baseline_label_n": 287,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2015-08",
+    "model_training_n": 194,
+    "baseline_label_n": 288,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2015-09",
+    "model_training_n": 195,
+    "baseline_label_n": 289,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2015-10",
+    "model_training_n": 196,
+    "baseline_label_n": 290,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2015-11",
+    "model_training_n": 197,
+    "baseline_label_n": 291,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2015-12",
+    "model_training_n": 198,
+    "baseline_label_n": 292,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2016-01",
+    "model_training_n": 199,
+    "baseline_label_n": 293,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2016-02",
+    "model_training_n": 200,
+    "baseline_label_n": 294,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2016-03",
+    "model_training_n": 201,
+    "baseline_label_n": 295,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2016-04",
+    "model_training_n": 202,
+    "baseline_label_n": 296,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2016-05",
+    "model_training_n": 203,
+    "baseline_label_n": 297,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2016-06",
+    "model_training_n": 204,
+    "baseline_label_n": 298,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2016-07",
+    "model_training_n": 205,
+    "baseline_label_n": 299,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2016-08",
+    "model_training_n": 206,
+    "baseline_label_n": 300,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2016-09",
+    "model_training_n": 207,
+    "baseline_label_n": 301,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2016-10",
+    "model_training_n": 208,
+    "baseline_label_n": 302,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2016-11",
+    "model_training_n": 209,
+    "baseline_label_n": 303,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2016-12",
+    "model_training_n": 210,
+    "baseline_label_n": 304,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2017-01",
+    "model_training_n": 211,
+    "baseline_label_n": 305,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2017-02",
+    "model_training_n": 212,
+    "baseline_label_n": 306,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2017-03",
+    "model_training_n": 213,
+    "baseline_label_n": 307,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2017-04",
+    "model_training_n": 214,
+    "baseline_label_n": 308,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2017-05",
+    "model_training_n": 215,
+    "baseline_label_n": 309,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2017-06",
+    "model_training_n": 216,
+    "baseline_label_n": 310,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2017-07",
+    "model_training_n": 217,
+    "baseline_label_n": 311,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2017-08",
+    "model_training_n": 218,
+    "baseline_label_n": 312,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2017-09",
+    "model_training_n": 219,
+    "baseline_label_n": 313,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2017-10",
+    "model_training_n": 220,
+    "baseline_label_n": 314,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2017-11",
+    "model_training_n": 221,
+    "baseline_label_n": 315,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2017-12",
+    "model_training_n": 222,
+    "baseline_label_n": 316,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2018-01",
+    "model_training_n": 223,
+    "baseline_label_n": 317,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2018-02",
+    "model_training_n": 224,
+    "baseline_label_n": 318,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2018-03",
+    "model_training_n": 225,
+    "baseline_label_n": 319,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2018-04",
+    "model_training_n": 225,
+    "baseline_label_n": 319,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2018-05",
+    "model_training_n": 227,
+    "baseline_label_n": 321,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2018-06",
+    "model_training_n": 228,
+    "baseline_label_n": 322,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2018-07",
+    "model_training_n": 229,
+    "baseline_label_n": 323,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2018-08",
+    "model_training_n": 230,
+    "baseline_label_n": 324,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2018-09",
+    "model_training_n": 231,
+    "baseline_label_n": 325,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2018-10",
+    "model_training_n": 232,
+    "baseline_label_n": 326,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2018-11",
+    "model_training_n": 232,
+    "baseline_label_n": 326,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2018-12",
+    "model_training_n": 233,
+    "baseline_label_n": 327,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2019-01",
+    "model_training_n": 234,
+    "baseline_label_n": 328,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2019-02",
+    "model_training_n": 236,
+    "baseline_label_n": 330,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2019-03",
+    "model_training_n": 237,
+    "baseline_label_n": 331,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2019-04",
+    "model_training_n": 238,
+    "baseline_label_n": 332,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2019-05",
+    "model_training_n": 239,
+    "baseline_label_n": 333,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2019-06",
+    "model_training_n": 240,
+    "baseline_label_n": 334,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2019-07",
+    "model_training_n": 241,
+    "baseline_label_n": 335,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2019-08",
+    "model_training_n": 242,
+    "baseline_label_n": 336,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2019-09",
+    "model_training_n": 243,
+    "baseline_label_n": 337,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2019-10",
+    "model_training_n": 244,
+    "baseline_label_n": 338,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2019-11",
+    "model_training_n": 245,
+    "baseline_label_n": 339,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2019-12",
+    "model_training_n": 246,
+    "baseline_label_n": 340,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2020-01",
+    "model_training_n": 247,
+    "baseline_label_n": 341,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2020-02",
+    "model_training_n": 248,
+    "baseline_label_n": 342,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2020-03",
+    "model_training_n": 249,
+    "baseline_label_n": 343,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2020-04",
+    "model_training_n": 250,
+    "baseline_label_n": 344,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2020-05",
+    "model_training_n": 250,
+    "baseline_label_n": 344,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2020-06",
+    "model_training_n": 252,
+    "baseline_label_n": 346,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2020-07",
+    "model_training_n": 253,
+    "baseline_label_n": 347,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2020-08",
+    "model_training_n": 254,
+    "baseline_label_n": 348,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2020-09",
+    "model_training_n": 255,
+    "baseline_label_n": 349,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2020-10",
+    "model_training_n": 256,
+    "baseline_label_n": 350,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2020-11",
+    "model_training_n": 257,
+    "baseline_label_n": 351,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2020-12",
+    "model_training_n": 258,
+    "baseline_label_n": 352,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2021-01",
+    "model_training_n": 259,
+    "baseline_label_n": 353,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2021-02",
+    "model_training_n": 260,
+    "baseline_label_n": 354,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2021-03",
+    "model_training_n": 261,
+    "baseline_label_n": 355,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2021-04",
+    "model_training_n": 262,
+    "baseline_label_n": 356,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2021-05",
+    "model_training_n": 263,
+    "baseline_label_n": 357,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2021-06",
+    "model_training_n": 264,
+    "baseline_label_n": 358,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2021-07",
+    "model_training_n": 265,
+    "baseline_label_n": 359,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2021-08",
+    "model_training_n": 266,
+    "baseline_label_n": 360,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2021-09",
+    "model_training_n": 267,
+    "baseline_label_n": 361,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2021-10",
+    "model_training_n": 268,
+    "baseline_label_n": 362,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2021-11",
+    "model_training_n": 269,
+    "baseline_label_n": 363,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2021-12",
+    "model_training_n": 270,
+    "baseline_label_n": 364,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2022-01",
+    "model_training_n": 271,
+    "baseline_label_n": 365,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2022-02",
+    "model_training_n": 272,
+    "baseline_label_n": 366,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2022-03",
+    "model_training_n": 273,
+    "baseline_label_n": 367,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2022-04",
+    "model_training_n": 274,
+    "baseline_label_n": 368,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2022-05",
+    "model_training_n": 275,
+    "baseline_label_n": 369,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2022-06",
+    "model_training_n": 276,
+    "baseline_label_n": 370,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2022-07",
+    "model_training_n": 277,
+    "baseline_label_n": 371,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2022-08",
+    "model_training_n": 278,
+    "baseline_label_n": 372,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2022-09",
+    "model_training_n": 279,
+    "baseline_label_n": 373,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2022-10",
+    "model_training_n": 280,
+    "baseline_label_n": 374,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2022-11",
+    "model_training_n": 281,
+    "baseline_label_n": 375,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2022-12",
+    "model_training_n": 282,
+    "baseline_label_n": 376,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2023-01",
+    "model_training_n": 283,
+    "baseline_label_n": 377,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2023-02",
+    "model_training_n": 284,
+    "baseline_label_n": 378,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2023-03",
+    "model_training_n": 285,
+    "baseline_label_n": 379,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2023-04",
+    "model_training_n": 285,
+    "baseline_label_n": 379,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2023-05",
+    "model_training_n": 286,
+    "baseline_label_n": 380,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2023-06",
+    "model_training_n": 288,
+    "baseline_label_n": 382,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2023-07",
+    "model_training_n": 289,
+    "baseline_label_n": 383,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2023-08",
+    "model_training_n": 290,
+    "baseline_label_n": 384,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2023-09",
+    "model_training_n": 291,
+    "baseline_label_n": 385,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2023-10",
+    "model_training_n": 292,
+    "baseline_label_n": 386,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2023-11",
+    "model_training_n": 292,
+    "baseline_label_n": 386,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2023-12",
+    "model_training_n": 294,
+    "baseline_label_n": 388,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2024-01",
+    "model_training_n": 295,
+    "baseline_label_n": 389,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2024-02",
+    "model_training_n": 296,
+    "baseline_label_n": 390,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2024-03",
+    "model_training_n": 297,
+    "baseline_label_n": 391,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2024-04",
+    "model_training_n": 298,
+    "baseline_label_n": 392,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2024-05",
+    "model_training_n": 299,
+    "baseline_label_n": 393,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2024-06",
+    "model_training_n": 300,
+    "baseline_label_n": 394,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2024-07",
+    "model_training_n": 301,
+    "baseline_label_n": 395,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2024-08",
+    "model_training_n": 302,
+    "baseline_label_n": 396,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2024-09",
+    "model_training_n": 303,
+    "baseline_label_n": 397,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2024-10",
+    "model_training_n": 304,
+    "baseline_label_n": 398,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2024-11",
+    "model_training_n": 305,
+    "baseline_label_n": 399,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2024-12",
+    "model_training_n": 306,
+    "baseline_label_n": 400,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2025-01",
+    "model_training_n": 307,
+    "baseline_label_n": 401,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2025-02",
+    "model_training_n": 308,
+    "baseline_label_n": 402,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2025-03",
+    "model_training_n": 309,
+    "baseline_label_n": 403,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2025-04",
+    "model_training_n": 310,
+    "baseline_label_n": 404,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2025-05",
+    "model_training_n": 311,
+    "baseline_label_n": 405,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2025-06",
+    "model_training_n": 312,
+    "baseline_label_n": 406,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2025-07",
+    "model_training_n": 313,
+    "baseline_label_n": 407,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2025-08",
+    "model_training_n": 314,
+    "baseline_label_n": 408,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2025-09",
+    "model_training_n": 314,
+    "baseline_label_n": 408,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2025-10",
+    "model_training_n": 316,
+    "baseline_label_n": 410,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2025-11",
+    "model_training_n": 316,
+    "baseline_label_n": 410,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2025-12",
+    "model_training_n": 318,
+    "baseline_label_n": 412,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2026-01",
+    "model_training_n": 319,
+    "baseline_label_n": 413,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2026-02",
+    "model_training_n": 320,
+    "baseline_label_n": 414,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2026-03",
+    "model_training_n": 321,
+    "baseline_label_n": 415,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2026-04",
+    "model_training_n": 321,
+    "baseline_label_n": 415,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  },
+  {
+    "period": "2026-05",
+    "model_training_n": 323,
+    "baseline_label_n": 417,
+    "additional_baseline_labels": 94,
+    "first_model_target": "1999-04",
+    "first_baseline_label": "1991-06"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "window": "EXPANDED_ARCHIVE",
+    "metric": "annual_log_growth",
+    "ex_post_static_equity_weight": 0.4071182931980171,
+    "total_gap": -0.023384142885548395,
+    "exposure_component": -0.013899943702206027,
+    "timing_component": -0.00917139446496014,
+    "relative_cost_component": -0.00031280471838222856,
+    "identity_error": 0
+  },
+  {
+    "window": "EXPANDED_ARCHIVE",
+    "metric": "annual_CER",
+    "ex_post_static_equity_weight": 0.4071182931980171,
+    "total_gap": -0.011221621678648791,
+    "exposure_component": -0.0041725957925019125,
+    "timing_component": -0.0067173295939014915,
+    "relative_cost_component": -0.000331696292245387,
+    "identity_error": 0
+  },
+  {
+    "window": "SMOOTH_6_REFERENCE",
+    "metric": "annual_log_growth",
+    "ex_post_static_equity_weight": 0.363857932529447,
+    "total_gap": -0.030990669079727057,
+    "exposure_component": -0.024790018903010205,
+    "timing_component": -0.005880849813806516,
+    "relative_cost_component": -0.00031980036291033576,
+    "identity_error": 0
+  },
+  {
+    "window": "SMOOTH_6_REFERENCE",
+    "metric": "annual_CER",
+    "ex_post_static_equity_weight": 0.363857932529447,
+    "total_gap": -0.01410021071795882,
+    "exposure_component": -0.008836695239150122,
+    "timing_component": -0.0049337299879581575,
+    "relative_cost_component": -0.0003297854908505399,
+    "identity_error": 0
+  }
+]

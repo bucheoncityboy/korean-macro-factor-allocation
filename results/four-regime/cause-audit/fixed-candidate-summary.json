@@ -1,0 +1,72 @@
+[
+  {
+    "model": "MACRO_LOGIT",
+    "candidate": 0,
+    "n": 237,
+    "log_loss": 1.4736810636100772,
+    "brier": 0.7865588965012077
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "candidate": 1,
+    "n": 237,
+    "log_loss": 1.4010090955704622,
+    "brier": 0.7585971224635641
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "candidate": 2,
+    "n": 237,
+    "log_loss": 1.379839415511421,
+    "brier": 0.7478868342670452
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "candidate": 3,
+    "n": 237,
+    "log_loss": 1.3899166093873452,
+    "brier": 0.7521397153623838
+  },
+  {
+    "model": "MACRO_LOGIT",
+    "candidate": "EQUAL_ENSEMBLE",
+    "n": 237,
+    "log_loss": 1.3883774486706164,
+    "brier": 0.7525071503963838
+  },
+  {
+    "model": "MACRO_LGBM",
+    "candidate": 0,
+    "n": 237,
+    "log_loss": 1.3951431654277529,
+    "brier": 0.7572723149811297
+  },
+  {
+    "model": "MACRO_LGBM",
+    "candidate": 1,
+    "n": 237,
+    "log_loss": 1.4163281510420174,
+    "brier": 0.7684848500338187
+  },
+  {
+    "model": "MACRO_LGBM",
+    "candidate": 2,
+    "n": 237,
+    "log_loss": 1.3957858154713443,
+    "brier": 0.7583147720687332
+  },
+  {
+    "model": "MACRO_LGBM",
+    "candidate": 3,
+    "n": 237,
+    "log_loss": 1.415670095152415,
+    "brier": 0.7691919820576985
+  },
+  {
+    "model": "MACRO_LGBM",
+    "candidate": "EQUAL_ENSEMBLE",
+    "n": 237,
+    "log_loss": 1.4010331168494123,
+    "brier": 0.7610372705228976
+  }
+]

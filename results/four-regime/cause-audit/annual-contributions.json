@@ -1,0 +1,170 @@
+[
+  {
+    "window": "EXPANDED_ARCHIVE",
+    "decision_year": "2014",
+    "n": 3,
+    "log_wealth_gap_contribution": -0.0011883979910521508,
+    "mean_ml_equity_weight": 0.4069137251430905
+  },
+  {
+    "window": "EXPANDED_ARCHIVE",
+    "decision_year": "2015",
+    "n": 12,
+    "log_wealth_gap_contribution": 0.006618840508740934,
+    "mean_ml_equity_weight": 0.38603270066600553
+  },
+  {
+    "window": "EXPANDED_ARCHIVE",
+    "decision_year": "2016",
+    "n": 12,
+    "log_wealth_gap_contribution": -0.00964672000344312,
+    "mean_ml_equity_weight": 0.42430476643128046
+  },
+  {
+    "window": "EXPANDED_ARCHIVE",
+    "decision_year": "2017",
+    "n": 12,
+    "log_wealth_gap_contribution": 0.006451755663100451,
+    "mean_ml_equity_weight": 0.5401239516151127
+  },
+  {
+    "window": "EXPANDED_ARCHIVE",
+    "decision_year": "2018",
+    "n": 12,
+    "log_wealth_gap_contribution": -0.020244024195278813,
+    "mean_ml_equity_weight": 0.5834427988508295
+  },
+  {
+    "window": "EXPANDED_ARCHIVE",
+    "decision_year": "2019",
+    "n": 12,
+    "log_wealth_gap_contribution": 0.0010371975046340647,
+    "mean_ml_equity_weight": 0.47740409987171883
+  },
+  {
+    "window": "EXPANDED_ARCHIVE",
+    "decision_year": "2020",
+    "n": 12,
+    "log_wealth_gap_contribution": -0.07791652646955707,
+    "mean_ml_equity_weight": 0.35469110595640224
+  },
+  {
+    "window": "EXPANDED_ARCHIVE",
+    "decision_year": "2021",
+    "n": 12,
+    "log_wealth_gap_contribution": 0.013753986022778095,
+    "mean_ml_equity_weight": 0.3764674990307493
+  },
+  {
+    "window": "EXPANDED_ARCHIVE",
+    "decision_year": "2022",
+    "n": 12,
+    "log_wealth_gap_contribution": 0.015372234475914466,
+    "mean_ml_equity_weight": 0.33673033178803896
+  },
+  {
+    "window": "EXPANDED_ARCHIVE",
+    "decision_year": "2023",
+    "n": 12,
+    "log_wealth_gap_contribution": -0.0065492572850056885,
+    "mean_ml_equity_weight": 0.33366437275224303
+  },
+  {
+    "window": "EXPANDED_ARCHIVE",
+    "decision_year": "2024",
+    "n": 12,
+    "log_wealth_gap_contribution": 0.008380423671814569,
+    "mean_ml_equity_weight": 0.33582705935594465
+  },
+  {
+    "window": "EXPANDED_ARCHIVE",
+    "decision_year": "2025",
+    "n": 12,
+    "log_wealth_gap_contribution": -0.11228114309796017,
+    "mean_ml_equity_weight": 0.35644764168979287
+  },
+  {
+    "window": "EXPANDED_ARCHIVE",
+    "decision_year": "2026",
+    "n": 5,
+    "log_wealth_gap_contribution": -0.09660336913608333,
+    "mean_ml_equity_weight": 0.34283678723914524
+  },
+  {
+    "window": "SMOOTH_6_REFERENCE",
+    "decision_year": "2016",
+    "n": 2,
+    "log_wealth_gap_contribution": -0.008433245456946943,
+    "mean_ml_equity_weight": 0.37795806913586216
+  },
+  {
+    "window": "SMOOTH_6_REFERENCE",
+    "decision_year": "2017",
+    "n": 12,
+    "log_wealth_gap_contribution": -0.015774104546414466,
+    "mean_ml_equity_weight": 0.45281364213268543
+  },
+  {
+    "window": "SMOOTH_6_REFERENCE",
+    "decision_year": "2018",
+    "n": 12,
+    "log_wealth_gap_contribution": 0.018821477576431538,
+    "mean_ml_equity_weight": 0.4584536345906487
+  },
+  {
+    "window": "SMOOTH_6_REFERENCE",
+    "decision_year": "2019",
+    "n": 12,
+    "log_wealth_gap_contribution": -0.015467007968287792,
+    "mean_ml_equity_weight": 0.38826126179570447
+  },
+  {
+    "window": "SMOOTH_6_REFERENCE",
+    "decision_year": "2020",
+    "n": 12,
+    "log_wealth_gap_contribution": -0.05872123935703025,
+    "mean_ml_equity_weight": 0.35175165534807684
+  },
+  {
+    "window": "SMOOTH_6_REFERENCE",
+    "decision_year": "2021",
+    "n": 12,
+    "log_wealth_gap_contribution": 0.008462676038374396,
+    "mean_ml_equity_weight": 0.39939168066801534
+  },
+  {
+    "window": "SMOOTH_6_REFERENCE",
+    "decision_year": "2022",
+    "n": 12,
+    "log_wealth_gap_contribution": 0.017164463273520218,
+    "mean_ml_equity_weight": 0.3192373667525916
+  },
+  {
+    "window": "SMOOTH_6_REFERENCE",
+    "decision_year": "2023",
+    "n": 12,
+    "log_wealth_gap_contribution": -0.009460971567089731,
+    "mean_ml_equity_weight": 0.30006930554493244
+  },
+  {
+    "window": "SMOOTH_6_REFERENCE",
+    "decision_year": "2024",
+    "n": 12,
+    "log_wealth_gap_contribution": 0.015369823848157067,
+    "mean_ml_equity_weight": 0.3
+  },
+  {
+    "window": "SMOOTH_6_REFERENCE",
+    "decision_year": "2025",
+    "n": 12,
+    "log_wealth_gap_contribution": -0.15873643010018168,
+    "mean_ml_equity_weight": 0.3072569555334019
+  },
+  {
+    "window": "SMOOTH_6_REFERENCE",
+    "decision_year": "2026",
+    "n": 5,
+    "log_wealth_gap_contribution": -0.09021935375458329,
+    "mean_ml_equity_weight": 0.3521840148444072
+  }
+]

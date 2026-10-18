@@ -21,3 +21,4 @@ jobs:
           LIGHTGBM_BIN: '${{ github.workspace }}/.cache/LightGBM/lightgbm'
       - run: pnpm verify:published
       - run: pnpm verify:power -- --public
+      - run: pnpm verify:causes -- --public
