@@ -122,6 +122,25 @@ def figures():
     plt.close(fig)
 
 
+def decomposition():
+    folder = ROOT / "results/main"
+    summary = pd.read_csv(folder / "summary.csv")
+    rows = []
+    for strategy in PRIMARY:
+        base = summary[(summary.strategy == strategy) & (summary.cost_bp == 5)].iloc[0]
+        zero = summary[(summary.strategy == strategy) & (summary.cost_bp == 0)].iloc[0]
+        matched = summary[(summary.strategy == strategy + "__exposure_matched") & (summary.cost_bp == 5)].iloc[0]
+        oracle = summary[(summary.strategy == strategy + "__oracle") & (summary.cost_bp == 5)].iloc[0]
+        rows.append({"strategy": strategy, "average_executed_risk_exposure": base.average_risk_exposure,
+                     "net_cagr": base.cagr, "zero_cost_cagr": zero.cagr,
+                     "cagr_cost_drag": zero.cagr - base.cagr, "annual_cost_fraction": base.annual_cost_fraction,
+                     "ex_post_exposure_matched_cagr": matched.cagr,
+                     "difference_from_ex_post_matched_cagr": base.cagr - matched.cagr,
+                     "future_regime_oracle_cagr": oracle.cagr,
+                     "interpretation": "descriptive decomposition; matched/oracle are not tradable"})
+    pd.DataFrame(rows).to_csv(folder / "exposure_cost_decomposition.csv", index=False)
+
+
 def result_documents():
     folder = ROOT / "results/main"
     summary = pd.read_csv(folder / "summary.csv")
@@ -154,6 +173,7 @@ def result_documents():
     text += "[정의별·자산별 분류 성능](../results/main/classification.csv)에서 빈도·국면 유지와 비교한다. 2국면과 4국면 손실을 직접 비교하지 않는다. "
     text += "[입력 기여도](../results/main/input_importance.csv)는 로지스틱 절대 표준화 계수와 XGB 분할 중요도의 블록 내 정규화 요약이다. 인과효과나 모형 간 공통 척도가 아니다.\n\n"
     text += "## 사전 부록\n\n[전체 비용·단순 배분·현금 규칙·사후 노출·미래 정답 진단](../results/main/summary.csv). "
+    text += "[노출·비용 분해](../results/main/exposure_cost_decomposition.csv)는 고정 노출 비교와 무비용 경로의 차이를 보여주는 기술적 진단이다. "
     text += "[수익 입력 제거](../results/without_returns/summary.csv), [시장 입력 제거](../results/without_market/summary.csv), "
     text += "[경제·시차 제거](../results/without_macro/summary.csv), [6개월 평활](../results/macro6/summary.csv). 부록은 주 결과로 승격하지 않았다.\n\n"
     text += "## 검증과 한계\n\n[실제 원자료 재학습·독립 NAV 재생·미래 교란](../results/verification.json), "
@@ -208,6 +228,7 @@ def report():
     for folder in (ROOT / "results").iterdir():
         if (folder / "predictions.parquet").exists():
             classification(folder)
+    decomposition()
     figures()
     result_documents()
     seal_artifacts()
