@@ -1,14 +1,19 @@
 {
   "status": "generated_after_actual_verification",
-  "report_source_sha256": "a2f20530e45afd3a62377f919c49fe701ccf031f9ed6d0df6098bb1ef8419f87",
+  "report_source_sha256": "f6afe54b69f8ab98447e1bdf9cb9042e20f3fc9068ee24582d70e1b5fe73fe66",
   "document_sha256": "8a6ff65747525c561ba610a0f07e00e3c40ccb8fa79f36b1beea252bdd5ebcb2",
   "statistics_source_sha256": "9201b0a70582d0e096917cf94cf754920a6aa7a30e04e09f6b4f6e5705aacaf0",
   "extra_document_sha256": {
-    "README.md": "72b9032d88502fcf0fbc82ca20c6283556966af81f09a8d473622b57a63fdd2f",
-    "docs/paper-comparison.md": "8e1b5adf4bf30fa4b75ea2c9ec5c1cb0500295e6ba0d9c87432a7247d7ddf0f5"
+    "README.md": "8c2da04f1212013bef9e5d1be42d4010ab5d06f25033be75726d1df3f373999b",
+    "docs/paper-comparison.md": "8e1b5adf4bf30fa4b75ea2c9ec5c1cb0500295e6ba0d9c87432a7247d7ddf0f5",
+    "docs/assets/paper_nav_drawdown.png": "99829c49b6fad2e2635abe3145498054e14127562671a8303fb295a838cbb2e5",
+    "docs/assets/paper_nav_drawdown.svg": "34d3eda71f42069ecdae8bc364d1803ae48fe4b85b19b19daa5fd4d32b0d911e",
+    "docs/assets/controlled_cer_intervals.png": "3346eaa07aa3b71dde2d0badf1a1465acbc7ac703024d58284c31ab7ff8ca0c6",
+    "docs/assets/controlled_cer_intervals.svg": "21299b8ba8caa7a62685be528b385ce5942ebff9fbe8edc5f08e38457dfbe36a",
+    "docs/assets/portfolio_figures.json": "d761d1b6bbf923cbd28b7da0d684bdca43ee38956b2114e08dc6d5d79dd39171"
   },
   "presentation_update": {
-    "scope": "README reorganized around paper empirical results; regenerated from saved verified tables",
+    "scope": "Portfolio case-study README with result tables, account-path chart and simultaneous CER intervals; generated from verified saved results",
     "empirical_outputs_unchanged": true
   }
 }

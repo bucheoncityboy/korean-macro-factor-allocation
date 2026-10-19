@@ -17,6 +17,9 @@ from .study import OUT
 from .verification import artifacts, seal
 
 PRIMARY = ["asset2_xgb", "asset2_logistic", "economic4_xgb", "economic4_logistic"]
+PORTFOLIO_FILES = ["docs/assets/" + name for name in [
+    "paper_nav_drawdown.png", "paper_nav_drawdown.svg", "controlled_cer_intervals.png",
+    "controlled_cer_intervals.svg", "portfolio_figures.json"]]
 
 
 def tables(nav):
@@ -213,45 +216,164 @@ def paper_comparison_document(p):
     (root / 'docs/paper-comparison.md').write_text('\n'.join(lines) + '\n')
 
 
+def portfolio_figures(nav, inference):
+    """Presentation-only charts from the sealed account paths and CER inference."""
+    from matplotlib import dates as mdates
+    from matplotlib.ticker import PercentFormatter
+
+    directory = ROOT / "docs/assets"
+    directory.mkdir(parents=True, exist_ok=True)
+    style = {"font.family": "DejaVu Sans", "font.size": 11, "axes.titlesize": 12,
+             "axes.labelcolor": "#475569", "text.color": "#0f172a", "axes.edgecolor": "#cbd5e1",
+             "axes.spines.top": False, "axes.spines.right": False, "svg.hashsalt": "etf-portfolio"}
+
+    def save(fig, name):
+        for extension in ["png", "svg"]:
+            metadata = {"Software": "global-etf-regimes"} if extension == "png" else {"Date": None}
+            fig.savefig(directory / f"{name}.{extension}", dpi=180, bbox_inches="tight", metadata=metadata)
+        plt.close(fig)
+
+    with plt.rc_context(style):
+        fig, axes = plt.subplots(2, 1, figsize=(11.8, 7.0), sharex=True,
+                                 gridspec_kw={"height_ratios": [1.6, 1], "hspace": .15})
+        selected = nav[(nav.study == "A") & (nav.cost_bp == 5)]
+        specs = [("mv", "Baseline MV", "#64748b", "-"),
+                 ("mv_jmxgb_floor", "JM-XGB MV (bear floor)", "#2563eb", "-"),
+                 ("mv_jmxgb_cap", "JM-XGB MV (bear cap)", "#0d9488", ":"),
+                 ("bil", "BIL cash", "#a16207", "--")]
+        for name, label, color, linestyle in specs:
+            f = selected[selected.strategy == name].sort_values("date")
+            drawdown = f.nav / f.nav.cummax().clip(lower=1) - 1
+            axes[0].plot(f.date, f.nav, label=label, color=color, linestyle=linestyle, linewidth=1.9)
+            axes[1].plot(f.date, drawdown, color=color, linestyle=linestyle, linewidth=1.6)
+            if name == "mv":
+                axes[1].fill_between(f.date, drawdown, 0, color=color, alpha=.10)
+        for ax in axes:
+            ax.axvspan(pd.Timestamp("2024-01-01"), selected.date.max(), color="#eff6ff", zorder=-2)
+            ax.axvline(pd.Timestamp("2024-01-01"), color="#94a3b8", linewidth=.8, linestyle="--")
+            ax.grid(axis="y", color="#e2e8f0", linewidth=.7)
+            ax.margins(x=.01)
+        axes[0].set(title="A. Net capital growth", ylabel="Net NAV · initial 1")
+        axes[0].legend(loc="upper left", ncol=2, frameon=False, fontsize=9)
+        axes[1].set(title="B. Drawdown from running peak", ylabel="Drawdown")
+        axes[1].yaxis.set_major_formatter(PercentFormatter(1, decimals=0))
+        axes[1].xaxis.set_major_locator(mdates.YearLocator())
+        axes[1].xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
+        fig.suptitle("Paper-reference ETF test | protection and participation", x=.085, ha="left", fontsize=16, fontweight="bold")
+        fig.text(.085, .925, "July 2021–September 2025 · 5 bp per ETF leg · shaded: 2024–2025 extension", color="#64748b", fontsize=10)
+        fig.subplots_adjust(left=.085, right=.98, top=.865, bottom=.08)
+        save(fig, "paper_nav_drawdown")
+
+        rows = [r for r in inference["B"] if r["block_months"] == 6]
+        labels = {("asset2_xgb", "economic4_xgb"): "Asset 2-state XGB\n− Economic 4-state XGB",
+                  ("asset2_xgb", "asset2_logistic"): "Asset 2-state XGB\n− Asset 2-state Logistic",
+                  ("economic4_xgb", "economic4_logistic"): "Economic 4-state XGB\n− Economic 4-state Logistic"}
+        fig, ax = plt.subplots(figsize=(11.8, 4.5))
+        ys = list(range(len(rows) - 1, -1, -1))
+        for y, r in zip(ys, rows):
+            point = r["difference_annual_cer"] * 100
+            lo, hi = np.asarray(r["simultaneous_95_interval"]) * 100
+            ax.errorbar(point, y, xerr=[[point - lo], [hi - point]], fmt="o", color="#2563eb",
+                        ecolor="#64748b", markersize=7, capsize=5, linewidth=2)
+            ax.text(3.6, y - .28, f"{point:+.2f} pp   [{lo:+.2f}, {hi:+.2f}]", ha="right", fontsize=10, color="#475569")
+        ax.axvline(0, color="#0f172a", linewidth=1.1, linestyle="--")
+        ax.set(yticks=ys, yticklabels=[labels[(r["left"], r["right"])] for r in rows],
+               xlim=(-8, 4), ylim=(-.6, 2.6), xlabel="Annual CER difference (percentage points)")
+        ax.tick_params(axis="y", length=0, pad=14)
+        ax.spines["left"].set_visible(False)
+        ax.grid(axis="x", color="#e2e8f0", linewidth=.7)
+        fig.suptitle("Controlled comparison | three simultaneous intervals", x=.03, y=.99, ha="left", fontsize=16, fontweight="bold")
+        fig.text(.03, .89, "20,000 paired monthly block draws · 6-month blocks · simultaneous 95% intervals", color="#64748b", fontsize=10)
+        fig.subplots_adjust(left=.27, right=.98, top=.79, bottom=.16)
+        save(fig, "controlled_cer_intervals")
+    write_json(directory / "portfolio_figures.json", {
+        "scope": "presentation from existing verified outputs; no refitting or strategy changes",
+        "inputs": {str(p.relative_to(ROOT)): digest(p) for p in
+                   [OUT / "nav.parquet", OUT / "summary.csv", OUT / "inference.json"]},
+        "outputs": {name: digest(ROOT / name) for name in PORTFOLIO_FILES if name.endswith((".png", ".svg"))}})
+
+
 def readme(summary, inference, verification):
     a = summary[(summary.study == "A") & (summary.cost_bp == 5)].set_index("strategy")
-    names = {"asset2_xgb": "자산 2국면 XGBoost", "asset2_logistic": "자산 2국면 로지스틱",
-             "economic4_xgb": "경제 4국면 XGBoost", "economic4_logistic": "경제 4국면 로지스틱"}
-    lines = ["# 글로벌 ETF 자산배분: 자산별 국면 예측의 실증 분석", "",
-             "- **연구 목적:** [Shu·Yu·Mulvey 논문](https://arxiv.org/html/2406.09578v2)의 자산별 국면 예측이 실제 ETF에서도 배분 성과를 개선하는지 검증합니다.",
-             "- **분석 구조:** Jump Model로 강세·약세를 식별하고, XGBoost로 다음 거래일 국면을 예측해 평균분산(MV)·최소분산(MinVar)·동일가중(EW) 배분에 반영합니다.",
-             "- **자료와 기간:** SPY·EFA·EEM·IEF·TLT·LQD·IYR·GLD와 현금 BIL, **2021-07-01–2025-09-30의 51개월**입니다. 상장 이후 실제 자료만 사용합니다.",
-             "- **원문에 맞춘 조건:** 11년 학습·직전 5년 순차 검증·6개월 갱신, 자산별 벌점 선택, 초기 검증에서 확률 평활 선택, 자산 상한 40%와 현금 대피 규칙을 적용합니다.",
-             "- **체결과 비용:** 종가 후 판단 → 다음 조정 시가 체결 → 종가 평가. 편도 5bp를 BIL 포함 모든 ETF 매매에 부과합니다.", "",
-             "- **원문 실증:** 2007–2023년 12개 지수에서 JM-XGB 결합 후 샤프가 MV **0.37→1.02**, MinVar **0.70→1.12**, EW **0.51→0.91**로 개선됐습니다.",
-             "- **이번 ETF 실증:** 아래는 기본 전략 → JM-XGB 결합 전략의 일별 BIL 초과수익 샤프와 최대낙폭입니다."]
-    for base, enhanced, label in [("mv", "mv_jmxgb_floor", "평균분산, 약세 평균 −10bp 하한 해석"),
-                                   ("mv", "mv_jmxgb_cap", "평균분산, 약세 평균 −10bp 상한 해석"),
-                                   ("minvar", "minvar_jmxgb", "최소분산"),
-                                   ("equal_weight", "ew_jmxgb", "동일가중")]:
+    b = summary[(summary.study == "B") & (summary.cost_bp == 5)].set_index("strategy")
+    portfolio_figures(pd.read_parquet(OUT / "nav.parquet"), inference)
+    lines = ["# 자산별 국면 예측을 활용한 글로벌 ETF 자산배분", "",
+             "**논문의 배분 개선 효과를 실제 ETF로 검증하고, 국면 정의와 ML의 추가 가치를 분리한 실증 연구**", "",
+             "[논문](https://arxiv.org/html/2406.09578v2) · [상세 결과](docs/results.md) · [원문과의 조건 대응](docs/paper-comparison.md) · [재현 안내](docs/reproduction.md)", "",
+             "| 평가 대상 | 표본 밖 평가 | 학습 / 검증 | 독립 검증 규모 |",
+             "|---|---|---|---|",
+             f"| 실제 위험 ETF 8개 + BIL | 2021.07–2025.09 · **51개월** | 11년 / 직전 5년 · 반년 갱신 | {verification['fresh_fit_jobs_at_three_boundaries']}건 재학습 · {verification['independent_complete_paths']}개 경로 재생 |", "",
+             "> **핵심 결과:** 이번 표본에서 원문형 전략은 최대낙폭을 줄였으나 샤프 개선 방향은 유지되지 않았다. 공통 조건으로 수행한 세 주요 CER 비교도 모두 통계적 우위 미확인이다.", "",
+             "## 연구 질문과 설계", "",
+             "- **논문 실증:** Shu·Yu·Mulvey의 자산별 강세·약세 예측이 실제 ETF의 위험조정 성과도 개선하는가?",
+             "- **통제 비교:** 배분 조건을 같게 두면 자산별 2국면과 경제 4국면 중 무엇이 유용하며, XGBoost가 로지스틱보다 추가 가치를 주는가?",
+             "- 위험자산은 SPY·EFA·EEM·IEF·TLT·LQD·IYR·GLD, 현금은 BIL이다. 상장 전 수익을 합성하지 않았다.",
+             "- 미국 종가 후 판단 → 다음 거래일 조정 시가 체결 → 종가 평가. 편도 **5bp**를 BIL 포함 모든 ETF 매매에 부과했다.", "",
+             "```mermaid", "flowchart LR", '    D["과거 수익·시장 입력"] --> J["Jump Model<br/>자산별 강세·약세 식별"]',
+             '    J --> X["XGBoost<br/>다음 거래일 국면 예측"]', '    X --> W["MV · MinVar · EW<br/>배분 결정"]',
+             '    W --> A["다음 시가 체결<br/>비용·드리프트·NAV 계산"]', "```", "",
+             "원문형 실증은 저자 Jump Model 구현, 11년 학습, 직전 5년 순차 검증, 반년 갱신, 자산별 벌점·초기 평활 선택을 따른다. 원문과 다른 자산·기간·미확정 규칙은 [대응표](docs/paper-comparison.md)에 명시했다.", "",
+             "## 1. 원문에서 보고된 개선이 ETF에서도 유지됐는가?", "",
+             "기본 전략 → JM-XGB 결합 전략의 변화다. 원문은 12개 지수·2007–2023년, 이번 실증은 8개 ETF·2021–2025년이다. ETF 샤프는 일별 BIL 초과수익, 원문은 금리 대용 현금 기준이다. ETF 최대낙폭은 비용 차감 NAV에서 계산했으며 두 표본의 차이를 직접적인 유의성 검정으로 해석하지 않는다.", "",
+             "| 배분 방식 | 원문 샤프 | ETF 샤프 | ETF 최대낙폭 |",
+             "|---|---:|---:|---:|"]
+    for base, enhanced, label, paper_before, paper_after in [
+            ("mv", "mv_jmxgb_floor", "평균분산 · 약세 −10bp 하한", .37, 1.02),
+            ("mv", "mv_jmxgb_cap", "평균분산 · 약세 −10bp 상한", .37, 1.02),
+            ("minvar", "minvar_jmxgb", "최소분산", .70, 1.12),
+            ("equal_weight", "ew_jmxgb", "동일가중", .51, .91)]:
         before, after = a.loc[base], a.loc[enhanced]
-        lines.append(f"- {label}: 샤프 **{before.daily_sharpe:.2f}→{after.daily_sharpe:.2f}**, 최대낙폭 **{before.max_drawdown:.2%}→{after.max_drawdown:.2%}**.")
-    mv, regime_mv = a.loc["mv"], a.loc["mv_jmxgb_floor"]
-    lines += ["- **주요 관찰:** 전체 표본에서 낙폭은 줄었지만 원문의 샤프 개선 방향은 유지되지 않았습니다. 위 차이는 점 추정이며 통계적으로 확인된 우위를 뜻하지 않습니다.",
-              f"- 평균분산 전략의 실제 평균 위험노출은 {mv.average_closing_risk_exposure:.1%}→{regime_mv.average_closing_risk_exposure:.1%}, 연 비용/NAV는 {mv.annual_cost_fraction:.2%}→{regime_mv.annual_cost_fraction:.2%}였습니다. [노출·비용·기간별 해석](docs/interpretation.md)",
-              "- 원문과 겹치는 **30개월**과 이후 확장 **21개월**을 분리해 보고합니다. [원문 대응·기간별 비교](docs/paper-comparison.md) · [전체 결과와 NAV](docs/results.md)", "",
-              "- **추가 실증:** 공통 입력·평균 추정·배분 아래 자산별 2국면/경제 4국면 × 로지스틱/XGBoost를 비교해 국면 정의와 ML의 추가 가치를 구분합니다.",
-              "- 주 지표는 월별 순수익의 연 CER(위험회피 5)입니다. 세 대비에 월 쌍체 블록 부트스트랩 20,000회와 동시 95% 구간을 적용했습니다."]
-    for r in inference["B"]:
-        if r["block_months"] != 6:
-            continue
-        lo, hi = r["simultaneous_95_interval"]
-        lines.append(f"- {names[r['left']]} − {names[r['right']]}: CER **{r['difference_annual_cer'] * 100:+.2f}%p**, 동시 95% 구간 [{lo * 100:+.2f}, {hi * 100:+.2f}]%p — **{r['finding']}**.")
-    lines += ["- 우위 미확인은 동등성이나 충분한 검정력을 뜻하지 않습니다. 입력 제거·경제 6개월 정의·비용·현금 규칙 등 사전 고정 부록은 [전체 결과](docs/results.md)에 연결했습니다.", "",
-              "- **해석의 한계:** 원문의 12개 지수·204개월과 이번 8개 ETF·51개월은 다릅니다. BIL, 다음 시가 체결과 원문 세부 규칙의 미확정 차이가 있어 수치의 정확한 재현으로 제시하지 않습니다.",
-              "- 이전 결과를 열람한 뒤 재설계한 역사적 순차 분석입니다. 전향 검증이 아니며 재표집은 전체 재학습·설계 수정 불확실성을 포함하지 않습니다.",
-              f"- **검증:** 독립 재학습 {verification['fresh_fit_jobs_at_three_boundaries']}건·전체 계정 {verification['independent_complete_paths']}개 독립 재생, 미래 정보 교란·확률·시점·비용·NAV 검사 통과. [실제 원자료 검증](results/study/verification.json) · [공개 CI](https://github.com/bucheoncityboy/korean-macro-factor-allocation/actions)",
-              "- **문서:** [방법](docs/methodology.md) · [자료·출처](docs/data.md) · [재현 안내](docs/reproduction.md) · [고정 계약](configs/execution_contract.json)", "",
-              "- **재현:** Python 3.12와 잠근 의존성을 사용합니다. 기존 계약을 재현할 때 `audit --freeze`로 덮어쓰지 않습니다.", "",
+        lines.append(f"| {label} | {paper_before:.2f} → {paper_after:.2f} | **{before.daily_sharpe:.2f} → {after.daily_sharpe:.2f}** | {before.max_drawdown:.2%} → {after.max_drawdown:.2%} |")
+    lines += ["", "약세 예상수익 −10bp 제한은 원문의 적용 방향이 미확정이라 하한·상한 해석을 모두 공개했다. 유리한 해석을 골라 결과로 제시하지 않았다.", "",
+              "![원문형 평균분산 전략의 비용 차감 NAV와 낙폭](docs/assets/paper_nav_drawdown.png)", "",
+              "*평균분산 전략의 실제 계정 경로. BIL을 함께 표시해 현금 대비 성과를 구분했다. 음영은 원문 표본 이후인 2024–2025년 확장 구간이다.*", "",
+              "### 결과를 읽는 근거", "",
+              "낙폭 완화와 함께 위험 노출·상승 참여·거래비용도 달라졌다. 아래는 같은 A 실증의 관찰값이며 단독 원인의 효과로 단정하지 않는다.", "",
+              "| 관찰 지표 | 기본 평균분산 | JM-XGB 평균분산 · 하한 해석 |",
+              "|---|---:|---:|"]
+    mv, regime = a.loc["mv"], a.loc["mv_jmxgb_floor"]
+    for label, column, fmt in [("실제 종가 평균 위험노출", "average_closing_risk_exposure", ".1%"),
+                               ("연 위험 ETF 다리 회전율", "annual_turnover_risky_legs", ".2f"),
+                               ("연 비용 / 일별 NAV 합", "annual_cost_fraction", ".2%")]:
+        lines.append(f"| {label} | {mv[column]:{fmt}} | {regime[column]:{fmt}} |")
+    lines += ["", "- 현금 대피 규칙은 A 예측일의 **49.1%**에 발동했다. 12개 지수와 8개 ETF에서 같은 강세 자산 수 문턱은 다른 상대적 엄격도를 갖는다.",
+              "- 원문 중첩 **30개월**과 이후 확장 **21개월**을 나눠 보고했다. 2024–2025년 상승 구간의 참여 차이도 전체 성과에 영향을 줄 수 있다.",
+              "- [기간별 비교](results/study/paper_comparison.csv) · [노출·비용 해석](docs/interpretation.md) · [현금 규칙·평균 추정 연결 실험](results/study/design_bridge.csv)", "",
+              "## 2. 국면 정의와 ML의 추가 가치를 분리하면?", "",
+              "네 조합에 동일한 입력 17개, 월별 학습 가중치, 확률 평활, 축소 평균 추정과 평균분산 배분을 적용했다. 주 지표는 월별 순수익의 **연 CER(위험회피 5)**다.", "",
+              "| 국면 정의 · 분류기 | 연 CER | CAGR | 최대낙폭 | 연 비용/NAV |",
+              "|---|---:|---:|---:|---:|"]
+    names = {"asset2_xgb": "자산 2국면 · XGBoost", "asset2_logistic": "자산 2국면 · 로지스틱",
+             "economic4_xgb": "경제 4국면 · XGBoost", "economic4_logistic": "경제 4국면 · 로지스틱"}
+    for name in PRIMARY:
+        r = b.loc[name]
+        lines.append(f"| {names[name]} | {r.annual_cer:.2%} | {r.cagr:.2%} | {r.max_drawdown:.2%} | {r.annual_cost_fraction:.2%} |")
+    lines += ["", f"경제 4국면 XGBoost의 CER 점 추정이 가장 높았다. 같은 기간 BIL의 CER는 **{b.loc['bil', 'annual_cer']:.2%}**다. 모형 간 우위는 아래의 쌍체 비교로 판단했다.", "",
+              "![세 주요 CER 차이와 동시 95퍼센트 구간](docs/assets/controlled_cer_intervals.png)", "",
+              "*점은 연 CER 차이, 선은 세 비교를 함께 보정한 95% 구간이다. 양수는 왼쪽 모형의 우위를 뜻하며 세 구간 모두 0을 포함한다.*", "",
+              "- 월 쌍체 블록 부트스트랩 **20,000회**, 기본 블록 6개월·민감도 3/12개월, max-T 동시 보정.",
+              "- 세 주요 비교 모두 **우위 미확인**이다. 같은 효과라는 결론이나 충분한 검정력을 뜻하지 않는다.",
+              "- 입력 제거·경제 6개월 정의·비용 0/10/25bp·현금 규칙·단순 배분을 사전 고정 부록으로 공개했다. [검정·검정력·전체 부록](docs/results.md)", "",
+              "## 구현과 검증", "",
+              "| 구현한 내용 | 확인 가능한 근거 |",
+              "|---|---|",
+              "| 공개 자료 수집·감사 | 원 응답·URL·시각·SHA-256, 일별 빈도·기업행사 검사 · [자료 문서](docs/data.md) |",
+              "| 정보시점 통제 | ALFRED 첫 완성 빈티지·가용일 보존, 날짜만 있는 자료 1거래일 지연 · [방법](docs/methodology.md) |",
+              f"| 순차 예측·계정 엔진 | 독립 재학습 **{verification['fresh_fit_jobs_at_three_boundaries']}건**, 전체 계정 **{verification['independent_complete_paths']}개** 독립 재생 · [검증 기록](results/study/verification.json) |",
+              f"| 최적화·회계 검증 | **{len(verification['optimality_certificates'])}개** 최적화 해의 전역 목적값 상한, 미래 교란·확률·비용·드리프트·NAV 검사 |",
+              "| 재현 가능한 공개 산출물 | 고정 실행 계약·의존성·원자료 스냅샷·해시 검증 · [실행 기록](results/study/run.json) · [공개 CI](https://github.com/bucheoncityboy/korean-macro-factor-allocation/actions) |", "",
+              "**기술:** Python 3.12 · 저자 Jump Model · scikit-learn · XGBoost · CVXPY/OSQP · pandas · GitHub Actions", "",
+              "## 해석의 범위", "",
+              "- 원문은 **12개 지수·2007–2023년 204개월**, 이번 연구는 **8개 실제 ETF·51개월**이다. 금융위기·코로나 급락이 이번 평가에는 없고, BIL·다음 시가 체결 등도 다르다.",
+              "- 자산 2국면의 다음 날 상태 예측과 경제 4국면의 관측월 상태 추정은 다른 문제다. 정확도·로그손실을 두 정의 사이에서 직접 비교하지 않는다.",
+              "- 이전 결과를 열람한 뒤 재설계한 역사적 순차 분석이며 전향 검증이 아니다. 재표집은 전체 재학습·설계 수정의 불확실성을 포함하지 않는다.", "",
+              "## 재현", "",
+              "아래 CLI는 고정된 자료와 계약을 사용한다. 상세 환경과 실행 소스는 [재현 안내](docs/reproduction.md), 전체 설정은 [프로토콜](configs/protocol.json)에 있다.", "",
               "```bash", "uv sync --frozen --python 3.12", "uv run etf-study acquire", "uv run etf-study audit",
               "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 uv run etf-study run --workers 4",
               "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 uv run etf-study verify", "uv run etf-study report",
-              "uv run etf-study verify --artifacts-only", "```"]
+              "uv run etf-study verify --artifacts-only", "```", "",
+              "기존 계약을 재현할 때 `audit --freeze`로 덮어쓰지 않는다. 원자료 없는 공개 CI 검증과 실제 원자료 재검증은 별도로 기록한다."]
     (ROOT / "README.md").write_text("\n".join(lines) + "\n")
 
 
@@ -376,5 +498,5 @@ def report():
                "report_source_sha256": digest(ROOT / "src/etf_regimes/reporting.py"),
                "document_sha256": digest(ROOT / "docs/results.md"),
                "statistics_source_sha256": digest(ROOT / "src/etf_regimes/statistics.py"),
-               "extra_document_sha256": {name: digest(ROOT / name) for name in ["README.md", "docs/paper-comparison.md"]}})
+               "extra_document_sha256": {name: digest(ROOT / name) for name in ["README.md", "docs/paper-comparison.md", *PORTFOLIO_FILES]}})
     seal()

@@ -1,0 +1,14 @@
+{
+  "scope": "presentation from existing verified outputs; no refitting or strategy changes",
+  "inputs": {
+    "results/study/nav.parquet": "c73da4db0d91d017e953e7ce43e2ea8d9fdee3f06a4195ccc29dbae9e38abb83",
+    "results/study/summary.csv": "94d9e0c3ab06e3b58c90c0443a6a54dee13e83b57c7266b4604e27bc02ba6987",
+    "results/study/inference.json": "95c5e9287b2b226730412ae62358ae47f3fa3ff218d1e24fdc3baff6805f326f"
+  },
+  "outputs": {
+    "docs/assets/paper_nav_drawdown.png": "99829c49b6fad2e2635abe3145498054e14127562671a8303fb295a838cbb2e5",
+    "docs/assets/paper_nav_drawdown.svg": "34d3eda71f42069ecdae8bc364d1803ae48fe4b85b19b19daa5fd4d32b0d911e",
+    "docs/assets/controlled_cer_intervals.png": "3346eaa07aa3b71dde2d0badf1a1465acbc7ac703024d58284c31ab7ff8ca0c6",
+    "docs/assets/controlled_cer_intervals.svg": "21299b8ba8caa7a62685be528b385ce5942ebff9fbe8edc5f08e38457dfbe36a"
+  }
+}
