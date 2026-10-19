@@ -299,7 +299,7 @@ def readme(summary, inference, verification):
     portfolio_figures(pd.read_parquet(OUT / "nav.parquet"), inference)
     lines = ["# 자산별 국면 예측을 활용한 글로벌 ETF 자산배분", "",
              "**논문의 배분 개선 효과를 실제 ETF로 검증하고, 국면 정의와 ML의 추가 가치를 분리한 실증 연구**", "",
-             "[논문](https://arxiv.org/html/2406.09578v2) · [상세 결과](docs/results.md) · [원문과의 조건 대응](docs/paper-comparison.md) · [재현 안내](docs/reproduction.md)", "",
+             "[논문](https://arxiv.org/html/2406.09578v2) · [상세 결과](docs/results.md) · [원문과의 조건 대응](docs/paper-comparison.md) · [데이터 명세](docs/data.md) · [검증 방법론](docs/methodology.md) · [재현 안내](docs/reproduction.md)", "",
              "| 평가 대상 | 표본 밖 평가 | 학습 / 검증 | 독립 검증 규모 |",
              "|---|---|---|---|",
              f"| 위험 ETF 8개<br>+ 현금 BIL | 2021.07–2025.09<br>**51개월** | 학습 11년 · 검증 5년<br>6개월마다 갱신 | {verification['fresh_fit_jobs_at_three_boundaries']}건 독립 재학습<br>{verification['independent_complete_paths']}개 계정 재생 |", "",
