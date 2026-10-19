@@ -1,0 +1,208 @@
+{
+  "status": "not_ready",
+  "audited_utc": "2026-10-19T16:59:50.471210+00:00",
+  "identical_data_replication_completed": false,
+  "new_strategy_performance_computed": false,
+  "prior_ETF_results_viewed": true,
+  "scope": "Primary-source and local availability audit; not a new backtest or proof of paper equivalence.",
+  "sources": {
+    "paper": "https://arxiv.org/html/2406.09578v2",
+    "author_homepage": "https://sites.google.com/view/yizhan-shu/home",
+    "author_repository": "https://github.com/Yizhan-Oliver-Shu/jump-models",
+    "publisher": "https://link.springer.com/article/10.1007/s10479-024-06266-0"
+  },
+  "author_repository_inventory": {
+    "sources": [
+      {
+        "url": "https://github.com/Yizhan-Oliver-Shu/jump-models/blob/d0fa00ce10126791695a259a45c5ddd41fbced80/examples/nasdaq/feature.py",
+        "kind": "author_library_example_not_paper_reproduction",
+        "sha256_utf8_content": "acf62adc69a7a8ecc0e86ab77afa7c1d9f9168ba9bfb468dbdcfd0949d0c147e"
+      },
+      {
+        "url": "https://github.com/Yizhan-Oliver-Shu/jump-models/blob/d0fa00ce10126791695a259a45c5ddd41fbced80/examples/nasdaq/example.py",
+        "kind": "author_library_example_not_paper_reproduction",
+        "sha256_utf8_content": "64efbb10ee7cb99d5a518fb3cca2ada9e921e7e7d1b8cfe33d3c3f918f4912d9"
+      },
+      {
+        "url": "https://github.com/Yizhan-Oliver-Shu/jump-models/blob/d0fa00ce10126791695a259a45c5ddd41fbced80/environment.yaml",
+        "kind": "author_library_example_not_paper_reproduction",
+        "sha256_utf8_content": "c0477586ffa143bd7c9c156f71d7ef0ed5473a1ec974528432c726e6ae8b8e7a"
+      }
+    ],
+    "tree_sha": "d0fa00ce10126791695a259a45c5ddd41fbced80",
+    "tree_paths": [
+      ".gitignore",
+      "JM_value_example.png",
+      "LICENSE",
+      "README.md",
+      "environment.yaml",
+      "examples",
+      "examples/nasdaq",
+      "examples/nasdaq/data",
+      "examples/nasdaq/data/NDX.csv",
+      "examples/nasdaq/data/NDX.pkl",
+      "examples/nasdaq/example.ipynb",
+      "examples/nasdaq/example.py",
+      "examples/nasdaq/feature.py",
+      "examples/nasdaq/get_data.py",
+      "examples/nasdaq/plots",
+      "examples/nasdaq/plots/CJM_lambd-600.0_test_online.pdf",
+      "examples/nasdaq/plots/CJM_lambd-600.0_train.pdf",
+      "examples/nasdaq/plots/JM_lambd-0.0_train.pdf",
+      "examples/nasdaq/plots/JM_lambd-50.0_test_online.pdf",
+      "examples/nasdaq/plots/JM_lambd-50.0_train.pdf",
+      "examples/nasdaq/plots/SJM_lambd-50.0_max-feats-3.0_test_online.pdf",
+      "examples/nasdaq/plots/SJM_lambd-50.0_max-feats-3.0_train.pdf",
+      "examples/nasdaq/utils_dir.py",
+      "jumpmodels",
+      "jumpmodels/__init__.py",
+      "jumpmodels/base.py",
+      "jumpmodels/jump.py",
+      "jumpmodels/plot.py",
+      "jumpmodels/preprocess.py",
+      "jumpmodels/sparse_jump.py",
+      "jumpmodels/utils",
+      "jumpmodels/utils/__init__.py",
+      "jumpmodels/utils/calculation.py",
+      "jumpmodels/utils/cluster.py",
+      "jumpmodels/utils/index.py",
+      "jumpmodels/utils/validation.py",
+      "pyproject.toml"
+    ],
+    "complete_12_asset_paper_runner_in_inspected_tree": false,
+    "complete_12_asset_input_panel_in_inspected_tree": false
+  },
+  "original_input_requirement": {
+    "raw_years": [
+      1991,
+      2023
+    ],
+    "first_training_years": [
+      1991,
+      2001
+    ],
+    "first_validation_years": [
+      2002,
+      2006
+    ],
+    "evaluation_years": [
+      2007,
+      2023
+    ],
+    "evaluation_months": 204,
+    "bloomberg_identifiers_as_reported_in_appendix_A": {
+      "LargeCap": "SPTR",
+      "MidCap": "SPTRMDCP",
+      "SmallCap": "RU20INTR",
+      "EAFE": "NDDUEAFE",
+      "EM": "NDUEEGF",
+      "AggBond": "LBUSTRUU",
+      "Treasury": "LUTLTRUU",
+      "HighYield": "IBOXHY",
+      "Corporate": "LUACTRUU",
+      "REIT": "DJUSRET",
+      "Commodity": "DBLCDBCE",
+      "Gold": "GOLDLNPM"
+    },
+    "market_series": [
+      "DGS2",
+      "T10Y2Y",
+      "VIXCLS",
+      "DGS3MO"
+    ],
+    "historical_splices_requiring_original_series": {
+      "Treasury": "SPBDUSLT before 1994-03-02",
+      "HighYield": "VWEHX before 1999-01-04",
+      "REIT": "REIT before 1992-01-03"
+    },
+    "commodity_return_type": "Appendix A names an Excess Return Index; obtain exact raw/risk-free treatment rather than assuming total-return equivalence."
+  },
+  "hard_blockers": [
+    {
+      "id": "original_input_panel_not_obtained",
+      "evidence": "Current downloaded snapshot and asset configuration contain the eight ETF study, not the original 12-index 1991–2023 panel.",
+      "proxy_is_not_completion": true
+    }
+  ],
+  "open_method_items": [
+    "paper execution code revision and full environment",
+    "exact XGBoost version/resolved defaults",
+    "exact jump-penalty candidate grid and ties",
+    "feature/EWM initialization, clipping, and warmup",
+    "smoothing initialization and initial selection ordering",
+    "covariance cutoff/finite-sample normalization",
+    "precise return interval and cash/transaction treatment",
+    "raw reference intermediate outputs and NAV path"
+  ],
+  "author_example_differences": {
+    "halflives": [
+      5,
+      20,
+      60
+    ],
+    "feature_count": 9,
+    "ewm_adjust": "pandas default True",
+    "preprocessing": "training-fitted 3-standard-deviation clipping then scaling",
+    "current_ETF_implementation": "paper-table halflives and eight features; adjust=False; scaling without clipping",
+    "status": "Observed example differences; not confirmation of paper execution settings; do not automatically substitute."
+  },
+  "access_limits": {
+    "publisher_public_preview_checked": true,
+    "publisher_full_text_obtained": false,
+    "author_SharedIt": "robot verification; not inspected",
+    "absence_of_other_public_or_author_material": "not established",
+    "purchases_or_author_messages_sent": false
+  },
+  "required_order": [
+    "obtain and audit original inputs/settings",
+    "verify baseline and intermediate calculations",
+    "reproduce paper tables with preregistered numerical acceptance rules",
+    "change ETF/cash/execution conditions on matched sample",
+    "interpret regime-definition and ML extensions"
+  ],
+  "existing_results_status": "Verified historical ETF application only; 30 diagnostics do not isolate paper-data versus implementation causes.",
+  "financial_source_files_unchanged": true,
+  "financial_CSV_and_Parquet_sha256": {
+    "results/study/summary.csv": "94d9e0c3ab06e3b58c90c0443a6a54dee13e83b57c7266b4604e27bc02ba6987",
+    "results/study/targets.parquet": "5643f2f6a1031e42a5046b20cd933c616bb420bb030ebe46ea4d5b5a4ec9d283",
+    "results/study/candidate_probabilities.parquet": "5bad28fb717bfdd03f388a511dbb310855f88c0c4bcaf2cb41e7ed5ffbf1c507",
+    "results/study/feature_importance.csv": "c8e4f85f46242ef978ecc5c47098267930c94e67c4f70dfbf8a367330b2fcc85",
+    "results/study/trades.parquet": "7c9b6aef95d652977f43d2639a3d4eaa2f65560b2e98f6b47a5ed1e1d4a54ff7",
+    "results/study/subperiods.csv": "01b941ebae5d75f4b8155ea29fbd0e229541f7641eb349de0d32f817dc56315e",
+    "results/study/design_bridge.csv": "94f0f9b4814fab1aa3825c40df4604c9876f737273cb3f221256f19671caf99a",
+    "results/study/economic_labels.csv": "4b98c4abc15f416ee0e7b018fede719850eee1fca5fac9b2764d42676e7934f4",
+    "results/study/paper_comparison.csv": "b4bf8edb76bec2cb5b251a9620b8c21c9510e11673d1c5ef116f44b78cd0df48",
+    "results/study/nav.parquet": "c73da4db0d91d017e953e7ce43e2ea8d9fdee3f06a4195ccc29dbae9e38abb83",
+    "results/study/classification.csv": "8f839b2e8682dac8a41144640af1a83600af13f1c51b02af96aa597450ef3583",
+    "results/study/annual.csv": "08e9eb147396800518a87aa3d3b497f0ccca3f9ef05a01622780d5066c4910f3",
+    "results/study/predictions.parquet": "829120df3d4d2dcafa92c105a49e2601dd64386fecf9a5dad4aed98c064879a8",
+    "results/study/economic_labels_6.csv": "fefcd473385e302f0c35e39639cf2285f83365f98579dadffc338eb191758d34",
+    "results/study/monthly.csv": "95e140d53c0f128a9f95ec5b6e14da6d457b6a57f189162c6cc41d82c3c22588",
+    "results/followup/summary.csv": "b7caf7208f75e076a7dc2746a83d1c37cbea512178ad6e9c1ef401e01302ada6",
+    "results/followup/factorial.csv": "636ad2c17bff5f1b0a34b0d1139053176317c023599de36ad514ae8764d62435",
+    "results/followup/targets.parquet": "9a55d039d8965ee01c6404b3188c3d2929b890c4bfae9a367beda54e062e24f2",
+    "results/followup/candidate_probabilities.parquet": "636dd2bcaf878105034ee1cf77ce736d30f72932b826ea07b34d314d17398334",
+    "results/followup/trades.parquet": "0e5478cdcaa45e99e26add5b33951ba079ac8dc975e8ca93ca2802fdfab29782",
+    "results/followup/overlap_summary.csv": "2b8b7151e56ab9cb9dec8394487ef07648aab6678727a15e1d4d5c8e1e9a3cd0",
+    "results/followup/nav.parquet": "d3ce4222313d2fcf0865b53861940e7afd5cc5127378e2bb3af82c12e392dc16",
+    "results/followup/classification.csv": "e9cc66e5a9e6c40c9caf3a8490244b557dd4aba16814763790188bc291dc8524",
+    "results/followup/annual.csv": "ead64582af068956e2c488528beeb47a2f8fb444d7d9eaff84e79c83e6cb5728",
+    "results/followup/predictions.parquet": "b8513e01006035dcaccdade79c9b2822313e2a9e316816e820434f60bb35def3",
+    "results/followup/monthly.csv": "fafda4b5202550104532b0ca14b6af022edd437faabe8fbf50e1a9e108f697c6",
+    "results/redesign/targets.parquet": "44c2d75ac2a70271e98d14ad61e412992e4bad5b7a3f320ec70740aafb3c61e4",
+    "results/redesign/paper_table4.csv": "c13ac14cd3f027ce95fd0f3dcb5b59d381c9d3c1cedd12b7ad8915dd51789b89",
+    "results/redesign/candidate_probabilities.parquet": "fec470f8f09910cf4db00594c9f5a69843a5f130d756d348d5e90f6ec847e61c",
+    "results/redesign/paper_table6.csv": "bbcf927b193546547d7a5a60625d80ee648b3391d5608243982e5e8817547c81",
+    "results/redesign/paper_table7.csv": "4d5a78a7eeefda6e3dceffbf671fd84b050260fd11cee1bd0808be77d0f29a23",
+    "results/redesign/trades.parquet": "6b188f3fbda0f8b0468b062e8cc4cba47539bd87557b53bee582492614ab81d1",
+    "results/redesign/diagnostic_contrasts.csv": "03fb9fc52b91ed85df5744dcb992ea56ed358bd9a1b6f72ae0af554fb9f99061",
+    "results/redesign/diagnostic_summary.csv": "f784b3fc58258f443f815e5abaa79488301faf2d221bae5e6840a5134a01f073",
+    "results/redesign/nav.parquet": "7aedf9c673f54fab6128048f02084afbfbc70a11fa24b787c0ced703a327c926",
+    "results/redesign/classification.csv": "d4cfd1fabbfc44d509937fe8a618ed1494fa5b28f7e0a54f1d24ff18bedcc37f",
+    "results/redesign/execution_quotes.parquet": "cc16d0be950d4ed809a19a9ff7e5a11fdbbc6a29638fa62f48b0166baa41bf45",
+    "results/redesign/paper_ic_observations.parquet": "e396daf156f39fd127ff2949932e845d8eaaedf5c9c80ec9aa7fea979716e608",
+    "results/redesign/training_diagnostics.csv": "3d98067f98359db364c0167d8aa5f0830ca73b300664dc5a63862d7f2591dfa4",
+    "results/redesign/predictions.parquet": "b0bc4d2633232295871b89162d8cae95dcd28a54f21261e97798122145513bff",
+    "results/redesign/paper_directions.csv": "fe00bdb7239da810c52a90b40b89443607ab9939b2d0bebab6a275ef8a99b4dc"
+  }
+}

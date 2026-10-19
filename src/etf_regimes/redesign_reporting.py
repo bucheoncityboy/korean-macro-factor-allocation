@@ -184,13 +184,14 @@ def report():
             controlled.append(f'| {cohort} | {shortnames[r["left"]]} − {shortnames[r["right"]]} | {100*r["difference_annual_cer"]:+.2f}%p | [{100*lo:+.2f}, {100*hi:+.2f}]%p | {r["finding"]} |')
     meanic=ic.groupby('method').ic.mean()
     lines=['# 국면 예측을 활용한 글로벌 ETF 자산배분','',
-        '**Shu·Yu·Mulvey 원문 실증에 맞춘 배분 전후 비교와, 국면 정의·ML·거래 정책을 분리한 Python 포트폴리오 연구**','',
+        '**Shu·Yu·Mulvey 원문 방법을 실제 ETF에 적용한 배분 전후 비교와, 국면 정의·ML·거래 정책을 분리한 Python 포트폴리오 연구**','',
+        '**재현 상태:** 원문과 동일한 자료를 쓴 재현은 미완료다. 검증을 마친 아래 결과는 ETF 응용 실험이며, 원문 전체 구현과의 동등성은 확인하지 못했다. [자료·저자 코드 선행 감사](docs/paper-replication-readiness.md)','',
         '[원문](https://arxiv.org/html/2406.09578v2) · [원문형 전체 실증](docs/redesign-paper.md) · [30개 진단](docs/redesign-diagnostics.md) · [141개월 후속](docs/followup.md)','',
         '**목차:** [원문 대응](#원문-대응) · [원문형 실증](#원문형-실증) · [국면·ML 통제 비교](#국면ml-통제-비교) · [원인 진단](#원인-진단) · [장기 후속](#장기-후속) · [데이터 명세](#데이터-명세) · [검증 방법론](#검증-방법론) · [결론](#결론) · [재현](#재현)','',
         '## 원문 대응','',
         '- **질문:** JM–XGBoost를 넣으면 기본 MV·MinVar·동일가중의 수익·샤프·낙폭이 함께 개선되는가?',
         '- **A51 원문 준거:** 실제 ETF8개·BIL, 2021.07–2025.09 **51개월**, **11년 학습·5년 검증·6개월 갱신**, 일별 판단·다음 시가 체결·편도5bp.',
-        '- **같은 점:** 저자 Jump Model·수익8/시장5 입력·XGB 기본 용량·다음 날 국면·현금 규칙·원문형 평균분산 목적함수.',
+        '- **맞춘 구조:** 저자 Jump Model·수익8/시장5 입력·XGB 기본 용량·다음 날 국면·강세 개수에 따른 현금 규칙·원문형 평균분산 목적함수. 자료 대체와 미확정 수치 규약은 별도다.',
         '- **다른 점:** 원문12개 지수·2007–2023년204개월과 자료·기간·현금·체결 시점이 다르다. XGB 버전·약세 평균 제한 등 미확정 항목을 [대응 감사](results/redesign/paper_fidelity_reviewed.json)에 공개한다.',
         '- A51은 예측·평균 추정·위험회피·거래벌점·현금 규칙의 묶음 비교다. **XGB 단독 추가 가치는 B51의 동일 배분 내 LR 비교로 판단**한다.','',
         '## 원문형 실증','',*table,'',
@@ -223,7 +224,7 @@ def report():
         '- **통계:** 월 CER(위험회피5), 월 쌍체 블록20,000회·6개월 기본/3·12개월 민감도·주요3개 max-T 동시95%. D51은 설명용이며 새 우승/유의성 검정을 하지 않는다.',
         '- [분석 계약](configs/report_analysis_contract.json) · [진단 실행 계약](configs/diagnostic_execution_contract.json) · [실제 자료 검증](results/redesign/verification.json). 이전 결과를 열람한 역사적 후속 연구이며 전향 검증이 아니다.','',
         '## 결론','',
-        '- **원문 재현 방향:** 이 ETF 표본에서는 낙폭 감소를 확인했으나, 원문과 같은 세 배분의 수익·샤프 동반 개선은 유지되지 않았다.',
+        '- **ETF 적용 결과:** 이 ETF 표본에서는 낙폭 감소를 확인했으나, 원문과 같은 세 배분의 수익·샤프 동반 개선은 유지되지 않았다. 동일자료 재현을 하지 않아 차이의 원인을 확정할 수 없다.',
         '- **예측→투자성과:** 예상수익 IC 개선만으로 비용 차감 샤프 개선을 보장하지 않는다. 노출·평균 추정·거래 정책을 분리해 해석해야 한다.',
         '- **ML 추가 가치:** XGB의 LR 대비 우위는 B51·F141 모두 확인하지 못했다. 우위 미확인은 동등성이나 무효과의 증거가 아니다.','',
         '## 재현','',
@@ -232,6 +233,7 @@ def report():
         'uv run python -m etf_regimes.redesign_analysis run','uv run python -m etf_regimes.redesign_analysis verify',
         'uv run python -m etf_regimes.redesign run --workers 4','uv run python -m etf_regimes.redesign_packaging package','uv run python -m etf_regimes.redesign verify --workers 4',
         'uv run python -m etf_regimes.redesign report','```','',
+        '- 위 명령은 기존 ETF 응용 실험의 재현이다. 원문 동일자료 재현의 [선행 조건](docs/paper-replication-readiness.md)은 아직 충족하지 못했다.',
         '- 결과만 검증하려면 [복원·공개 CI 절차](docs/redesign-diagnostics.md#재현과-검증)를 따른다. 실행 계약의 원자료 해시가 다르면 새 다운로드를 조용히 대체하지 않고 중단한다.',
         '- **구현:** Python3.12 · 저자 Jump Model(커밋 고정) · scikit-learn · XGBoost2.1.4 · CVXPY/OSQP · pandas. [연구 명세](docs/redesign-plan.md) · [검수 기록](docs/redesign-review.md)']
     (ROOT/'README.md').write_text('\n'.join(lines)+'\n')
@@ -272,7 +274,7 @@ def report():
     p.write_text(text)
     write_json(OUT/'report.json',{'status':'generated_after_actual_verification','created_utc':datetime.now(UTC).isoformat(),
         'report_source_sha256':digest(ROOT/'src/etf_regimes/redesign_reporting.py'),'analysis_contract_sha256':digest(REPORT_CONTRACT),
-        'README_sha256':digest(ROOT/'README.md'),'documents':{p:digest(ROOT/p) for p in ['docs/redesign-paper.md','docs/redesign-diagnostics.md']},
+        'README_sha256':digest(ROOT/'README.md'),'documents':{p:digest(ROOT/p) for p in ['docs/redesign-paper.md','docs/redesign-diagnostics.md','docs/paper-replication-readiness.md']},
         'prior_results_viewed':True,'diagnostic_accounts':30,'canonical_selection':'explicit redesign report command'})
     print('Explicit paper-first project README and full30 diagnostic report generated',flush=True)
 

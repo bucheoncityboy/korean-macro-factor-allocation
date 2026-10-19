@@ -4,7 +4,7 @@
   "new_diagnostic_summary_computed": false,
   "execution_contract_sha256": "2e065e4921055446d0b6addb00c70ba88a4c414cae23ad7bf659e8302cec8ab4",
   "sources": {
-    "src/etf_regimes/redesign_reporting.py": "73896dd56e66abf84007e3dec75f86d00e4202a755985f6bd279d1508facbe2d",
+    "src/etf_regimes/redesign_reporting.py": "35339483b6fa72173ce5e228315f146c293e356e2db6496e13260e00d5901c44",
     "src/etf_regimes/redesign_analysis.py": "b7115839a07fa38c83827e17223d7acca39645195dab3c1483959bf97ebb0bfb",
     "src/etf_regimes/redesign_fidelity.py": "9a92630b75ae4e1de354f65563fe6692148f73770b75fb29cc993eadbe4b37ee",
     "tests/test_redesign_reporting.py": "83ab6e0f928d742f2371ac0adcecbb2ff417a25d616ddff014788a07bbd263eb"
@@ -48,5 +48,15 @@
     "cash_identity": "Only exact-zero risky holdings/trades, with maximum daily excess and fee fraction <=1e-12; then mathematical excess R=V=0 and Sharpe undefined. Retain raw floating values, actual net returns/NAV/CER.",
     "binary_raw_loss": "Require native probability-sum drift <=float32 epsilon, then evaluate OOS raw loss with [p0,1-p0]. Raw stored probabilities unchanged; training-native float32 vs OOS-float64 precision disclosed.",
     "primary_A_B_F_results_and_all_financial_outputs_unchanged": true
+  },
+  "replication_readiness_presentation_amendment": {
+    "created_utc": "2026-10-19T16:59:50.471210+00:00",
+    "previous_contract_archive": "archive/paper_replication_readiness/diagnostic_analysis_contract.json",
+    "previous_contract_sha256": "f43e9011ab7de27beac728ea3c9dfe750c046757b8b6797c252682a1f9afae8d",
+    "previous_reporting_source_archive": "archive/paper_replication_readiness/redesign_reporting.py",
+    "previous_reporting_source_sha256": "73896dd56e66abf84007e3dec75f86d00e4202a755985f6bd279d1508facbe2d",
+    "scope": "README disclosure and link only; metric/classification/plot/financial code unchanged; no new performance calculation.",
+    "readiness_record": "results/paper_replication/readiness.json",
+    "readiness_record_sha256": "f235d2d1c5ed7a922c47430f8ede99e4526e6b93013e6b00945cb9e7a3d3db3d"
   }
 }
