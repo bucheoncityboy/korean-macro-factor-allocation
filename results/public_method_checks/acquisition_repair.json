@@ -1,0 +1,6 @@
+{
+  "status": "incomplete_download_quarantined",
+  "cause": "Acquisition helper requires an absolute path; initial relative path raised before metadata write.",
+  "response_sha256": "efe225b4e885038b01d642f61ea744c5650efd852e2f77093d09b8898a95922f",
+  "no_financial_calculations_performed": true
+}

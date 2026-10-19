@@ -1,0 +1,8 @@
+{
+  "results/public_method_checks/acquisition_repair.json": "d901e74468db5dca9c4e1401e1b726b4a55ec6601bd1f59bd0401dfff339d057",
+  "results/public_method_checks/author_control.json": "fcf28ee8c4e17bb2c10f10348fffd1053cab92c7913b532978cb6347a76b10c4",
+  "results/public_method_checks/author_online_labels.csv": "50f04746c3d6496db270a8596da2fdebd1a1b3d0080af2bd9cb114cba4d70b2e",
+  "results/public_method_checks/execution_source.bundle": "04e16ffb3f93bfdbf63d5ea38fe702bd3afd784344a1d272df85eedd517a9a6e",
+  "results/public_method_checks/source_snapshot.json": "3c759337cedba68a7ba928d8571972194ffda0df0fc99909e30a85649a63eaed",
+  "results/public_method_checks/verification.json": "0c222319ed7f927a7d034a965fdfa8e276beb8e33fb4536e59f44191c9932326"
+}

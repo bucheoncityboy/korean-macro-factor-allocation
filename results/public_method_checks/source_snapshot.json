@@ -1,0 +1,8 @@
+{
+  "source_commit": "e07e487cec8b1dcc519c92c9030eb3ab3c4e293f",
+  "prerequisite_commit": "a92693fcb283ebb5f1e8714ce1ef892cd87f06a6",
+  "path": "results/public_method_checks/execution_source.bundle",
+  "bundle_sha256": "04e16ffb3f93bfdbf63d5ea38fe702bd3afd784344a1d272df85eedd517a9a6e",
+  "contract_sha256": "6c98c106da1f24d8310fdde1d69de58a77f38a9fe73b8c7f21b1dc453b3fc503",
+  "scope": "Exact pre-verification public-method control source, not a new investment strategy"
+}

@@ -1,0 +1,106 @@
+{
+  "status": "passed",
+  "feature_and_preprocess_max_errors": {
+    "5": 2.6645352591003757e-15,
+    "20": 2.6645352591003757e-15,
+    "60": 7.105427357601002e-15,
+    "train_preprocess": 0.0,
+    "test_preprocess": 0.0
+  },
+  "train_rows": 3777,
+  "test_rows": 688,
+  "train_start": "2007-01-03 00:00:00",
+  "train_end": "2021-12-31 00:00:00",
+  "test_start": "2022-01-03 00:00:00",
+  "test_end": "2024-09-27 00:00:00",
+  "CSV_rounding_not_pickle_equivalence": true,
+  "not_paper_portfolio_reproduction": true,
+  "models": [
+    {
+      "penalty": 0,
+      "centers": [
+        [
+          0.4324607783223576,
+          -0.5181398156152042,
+          0.44797542621412884,
+          0.5302182878617456,
+          -0.4279341120754359,
+          0.561384943313452,
+          0.48339078745893893,
+          -0.2896174756468121,
+          0.5310802078153036
+        ],
+        [
+          -0.7892328340363142,
+          0.9455954750195221,
+          -0.8175467763369292,
+          -0.9676384610191918,
+          0.7809717527779048,
+          -1.02451702444639,
+          -0.882179148391781,
+          0.5285464776202129,
+          -0.9692114488177566
+        ]
+      ],
+      "parameters": {
+        "cont": false,
+        "grid_size": 0.05,
+        "jump_penalty": 0,
+        "max_iter": 1000,
+        "mode_loss": true,
+        "n_components": 2,
+        "n_init": 10,
+        "random_state": 240609578,
+        "tol": 1e-08,
+        "verbose": 0
+      },
+      "online_rows": 688,
+      "online_and_retrospective_labels_exact": true,
+      "future_prefix_exact": true,
+      "conditional_fixed_center_objective": 1948.6499622960582
+    },
+    {
+      "penalty": 50,
+      "centers": [
+        [
+          0.15434321298817658,
+          -0.2969013688762777,
+          0.15716913835272686,
+          0.29635899902220947,
+          -0.31877020938000056,
+          0.27405378387487583,
+          0.33665172829921086,
+          -0.24578329514305666,
+          0.3369734446698997
+        ],
+        [
+          -0.6431319107551102,
+          1.2371567299550545,
+          -0.6549072440798988,
+          -1.234896731903762,
+          1.3282818847763014,
+          -1.1419532499081693,
+          -1.4027922905600494,
+          1.0241531012390612,
+          -1.4041328487886644
+        ]
+      ],
+      "parameters": {
+        "cont": false,
+        "grid_size": 0.05,
+        "jump_penalty": 50,
+        "max_iter": 1000,
+        "mode_loss": true,
+        "n_components": 2,
+        "n_init": 10,
+        "random_state": 240609578,
+        "tol": 1e-08,
+        "verbose": 0
+      },
+      "online_rows": 688,
+      "online_and_retrospective_labels_exact": true,
+      "future_prefix_exact": true,
+      "conditional_fixed_center_objective": 2201.9962718389593
+    }
+  ]
+}

@@ -25,3 +25,4 @@ results/redesign/targets.parquet
 results/redesign/trades.parquet
 results/followup/verification_artifacts.json
 results/redesign/verification_artifacts.json
+results/public_method_checks/artifact_verification.json

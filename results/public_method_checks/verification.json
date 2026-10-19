@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "mode": "actual_public_and_ETF_raw_data",
+  "verified_utc": "2026-10-19T17:14:55.577307+00:00",
+  "checkout_commit": "e07e487cec8b1dcc519c92c9030eb3ab3c4e293f",
+  "contract_sha256": "6c98c106da1f24d8310fdde1d69de58a77f38a9fe73b8c7f21b1dc453b3fc503",
+  "author_control": {
+    "models": 2,
+    "test_rows_each": 688,
+    "no_trading_returns_calculated": true
+  },
+  "ETF_controls": {
+    "feature_assets": 8,
+    "feature_columns_each": 13,
+    "all_daily_feature_max_abs_errors": {
+      "SPY": 9.71445146547012e-15,
+      "EFA": 9.71445146547012e-15,
+      "EEM": 9.71445146547012e-15,
+      "IEF": 9.71445146547012e-15,
+      "TLT": 9.71445146547012e-15,
+      "LQD": 9.71445146547012e-15,
+      "IYR": 9.71445146547012e-15,
+      "GLD": 9.71445146547012e-15
+    },
+    "independent_rate_join": "strictly earlier date, merge_asof",
+    "JM_label_hash_and_mean_rechecks": 24,
+    "next_day_training_alignment": "passed",
+    "covariance_matrices": 3,
+    "covariance_max_abs_errors": {
+      "2021-06-30": 1.6263032587282567e-19,
+      "2023-12-29": 6.776263578034403e-20,
+      "2025-06-30": 1.0842021724855044e-19
+    }
+  },
+  "financial_outputs_exactly_unchanged": 41,
+  "new_strategy_performance_computed": false,
+  "identical_data_paper_reproduction_completed": false,
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "xgboost": "2.1.4",
+    "jumpmodels": "0.1.1"
+  }
+}

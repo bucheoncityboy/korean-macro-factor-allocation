@@ -1,0 +1,8 @@
+{
+  "path": "archive/public_method_checks/NDX.csv",
+  "url": "https://raw.githubusercontent.com/Yizhan-Oliver-Shu/jump-models/d0fa00ce10126791695a259a45c5ddd41fbced80/examples/nasdaq/data/NDX.csv",
+  "downloaded_at_utc": "2026-10-19T17:10:17.412955+00:00",
+  "sha256": "efe225b4e885038b01d642f61ea744c5650efd852e2f77093d09b8898a95922f",
+  "bytes": 312868,
+  "content_type": "text/plain; charset=utf-8"
+}

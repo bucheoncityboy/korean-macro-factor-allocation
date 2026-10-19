@@ -32,3 +32,9 @@ jobs:
         env:
           OMP_NUM_THREADS: "1"
           OPENBLAS_NUM_THREADS: "1"
+      - name: Verify public-input method controls
+        if: ${{ hashFiles('results/public_method_checks/verification.json') != '' }}
+        run: uv run python -m etf_regimes.public_method_checks artifacts
+        env:
+          OMP_NUM_THREADS: "1"
+          OPENBLAS_NUM_THREADS: "1"

@@ -1,0 +1,14 @@
+{
+  "scope": "public_data_paper_method_reconstruction",
+  "user_constraint": "없음 — 기존 조건대로 공개 자료만 사용",
+  "original_index_data_required_for_this_scope": false,
+  "identical_data_paper_reproduction_possible_with_current_inputs": false,
+  "study_assets": ["SPY", "EFA", "EEM", "IEF", "TLT", "LQD", "IYR", "GLD"],
+  "cash": "BIL",
+  "data_policy": "Real post-listing public ETF history only; no synthetic pre-listing extension",
+  "financial_design": "Preserve the frozen A51/B51/F141/D51 accounts; do not expand the hyperparameter search",
+  "author_CSV_control": "Public Nasdaq CSV is a numerical control, not a new investable asset or a copy of the pickle-based notebook outputs",
+  "verification_order": ["public input/source provenance", "independent scalar feature calculations", "author-library DP control", "ETF JM means and next-day alignment", "covariance and objective units", "interpret the already frozen ETF results"],
+  "unresolved_paper_conventions": "Remain explicit; author-example clipping/adjust=True is not automatically promoted to a paper setting",
+  "success": "Transparent calculation agreement and declared deviations, irrespective of observed portfolio superiority"
+}
