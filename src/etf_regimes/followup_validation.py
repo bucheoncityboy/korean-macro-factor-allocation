@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 
 from .accounting_checks import optimality_certificate
-from .common import ROOT, digest, require, write_json
+from .common import ROOT, digest, git_head, require, write_json
 from .data import build_features, macro_tables, read_prices
 from .followup import OUT, cfg, check_contract, inputs, select_penalty
 from .followup_allocation import IDS, execute, prepare, specifications
@@ -27,6 +27,20 @@ def artifacts(check_hashes=True):
     run = json.loads((OUT / "run.json").read_text())
     require(run["contract_sha256"] == digest(ROOT / "configs/followup_contract.json") and
             run["sources"] == contract["sources"], "Execution provenance differs")
+    archive = json.loads((ROOT / "configs/followup_execution_source.json").read_text())
+    require(archive["contract_sha256"] == run["contract_sha256"] and
+            archive["sources"] == contract["sources"] and
+            archive["sha256"] == digest(ROOT / archive["path"]), "Exact follow-up execution source differs")
+    amendment = contract.get("numerical_amendment")
+    if amendment:
+        require(digest(ROOT / amendment["initial_contract_archive"]) == amendment["initial_contract_sha256"] and
+                digest(ROOT / amendment["initial_run_archive"]) == amendment["initial_run_sha256"] and
+                digest(OUT / "solver_failure.json") == amendment["failed_input_sha256"] and
+                digest(OUT / "solver_repair.json") == amendment["repair_certificate_sha256"],
+                "Initial failure/amendment evidence differs")
+        if run.get("forecast_reuse_verified"):
+            require(all(digest(ROOT / path) == sha for path, sha in amendment["forecast_sha256"].items()),
+                    "Numerical repair changed classifier outputs")
     if check_hashes:
         manifest = json.loads((OUT / "artifact_manifest.json").read_text())
         require(all(digest(ROOT / p) == h for p, h in manifest.items()), "Follow-up artifact hash mismatch")
@@ -90,6 +104,11 @@ def artifacts(check_hashes=True):
         v = json.loads((OUT / "verification.json").read_text())
         require(v["verification_source_sha256"] == digest(ROOT / "src/etf_regimes/followup_validation.py"),
                 "Independent verification source changed")
+    if check_hashes and (OUT / "report.json").exists():
+        report = json.loads((OUT / "report.json").read_text())
+        require(report["report_source_sha256"] == digest(ROOT / "src/etf_regimes/followup_reporting.py") and
+                report["README_sha256"] == digest(ROOT / "README.md") and
+                report["document_sha256"] == digest(ROOT / "docs/followup.md"), "Follow-up report binding differs")
     return {"predictions": len(p), "candidate_predictions": len(raw),
             "smoothing_streams": streams, "accounts": len(account_keys)}
 
@@ -124,6 +143,22 @@ def independent_refits(prices, workers):
                 require(np.allclose(actual, values, atol=1e-11, rtol=1e-11), "Fresh probability differs")
             count += 1
     return count
+
+
+def recheck_tuning(prices):
+    raw = pd.read_parquet(OUT / "candidate_probabilities.parquet")
+    paths = {}
+    part = raw[(raw.definition == "asset2") & raw.model.isin(["logistic", "xgb"])]
+    for (asset, penalty, model), group in part.groupby(["asset", "penalty", "model"]):
+        group = group.sort_values("target_date")
+        paths[(asset, penalty, model)] = pd.Series(group.p0.to_numpy(), index=group.target_date)
+    records = json.loads((OUT / "tuning.json").read_text())
+    for record in records:
+        selected, candidates = select_penalty(paths, record["asset"], pd.Timestamp(record["asof"]), prices, cfg())
+        require(selected["penalty"] == record["selected"]["penalty"] and
+                np.allclose([x["score"] for x in candidates], [x["score"] for x in record["candidates"]],
+                            atol=1e-12, rtol=1e-12), "Historical validation selection differs")
+    return len(records)
 
 
 def hostile_future(prices):
@@ -214,6 +249,12 @@ def replay_and_certify(prices):
         independent = independent_replay(group, prices, assets, key[3] / 10000)
         reference = by_nav[key].sort_values("date")
         require(np.allclose(independent, reference.nav, atol=1e-9, rtol=1e-9), "Independent share replay differs")
+        if key == ("bridge", "a_hard_paper_cash1", "legacy", 5):
+            original = pd.read_parquet(ROOT / "results/study/nav.parquet")
+            original = original[(original.study == "A") & (original.strategy == "mv_jmxgb_floor") &
+                                (original.cost_bp == 5)].sort_values("date")
+            require(np.allclose(reference.nav, original.nav, atol=1e-9, rtol=1e-9),
+                    "Factorial anchor does not reproduce the sealed original A account")
         count += 1
         if key[1] in ["bil", "equal_weight", "spy_ief_60_40", "trend"]:
             continue
@@ -266,11 +307,13 @@ def verify(artifacts_only=False, workers=4):
     result = {"status": "verifying", "mode": "actual_raw_data", **artifacts(check_hashes=False)}
     prices, _ = read_prices()
     result["independent_refits_at_three_boundaries"] = independent_refits(prices, workers)
+    result["independent_validation_selections"] = recheck_tuning(prices)
     print("follow-up verification: independent refits passed", flush=True)
     result["hostile_future"] = hostile_future(prices)
     print("follow-up verification: hostile future passed", flush=True)
     count, certificates = replay_and_certify(prices)
     result.update(status="passed", independent_complete_paths=count, optimality_certificates=certificates,
+                  verification_checkout_commit=git_head(),
                   verification_source_sha256=digest(ROOT / "src/etf_regimes/followup_validation.py"))
     write_json(OUT / "verification.json", result)
     run = json.loads((OUT / "run.json").read_text())

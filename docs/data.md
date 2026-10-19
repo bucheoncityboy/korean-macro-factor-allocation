@@ -1,6 +1,6 @@
 # 자료 감사와 출처
 
-평가 구간은 11년 학습과5년 순차 검증을 확보한2021-07–2025-09의51개월이다. CPIAUCSL의2025-10 관측치가 없어 이후 연속 경제 라벨을 만들 수 없으며, 결측을 보간하거나 달력을 압축하지 않는다.
+같은 원자료로 두 실행을 구분한다. 원문 준거는 11년 학습·5년 검증으로 2021-07–2025-09의 51개월, 후속 연구는 5년 학습·3년 검증으로 2014-01–2025-09의 141개월이다. CPIAUCSL의 2025-10 관측치가 없어 이후 연속 경제 라벨을 만들 수 없으며, 결측을 보간하거나 달력을 압축하지 않는다. [후속 설계와 감사 기준](followup-design.md)
 
 - [BLS: 2025년 정부 업무중단과 CPI](https://www.bls.gov/cpi/additional-resources/2025-federal-government-shutdown-impact-cpi.htm)
 - [BLS: CPI 자료 결측 설명](https://www.bls.gov/cpi/additional-resources/2025-federal-government-shutdown-impact-cpi-faq.htm)

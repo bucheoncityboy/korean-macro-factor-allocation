@@ -1,7 +1,7 @@
 {
-  "frozen_at_utc": "2026-10-19T07:37:56.047379+00:00",
+  "frozen_at_utc": "2026-10-19T08:55:50.327948+00:00",
   "prior_results_viewed": true,
-  "new_performance_computed": false,
+  "new_performance_computed": true,
   "protocol": {
     "version": "1.0.0",
     "study_type": "Historical remedial extension after inspecting the original results; exploratory, never prospective",
@@ -169,11 +169,13 @@
     "uv.lock": "e1b9ea1fec0d4674eca97d73c4be1c9d744a5ad428b22eb2017f2ac919d9d026",
     "pyproject.toml": "07d6f06626f8445d39a85c890e7a6ddd3b875174702c4b12cfda2cf899bf9571",
     "configs/protocol.json": "a5bb50a063de055fb2874b9b7371224808aa467d316bd66044c3c89c1343b203",
-    "src/etf_regimes/followup.py": "ff3fe69feebf1eb2187e72c0638cac0617f8ca422e1c09fdfb5f24d391043ff5",
+    "src/etf_regimes/followup.py": "0280e94983a441332cde1915bfa0f90c2721a43ac7a5ccd4f83becb4306a5af3",
     "src/etf_regimes/followup_models.py": "98e16edf0e0af35e7757b5e72d3cb5dfac1d786d9250084f57cdd3ba2e64abe2",
-    "src/etf_regimes/followup_allocation.py": "4cea06b7142d408631a3dfd83d6bb1de768eda1a6407ba2c9df00ed7806158a5",
+    "src/etf_regimes/followup_allocation.py": "ae73f150c84634668020a9bbbba2153d2b6e74d71d06a3f450462b296e20cd64",
+    "src/etf_regimes/followup_solver.py": "455bbd2b14761bd6efb1e409764c7f2c55f4d8927e3c6ab82b4c73c490360871",
     "src/etf_regimes/followup_statistics.py": "978703b845216b061d5307c8b708ab22c5727b1b33385988a3541e640ef33bc6",
     "src/etf_regimes/statistics.py": "9201b0a70582d0e096917cf94cf754920a6aa7a30e04e09f6b4f6e5705aacaf0",
+    "src/etf_regimes/cli.py": "f271438827a0bd18f6e5a0752b3b69f30424e02f12464ce0765cb373d8f85266",
     "configs/followup_protocol.json": "7bf5b52e6e155359fb0fd410827a6dd45c80df15500a93d4dab41b2302b86bda"
   },
   "audit_sha256": "7e2c787cc4044107eb7008bd85966fe69887581695f426c9406d4e877203982c",
@@ -211,5 +213,25 @@
     "results/study/trades.parquet": "7c9b6aef95d652977f43d2639a3d4eaa2f65560b2e98f6b47a5ed1e1d4a54ff7",
     "results/study/tuning.json": "efae6166ef506d6b98c20925ca300652256a0e885c2e9905515f59ca58b115bf",
     "results/study/verification.json": "342b57b73d16c439bd4c0f5fcb967fd8ca5becb6bb33317ef4fe1018f388a8e0"
+  },
+  "full_performance_summary_computed": false,
+  "numerical_amendment": {
+    "initial_contract_sha256": "4cde73d88f18b433a268536869dc6240a26dc167961bb327c16fdc1732165a59",
+    "initial_execution_commit": "479ffc80117e75fd451729bf128253540e2b4b02",
+    "initial_public_commit": "4e994d895ce9993b88b160774002193fe3de7cbb",
+    "initial_run_sha256": "e0ab0d99f3e3f51cf692b588db55a08826aeabe730eeb3545398b106a305c84a",
+    "initial_contract_archive": "archive/followup_initial_contract.json",
+    "initial_run_archive": "archive/followup_initial_run.json",
+    "failed_input_sha256": "5cb0c062e8e872b923de3a024a07944cca3ca61e6e349d452e9195938a34d545",
+    "repair_certificate_sha256": "673ae19c03f6ee30de28c29bd827302255aa88298162ce0d04509a047698dc55",
+    "objective_and_research_parameters_unchanged": true,
+    "full_performance_summary_viewed": false,
+    "reason": "Numerical-only KKT-certified boundary presolve for cash-inclusive objective; original risk-only reference solver preserved",
+    "forecast_sha256": {
+      "results/followup/predictions.parquet": "b8513e01006035dcaccdade79c9b2822313e2a9e316816e820434f60bb35def3",
+      "results/followup/candidate_probabilities.parquet": "636dd2bcaf878105034ee1cf77ce736d30f72932b826ea07b34d314d17398334",
+      "results/followup/fits.json": "147f5e89b5c8a6432c6e60a1c70908b5f2667ab441ddfece3c19ceda5141bd83",
+      "results/followup/tuning.json": "a7094f680f408e501e41f0849c30a237a87f3c30fa9a736c65bd3cd55ccf5537"
+    }
   }
 }

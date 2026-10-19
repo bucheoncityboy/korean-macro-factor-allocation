@@ -9,3 +9,10 @@ data/processed/
 results/private/
 *.egg-info/
 *.log
+results/followup/candidate_probabilities.parquet
+results/followup/predictions.parquet
+results/followup/fits.json
+results/followup/tuning.json
+results/followup/nav.parquet
+results/followup/targets.parquet
+results/followup/trades.parquet

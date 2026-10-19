@@ -1,0 +1,20 @@
+{
+  "same_objective_and_constraints": true,
+  "research_parameters_changed": false,
+  "failure_input": "results/followup/solver_failure.json",
+  "reason": "All risky weights were around 7e-10; exact sell/retain boundary satisfies the full KKT conditions. No weights are rounded or fabricated.",
+  "repaired_weights": [
+    0.0,
+    0.0,
+    0.0,
+    6.547693572981117e-10,
+    6.521235691227678e-10,
+    6.515695033572932e-10,
+    0.0,
+    0.0,
+    0.9999999980415376
+  ],
+  "independent_global_objective_improvement_upper_bound": 4.6073611416468395e-12,
+  "certificate": "Exact KKT inequalities plus independent supporting-hyperplane LP",
+  "full_performance_summary_viewed": false
+}

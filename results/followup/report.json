@@ -1,0 +1,10 @@
+{
+  "status": "generated_after_actual_verification",
+  "report_source_sha256": "a90b15a52ea5b1cf396d1871e510cbb32a6ca66bce3786a421b8cc91e9c5434f",
+  "README_sha256": "ec841cada6edaad58e390355f777af455595c820ae6e03921d7fbffb5e5be64f",
+  "document_sha256": "5e25a36163f447e0d5bef01abc61e6e178f3cef3e09d19b07769e389a0bfd789",
+  "primary_policy": "primary",
+  "prior_results_viewed": true,
+  "output_snapshot_manifest_sha256": "edbb161f1bcaddff72feb4ceb4a86878a3cc4abe2b39839800a51b50b74f656e",
+  "output_snapshot_source_sha256": "1053fdff6b7a81738424699ca75d0a39b35c5d2afabd32dd54e4bf17454b8857"
+}

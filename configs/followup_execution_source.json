@@ -1,0 +1,28 @@
+{
+  "path": "archive/followup_repaired_execution_source.bundle",
+  "sha256": "cb152f2b3dc08ff57f3612244b9c7f708b92ac78f44be65703da50914ba90206",
+  "execution_commit": "b66d9ce249aa29dbe5b1d075dc23a5e55df41d6b",
+  "required_parent": "042d8d6e93ff3519bb0b727390a4a68eb554e969",
+  "contract_sha256": "106451e8f6eaf386f061d1861b1d5a6c5d23f7f707742b35e1e1f8982c7eb6b8",
+  "sources": {
+    "src/etf_regimes/data.py": "95714ca1cc94f027b7af3fd123a6ccf38af48ffac615b867f4850da1d6c01e0d",
+    "src/etf_regimes/models.py": "5581b862ad62a824a3593e056724b81a167effa785d8a13720ecf7abc52a41fe",
+    "src/etf_regimes/estimation.py": "977d9d41972d293014de352e14b730bd9b74626f05799941cd533dca793bc7b2",
+    "src/etf_regimes/study.py": "dc921566a042c81769aa1759288ec7b4bc400a88ed219d7c3e6a90b5c32cfef8",
+    "src/etf_regimes/allocation.py": "9047eb8050a955d41fe560137535f48600b9490075032020f54c163eb56c3455",
+    "src/etf_regimes/trading.py": "38178bf9d219693812719c76309dbdc73e906468e9e5e79ec87997ec9177aa90",
+    "src/etf_regimes/common.py": "969831ba3d4b22e5abb5cbb2fe0262f6588541a2aeaf6fb741fe554306650a63",
+    "src/etf_regimes/runtime.py": "b76c6b3ff2e66910bca06159db54f76923bc07e59dc36922837cdc82b42d188b",
+    "uv.lock": "e1b9ea1fec0d4674eca97d73c4be1c9d744a5ad428b22eb2017f2ac919d9d026",
+    "pyproject.toml": "07d6f06626f8445d39a85c890e7a6ddd3b875174702c4b12cfda2cf899bf9571",
+    "configs/protocol.json": "a5bb50a063de055fb2874b9b7371224808aa467d316bd66044c3c89c1343b203",
+    "src/etf_regimes/followup.py": "0280e94983a441332cde1915bfa0f90c2721a43ac7a5ccd4f83becb4306a5af3",
+    "src/etf_regimes/followup_models.py": "98e16edf0e0af35e7757b5e72d3cb5dfac1d786d9250084f57cdd3ba2e64abe2",
+    "src/etf_regimes/followup_allocation.py": "ae73f150c84634668020a9bbbba2153d2b6e74d71d06a3f450462b296e20cd64",
+    "src/etf_regimes/followup_solver.py": "455bbd2b14761bd6efb1e409764c7f2c55f4d8927e3c6ab82b4c73c490360871",
+    "src/etf_regimes/followup_statistics.py": "978703b845216b061d5307c8b708ab22c5727b1b33385988a3541e640ef33bc6",
+    "src/etf_regimes/statistics.py": "9201b0a70582d0e096917cf94cf754920a6aa7a30e04e09f6b4f6e5705aacaf0",
+    "src/etf_regimes/cli.py": "f271438827a0bd18f6e5a0752b3b69f30424e02f12464ce0765cb373d8f85266",
+    "configs/followup_protocol.json": "7bf5b52e6e155359fb0fd410827a6dd45c80df15500a93d4dab41b2302b86bda"
+  }
+}

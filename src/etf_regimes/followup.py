@@ -24,7 +24,7 @@ def cfg():
 
 def fingerprints():
     result = sources()
-    for name in ["followup", "followup_models", "followup_allocation", "followup_statistics", "statistics"]:
+    for name in ["followup", "followup_models", "followup_allocation", "followup_solver", "followup_statistics", "statistics", "cli"]:
         path = ROOT / f"src/etf_regimes/{name}.py"
         result[str(path.relative_to(ROOT))] = digest(path)
     result["configs/followup_protocol.json"] = digest(ROOT / "configs/followup_protocol.json")
@@ -191,22 +191,38 @@ def forecast(prices, workers):
     write_json(OUT / "tuning.json", tuning)
 
 
-def run(workers=4):
+def run(workers=4, reuse_forecasts=False):
     from .followup_allocation import allocate
     c = check_contract()
     if (OUT / "run.json").exists():
         value = json.loads((OUT / "run.json").read_text())
-        require(value["contract_sha256"] == digest(CONTRACT) and value["sources"] == c["sources"],
-                "Resume source/contract mismatch")
-        value.setdefault("resumed_at_utc", []).append(datetime.now(UTC).isoformat())
-        value["status"] = "running"
+        if value["contract_sha256"] != digest(CONTRACT):
+            amendment = c.get("numerical_amendment", {})
+            require(amendment.get("initial_contract_sha256") == value["contract_sha256"] and
+                    amendment.get("initial_run_sha256") == digest(OUT / "run.json"),
+                    "Undocumented resume source/contract mismatch")
+            value = {"status": "running", "started_at_utc": datetime.now(UTC).isoformat(),
+                     "execution_commit": git_head(), "contract_sha256": digest(CONTRACT),
+                     "sources": c["sources"], "prior_results_viewed": True,
+                     "initial_stopped_attempt": amendment}
+        else:
+            require(value["sources"] == c["sources"], "Resume source mismatch")
+            value.setdefault("resumed_at_utc", []).append(datetime.now(UTC).isoformat())
+            value["status"] = "running"
     else:
         value = {"status": "running", "started_at_utc": datetime.now(UTC).isoformat(),
                  "execution_commit": git_head(), "contract_sha256": digest(CONTRACT),
                  "sources": c["sources"], "prior_results_viewed": True}
+    value["forecast_reuse_verified"] = bool(reuse_forecasts)
     write_json(OUT / "run.json", value)
     prices, _ = read_prices()
-    forecast(prices, workers)
+    reused = c.get("numerical_amendment", {}).get("forecast_sha256", {}) if reuse_forecasts else {}
+    require(not reuse_forecasts or bool(reused), "Forecast reuse requires a recorded numerical amendment")
+    if reused:
+        require(all(digest(ROOT / path) == sha for path, sha in reused.items()), "Frozen forecast reuse differs")
+        print("follow-up: reusing unchanged, hash-verified forecasts after numerical-only amendment", flush=True)
+    else:
+        forecast(prices, workers)
     allocate(prices, workers)
     value.update(status="executed_not_verified", finished_at_utc=datetime.now(UTC).isoformat())
     write_json(OUT / "run.json", value)

@@ -1,0 +1,2036 @@
+{
+  "status": "passed",
+  "mode": "actual_raw_data",
+  "predictions": 236320,
+  "candidate_predictions": 889920,
+  "smoothing_streams": 240,
+  "accounts": 69,
+  "independent_refits_at_three_boundaries": 48,
+  "independent_validation_selections": 192,
+  "hostile_future": {
+    "cutoff": "2019-12-31 00:00:00",
+    "feature_assets": 8,
+    "definitions": 2,
+    "tuning": "passed",
+    "account_policies": 3,
+    "prices_market_macro_and_unpublished_labels": "passed"
+  },
+  "independent_complete_paths": 69,
+  "optimality_certificates": [
+    {
+      "account": [
+        "bridge",
+        "a_hard_paper_cash0",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 1.2232656836259903e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_paper_cash0",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2023-08-15 00:00:00",
+      "daily_improvement_upper_bound": 2.5684858477627846e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_paper_cash0",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 1.0106632978429397e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_paper_cash0",
+        "horizon",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 5.548199161382883e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_paper_cash0",
+        "horizon",
+        "5"
+      ],
+      "date": "2023-08-15 00:00:00",
+      "daily_improvement_upper_bound": 1.6992383236473822e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_paper_cash0",
+        "horizon",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 3.722507545267373e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_paper_cash0",
+        "legacy",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 2.6724553559703823e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_paper_cash0",
+        "legacy",
+        "5"
+      ],
+      "date": "2023-08-15 00:00:00",
+      "daily_improvement_upper_bound": 1.184328690347937e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_paper_cash0",
+        "legacy",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 1.7301533469793462e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_paper_cash1",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 1.2232656836259903e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_paper_cash1",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 1.0544342309015686e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_paper_cash1",
+        "horizon",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 5.548199161382883e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_paper_cash1",
+        "horizon",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 3.749490301574454e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_paper_cash1",
+        "legacy",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 2.6724553559703823e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_paper_cash1",
+        "legacy",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 1.730162454277595e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_shrink_cash0",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 5.146415222147607e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_shrink_cash0",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2023-08-15 00:00:00",
+      "daily_improvement_upper_bound": 1.9448984906861425e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_shrink_cash0",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 2.7860044566480058e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_shrink_cash0",
+        "horizon",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 1.183902661235775e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_shrink_cash0",
+        "horizon",
+        "5"
+      ],
+      "date": "2023-08-15 00:00:00",
+      "daily_improvement_upper_bound": 6.969090934255738e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_shrink_cash0",
+        "horizon",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 1.3602547040136859e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_shrink_cash0",
+        "legacy",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 1.487925342831542e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_shrink_cash0",
+        "legacy",
+        "5"
+      ],
+      "date": "2023-08-15 00:00:00",
+      "daily_improvement_upper_bound": 3.3091566799584547e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_shrink_cash0",
+        "legacy",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 1.2645975846353741e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_shrink_cash1",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 5.146415222147607e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_shrink_cash1",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 5.12570322557665e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_shrink_cash1",
+        "horizon",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 1.183902661235775e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_shrink_cash1",
+        "horizon",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 7.260852075835489e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_shrink_cash1",
+        "legacy",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 1.487925342831542e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_hard_shrink_cash1",
+        "legacy",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 1.3757096373537281e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_paper_cash0",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 2.05500034849114e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_paper_cash0",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2023-08-15 00:00:00",
+      "daily_improvement_upper_bound": 7.32170676088428e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_paper_cash0",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 4.810584309372645e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_paper_cash0",
+        "horizon",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 0.0,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_paper_cash0",
+        "horizon",
+        "5"
+      ],
+      "date": "2023-08-15 00:00:00",
+      "daily_improvement_upper_bound": 1.7289172048838152e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_paper_cash0",
+        "horizon",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 4.939254257332881e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_paper_cash0",
+        "legacy",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 2.6978152784656872e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_paper_cash0",
+        "legacy",
+        "5"
+      ],
+      "date": "2023-08-15 00:00:00",
+      "daily_improvement_upper_bound": 1.2239510755818542e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_paper_cash0",
+        "legacy",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 6.284968769379451e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_paper_cash1",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 2.05500034849114e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_paper_cash1",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 1.2503873153893452e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_paper_cash1",
+        "horizon",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 0.0,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_paper_cash1",
+        "horizon",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 5.126840531971544e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_paper_cash1",
+        "legacy",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 2.6978152784656872e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_paper_cash1",
+        "legacy",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 6.28495311350008e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_shrink_cash0",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 7.688852809648039e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_shrink_cash0",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2023-08-15 00:00:00",
+      "daily_improvement_upper_bound": 0.0,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_shrink_cash0",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 6.582809384397814e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_shrink_cash0",
+        "horizon",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 5.175446117673677e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_shrink_cash0",
+        "horizon",
+        "5"
+      ],
+      "date": "2023-08-15 00:00:00",
+      "daily_improvement_upper_bound": 3.475956505185349e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_shrink_cash0",
+        "horizon",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 1.75126358727129e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_shrink_cash0",
+        "legacy",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 4.4630233373994105e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_shrink_cash0",
+        "legacy",
+        "5"
+      ],
+      "date": "2023-08-15 00:00:00",
+      "daily_improvement_upper_bound": 9.531809749049186e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_shrink_cash0",
+        "legacy",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 3.839251637959007e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_shrink_cash1",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 7.688852809648039e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_shrink_cash1",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 6.547904579656816e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_shrink_cash1",
+        "horizon",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 5.175446117673677e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_shrink_cash1",
+        "horizon",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 1.775405039997069e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_shrink_cash1",
+        "legacy",
+        "5"
+      ],
+      "date": "2021-07-01 00:00:00",
+      "daily_improvement_upper_bound": 4.4630233373994105e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "bridge",
+        "a_soft_shrink_cash1",
+        "legacy",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 4.044230120063552e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_frequency",
+        "primary",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 2.234041930940754e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_frequency",
+        "primary",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 2.6869329887945197e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_frequency",
+        "primary",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 3.2547907816463887e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 1.2041987117747746e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 2.0264559561639084e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 8.976131144790289e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "horizon",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 2.2738941372196786e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "horizon",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 5.21778266752114e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "horizon",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 5.440331453561431e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "legacy",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 2.438244105316262e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "legacy",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 4.0264436207936016e-14,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "legacy",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 5.379906589664252e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "primary",
+        "0"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 4.2510460429578956e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "primary",
+        "0"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 8.584991089332847e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "primary",
+        "0"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 3.5301359058159676e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "primary",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 2.2738941372196786e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "primary",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 5.218028239313208e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "primary",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 1.4149678282358857e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "primary",
+        "10"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 4.550348975656399e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "primary",
+        "10"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 8.004301296207425e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "primary",
+        "10"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 1.0515427938118105e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "primary",
+        "25"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 2.3778035421716248e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "primary",
+        "25"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 1.3953534128922224e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "primary",
+        "25"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 6.176191719511892e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "wide_band",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 2.2738941372196786e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "wide_band",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 5.215503810079847e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_logistic",
+        "wide_band",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 2.661594469127726e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_persistence",
+        "primary",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 4.4442210762191126e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_persistence",
+        "primary",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 3.0753625015512986e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_persistence",
+        "primary",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 1.2746952473587092e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 3.231424459612664e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 1.5598942873073368e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 0.0,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "horizon",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 9.689013371998179e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "horizon",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 1.1202905736331509e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "horizon",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 5.608285591571921e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "legacy",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 3.4527147308761885e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "legacy",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 2.908974314007979e-14,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "legacy",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 2.859302746828496e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "primary",
+        "0"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 2.555689514183168e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "primary",
+        "0"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 3.093275689845104e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "primary",
+        "0"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 1.2121864872548932e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "primary",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 9.689013371998179e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "primary",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 1.1301196252682527e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "primary",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 4.1017027014450536e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "primary",
+        "10"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 1.3728719279026275e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "primary",
+        "10"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 3.7460775583961214e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "primary",
+        "10"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 4.2493986844929776e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "primary",
+        "25"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 4.3601573631972534e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "primary",
+        "25"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 9.409447803169699e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "primary",
+        "25"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 5.9560225132947175e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "wide_band",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 9.689013371998179e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "wide_band",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 1.1268073876313095e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb",
+        "wide_band",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 4.635006300209715e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb_paper",
+        "legacy",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 5.47241288742506e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb_paper",
+        "legacy",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 3.474161577995613e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb_paper",
+        "legacy",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 1.8306479379268104e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb_paper",
+        "primary",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 0.0,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb_paper",
+        "primary",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 1.414078256616394e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "asset2_xgb_paper",
+        "primary",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 6.248557931926718e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_frequency",
+        "primary",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 1.3362729705309467e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_frequency",
+        "primary",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 3.0401342352565346e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_frequency",
+        "primary",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 3.7215209755005196e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 1.7071038864186622e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 4.364460453199631e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 5.913213305510159e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "horizon",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 8.569634700483515e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "horizon",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 1.7997192549180224e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "horizon",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 6.609968682699894e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "legacy",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 5.992974129107043e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "legacy",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 4.81404125547355e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "legacy",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 0.0,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "primary",
+        "0"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 4.2281944005045924e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "primary",
+        "0"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 7.502475074842255e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "primary",
+        "0"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 2.655013051156003e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "primary",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 8.569634700483515e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "primary",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 1.1371360057461748e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "primary",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 1.425009493949891e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "primary",
+        "10"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 8.407769042074152e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "primary",
+        "10"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 0.0,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "primary",
+        "10"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 5.481647782717113e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "primary",
+        "25"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 3.5081381701516923e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "primary",
+        "25"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 2.721725991962744e-14,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "primary",
+        "25"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 0.0,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "wide_band",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 8.569634700483515e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "wide_band",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 3.3881317890172014e-21,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_logistic",
+        "wide_band",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 4.2618615207030627e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_persistence",
+        "primary",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 0.0,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_persistence",
+        "primary",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 2.4154070264086405e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_persistence",
+        "primary",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 3.2317271282016405e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 1.6466385546753948e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 4.773628595276108e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "cash_cost",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 2.8358876865189862e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "horizon",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 4.726718985697187e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "horizon",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 4.721693684910794e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "horizon",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 8.000203960672331e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "legacy",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 0.0,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "legacy",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 6.306929262699101e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "legacy",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 4.61224286573466e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "primary",
+        "0"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 2.2887700307054615e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "primary",
+        "0"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 9.326003060490485e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "primary",
+        "0"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 9.632940986253756e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "primary",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 4.726718985697187e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "primary",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 9.098681145536594e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "primary",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 8.400240955440267e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "primary",
+        "10"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 0.0,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "primary",
+        "10"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 5.0099040465879626e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "primary",
+        "10"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 3.045293621358478e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "primary",
+        "25"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 0.0,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "primary",
+        "25"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 2.8785064203106295e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "primary",
+        "25"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 1.3821024792709134e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "wide_band",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 4.726718985697187e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "wide_band",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 6.843089259849812e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb",
+        "wide_band",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 5.799577110194394e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb_paper",
+        "legacy",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 3.0865970044625934e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb_paper",
+        "legacy",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 1.2996277299237753e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb_paper",
+        "legacy",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 0.0,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb_paper",
+        "primary",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 1.5709131403736452e-11,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb_paper",
+        "primary",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 1.0534591489343593e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "economic4_xgb_paper",
+        "primary",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 8.504950021497233e-13,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "unconditional_mv",
+        "primary",
+        "5"
+      ],
+      "date": "2014-01-02 00:00:00",
+      "daily_improvement_upper_bound": 1.2695659004332074e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "unconditional_mv",
+        "primary",
+        "5"
+      ],
+      "date": "2019-11-13 00:00:00",
+      "daily_improvement_upper_bound": 4.549451921178444e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    },
+    {
+      "account": [
+        "long",
+        "unconditional_mv",
+        "primary",
+        "5"
+      ],
+      "date": "2025-09-30 00:00:00",
+      "daily_improvement_upper_bound": 3.804394118324069e-12,
+      "certificate_target": "optimizer proposal before no-trade band"
+    }
+  ],
+  "verification_checkout_commit": "b66d9ce249aa29dbe5b1d075dc23a5e55df41d6b",
+  "verification_source_sha256": "52736969e71e72339c8361571c46397cdb4c640a4ec352e9d0dcb85a3b186e15"
+}

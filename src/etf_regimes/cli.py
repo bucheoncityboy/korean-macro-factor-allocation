@@ -19,6 +19,8 @@ def main():
     follow.add_argument('stage', choices=['audit', 'freeze', 'run', 'verify', 'report'])
     follow.add_argument('--workers', type=int, default=4)
     follow.add_argument('--artifacts-only', action='store_true')
+    follow.add_argument('--reuse-forecasts', action='store_true',
+                        help='For the documented numerical repair only; default rebuilds all forecasts')
     args = parser.parse_args()
     if args.command == 'acquire':
         from .data import acquire
@@ -47,7 +49,7 @@ def main():
         if args.stage in ['audit', 'freeze', 'run']:
             from . import followup
             method = getattr(followup, args.stage)
-            result = method(args.workers) if args.stage == 'run' else method()
+            result = method(args.workers, reuse_forecasts=args.reuse_forecasts) if args.stage == 'run' else method()
         elif args.stage == 'verify':
             from .followup_validation import verify
             result = verify(args.artifacts_only, args.workers)

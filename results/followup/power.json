@@ -1,0 +1,60 @@
+{
+  "full_141_months": [
+    {
+      "left": "asset2_xgb",
+      "right": "economic4_xgb",
+      "months": 141,
+      "block_months": 6,
+      "target_power": 0.8,
+      "minimum_detectable_annual_cer": 0.028038359473843363,
+      "limitation": "conditional additive-effect path simulation, not full refitting or future-power guarantee"
+    },
+    {
+      "left": "asset2_xgb",
+      "right": "asset2_logistic",
+      "months": 141,
+      "block_months": 6,
+      "target_power": 0.8,
+      "minimum_detectable_annual_cer": 0.02110432620688227,
+      "limitation": "conditional additive-effect path simulation, not full refitting or future-power guarantee"
+    },
+    {
+      "left": "economic4_xgb",
+      "right": "economic4_logistic",
+      "months": 141,
+      "block_months": 6,
+      "target_power": 0.8,
+      "minimum_detectable_annual_cer": 0.01269725362061932,
+      "limitation": "conditional additive-effect path simulation, not full refitting or future-power guarantee"
+    }
+  ],
+  "overlap_51_months": [
+    {
+      "left": "asset2_xgb",
+      "right": "economic4_xgb",
+      "months": 51,
+      "block_months": 6,
+      "target_power": 0.8,
+      "minimum_detectable_annual_cer": 0.05301028693212241,
+      "limitation": "conditional additive-effect path simulation, not full refitting or future-power guarantee"
+    },
+    {
+      "left": "asset2_xgb",
+      "right": "asset2_logistic",
+      "months": 51,
+      "block_months": 6,
+      "target_power": 0.8,
+      "minimum_detectable_annual_cer": 0.028937392200679573,
+      "limitation": "conditional additive-effect path simulation, not full refitting or future-power guarantee"
+    },
+    {
+      "left": "economic4_xgb",
+      "right": "economic4_logistic",
+      "months": 51,
+      "block_months": 6,
+      "target_power": 0.8,
+      "minimum_detectable_annual_cer": 0.02224899639234413,
+      "limitation": "conditional additive-effect path simulation, not full refitting or future-power guarantee"
+    }
+  ]
+}

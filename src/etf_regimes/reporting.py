@@ -294,6 +294,9 @@ def portfolio_figures(nav, inference):
 
 
 def readme(summary, inference, verification):
+    if (ROOT / "results/followup/report.json").exists():
+        from .followup_reporting import readme_from_saved
+        return readme_from_saved()
     a = summary[(summary.study == "A") & (summary.cost_bp == 5)].set_index("strategy")
     b = summary[(summary.study == "B") & (summary.cost_bp == 5)].set_index("strategy")
     portfolio_figures(pd.read_parquet(OUT / "nav.parquet"), inference)

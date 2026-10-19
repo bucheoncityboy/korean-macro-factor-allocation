@@ -16,3 +16,11 @@ jobs:
         env:
           OMP_NUM_THREADS: "1"
           OPENBLAS_NUM_THREADS: "1"
+      - name: Verify frozen follow-up artifacts
+        if: ${{ hashFiles('results/followup/verification.json') != '' }}
+        run: |
+          uv run python -m etf_regimes.followup_snapshot restore
+          uv run etf-study followup verify --artifacts-only
+        env:
+          OMP_NUM_THREADS: "1"
+          OPENBLAS_NUM_THREADS: "1"

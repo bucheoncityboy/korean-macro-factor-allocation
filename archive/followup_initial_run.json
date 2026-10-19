@@ -1,0 +1,26 @@
+{
+  "status": "running",
+  "started_at_utc": "2026-10-19T07:38:07.878147+00:00",
+  "execution_commit": "479ffc80117e75fd451729bf128253540e2b4b02",
+  "contract_sha256": "4cde73d88f18b433a268536869dc6240a26dc167961bb327c16fdc1732165a59",
+  "sources": {
+    "src/etf_regimes/data.py": "95714ca1cc94f027b7af3fd123a6ccf38af48ffac615b867f4850da1d6c01e0d",
+    "src/etf_regimes/models.py": "5581b862ad62a824a3593e056724b81a167effa785d8a13720ecf7abc52a41fe",
+    "src/etf_regimes/estimation.py": "977d9d41972d293014de352e14b730bd9b74626f05799941cd533dca793bc7b2",
+    "src/etf_regimes/study.py": "dc921566a042c81769aa1759288ec7b4bc400a88ed219d7c3e6a90b5c32cfef8",
+    "src/etf_regimes/allocation.py": "9047eb8050a955d41fe560137535f48600b9490075032020f54c163eb56c3455",
+    "src/etf_regimes/trading.py": "38178bf9d219693812719c76309dbdc73e906468e9e5e79ec87997ec9177aa90",
+    "src/etf_regimes/common.py": "969831ba3d4b22e5abb5cbb2fe0262f6588541a2aeaf6fb741fe554306650a63",
+    "src/etf_regimes/runtime.py": "b76c6b3ff2e66910bca06159db54f76923bc07e59dc36922837cdc82b42d188b",
+    "uv.lock": "e1b9ea1fec0d4674eca97d73c4be1c9d744a5ad428b22eb2017f2ac919d9d026",
+    "pyproject.toml": "07d6f06626f8445d39a85c890e7a6ddd3b875174702c4b12cfda2cf899bf9571",
+    "configs/protocol.json": "a5bb50a063de055fb2874b9b7371224808aa467d316bd66044c3c89c1343b203",
+    "src/etf_regimes/followup.py": "ff3fe69feebf1eb2187e72c0638cac0617f8ca422e1c09fdfb5f24d391043ff5",
+    "src/etf_regimes/followup_models.py": "98e16edf0e0af35e7757b5e72d3cb5dfac1d786d9250084f57cdd3ba2e64abe2",
+    "src/etf_regimes/followup_allocation.py": "4cea06b7142d408631a3dfd83d6bb1de768eda1a6407ba2c9df00ed7806158a5",
+    "src/etf_regimes/followup_statistics.py": "978703b845216b061d5307c8b708ab22c5727b1b33385988a3541e640ef33bc6",
+    "src/etf_regimes/statistics.py": "9201b0a70582d0e096917cf94cf754920a6aa7a30e04e09f6b4f6e5705aacaf0",
+    "configs/followup_protocol.json": "7bf5b52e6e155359fb0fd410827a6dd45c80df15500a93d4dab41b2302b86bda"
+  },
+  "prior_results_viewed": true
+}

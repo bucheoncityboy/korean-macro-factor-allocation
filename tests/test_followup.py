@@ -9,6 +9,7 @@ from etf_regimes.data import MACRO_COLS, MARKET_COLS, RETURN_COLS
 from etf_regimes.followup import cfg
 from etf_regimes.followup_allocation import account, band_decision, specifications
 from etf_regimes.followup_models import fit
+from etf_regimes.followup_solver import CertifiedOptimizer
 from etf_regimes.followup_validation import independent_replay
 
 
@@ -22,6 +23,20 @@ def test_horizon_amortizes_objective_only_and_proposal_is_globally_optimal():
     assert first[-1] == 1 and second[-1] < 1
     assert optimality_certificate(mean, covariance, previous, second[:-1], 10,
                                   .0005 / 21, include_cash=True) < 1e-8
+
+
+def test_certified_boundary_keeps_the_unchanged_objective_at_tiny_positions():
+    covariance = np.eye(8) * .0001
+    previous = np.full(8, 7e-10)
+    mean = np.array([-.002, -.0015, -.0012, -.0006, -.0007, -.0008, -.0021, -.0019])
+    solver = CertifiedOptimizer(8, .4, 10, 1, 5, include_cash=True)
+    result = solver.solve(mean, covariance, previous)
+    expected = np.where(mean > -.001, previous, 0.)
+    np.testing.assert_array_equal(result[:-1], expected)
+    assert solver.certified_boundary_days == 1
+    assert optimality_certificate(mean, covariance, previous, result[:-1], 10, .0005, True) < 1e-10
+    # A buy opportunity must not be replaced with a sell-only boundary solution.
+    assert solver.certified_boundary(np.full(8, .002), covariance, previous) is None
 
 
 def test_no_trade_band_holds_own_drift_but_does_not_waive_cap():

@@ -10,6 +10,7 @@ from .allocation import DailyOptimizer
 from .common import ROOT, require
 from .estimation import monthly_weights
 from .followup import OUT, cfg
+from .followup_solver import CertifiedOptimizer
 from .trading import ewm_covariance, settle
 
 PRIMARY = ["asset2_xgb", "asset2_logistic", "economic4_xgb", "economic4_logistic"]
@@ -126,8 +127,9 @@ def execute(payload, spec):
     c = cfg()
     policy = c["policy_variants"][spec["policy"]]
     horizon, include_cash = policy["horizon_days"], policy["include_cash"]
-    optimizer = DailyOptimizer(8, c["asset_cap"], c["risk_aversion"], 1 / horizon,
-                               spec["cost_bp"], include_cash=include_cash)
+    optimizer_class = CertifiedOptimizer if include_cash else DailyOptimizer
+    optimizer = optimizer_class(8, c["asset_cap"], c["risk_aversion"], 1 / horizon,
+                                spec["cost_bp"], include_cash=include_cash)
     assets, dates, name = payload["assets"], payload["dates"], spec["strategy"]
     cash = np.r_[np.zeros(8), 1.]
     stream = payload["streams"].get(name if spec["cohort"] == "long" else "asset2_xgb")
@@ -181,6 +183,7 @@ def execute(payload, spec):
             table[key] = value
         table["signal_time_et"], table["execution_time_et"], table["valuation_time_et"] = "after close", "09:30", "close"
         table["horizon_days"], table["include_cash_penalty"] = horizon, include_cash
+        table["optimizer_certified_boundary_days"] = getattr(optimizer, "certified_boundary_days", 0)
     require(np.isfinite(nav.nav).all(), "Nonfinite follow-up NAV")
     return nav, targets, trades
 

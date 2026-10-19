@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "restore": {
+    "status": "passed",
+    "restored_files": 7,
+    "verified_files": 7,
+    "numeric_values_and_bytes_unchanged": true
+  },
+  "original_and_restored_sha256": {
+    "results/followup/candidate_probabilities.parquet": "636dd2bcaf878105034ee1cf77ce736d30f72932b826ea07b34d314d17398334",
+    "results/followup/predictions.parquet": "b8513e01006035dcaccdade79c9b2822313e2a9e316816e820434f60bb35def3",
+    "results/followup/fits.json": "147f5e89b5c8a6432c6e60a1c70908b5f2667ab441ddfece3c19ceda5141bd83",
+    "results/followup/tuning.json": "a7094f680f408e501e41f0849c30a237a87f3c30fa9a736c65bd3cd55ccf5537",
+    "results/followup/nav.parquet": "d3ce4222313d2fcf0865b53861940e7afd5cc5127378e2bb3af82c12e392dc16",
+    "results/followup/targets.parquet": "9a55d039d8965ee01c6404b3188c3d2929b890c4bfae9a367beda54e062e24f2",
+    "results/followup/trades.parquet": "0e5478cdcaa45e99e26add5b33951ba079ac8dc975e8ca93ca2802fdfab29782"
+  },
+  "financial_values_changed": false
+}
