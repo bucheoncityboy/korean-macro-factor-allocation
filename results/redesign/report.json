@@ -3,7 +3,7 @@
   "created_utc": "2026-10-19T15:31:25.372438+00:00",
   "report_source_sha256": "35339483b6fa72173ce5e228315f146c293e356e2db6496e13260e00d5901c44",
   "analysis_contract_sha256": "39f79a6fbed5d16845fc87a4375b86d9c38c2a0689403250c593f460712bfed9",
-  "README_sha256": "70329600809007e60c3d49ca12c6381e8da28253048f58f593fd87c967364fba",
+  "README_sha256": "cc4a7307845d90611deaf5abdbb762e85bd8c873df0016820d0e4d79ad3b56b4",
   "documents": {
     "docs/redesign-paper.md": "c6708d152927891d5ff6001baca5ad75231eb87371bbac0c49859a82977c240b",
     "docs/redesign-diagnostics.md": "6a14f7079060f3e0abd3eef57fc57c1e733cfbce7295f88cbe8e6f0b5a96cc24",
@@ -40,6 +40,16 @@
       "previous_README_sha256": "86ff06ed9357faafdf3191087f3d941f3e54deb80f2700b050601659800a1af1",
       "alignment_contract_sha256": "413854b99ef05ba803d065bc1be20de1f3b25fa0c4d80925d003b5b0b1a86416",
       "alignment_verification_sha256": "16ee95d93a0112d9442c2befc6c1e7616b8b73ca1d9a72d894d4cabca2a5c365"
+    },
+    {
+      "created_utc": "2026-10-19T18:25:00.125627+00:00",
+      "scope": "User-requested README readability refresh: results-first navigation, comparison tables, two verified figures and collapsible details; presentation only",
+      "previous_README_git_commit": "c83d48b6f00190b5d3f207cbbcae3675f4ac7469",
+      "previous_README_path": "README.md",
+      "previous_README_sha256": "70329600809007e60c3d49ca12c6381e8da28253048f58f593fd87c967364fba",
+      "README_sha256": "cc4a7307845d90611deaf5abdbb762e85bd8c873df0016820d0e4d79ad3b56b4",
+      "financial_calculations_rerun": false,
+      "actual_verification_timestamp_changed": false
     }
   ]
 }
