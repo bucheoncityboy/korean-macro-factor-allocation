@@ -299,11 +299,14 @@ def readme(summary, inference, verification):
     portfolio_figures(pd.read_parquet(OUT / "nav.parquet"), inference)
     lines = ["# 자산별 국면 예측을 활용한 글로벌 ETF 자산배분", "",
              "**논문의 배분 개선 효과를 실제 ETF로 검증하고, 국면 정의와 ML의 추가 가치를 분리한 실증 연구**", "",
-             "[논문](https://arxiv.org/html/2406.09578v2) · [상세 결과](docs/results.md) · [원문과의 조건 대응](docs/paper-comparison.md) · [데이터 명세](#데이터-명세) · [검증 방법론](#검증-방법론) · [재현 안내](docs/reproduction.md)", "",
+             "[논문](https://arxiv.org/html/2406.09578v2) · [상세 결과](docs/results.md) · [원문과의 조건 대응](docs/paper-comparison.md)", "",
              "| 평가 대상 | 표본 밖 평가 | 학습 / 검증 | 독립 검증 규모 |",
              "|---|---|---|---|",
              f"| 위험 ETF 8개<br>+ 현금 BIL | 2021.07–2025.09<br>**51개월** | 학습 11년 · 검증 5년<br>6개월마다 갱신 | {verification['fresh_fit_jobs_at_three_boundaries']}건 독립 재학습<br>{verification['independent_complete_paths']}개 계정 재생 |", "",
              "> **핵심 결과:** 이번 표본에서 원문형 전략은 최대낙폭을 줄였으나 샤프 개선 방향은 유지되지 않았다. 공통 조건으로 수행한 세 주요 CER 비교도 모두 통계적 우위 미확인이다.", "",
+             "**목차**", "",
+             "[연구 질문과 설계](#연구-질문과-설계) · [데이터 명세](#데이터-명세) · [검증 방법론](#검증-방법론) · [원문 대비 실증](#원문-대비-실증)<br>",
+             "[국면 정의와 ML 비교](#국면-정의와-ml-비교) · [결론](#결론) · [해석의 범위](#해석의-범위) · [재현](#재현)", "",
              "## 연구 질문과 설계", "",
              "- **논문 실증:** Shu·Yu·Mulvey의 자산별 강세·약세 예측이 실제 ETF의 위험조정 성과도 개선하는가?",
              "- **통제 비교:** 배분 조건을 같게 두면 자산별 2국면과 경제 4국면 중 무엇이 유용하며, XGBoost가 로지스틱보다 추가 가치를 주는가?",
@@ -313,47 +316,6 @@ def readme(summary, inference, verification):
              '    J --> X["XGBoost<br/>다음 거래일 국면 예측"]', '    X --> W["MV · MinVar · EW<br/>배분 결정"]',
              '    W --> A["다음 시가 체결<br/>비용·드리프트·NAV 계산"]', "```", "",
              "원문형 실증은 저자 Jump Model 구현, 11년 학습, 직전 5년 순차 검증, 반년 갱신, 자산별 벌점·초기 평활 선택을 따른다. 원문과 다른 자산·기간·미확정 규칙은 [대응표](docs/paper-comparison.md)에 명시했다.", "",
-             "## 1. 원문에서 보고된 개선이 ETF에서도 유지됐는가?", "",
-             "기본 전략 → JM-XGB 결합 전략의 변화다. 원문은 12개 지수·2007–2023년, 이번 실증은 8개 ETF·2021–2025년이다. ETF 샤프는 일별 BIL 초과수익, 원문은 금리 대용 현금 기준이다. ETF 최대낙폭은 비용 차감 NAV에서 계산했으며 두 표본의 차이를 직접적인 유의성 검정으로 해석하지 않는다.", "",
-             "| 배분 방식 | 원문 샤프 | ETF 샤프 | ETF 최대낙폭 |",
-             "|---|---:|---:|---:|"]
-    for base, enhanced, label, paper_before, paper_after in [
-            ("mv", "mv_jmxgb_floor", "평균분산 · 약세 −10bp 하한", .37, 1.02),
-            ("mv", "mv_jmxgb_cap", "평균분산 · 약세 −10bp 상한", .37, 1.02),
-            ("minvar", "minvar_jmxgb", "최소분산", .70, 1.12),
-            ("equal_weight", "ew_jmxgb", "동일가중", .51, .91)]:
-        before, after = a.loc[base], a.loc[enhanced]
-        lines.append(f"| {label} | {paper_before:.2f} → {paper_after:.2f} | **{before.daily_sharpe:.2f} → {after.daily_sharpe:.2f}** | {before.max_drawdown:.2%} → {after.max_drawdown:.2%} |")
-    lines += ["", "약세 예상수익 −10bp 제한은 원문의 적용 방향이 미확정이라 하한·상한 해석을 모두 공개했다. 유리한 해석을 골라 결과로 제시하지 않았다.", "",
-              "![원문형 평균분산 전략의 비용 차감 NAV와 낙폭](docs/assets/paper_nav_drawdown.png)", "",
-              "*평균분산 전략의 실제 계정 경로. BIL을 함께 표시해 현금 대비 성과를 구분했다. 음영은 원문 표본 이후인 2024–2025년 확장 구간이다.*", "",
-              "### 결과를 읽는 근거", "",
-              "낙폭 완화와 함께 위험 노출·상승 참여·거래비용도 달라졌다. 아래는 같은 A 실증의 관찰값이며 단독 원인의 효과로 단정하지 않는다.", "",
-              "| 관찰 지표 | 기본 평균분산 | JM-XGB 평균분산 · 하한 해석 |",
-              "|---|---:|---:|"]
-    mv, regime = a.loc["mv"], a.loc["mv_jmxgb_floor"]
-    for label, column, fmt in [("실제 종가 평균 위험노출", "average_closing_risk_exposure", ".1%"),
-                               ("연 위험 ETF 다리 회전율", "annual_turnover_risky_legs", ".2f"),
-                               ("연 비용 / 일별 NAV 합", "annual_cost_fraction", ".2%")]:
-        lines.append(f"| {label} | {mv[column]:{fmt}} | {regime[column]:{fmt}} |")
-    lines += ["", "- 현금 대피 규칙은 A 예측일의 **49.1%**에 발동했다. 12개 지수와 8개 ETF에서 같은 강세 자산 수 문턱은 다른 상대적 엄격도를 갖는다.",
-              "- 원문 중첩 **30개월**과 이후 확장 **21개월**을 나눠 보고했다. 2024–2025년 상승 구간의 참여 차이도 전체 성과에 영향을 줄 수 있다.",
-              "- [기간별 비교](results/study/paper_comparison.csv) · [노출·비용 해석](docs/interpretation.md) · [현금 규칙·평균 추정 연결 실험](results/study/design_bridge.csv)", "",
-              "## 2. 국면 정의와 ML의 추가 가치를 분리하면?", "",
-              "네 조합에 동일한 입력 17개, 월별 학습 가중치, 확률 평활, 축소 평균 추정과 평균분산 배분을 적용했다. 주 지표는 월별 순수익의 **연 CER(위험회피 5)**다.", "",
-              "| 국면 정의 · 분류기 | 연 CER | CAGR | 최대낙폭 | 연 비용/NAV |",
-              "|---|---:|---:|---:|---:|"]
-    names = {"asset2_xgb": "자산 2국면 · XGBoost", "asset2_logistic": "자산 2국면 · 로지스틱",
-             "economic4_xgb": "경제 4국면 · XGBoost", "economic4_logistic": "경제 4국면 · 로지스틱"}
-    for name in PRIMARY:
-        r = b.loc[name]
-        lines.append(f"| {names[name]} | {r.annual_cer:.2%} | {r.cagr:.2%} | {r.max_drawdown:.2%} | {r.annual_cost_fraction:.2%} |")
-    lines += ["", f"경제 4국면 XGBoost의 CER 점 추정이 가장 높았다. 같은 기간 BIL의 CER는 **{b.loc['bil', 'annual_cer']:.2%}**다. 모형 간 우위는 아래의 쌍체 비교로 판단했다.", "",
-              "![세 주요 CER 차이와 동시 95퍼센트 구간](docs/assets/controlled_cer_intervals.png)", "",
-              "*점은 연 CER 차이, 선은 세 비교를 함께 보정한 95% 구간이다. 양수는 왼쪽 모형의 우위를 뜻하며 세 구간 모두 0을 포함한다.*", "",
-              "- 월 쌍체 블록 부트스트랩 **20,000회**, 기본 블록 6개월·민감도 3/12개월, max-T 동시 보정.",
-              "- 세 주요 비교 모두 **우위 미확인**이다. 같은 효과라는 결론이나 충분한 검정력을 뜻하지 않는다.",
-              "- 입력 제거·경제 6개월 정의·비용 0/10/25bp·현금 규칙·단순 배분을 사전 고정 부록으로 공개했다. [검정·검정력·전체 부록](docs/results.md)", "",
               "## 데이터 명세", "",
               "| 자료 | 출처·구성 | 사용 방식·정보시점 |",
               "|---|---|---|",
@@ -383,6 +345,51 @@ def readme(summary, inference, verification):
               "- **공개 재현:** CI는 원자료 없이 단위검사와 저장 확률·시점·거래·NAV·해시를 확인한다. 실제 원자료의 독립 재학습·미래 교란·전체 계정 재생은 별도 검증 기록으로 제공한다.",
               "- [전체 방법론](docs/methodology.md) · [실제 원자료 검증 기록](results/study/verification.json) · [실행 기록](results/study/run.json) · [공개 CI](https://github.com/bucheoncityboy/korean-macro-factor-allocation/actions)", "",
               "**기술:** Python 3.12 · 저자 Jump Model · scikit-learn · XGBoost · CVXPY/OSQP · pandas · GitHub Actions", "",
+             "## 원문 대비 실증", "",
+             "기본 전략 → JM-XGB 결합 전략의 변화다. 원문은 12개 지수·2007–2023년, 이번 실증은 8개 ETF·2021–2025년이다. ETF 샤프는 일별 BIL 초과수익, 원문은 금리 대용 현금 기준이다. ETF 최대낙폭은 비용 차감 NAV에서 계산했으며 두 표본의 차이를 직접적인 유의성 검정으로 해석하지 않는다.", "",
+             "| 배분 방식 | 원문 샤프 | ETF 샤프 | ETF 최대낙폭 |",
+             "|---|---:|---:|---:|"]
+    for base, enhanced, label, paper_before, paper_after in [
+            ("mv", "mv_jmxgb_floor", "평균분산 · 약세 −10bp 하한", .37, 1.02),
+            ("mv", "mv_jmxgb_cap", "평균분산 · 약세 −10bp 상한", .37, 1.02),
+            ("minvar", "minvar_jmxgb", "최소분산", .70, 1.12),
+            ("equal_weight", "ew_jmxgb", "동일가중", .51, .91)]:
+        before, after = a.loc[base], a.loc[enhanced]
+        lines.append(f"| {label} | {paper_before:.2f} → {paper_after:.2f} | **{before.daily_sharpe:.2f} → {after.daily_sharpe:.2f}** | {before.max_drawdown:.2%} → {after.max_drawdown:.2%} |")
+    lines += ["", "약세 예상수익 −10bp 제한은 원문의 적용 방향이 미확정이라 하한·상한 해석을 모두 공개했다. 유리한 해석을 골라 결과로 제시하지 않았다.", "",
+              "![원문형 평균분산 전략의 비용 차감 NAV와 낙폭](docs/assets/paper_nav_drawdown.png)", "",
+              "*평균분산 전략의 실제 계정 경로. BIL을 함께 표시해 현금 대비 성과를 구분했다. 음영은 원문 표본 이후인 2024–2025년 확장 구간이다.*", "",
+              "### 결과를 읽는 근거", "",
+              "낙폭 완화와 함께 위험 노출·상승 참여·거래비용도 달라졌다. 아래는 같은 A 실증의 관찰값이며 단독 원인의 효과로 단정하지 않는다.", "",
+              "| 관찰 지표 | 기본 평균분산 | JM-XGB 평균분산 · 하한 해석 |",
+              "|---|---:|---:|"]
+    mv, regime = a.loc["mv"], a.loc["mv_jmxgb_floor"]
+    for label, column, fmt in [("실제 종가 평균 위험노출", "average_closing_risk_exposure", ".1%"),
+                               ("연 위험 ETF 다리 회전율", "annual_turnover_risky_legs", ".2f"),
+                               ("연 비용 / 일별 NAV 합", "annual_cost_fraction", ".2%")]:
+        lines.append(f"| {label} | {mv[column]:{fmt}} | {regime[column]:{fmt}} |")
+    lines += ["", "- 현금 대피 규칙은 A 예측일의 **49.1%**에 발동했다. 12개 지수와 8개 ETF에서 같은 강세 자산 수 문턱은 다른 상대적 엄격도를 갖는다.",
+              "- 원문 중첩 **30개월**과 이후 확장 **21개월**을 나눠 보고했다. 2024–2025년 상승 구간의 참여 차이도 전체 성과에 영향을 줄 수 있다.",
+              "- [기간별 비교](results/study/paper_comparison.csv) · [노출·비용 해석](docs/interpretation.md) · [현금 규칙·평균 추정 연결 실험](results/study/design_bridge.csv)", "",
+              "## 국면 정의와 ML 비교", "",
+              "네 조합에 동일한 입력 17개, 월별 학습 가중치, 확률 평활, 축소 평균 추정과 평균분산 배분을 적용했다. 주 지표는 월별 순수익의 **연 CER(위험회피 5)**다.", "",
+              "| 국면 정의 · 분류기 | 연 CER | CAGR | 최대낙폭 | 연 비용/NAV |",
+              "|---|---:|---:|---:|---:|"]
+    names = {"asset2_xgb": "자산 2국면 · XGBoost", "asset2_logistic": "자산 2국면 · 로지스틱",
+             "economic4_xgb": "경제 4국면 · XGBoost", "economic4_logistic": "경제 4국면 · 로지스틱"}
+    for name in PRIMARY:
+        r = b.loc[name]
+        lines.append(f"| {names[name]} | {r.annual_cer:.2%} | {r.cagr:.2%} | {r.max_drawdown:.2%} | {r.annual_cost_fraction:.2%} |")
+    lines += ["", f"경제 4국면 XGBoost의 CER 점 추정이 가장 높았다. 같은 기간 BIL의 CER는 **{b.loc['bil', 'annual_cer']:.2%}**다. 모형 간 우위는 아래의 쌍체 비교로 판단했다.", "",
+              "![세 주요 CER 차이와 동시 95퍼센트 구간](docs/assets/controlled_cer_intervals.png)", "",
+              "*점은 연 CER 차이, 선은 세 비교를 함께 보정한 95% 구간이다. 양수는 왼쪽 모형의 우위를 뜻하며 세 구간 모두 0을 포함한다.*", "",
+              "- 월 쌍체 블록 부트스트랩 **20,000회**, 기본 블록 6개월·민감도 3/12개월, max-T 동시 보정.",
+              "- 세 주요 비교 모두 **우위 미확인**이다. 같은 효과라는 결론이나 충분한 검정력을 뜻하지 않는다.",
+              "- 입력 제거·경제 6개월 정의·비용 0/10/25bp·현금 규칙·단순 배분을 사전 고정 부록으로 공개했다. [검정·검정력·전체 부록](docs/results.md)", "",
+              "## 결론", "",
+              "- **원문 대비:** 이번 ETF 표본에서는 국면 전략의 최대낙폭이 줄었지만 원문과 같은 샤프 개선 방향은 유지되지 않았다. 낮아진 위험노출과 높아진 거래비용을 함께 고려해야 한다.",
+              f"- **국면 정의:** 경제 4국면 XGBoost의 연 CER 점 추정은 **{b.loc['economic4_xgb', 'annual_cer']:.2%}**로 자산 2국면 XGBoost의 **{b.loc['asset2_xgb', 'annual_cer']:.2%}**보다 높았다. 기본 6개월 블록의 동시 95% 구간은 차이 0을 포함해 국면 정의의 우위는 확인하지 못했다.",
+              "- **ML의 추가 가치:** 자산 2국면과 경제 4국면 모두 XGBoost의 로지스틱 대비 우위가 확인되지 않았다. 세 주요 비교의 결론은 **‘우위 미확인’**이며, 같은 성과라는 뜻은 아니다.", "",
               "## 해석의 범위", "",
               "- 원문은 **12개 지수·2007–2023년 204개월**, 이번 연구는 **8개 실제 ETF·51개월**이다. 금융위기·코로나 급락이 이번 평가에는 없고, BIL·다음 시가 체결 등도 다르다.",
               "- 자산 2국면의 다음 날 상태 예측과 경제 4국면의 관측월 상태 추정은 다른 문제다. 정확도·로그손실을 두 정의 사이에서 직접 비교하지 않는다.",
