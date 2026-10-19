@@ -1,0 +1,1283 @@
+{
+  "version": 4,
+  "created_utc": "2026-10-19T14:24:18.919927+00:00",
+  "prior_results_viewed": true,
+  "new_diagnostic_performance_computed": false,
+  "sources": {
+    "src/etf_regimes/redesign_spec.py": "280ea2ef7efc5cfe880ff78a4c1715d00685f58815a177b13d04132e2a5e2040",
+    "src/etf_regimes/redesign_models.py": "fea10075dbddb86b0630acc5e91493d1b548cca4de4c111817ee3cf64acf2c0e",
+    "src/etf_regimes/redesign.py": "0ec74162830dd52004a163fd22e655f13baebd188eb859b03ddad51b320a4fec",
+    "src/etf_regimes/redesign_validation.py": "c2cfc226c57433a92b051491bcec6a90a8eb9c8c855b3793cd41f63ee46a2944",
+    "src/etf_regimes/redesign_account.py": "6fd315524ac777efa6e639bfd292593246f596be6315daf52f4acd86a8370e7b"
+  },
+  "input_sha256": {
+    "configs/protocol.json": "a5bb50a063de055fb2874b9b7371224808aa467d316bd66044c3c89c1343b203",
+    "configs/followup_protocol.json": "7bf5b52e6e155359fb0fd410827a6dd45c80df15500a93d4dab41b2302b86bda",
+    "configs/execution_contract.json": "9c66e54be5b83594fd01791d483a28821e54b40f7320c4dbf49134e0221c1d7e",
+    "configs/followup_contract.json": "106451e8f6eaf386f061d1861b1d5a6c5d23f7f707742b35e1e1f8982c7eb6b8",
+    "configs/report_analysis_contract.json": "9e2894ff422ac9ed53150f08ca96351356d84e7a5e6dfd109aeca5c77d0c51d1",
+    "docs/redesign-plan.md": "2fb574613e3c19be5fcf1c0f4fb219e6325763b0086a80e9ce58447e1e54a86b",
+    "results/study/predictions.parquet": "829120df3d4d2dcafa92c105a49e2601dd64386fecf9a5dad4aed98c064879a8",
+    "results/study/candidate_probabilities.parquet": "5bad28fb717bfdd03f388a511dbb310855f88c0c4bcaf2cb41e7ed5ffbf1c507",
+    "results/study/fits.json": "087abc591c14d40501529bda74100eb60e059ea32a2f0aed036e3e3d097ad8c6",
+    "results/study/tuning.json": "efae6166ef506d6b98c20925ca300652256a0e885c2e9905515f59ca58b115bf",
+    "results/study/nav.parquet": "c73da4db0d91d017e953e7ce43e2ea8d9fdee3f06a4195ccc29dbae9e38abb83",
+    "results/study/targets.parquet": "5643f2f6a1031e42a5046b20cd933c616bb420bb030ebe46ea4d5b5a4ec9d283",
+    "results/study/trades.parquet": "7c9b6aef95d652977f43d2639a3d4eaa2f65560b2e98f6b47a5ed1e1d4a54ff7",
+    "results/source_manifest.json": "65e9fb4f33450395f945677eb0a824ff7d7ddd12abae71441c952b1f546e1b73"
+  },
+  "baseline": {
+    "forecast": "A",
+    "classifier_years": 11,
+    "jm_years": 11,
+    "mean_years": 11,
+    "validation_years": 5,
+    "features": 13,
+    "loss_weights": "daily",
+    "prior": "A_daily_fixed",
+    "depth": 6,
+    "eta": 0.3,
+    "l2": 1,
+    "trees": 100,
+    "h": "A_selected",
+    "selection": "A_fixed",
+    "mean": "hard_daily_DGS",
+    "cash_rule": true,
+    "cov_years": 11,
+    "cost_scope": 8,
+    "horizon": 1,
+    "band": 0.0,
+    "risk_aversion": 10,
+    "cap": 0.4,
+    "actual_cost_bp": 5,
+    "initial": "BIL100_NAV1"
+  },
+  "accounts": [
+    {
+      "id": "F01",
+      "reference_id": "A0",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "classifier_years"
+      ],
+      "allowed_derived_changes": [
+        "classifier_scaler",
+        "fitted_classifier",
+        "raw_probabilities"
+      ],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 5,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "daily",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "hard_daily_DGS",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "F02",
+      "reference_id": "A0",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "features"
+      ],
+      "allowed_derived_changes": [
+        "classifier_scaler",
+        "fitted_classifier",
+        "raw_probabilities"
+      ],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 17,
+        "loss_weights": "daily",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "hard_daily_DGS",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "F03",
+      "reference_id": "A0",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "loss_weights"
+      ],
+      "allowed_derived_changes": [
+        "fitted_classifier",
+        "raw_probabilities"
+      ],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "monthly_N",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "hard_daily_DGS",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "F04",
+      "reference_id": "F03",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "loss_weights"
+      ],
+      "allowed_derived_changes": [
+        "fitted_classifier",
+        "raw_probabilities"
+      ],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "monthly_M",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "hard_daily_DGS",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "F05",
+      "reference_id": "A0",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "depth"
+      ],
+      "allowed_derived_changes": [
+        "fitted_classifier",
+        "raw_probabilities"
+      ],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "daily",
+        "prior": "A_daily_fixed",
+        "depth": 2,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "hard_daily_DGS",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "F06",
+      "reference_id": "A0",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "eta"
+      ],
+      "allowed_derived_changes": [
+        "fitted_classifier",
+        "raw_probabilities"
+      ],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "daily",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.03,
+        "l2": 1,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "hard_daily_DGS",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "F07",
+      "reference_id": "A0",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "l2"
+      ],
+      "allowed_derived_changes": [
+        "fitted_classifier",
+        "raw_probabilities"
+      ],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "daily",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 5,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "hard_daily_DGS",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "F08",
+      "reference_id": "A0",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "depth",
+        "eta",
+        "l2"
+      ],
+      "allowed_derived_changes": [
+        "declared_capacity_bundle",
+        "fitted_classifier",
+        "raw_probabilities"
+      ],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "daily",
+        "prior": "A_daily_fixed",
+        "depth": 2,
+        "eta": 0.03,
+        "l2": 5,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "hard_daily_DGS",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "F09",
+      "reference_id": "A0",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "h"
+      ],
+      "allowed_derived_changes": [
+        "smoothed_probabilities"
+      ],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "daily",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": 4,
+        "selection": "A_fixed",
+        "mean": "hard_daily_DGS",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "S01",
+      "reference_id": "A0",
+      "effect_type": "selection_policy",
+      "override_fields": [
+        "validation_years",
+        "selection"
+      ],
+      "allowed_derived_changes": [
+        "selected_penalty",
+        "selected_label_id",
+        "selected_means",
+        "selected_forecast"
+      ],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 3,
+        "features": 13,
+        "loss_weights": "daily",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "rolling_reselect",
+        "mean": "hard_daily_DGS",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "P01",
+      "reference_id": "A0",
+      "effect_type": "pipeline_bundle",
+      "override_fields": [
+        "classifier_years",
+        "jm_years",
+        "mean_years",
+        "selection"
+      ],
+      "allowed_derived_changes": [
+        "JM_labels",
+        "label_id",
+        "conditional_means",
+        "classifier_scaler",
+        "fitted_classifier",
+        "selected_penalty",
+        "initial_h",
+        "forecast"
+      ],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 5,
+        "jm_years": 5,
+        "mean_years": 5,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "daily",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "pipeline_reselect",
+        "mean": "hard_daily_DGS",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "M01",
+      "reference_id": "A0",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "mean"
+      ],
+      "allowed_derived_changes": [
+        "conditional_mean"
+      ],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "daily",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "mixture_daily_DGS",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "M02",
+      "reference_id": "A0",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "mean"
+      ],
+      "allowed_derived_changes": [
+        "conditional_mean"
+      ],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "daily",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "shrink252_daily_DGS",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "M03",
+      "reference_id": "A0",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "mean"
+      ],
+      "allowed_derived_changes": [
+        "conditional_mean"
+      ],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "daily",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "hard_monthly_DGS",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "M04",
+      "reference_id": "A0",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "mean"
+      ],
+      "allowed_derived_changes": [
+        "conditional_mean"
+      ],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "daily",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "hard_daily_BIL",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "M05",
+      "reference_id": "A0",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "cash_rule"
+      ],
+      "allowed_derived_changes": [],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "daily",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "hard_daily_DGS",
+        "cash_rule": false,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "M06",
+      "reference_id": "M05",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "mean"
+      ],
+      "allowed_derived_changes": [
+        "remove_state_mask",
+        "remove_bear_clip",
+        "ignore_JM_in_mean"
+      ],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "daily",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "unconditional_EWMA1260",
+        "cash_rule": false,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "M07",
+      "reference_id": "A0",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "cov_years"
+      ],
+      "allowed_derived_changes": [],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "daily",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "hard_daily_DGS",
+        "cash_rule": true,
+        "cov_years": 5,
+        "cost_scope": 8,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "T01",
+      "reference_id": "A0",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "cost_scope"
+      ],
+      "allowed_derived_changes": [],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "daily",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "hard_daily_DGS",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 9,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "T02",
+      "reference_id": "A0",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "horizon"
+      ],
+      "allowed_derived_changes": [],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "daily",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "hard_daily_DGS",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 21,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "T03",
+      "reference_id": "T01",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "horizon"
+      ],
+      "allowed_derived_changes": [],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "daily",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "hard_daily_DGS",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 9,
+        "horizon": 21,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "T04",
+      "reference_id": "T03",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "band"
+      ],
+      "allowed_derived_changes": [
+        "hold_units",
+        "forced_cash_then_cap_then_band"
+      ],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "daily",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "hard_daily_DGS",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 9,
+        "horizon": 21,
+        "band": 0.02,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "I01_N_L2_5",
+      "reference_id": "F03",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "l2"
+      ],
+      "allowed_derived_changes": [
+        "fitted_classifier",
+        "raw_probabilities"
+      ],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "monthly_N",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 5,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "hard_daily_DGS",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "I01_M_L2_5",
+      "reference_id": "F04",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "l2"
+      ],
+      "allowed_derived_changes": [
+        "fitted_classifier",
+        "raw_probabilities"
+      ],
+      "resolved": {
+        "forecast": "A",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 13,
+        "loss_weights": "monthly_M",
+        "prior": "A_daily_fixed",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 5,
+        "trees": 100,
+        "h": "A_selected",
+        "selection": "A_fixed",
+        "mean": "hard_daily_DGS",
+        "cash_rule": true,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "I02_asset2_9_1",
+      "reference_id": "B51_asset2_xgb",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "cost_scope"
+      ],
+      "allowed_derived_changes": [
+        "objective_interaction_2x2"
+      ],
+      "resolved": {
+        "forecast": "B_asset2",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 17,
+        "loss_weights": "monthly_M",
+        "prior": "B_monthly",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": 4,
+        "selection": "B_fixed",
+        "mean": "B_mixture_monthly12_BIL",
+        "cash_rule": false,
+        "cov_years": 11,
+        "cost_scope": 9,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "I02_asset2_8_21",
+      "reference_id": "B51_asset2_xgb",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "horizon"
+      ],
+      "allowed_derived_changes": [
+        "objective_interaction_2x2"
+      ],
+      "resolved": {
+        "forecast": "B_asset2",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 17,
+        "loss_weights": "monthly_M",
+        "prior": "B_monthly",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": 4,
+        "selection": "B_fixed",
+        "mean": "B_mixture_monthly12_BIL",
+        "cash_rule": false,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 21,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "I02_asset2_9_21",
+      "reference_id": "B51_asset2_xgb",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "cost_scope",
+        "horizon"
+      ],
+      "allowed_derived_changes": [
+        "objective_interaction_2x2"
+      ],
+      "resolved": {
+        "forecast": "B_asset2",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 17,
+        "loss_weights": "monthly_M",
+        "prior": "B_monthly",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": 4,
+        "selection": "B_fixed",
+        "mean": "B_mixture_monthly12_BIL",
+        "cash_rule": false,
+        "cov_years": 11,
+        "cost_scope": 9,
+        "horizon": 21,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "I02_economic4_9_1",
+      "reference_id": "B51_economic4_xgb",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "cost_scope"
+      ],
+      "allowed_derived_changes": [
+        "objective_interaction_2x2"
+      ],
+      "resolved": {
+        "forecast": "B_economic4",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 17,
+        "loss_weights": "monthly_M",
+        "prior": "B_monthly",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": 4,
+        "selection": "B_fixed",
+        "mean": "B_mixture_monthly12_BIL",
+        "cash_rule": false,
+        "cov_years": 11,
+        "cost_scope": 9,
+        "horizon": 1,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "I02_economic4_8_21",
+      "reference_id": "B51_economic4_xgb",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "horizon"
+      ],
+      "allowed_derived_changes": [
+        "objective_interaction_2x2"
+      ],
+      "resolved": {
+        "forecast": "B_economic4",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 17,
+        "loss_weights": "monthly_M",
+        "prior": "B_monthly",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": 4,
+        "selection": "B_fixed",
+        "mean": "B_mixture_monthly12_BIL",
+        "cash_rule": false,
+        "cov_years": 11,
+        "cost_scope": 8,
+        "horizon": 21,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    },
+    {
+      "id": "I02_economic4_9_21",
+      "reference_id": "B51_economic4_xgb",
+      "effect_type": "fixed_path",
+      "override_fields": [
+        "cost_scope",
+        "horizon"
+      ],
+      "allowed_derived_changes": [
+        "objective_interaction_2x2"
+      ],
+      "resolved": {
+        "forecast": "B_economic4",
+        "classifier_years": 11,
+        "jm_years": 11,
+        "mean_years": 11,
+        "validation_years": 5,
+        "features": 17,
+        "loss_weights": "monthly_M",
+        "prior": "B_monthly",
+        "depth": 6,
+        "eta": 0.3,
+        "l2": 1,
+        "trees": 100,
+        "h": 4,
+        "selection": "B_fixed",
+        "mean": "B_mixture_monthly12_BIL",
+        "cash_rule": false,
+        "cov_years": 11,
+        "cost_scope": 9,
+        "horizon": 21,
+        "band": 0.0,
+        "risk_aversion": 10,
+        "cap": 0.4,
+        "actual_cost_bp": 5,
+        "initial": "BIL100_NAV1"
+      }
+    }
+  ],
+  "period": [
+    "2021-07-01",
+    "2025-09-30",
+    51
+  ],
+  "selection_candidates": [
+    0,
+    0.1,
+    1,
+    10,
+    100
+  ],
+  "refit_boundaries": [
+    "2021-06-30",
+    "2023-12-29",
+    "2025-06-30"
+  ],
+  "tolerances": {
+    "prob_atol": 1e-12,
+    "nav_atol": 1e-09,
+    "nav_rtol": 1e-09,
+    "optimality_bound": 3e-07
+  },
+  "hold_priority": [
+    "forced_cash",
+    "signal_close_cap",
+    "L1_band_strictly_below"
+  ],
+  "cache_identity": "training_prefix_only, JM version, label hash, train window, feature order, weights/prior, full XGB config",
+  "diagnostic_inference": "descriptive only; no winner promotion; prior selected paths conditional; no new hypothesis tests",
+  "mean_empty_state": "known full-history mean; record empty states; no synthetic labels",
+  "label_freeze": "existing A label_model_id and selected lambda/h paths; P01/S01 explicitly declared exceptions",
+  "presentation_dependency_amendment": {
+    "created_utc": "2026-10-19T14:29:12.325505+00:00",
+    "initial_contract_archive": "archive/redesign/initial_diagnostic_execution_contract.json",
+    "initial_contract_sha256": "7b59e7a38859eddae365288683d1da386968d97f068e6218e1570542b462ad0e",
+    "new_diagnostic_performance_computed": false,
+    "status": "interrupted_during_candidate_training_before_any_new_account",
+    "financial_sources_resolved_matrix_and_cached_training_unchanged": true,
+    "reason": "Only the report-analysis manifest dependency was archived before presentation resealing."
+  },
+  "verification_invocation_amendment": {
+    "created_utc": "2026-10-19T15:06:14.806009+00:00",
+    "initial_contract_archive": "archive/redesign/pre_verification_contract.json",
+    "initial_contract_sha256": "d83247ffa312841f1dff48d65ec9cc651d6aac2ba355ad7bd8b258c3ce7fea28",
+    "proof": "results/redesign/verification_parameter_proof.json",
+    "proof_sha256": "4b6fe3a3ac6bfa3317d5651359bf8975d22b89c3389f76d9e7b145484ee181f0",
+    "kind": "Preserve frozen lambda value/type in cold-refit invocation; no estimator change",
+    "financial_sources_unchanged": {
+      "src/etf_regimes/redesign_spec.py": "0ec92bf9f68dfb4e6ddeae75863d3fbae1dd5a8dbc5444e3f93c0864280825c3",
+      "src/etf_regimes/redesign_models.py": "fea10075dbddb86b0630acc5e91493d1b548cca4de4c111817ee3cf64acf2c0e",
+      "src/etf_regimes/redesign.py": "6a75d3744d18f699327ff0133f28aaa543d0c5489d3e11ab9eee0d06872f825f"
+    },
+    "output_sha256_preserved": {
+      "results/redesign/predictions.parquet": "b0bc4d2633232295871b89162d8cae95dcd28a54f21261e97798122145513bff",
+      "results/redesign/candidate_probabilities.parquet": "fec470f8f09910cf4db00594c9f5a69843a5f130d756d348d5e90f6ec847e61c",
+      "results/redesign/fits.json": "4dffe8e0dc7c0320bf7d97f3194a6801787995db4a491007b061214610e9ac25",
+      "results/redesign/tuning.json": "1b346f36c0cee8b526d5b9609a88bbccb5630778b24873b3cfdae611c23bf8a8",
+      "results/redesign/nav.parquet": "95d3452b39b57269a38ad591ab9043b445b383ca8250fd41e2d3388906071d1d",
+      "results/redesign/targets.parquet": "b507076e57aa571fcd6bedc64ffeea38f6fc255e6f8af588f4abb96294e021c9",
+      "results/redesign/trades.parquet": "70f20fc989e1b4fcd4fa9a080851d1bc0ef7a77485a72c582572a21364911063"
+    },
+    "assertions_and_tolerances_unchanged": true,
+    "earlier_run_record": "archive/redesign/pre_verification_run.json"
+  },
+  "numerical_compatibility_amendment": {
+    "created_utc": "2026-10-19T15:10:21.491764+00:00",
+    "previous_contract_archive": "archive/redesign/pre_ratio_contract.json",
+    "previous_contract_sha256": "b06b6fd39aa7058737bf77ff137f73f1f575f5eb53eef5611e408b0ee71817ed",
+    "failure_record": "results/redesign/anchor_failure.json",
+    "failure_record_sha256": "61b5437e90e3c0389472cef44e24fbce9ef1687782884e256fbb5e2153d55cef",
+    "certificate": "results/redesign/ratio_first_certificate.json",
+    "certificate_sha256": "f07cfcc07ec76aff8779b1e31800ee55004f1dc6f7a8179f1677cf5307b80ec0",
+    "failed_accounts_snapshot": "configs/redesign_failed_accounts_snapshot.json",
+    "failed_accounts_snapshot_sha256": "090cfaee1f86a4a3994c89b4190a381feff72d40afc0100ecf4857dfa1168148",
+    "change": "Use the original ratio-first multiplication order in the shared HOLD-UNITS account; exact A0 NAV/targets/trades reproduced",
+    "unchanged": [
+      "all estimator forecasts",
+      "all selected labels/lambda/halflife",
+      "all objective parameters",
+      "all30 resolved conditions",
+      "all verification assertions and tolerances"
+    ],
+    "forecast_sha256": {
+      "results/redesign/predictions.parquet": "b0bc4d2633232295871b89162d8cae95dcd28a54f21261e97798122145513bff",
+      "results/redesign/candidate_probabilities.parquet": "fec470f8f09910cf4db00594c9f5a69843a5f130d756d348d5e90f6ec847e61c",
+      "results/redesign/fits.json": "4dffe8e0dc7c0320bf7d97f3194a6801787995db4a491007b061214610e9ac25",
+      "results/redesign/tuning.json": "1b346f36c0cee8b526d5b9609a88bbccb5630778b24873b3cfdae611c23bf8a8"
+    },
+    "initial_execution_binding": "archive/redesign/pre_ratio_execution_binding.json",
+    "initial_verification_binding": "archive/redesign/pre_ratio_verification_binding.json"
+  }
+}

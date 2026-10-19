@@ -1,0 +1,36 @@
+{
+  "status": "correction_required",
+  "cash_only_rows": [
+    {
+      "id": "I02_economic4_9_1",
+      "months": 51,
+      "n_days": 1067,
+      "annual_excess_return": 2.7610528671268324e-14,
+      "annual_excess_volatility": 2.4331793313146603e-15,
+      "daily_sharpe": 11.34751077157564,
+      "sharpe_status": "defined",
+      "max_drawdown": -0.0008747173622992,
+      "cagr": 0.0342960570591626,
+      "calmar": 3.1565085890934686e-11,
+      "calmar_status": "defined",
+      "annual_cer": 0.0336954292077531,
+      "closing_risk_exposure": 0.0,
+      "post_open_risk_exposure": 0.0,
+      "annual_turnover_9": 2.6655164512578772e-14,
+      "annual_turnover_8": 0.0,
+      "annual_cost_fraction": 1.3329310272932381e-17
+    }
+  ],
+  "raw_binary_mass_max_abs_error": 2.9802322387695312e-08,
+  "native_float32_epsilon": 1.1920928955078125e-07,
+  "financial_output_sha256": {
+    "results/redesign/predictions.parquet": "b0bc4d2633232295871b89162d8cae95dcd28a54f21261e97798122145513bff",
+    "results/redesign/candidate_probabilities.parquet": "fec470f8f09910cf4db00594c9f5a69843a5f130d756d348d5e90f6ec847e61c",
+    "results/redesign/fits.json": "4dffe8e0dc7c0320bf7d97f3194a6801787995db4a491007b061214610e9ac25",
+    "results/redesign/tuning.json": "1b346f36c0cee8b526d5b9609a88bbccb5630778b24873b3cfdae611c23bf8a8",
+    "results/redesign/nav.parquet": "7aedf9c673f54fab6128048f02084afbfbc70a11fa24b787c0ced703a327c926",
+    "results/redesign/targets.parquet": "44c2d75ac2a70271e98d14ad61e412992e4bad5b7a3f320ec70740aafb3c61e4",
+    "results/redesign/trades.parquet": "6b188f3fbda0f8b0468b062e8cc4cba47539bd87557b53bee582492614ab81d1"
+  },
+  "changes": "Economic cash identity for excess metrics; canonical p1=1-p0 for OOS raw-binary logloss only. No prices/returns/NAV/trades/models/selection/CER changed."
+}

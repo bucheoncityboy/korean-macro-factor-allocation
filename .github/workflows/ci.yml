@@ -24,3 +24,11 @@ jobs:
         env:
           OMP_NUM_THREADS: "1"
           OPENBLAS_NUM_THREADS: "1"
+      - name: Verify paper-first diagnostic artifacts
+        if: ${{ hashFiles('results/redesign/verification.json') != '' }}
+        run: |
+          uv run python -m etf_regimes.redesign_snapshot restore
+          uv run python -m etf_regimes.redesign_snapshot verify
+        env:
+          OMP_NUM_THREADS: "1"
+          OPENBLAS_NUM_THREADS: "1"

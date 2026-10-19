@@ -294,9 +294,6 @@ def portfolio_figures(nav, inference):
 
 
 def readme(summary, inference, verification):
-    if (ROOT / "results/followup/report.json").exists():
-        from .followup_reporting import readme_from_saved
-        return readme_from_saved()
     a = summary[(summary.study == "A") & (summary.cost_bp == 5)].set_index("strategy")
     b = summary[(summary.study == "B") & (summary.cost_bp == 5)].set_index("strategy")
     portfolio_figures(pd.read_parquet(OUT / "nav.parquet"), inference)
@@ -404,7 +401,7 @@ def readme(summary, inference, verification):
               "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 uv run etf-study verify", "uv run etf-study report",
               "uv run etf-study verify --artifacts-only", "```", "",
               "기존 계약을 재현할 때 `audit --freeze`로 덮어쓰지 않는다. 원자료 없는 공개 CI 검증과 실제 원자료 재검증은 별도로 기록한다."]
-    (ROOT / "README.md").write_text("\n".join(lines) + "\n")
+    (ROOT / "docs/study-readme.md").write_text("\n".join(lines) + "\n")
 
 
 def report():

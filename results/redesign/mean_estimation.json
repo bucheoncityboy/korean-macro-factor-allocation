@@ -1,0 +1,3242 @@
+[
+  {
+    "id": "M02",
+    "asset": "EEM",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.003073306333319628,
+      -0.0026357331461621227
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "9c0588058cd10bb0bb120775",
+    "label_hash": "d4039c8f543be596f599834e842fc88ba9761d432d0cd6118c25c07b289c31bb",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M02",
+    "asset": "EEM",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.003032019641321701,
+      -0.0026649790198564646
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "9e43fd59c856283b022177b7",
+    "label_hash": "c72c7cebd7103d39cce32ac134d237fe391ba58650c0570b0b6245115621b3c0",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M02",
+    "asset": "EEM",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.002992082111059567,
+      -0.0028024884783113286
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "d74ddfa8bb4632f12d9560a7",
+    "label_hash": "91db84baafcdfa3d34407dad25c68ce5beeefb42f93b9355ac7223bc04321c8d",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "EEM",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.002940213309504188,
+      -0.002648736142505679
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "3aa91c59c750f99fd1d6ce60",
+    "label_hash": "3d1348a62f3bf0768f1183e2f0242e225dc5db242b45233eb44ccddf4ab7ea67",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "EEM",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.0028042652093357807,
+      -0.0025134833513865535
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "c4c39570eb1721e85a573ae9",
+    "label_hash": "b0915d233b854ccbae280849a0ad7c4cf600d4fdd0447b71f67a63dc32c2dcd5",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M02",
+    "asset": "EEM",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.002786407883377791,
+      -0.002481930884597054
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "57970e164659ac942c698697",
+    "label_hash": "33bf861b3125bd38492b6cec1ea302aafa984dbd46ae250f369f9c436840279a",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "EEM",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.0028273464117570687,
+      -0.0024627497390061932
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "bfdb4e3ae8de90cfc35583cc",
+    "label_hash": "f0e85b90c70e375ddba82fa2dddb4a304b1c653e5fe801f9da8cc2468544de2d",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "EEM",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.0028030167737224045,
+      -0.0024126921062541168
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "1cbd30a082bce117b73dc3c3",
+    "label_hash": "12eb3e1e4d7bc594f94f271e79ea9d22ec2d52d6dcf4123bbd734212642ccb58",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "EEM",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.0028650611977132177,
+      -0.002478055036382601
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "e310ffa30d05d3ee4dbbf0c0",
+    "label_hash": "d38d2e9b21916c0e19946fb9e072a73342861cb4fd5dc37687499a434c5b3af0",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M02",
+    "asset": "EFA",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.0013984272161754923,
+      -0.0012626047346513069
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "782f7bb3a1991e473bcf9ac4",
+    "label_hash": "a4c68acc0190848232b0d83c7b8e66716d24b43f0748a39a6b36301b93bc7661",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M02",
+    "asset": "EFA",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.001314650342739453,
+      -0.0012569417499154116
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "4d40a152fcb19a744f846f11",
+    "label_hash": "181dd2486e9cf898631a32ef0f1d2f2069fcce754b3a67b48326858002e61e1b",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M02",
+    "asset": "EFA",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0012753311923257564,
+      -0.0012999293448901481
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "c805186187d8502c08a29c9c",
+    "label_hash": "8817216e2ec33e5f0ad947c1b5f066331bc7ba5d49400b6a78f2dd49f1795338",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "EFA",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.0017670034138680165,
+      -0.0017634813826488444
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "61bd45fde0ecb1b01be5cc02",
+    "label_hash": "318c24cd79f85b84b580aa3f15c10731b0d1f27b2d22271035dea95a1e90c121",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "EFA",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.0016916629387734217,
+      -0.0016241817283179374
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "fce46f30e828f42da098d5d0",
+    "label_hash": "0987d7d210d6f981394512104d8643427939776b7f37b744b559c2590d0f21ce",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M02",
+    "asset": "EFA",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.0016661488133683385,
+      -0.0016301131747147894
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "a3a863023eca3a1e0e3f2080",
+    "label_hash": "8c5f31ef984a34bc6fd89008578b0e2f79d9ba776df62abbbc88428b4a161e2a",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "EFA",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.0016539558705288698,
+      -0.0016854516861728958
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "132095f75858e9a49140c875",
+    "label_hash": "72d87490528caf24bbc48da0e36dbd205b307251655f05c4a03c494609be41bc",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "EFA",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.0016200281718189817,
+      -0.0018412430944210203
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "533b0a036a249bc3386e961f",
+    "label_hash": "7610fd30a35e6453896ff896c26c9e6c17ce31fe53b060709d08748b7e3871d1",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "EFA",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.0016523122708643457,
+      -0.001793963516266161
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "a25537836f292a06ee71fcdd",
+    "label_hash": "079d3927c5ef0c7166c04550702c11505d1448e741cb13cb596e27c3e92bc869",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M02",
+    "asset": "GLD",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.0028543383747497977,
+      -0.0017071875962022547
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "a66e00db4053572a74532dfd",
+    "label_hash": "4917dda27796d21dbd9d325acf33dcd585e7836b21f5b918156340c88e0279c9",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M02",
+    "asset": "GLD",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.0028692071125002543,
+      -0.0016618274727847346
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "c9fdc9a15da9655e3f30933a",
+    "label_hash": "11dde4546f9e512b3b1d7409605cabc3dde48b32171fb09533ebd30c6e1f263e",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M02",
+    "asset": "GLD",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0029215712375778064,
+      -0.0016679462125441056
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "c9b8baa94b57e1f0e3dff191",
+    "label_hash": "0aa2feecb860e4f15eacb02eecf30478f75bcfac94a5de0246efa8dfa1d329ff",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "GLD",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.002699066589130093,
+      -0.0016635379410045326
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "a759395b6a0bfdc7be94baf9",
+    "label_hash": "69de4f3b2082b956200ea85027feea5efc89b6a85268260c887e05e55f1f7f22",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "GLD",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.0027969554329243477,
+      -0.001666991107733949
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "84cb01b47755c09c295878cb",
+    "label_hash": "3bf733f2ec2adf1d809ddec30385acd6bc5bdc58b03273fa38840a0658a185bd",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M02",
+    "asset": "GLD",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.0026006153550067555,
+      -0.001648712161274748
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "0d1eb94499f6ae31b515c74d",
+    "label_hash": "3d311c4ab527961c9a8a61e4a95db2cc2a066eb31203a783236af1ca2b3b98ca",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "GLD",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.002854018314482065,
+      -0.0014991681442122716
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "58d76f827342a296d58ae859",
+    "label_hash": "245263d19ded7fcdd21a64dd0fe28ba46b731c61a55653dc17ba3d9d63fec3b7",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "GLD",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.002862228326524645,
+      -0.0014742771615672647
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "554b70267fd331410dca265b",
+    "label_hash": "f55a80d95f4d615a6856f5ddaa0da7487ecf4c9a81d9b8a1108fb8faf96aa424",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "GLD",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.0029758539925179065,
+      -0.001586005336847594
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "5f83f07b24a2caab63b209d0",
+    "label_hash": "1a8ebcfa6cf883ebfe850672454a01987b291aed5696b0aba0c45e3272e1d5a1",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M02",
+    "asset": "IEF",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.001092165095233293,
+      -0.000618722663352782
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "026d15ab67c84115f3c2027f",
+    "label_hash": "8f3bf8bc71621cc7d9ab1082fd08daa6f15bc836b90fb8de9089badbc82da49a",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M02",
+    "asset": "IEF",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.0010877834171665963,
+      -0.0006042142331837109
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "f18daa7696931995e377f257",
+    "label_hash": "cc773c8ae80e3e36499ce64c41d87e54e4a54ba1af2515c7c300a100ceee0134",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M02",
+    "asset": "IEF",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0010275834531106834,
+      -0.000721240463383285
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "cf682a3f08cec4745302ddbe",
+    "label_hash": "eb83555ec96120ac767c403769a35708c22c1d57d24f7c18bd3e53805610b070",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "IEF",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.000929508069019005,
+      -0.0008461547736201799
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "519243db7e70c373f89441df",
+    "label_hash": "f3f94fb780ea2d1b522c2a48af10ee4a72decd8f0d1ca44d2935771dd3bb81af",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "IEF",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.0009603593771193632,
+      -0.0008847802988861474
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "7467714351d4eb9cddc85144",
+    "label_hash": "cf46c0c58e05a9d07c7477d6a720054c8352a4c6f629009f0bed0032b189f277",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M02",
+    "asset": "IEF",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.0009746377115454959,
+      -0.0008945589420585815
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "3c42778d8b9268f3829867d3",
+    "label_hash": "68fe366bf4b58589c10f7fdf934f142429ba3cd4579f5c4516caadf358b710ad",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "IEF",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.0009714997405482422,
+      -0.0008986400719371105
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "e098e3e2f970a0c05a1c4312",
+    "label_hash": "cd2e7dce2f274896ee91f2dc23df397f32d84281928f5b383f6f29cabb66bf8c",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "IEF",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.0009462622568974035,
+      -0.0009402732997537855
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "2c67652f261d26328e80c2ad",
+    "label_hash": "eec483a8308f178c5bee22f9853853a5c59337069517bd5290e6f0fb4133d4c8",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "IEF",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.000959413668834873,
+      -0.0009424641729122602
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "6f51950ba519af3821bfc5bb",
+    "label_hash": "337ed956500c1a268c79d12ea48577133f29b26efc361e5e1f153493d5ff7e05",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M02",
+    "asset": "IYR",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.001484613960218358,
+      -0.0011121928122483247
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "11278c17c2f54380fdc81a5e",
+    "label_hash": "5d44bce7db241f6ce68e406865d9936972682364788135b0b256a6a4a83eb322",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M02",
+    "asset": "IYR",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.0014301199188668512,
+      -0.0011389309873853946
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "d7ccd92047240f1fc6fd8f12",
+    "label_hash": "46b23ec05882736d38e0f0c4bd49a7bcf3a6dff532e22f99133ad2a9c8f414a1",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M02",
+    "asset": "IYR",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0013762899483531564,
+      -0.0013184885779743316
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "ecb2ac769b5bcbfce2aaca80",
+    "label_hash": "27dd7bc4d766cdc32c794ed296df0536b3cdd4b70daf79a77ebdd83d77aad436",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "IYR",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.0013522579405391172,
+      -0.0013540804481854659
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "6a45021290557fc52d4b1529",
+    "label_hash": "da653e8948630a5f0de29837b08e1a416537e15d2013d576518648f032d4bb23",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "IYR",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.0013465514417019269,
+      -0.0013046161312698411
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "7434a55c9955a3e7f2646d03",
+    "label_hash": "052904af5cd0bfc2d72d328f3a92e02e0911ca7fdc122beba53a244011e9a19d",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M02",
+    "asset": "IYR",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.0014577926188848345,
+      -0.0014042572654039969
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "b59c4cf8516ef1df0ded2b70",
+    "label_hash": "e3751d67841ddd7a60e829c918764655f355171651e27b0f7141479f69da32c5",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "IYR",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.0014354897999451048,
+      -0.0013927293069451797
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "e6b70ed5885319b9271d8094",
+    "label_hash": "bff494f87401ea824ca6697f19343ed969d357362a5524c73ac199f59cf932e6",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "IYR",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.0014153557459752307,
+      -0.0013696896357865201
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "2ce7f14b1360566edfb37225",
+    "label_hash": "6fec6186ab67da4d472c6a908fe0f1c64b95a2c6c239ad7d6b4763e537ad52f4",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "IYR",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.0023120883199178217,
+      -0.002056765078046413
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "7bd5300c38bab1851452dd30",
+    "label_hash": "68e2c6b067ccd07d51cd30f2019d01a1edcb0b600183b760e528b0492184ad4e",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M02",
+    "asset": "LQD",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.0006422834632452768,
+      -0.0002572012396866987
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "b7bedcebd6bc65f5ecab519e",
+    "label_hash": "9ffb6c11ad5ef596e9ae266d39b1e5a687cefb83fb2520e533ad578a3ecc38c7",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M02",
+    "asset": "LQD",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.0009943025835156822,
+      -0.000505613605370428
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "3d3af898a519e0467d7e8ec9",
+    "label_hash": "1fc58236d6734c49bebc0b16e63e8dd75217f58f19ac5d1479ad77731befbbad",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M02",
+    "asset": "LQD",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0009213600974326562,
+      -0.0007325280020840908
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "d4f19e28ee5c16432df63bf5",
+    "label_hash": "db1d2ece79e4ace737a309ceda667126cbdd275eeac3782800d1922c8aec898f",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "LQD",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.0008764822443546922,
+      -0.0008008042689628371
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "84bc961b71ae99040e6cf168",
+    "label_hash": "35cae4946809daa1f265d09a529261cde1081b760b45e471306d60cf6f916de6",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "LQD",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.0009216444895746679,
+      -0.0008078790801459724
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "70e631d5254b344dd74eb500",
+    "label_hash": "6e995a49f09274933ce83f7dd1b4cfaf5b7f68c51e427bdcffcfdc269a34f57b",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M02",
+    "asset": "LQD",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.0009607390830507853,
+      -0.0008772722373234735
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "5fb296ee07928e1455c4c7ab",
+    "label_hash": "b101ce06b69f1123463db7bde7a3377a2bc66880b39025f39f75094d35d6e033",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "LQD",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.0009660700406737483,
+      -0.0008937298329525348
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "3c9b7381e10fb2310e2b6abe",
+    "label_hash": "2a4b04834c82a20ce13bbd033165abc355d2bcce63b51e0e3ada3d21e4b2f5d5",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "LQD",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.0009616021594781901,
+      -0.000937416193452227
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "77a3aff498e97464b2f28df2",
+    "label_hash": "1bba795d7f51e0f1f69979321674b897bf0d485cce255e3cdf782b22d2673a1d",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "LQD",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.0010066212668486633,
+      -0.0009170113035869189
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "abf6f370e6ef4bf23cb8d0e2",
+    "label_hash": "50e07d3a62c41f25ea374cbc802214599047f91100d5d5c401c262cdcb142747",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M02",
+    "asset": "SPY",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.0008677536600194056,
+      -0.000885042946497011
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "8efe0ee7ac2a7a7e746560e0",
+    "label_hash": "56bdddb18df22352de731a28540888dde0c32274dca690c6ea198b1f0dd4a1e9",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M02",
+    "asset": "SPY",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.0008333096449860201,
+      -0.000902792850025919
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "6ec4346bacf928553ca9dfb2",
+    "label_hash": "9e5ba331ff44bc0342856abe5fbc242baf721ec74a16cb2958d598e703c94730",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M02",
+    "asset": "SPY",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0008244754593443065,
+      -0.001049494951023764
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "3f01188f964078fb14ab811c",
+    "label_hash": "ff89e251d2375a99940921bfed274295716dd24d5c694927f0a9f82370895849",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "SPY",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.0008092491646908926,
+      -0.00041378703102127934
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "a28e2d624adc9d141cc3a223",
+    "label_hash": "5dcbc094d148b2879ab2ab1c993dea4555cbb3626cab757fab7ccebe9e46bacb",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "SPY",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.000842272189523338,
+      -0.0009966221352559165
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "934031070dc19089852fb828",
+    "label_hash": "e7602594913f26d648a1a0e17d92e29c14d239bc7a19fe03f9a59993a659c661",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M02",
+    "asset": "SPY",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.0008453418694084904,
+      -0.000995316653642673
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "f04f4431d2b4235354f53e4b",
+    "label_hash": "18a5b180a63917496705498b4f0c17d4f9c116be749f36d0450a15d74d856c1e",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "SPY",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.0008309431217511476,
+      -0.0010010002571367639
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "efe97252deeffc0c4944ae63",
+    "label_hash": "19037d81a7933521966565954d176cb092b2f2d983cafa87e50c921816724067",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "SPY",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.0007970822330350975,
+      -0.001014366132419773
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "0cd2e9d58ca178c0ef777bbe",
+    "label_hash": "8a99c8619830db2ee714755de8aa3ef3f6ce5f6588b4083094459118d19f35a5",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "SPY",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.0008366987337652709,
+      -0.001100997008407822
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "f51f8458c47e2e31239bdc68",
+    "label_hash": "ffe8786aa82bbac5ae24edbd3d33a621e4878a96dcd7baad73a20b93952cce26",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M02",
+    "asset": "TLT",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.0012100890839504917,
+      -0.00032926434467014254
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "54273fc43f8dcf6d826d2bf9",
+    "label_hash": "e39a23bc15fef64ec460de6928f694632dbb4ebd5ec10c5a8d15ea8506437e70",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M02",
+    "asset": "TLT",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.001218163334963969,
+      -0.0002446559670332216
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "adcc1b17eb6d4d8e6f320999",
+    "label_hash": "305fbf39baef490a1ffb3377ffd8e62b61e244aaadfb4bf821351c273ceadc2c",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M02",
+    "asset": "TLT",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0008926149577834437,
+      -0.0005808026179131314
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "ba59d433a7120d72e3834964",
+    "label_hash": "1bf5126e4a2798b8c3187e416bccc51b434c2f02731365e8f5acbd31f86cd7f6",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "TLT",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.0008276540668774449,
+      -0.000679323107801259
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "ada95067a11f0fcf5ac6a501",
+    "label_hash": "35adf8c7bf9e8c17257972123d72eff26b18f0e4b9fdfed08199a2f36e699457",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "TLT",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.0007877859466424627,
+      -0.0005803852455746738
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "8e0d666503772b5d5973bbeb",
+    "label_hash": "c5a1d7a4b87df08c4bfc1022b692a483b3d4a68e714857c7def56c29976d7d4d",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M02",
+    "asset": "TLT",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.0008514455221545078,
+      -0.0006843196302668865
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "7d5d923f5295062a1a560273",
+    "label_hash": "c8e862792137ea4a0446f3ea0e100e655423278abf9f12552d2dfe33013f299e",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "TLT",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.0008227684912526697,
+      -0.0006345596312290361
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "a3400fda7429f90ccba79a99",
+    "label_hash": "55d0429454c24dd95756b3a112b8287a9304d4d4d4bcf5566e5df7a77c7599c2",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "TLT",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.0006751602103558407,
+      -0.0009684090719482994
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "d7cb968c3aceb84e8d2d9f8b",
+    "label_hash": "12bf75bf143f17cfb61bc9b6e864a3444a15dcbbaf67b74bca15e2a8126b97ce",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M02",
+    "asset": "TLT",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.0016955613935257284,
+      -0.0017564871535374206
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "222c3a12be446b6c00d197e9",
+    "label_hash": "622165c41a7d573f8879f3039c9425cf335e84c2f393990ee36e8ff36f5ff237",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M03",
+    "asset": "EEM",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.003563301554345879,
+      -0.003231065309830307
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "9c0588058cd10bb0bb120775",
+    "label_hash": "d4039c8f543be596f599834e842fc88ba9761d432d0cd6118c25c07b289c31bb",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "EEM",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.00360335913727502,
+      -0.003173928369201672
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "9e43fd59c856283b022177b7",
+    "label_hash": "c72c7cebd7103d39cce32ac134d237fe391ba58650c0570b0b6245115621b3c0",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "EEM",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0036301198777348364,
+      -0.003342342339146112
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "d74ddfa8bb4632f12d9560a7",
+    "label_hash": "91db84baafcdfa3d34407dad25c68ce5beeefb42f93b9355ac7223bc04321c8d",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "EEM",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.0034561620390731553,
+      -0.003103241194054393
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "3aa91c59c750f99fd1d6ce60",
+    "label_hash": "3d1348a62f3bf0768f1183e2f0242e225dc5db242b45233eb44ccddf4ab7ea67",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "EEM",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.003298136970284253,
+      -0.003009162323484337
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "c4c39570eb1721e85a573ae9",
+    "label_hash": "b0915d233b854ccbae280849a0ad7c4cf600d4fdd0447b71f67a63dc32c2dcd5",
+    "weight_sum": 132.0
+  },
+  {
+    "id": "M03",
+    "asset": "EEM",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.00346215056675998,
+      -0.002954761829980235
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "57970e164659ac942c698697",
+    "label_hash": "33bf861b3125bd38492b6cec1ea302aafa984dbd46ae250f369f9c436840279a",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "EEM",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.0033238248100028334,
+      -0.00282363843445577
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "bfdb4e3ae8de90cfc35583cc",
+    "label_hash": "f0e85b90c70e375ddba82fa2dddb4a304b1c653e5fe801f9da8cc2468544de2d",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "EEM",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.003387108840070496,
+      -0.0028681087962122926
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "1cbd30a082bce117b73dc3c3",
+    "label_hash": "12eb3e1e4d7bc594f94f271e79ea9d22ec2d52d6dcf4123bbd734212642ccb58",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "EEM",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.0032908670388878303,
+      -0.0029633220333062124
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "e310ffa30d05d3ee4dbbf0c0",
+    "label_hash": "d38d2e9b21916c0e19946fb9e072a73342861cb4fd5dc37687499a434c5b3af0",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "EFA",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.0015584911225677797,
+      -0.0017417786775813467
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "782f7bb3a1991e473bcf9ac4",
+    "label_hash": "a4c68acc0190848232b0d83c7b8e66716d24b43f0748a39a6b36301b93bc7661",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "EFA",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.0015306127438282405,
+      -0.0016078768244033028
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "4d40a152fcb19a744f846f11",
+    "label_hash": "181dd2486e9cf898631a32ef0f1d2f2069fcce754b3a67b48326858002e61e1b",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "EFA",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0016086553698335935,
+      -0.001626881436502818
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "c805186187d8502c08a29c9c",
+    "label_hash": "8817216e2ec33e5f0ad947c1b5f066331bc7ba5d49400b6a78f2dd49f1795338",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "EFA",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.0020089574753311386,
+      -0.0020738011132819196
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "61bd45fde0ecb1b01be5cc02",
+    "label_hash": "318c24cd79f85b84b580aa3f15c10731b0d1f27b2d22271035dea95a1e90c121",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "EFA",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.0019151614624025573,
+      -0.0020377450165613886
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "fce46f30e828f42da098d5d0",
+    "label_hash": "0987d7d210d6f981394512104d8643427939776b7f37b744b559c2590d0f21ce",
+    "weight_sum": 132.0
+  },
+  {
+    "id": "M03",
+    "asset": "EFA",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.002056695907591806,
+      -0.0020273681816440764
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "a3a863023eca3a1e0e3f2080",
+    "label_hash": "8c5f31ef984a34bc6fd89008578b0e2f79d9ba776df62abbbc88428b4a161e2a",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "EFA",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.00187905579925418,
+      -0.0021007280995985066
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "132095f75858e9a49140c875",
+    "label_hash": "72d87490528caf24bbc48da0e36dbd205b307251655f05c4a03c494609be41bc",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "EFA",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.0018727248769731,
+      -0.0022798479960073293
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "533b0a036a249bc3386e961f",
+    "label_hash": "7610fd30a35e6453896ff896c26c9e6c17ce31fe53b060709d08748b7e3871d1",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "EFA",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.0018656210119276436,
+      -0.0022358751524770718
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "a25537836f292a06ee71fcdd",
+    "label_hash": "079d3927c5ef0c7166c04550702c11505d1448e741cb13cb596e27c3e92bc869",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "GLD",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.003481245778130053,
+      -0.0019935050312667214
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "a66e00db4053572a74532dfd",
+    "label_hash": "4917dda27796d21dbd9d325acf33dcd585e7836b21f5b918156340c88e0279c9",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "GLD",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.0037040421582602173,
+      -0.001929529262934652
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "c9fdc9a15da9655e3f30933a",
+    "label_hash": "11dde4546f9e512b3b1d7409605cabc3dde48b32171fb09533ebd30c6e1f263e",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "GLD",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0036309168478274117,
+      -0.0019973704662830057
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "c9b8baa94b57e1f0e3dff191",
+    "label_hash": "0aa2feecb860e4f15eacb02eecf30478f75bcfac94a5de0246efa8dfa1d329ff",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "GLD",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.003328535994068178,
+      -0.0017793544467493434
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "a759395b6a0bfdc7be94baf9",
+    "label_hash": "69de4f3b2082b956200ea85027feea5efc89b6a85268260c887e05e55f1f7f22",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "GLD",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.0034600749152179657,
+      -0.0019283431198065686
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "84cb01b47755c09c295878cb",
+    "label_hash": "3bf733f2ec2adf1d809ddec30385acd6bc5bdc58b03273fa38840a0658a185bd",
+    "weight_sum": 132.0
+  },
+  {
+    "id": "M03",
+    "asset": "GLD",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.003185238915023967,
+      -0.0017872398319329005
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "0d1eb94499f6ae31b515c74d",
+    "label_hash": "3d311c4ab527961c9a8a61e4a95db2cc2a066eb31203a783236af1ca2b3b98ca",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "GLD",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.003489269447182707,
+      -0.0014306764526609893
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "58d76f827342a296d58ae859",
+    "label_hash": "245263d19ded7fcdd21a64dd0fe28ba46b731c61a55653dc17ba3d9d63fec3b7",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "GLD",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.003487622204275613,
+      -0.0016452425773190178
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "554b70267fd331410dca265b",
+    "label_hash": "f55a80d95f4d615a6856f5ddaa0da7487ecf4c9a81d9b8a1108fb8faf96aa424",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "GLD",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.0037174749349420245,
+      -0.001882220335783574
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "5f83f07b24a2caab63b209d0",
+    "label_hash": "1a8ebcfa6cf883ebfe850672454a01987b291aed5696b0aba0c45e3272e1d5a1",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "IEF",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.0012995963139496559,
+      -0.0007335262994819972
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "026d15ab67c84115f3c2027f",
+    "label_hash": "8f3bf8bc71621cc7d9ab1082fd08daa6f15bc836b90fb8de9089badbc82da49a",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "IEF",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.0012934987360837032,
+      -0.000646171429060158
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "f18daa7696931995e377f257",
+    "label_hash": "cc773c8ae80e3e36499ce64c41d87e54e4a54ba1af2515c7c300a100ceee0134",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "IEF",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0012191397223806323,
+      -0.0008810701511286127
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "cf682a3f08cec4745302ddbe",
+    "label_hash": "eb83555ec96120ac767c403769a35708c22c1d57d24f7c18bd3e53805610b070",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "IEF",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.001139139806273136,
+      -0.0009899035903380368
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "519243db7e70c373f89441df",
+    "label_hash": "f3f94fb780ea2d1b522c2a48af10ee4a72decd8f0d1ca44d2935771dd3bb81af",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "IEF",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.0011450790932755243,
+      -0.0010332230818539008
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "7467714351d4eb9cddc85144",
+    "label_hash": "cf46c0c58e05a9d07c7477d6a720054c8352a4c6f629009f0bed0032b189f277",
+    "weight_sum": 132.0
+  },
+  {
+    "id": "M03",
+    "asset": "IEF",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.0011668595388397822,
+      -0.0011007438805038315
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "3c42778d8b9268f3829867d3",
+    "label_hash": "68fe366bf4b58589c10f7fdf934f142429ba3cd4579f5c4516caadf358b710ad",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "IEF",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.0011616453673264282,
+      -0.0010535570136047476
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "e098e3e2f970a0c05a1c4312",
+    "label_hash": "cd2e7dce2f274896ee91f2dc23df397f32d84281928f5b383f6f29cabb66bf8c",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "IEF",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.0011232056861299026,
+      -0.0011545222785754033
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "2c67652f261d26328e80c2ad",
+    "label_hash": "eec483a8308f178c5bee22f9853853a5c59337069517bd5290e6f0fb4133d4c8",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "IEF",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.0011405734759233318,
+      -0.0011058797229881866
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "6f51950ba519af3821bfc5bb",
+    "label_hash": "337ed956500c1a268c79d12ea48577133f29b26efc361e5e1f153493d5ff7e05",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "IYR",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.0016316347661057792,
+      -0.001685023494067792
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "11278c17c2f54380fdc81a5e",
+    "label_hash": "5d44bce7db241f6ce68e406865d9936972682364788135b0b256a6a4a83eb322",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "IYR",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.0015364055196065902,
+      -0.001567220101943446
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "d7ccd92047240f1fc6fd8f12",
+    "label_hash": "46b23ec05882736d38e0f0c4bd49a7bcf3a6dff532e22f99133ad2a9c8f414a1",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "IYR",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0015172057311145892,
+      -0.0017636015926155756
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "ecb2ac769b5bcbfce2aaca80",
+    "label_hash": "27dd7bc4d766cdc32c794ed296df0536b3cdd4b70daf79a77ebdd83d77aad436",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "IYR",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.0014250179520625815,
+      -0.0017940919136175554
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "6a45021290557fc52d4b1529",
+    "label_hash": "da653e8948630a5f0de29837b08e1a416537e15d2013d576518648f032d4bb23",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "IYR",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.0015019724092031985,
+      -0.0016963705771956483
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "7434a55c9955a3e7f2646d03",
+    "label_hash": "052904af5cd0bfc2d72d328f3a92e02e0911ca7fdc122beba53a244011e9a19d",
+    "weight_sum": 132.0
+  },
+  {
+    "id": "M03",
+    "asset": "IYR",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.001719699191885629,
+      -0.0018175749578015746
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "b59c4cf8516ef1df0ded2b70",
+    "label_hash": "e3751d67841ddd7a60e829c918764655f355171651e27b0f7141479f69da32c5",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "IYR",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.0016139940314904753,
+      -0.0018229255258975826
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "e6b70ed5885319b9271d8094",
+    "label_hash": "bff494f87401ea824ca6697f19343ed969d357362a5524c73ac199f59cf932e6",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "IYR",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.0015316685703284452,
+      -0.0017718044148955154
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "2ce7f14b1360566edfb37225",
+    "label_hash": "6fec6186ab67da4d472c6a908fe0f1c64b95a2c6c239ad7d6b4763e537ad52f4",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "IYR",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.0026205933234334346,
+      -0.0025129269218415223
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "7bd5300c38bab1851452dd30",
+    "label_hash": "68e2c6b067ccd07d51cd30f2019d01a1edcb0b600183b760e528b0492184ad4e",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "LQD",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.000765321083941282,
+      -0.0003358775485343542
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "b7bedcebd6bc65f5ecab519e",
+    "label_hash": "9ffb6c11ad5ef596e9ae266d39b1e5a687cefb83fb2520e533ad578a3ecc38c7",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "LQD",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.0011521087470003294,
+      -0.0005749954434946578
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "3d3af898a519e0467d7e8ec9",
+    "label_hash": "1fc58236d6734c49bebc0b16e63e8dd75217f58f19ac5d1479ad77731befbbad",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "LQD",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0010651632356011595,
+      -0.0008568306343389797
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "d4f19e28ee5c16432df63bf5",
+    "label_hash": "db1d2ece79e4ace737a309ceda667126cbdd275eeac3782800d1922c8aec898f",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "LQD",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.0010585478725396729,
+      -0.000969641749234264
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "84bc961b71ae99040e6cf168",
+    "label_hash": "35cae4946809daa1f265d09a529261cde1081b760b45e471306d60cf6f916de6",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "LQD",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.0010764670067944862,
+      -0.0009714188478216845
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "70e631d5254b344dd74eb500",
+    "label_hash": "6e995a49f09274933ce83f7dd1b4cfaf5b7f68c51e427bdcffcfdc269a34f57b",
+    "weight_sum": 132.0
+  },
+  {
+    "id": "M03",
+    "asset": "LQD",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.0011226146757872797,
+      -0.0011132121789250765
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "5fb296ee07928e1455c4c7ab",
+    "label_hash": "b101ce06b69f1123463db7bde7a3377a2bc66880b39025f39f75094d35d6e033",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "LQD",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.001126142190743692,
+      -0.0010688975416316203
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "3c9b7381e10fb2310e2b6abe",
+    "label_hash": "2a4b04834c82a20ce13bbd033165abc355d2bcce63b51e0e3ada3d21e4b2f5d5",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "LQD",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.0010712091603962961,
+      -0.0011256072930548068
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "77a3aff498e97464b2f28df2",
+    "label_hash": "1bba795d7f51e0f1f69979321674b897bf0d485cce255e3cdf782b22d2673a1d",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "LQD",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.0011566369165958309,
+      -0.0010883704075863117
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "abf6f370e6ef4bf23cb8d0e2",
+    "label_hash": "50e07d3a62c41f25ea374cbc802214599047f91100d5d5c401c262cdcb142747",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "SPY",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.0008243721615362968,
+      -0.0028152678895999074
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "8efe0ee7ac2a7a7e746560e0",
+    "label_hash": "56bdddb18df22352de731a28540888dde0c32274dca690c6ea198b1f0dd4a1e9",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "SPY",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.0008642862916657817,
+      -0.0028152678895999074
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "6ec4346bacf928553ca9dfb2",
+    "label_hash": "9e5ba331ff44bc0342856abe5fbc242baf721ec74a16cb2958d598e703c94730",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "SPY",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0009384612392100034,
+      -0.002341288414077155
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "3f01188f964078fb14ab811c",
+    "label_hash": "ff89e251d2375a99940921bfed274295716dd24d5c694927f0a9f82370895849",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "SPY",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.0008057648830788842,
+      -0.0008657567101667263
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "a28e2d624adc9d141cc3a223",
+    "label_hash": "5dcbc094d148b2879ab2ab1c993dea4555cbb3626cab757fab7ccebe9e46bacb",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "SPY",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.0008834221579014863,
+      -0.0022461307093662344
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "934031070dc19089852fb828",
+    "label_hash": "e7602594913f26d648a1a0e17d92e29c14d239bc7a19fe03f9a59993a659c661",
+    "weight_sum": 132.0
+  },
+  {
+    "id": "M03",
+    "asset": "SPY",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.0010184316187046901,
+      -0.0022461307093662344
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "f04f4431d2b4235354f53e4b",
+    "label_hash": "18a5b180a63917496705498b4f0c17d4f9c116be749f36d0450a15d74d856c1e",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "SPY",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.0008357244928933691,
+      -0.0022461307093662344
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "efe97252deeffc0c4944ae63",
+    "label_hash": "19037d81a7933521966565954d176cb092b2f2d983cafa87e50c921816724067",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "SPY",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.0008754352637532638,
+      -0.0022461307093662344
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "0cd2e9d58ca178c0ef777bbe",
+    "label_hash": "8a99c8619830db2ee714755de8aa3ef3f6ce5f6588b4083094459118d19f35a5",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "SPY",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.0008765733998548895,
+      -0.0022444264942762812
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "f51f8458c47e2e31239bdc68",
+    "label_hash": "ffe8786aa82bbac5ae24edbd3d33a621e4878a96dcd7baad73a20b93952cce26",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "TLT",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.0015492966331259622,
+      -0.000422483241176015
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "54273fc43f8dcf6d826d2bf9",
+    "label_hash": "e39a23bc15fef64ec460de6928f694632dbb4ebd5ec10c5a8d15ea8506437e70",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "TLT",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.0014612407170317113,
+      -0.0002055944135362312
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "adcc1b17eb6d4d8e6f320999",
+    "label_hash": "305fbf39baef490a1ffb3377ffd8e62b61e244aaadfb4bf821351c273ceadc2c",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "TLT",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0009721856317737121,
+      -0.0007354296638102272
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "ba59d433a7120d72e3834964",
+    "label_hash": "1bf5126e4a2798b8c3187e416bccc51b434c2f02731365e8f5acbd31f86cd7f6",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "TLT",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.0009768890701759353,
+      -0.0007500575594431582
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "ada95067a11f0fcf5ac6a501",
+    "label_hash": "35adf8c7bf9e8c17257972123d72eff26b18f0e4b9fdfed08199a2f36e699457",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "TLT",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.0009443177961743068,
+      -0.0006834663994767343
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "8e0d666503772b5d5973bbeb",
+    "label_hash": "c5a1d7a4b87df08c4bfc1022b692a483b3d4a68e714857c7def56c29976d7d4d",
+    "weight_sum": 132.0
+  },
+  {
+    "id": "M03",
+    "asset": "TLT",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.0010219749019688732,
+      -0.0010150778323429499
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "7d5d923f5295062a1a560273",
+    "label_hash": "c8e862792137ea4a0446f3ea0e100e655423278abf9f12552d2dfe33013f299e",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "TLT",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.0009876280593188603,
+      -0.0006479260915896894
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "a3400fda7429f90ccba79a99",
+    "label_hash": "55d0429454c24dd95756b3a112b8287a9304d4d4d4bcf5566e5df7a77c7599c2",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "TLT",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.0006834260020426243,
+      -0.0011989743054098734
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "d7cb968c3aceb84e8d2d9f8b",
+    "label_hash": "12bf75bf143f17cfb61bc9b6e864a3444a15dcbbaf67b74bca15e2a8126b97ce",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M03",
+    "asset": "TLT",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.0020194254614836742,
+      -0.002079767129205129
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "222c3a12be446b6c00d197e9",
+    "label_hash": "622165c41a7d573f8879f3039c9425cf335e84c2f393990ee36e8ff36f5ff237",
+    "weight_sum": 133.0
+  },
+  {
+    "id": "M04",
+    "asset": "EEM",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.00357224419870622,
+      -0.0031830135624870454
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "9c0588058cd10bb0bb120775",
+    "label_hash": "d4039c8f543be596f599834e842fc88ba9761d432d0cd6118c25c07b289c31bb",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M04",
+    "asset": "EEM",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.003564683965110884,
+      -0.0031737870653488227
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "9e43fd59c856283b022177b7",
+    "label_hash": "c72c7cebd7103d39cce32ac134d237fe391ba58650c0570b0b6245115621b3c0",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M04",
+    "asset": "EEM",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0035261162449389343,
+      -0.003327393286196742
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "d74ddfa8bb4632f12d9560a7",
+    "label_hash": "91db84baafcdfa3d34407dad25c68ce5beeefb42f93b9355ac7223bc04321c8d",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "EEM",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.00345907155418859,
+      -0.003148727364543593
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "3aa91c59c750f99fd1d6ce60",
+    "label_hash": "3d1348a62f3bf0768f1183e2f0242e225dc5db242b45233eb44ccddf4ab7ea67",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "EEM",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.003302480475151962,
+      -0.002985332091329524
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "c4c39570eb1721e85a573ae9",
+    "label_hash": "b0915d233b854ccbae280849a0ad7c4cf600d4fdd0447b71f67a63dc32c2dcd5",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M04",
+    "asset": "EEM",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.003299030893168542,
+      -0.0029301930499155138
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "57970e164659ac942c698697",
+    "label_hash": "33bf861b3125bd38492b6cec1ea302aafa984dbd46ae250f369f9c436840279a",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "EEM",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.0033306350257945824,
+      -0.002921764754197444
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "bfdb4e3ae8de90cfc35583cc",
+    "label_hash": "f0e85b90c70e375ddba82fa2dddb4a304b1c653e5fe801f9da8cc2468544de2d",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "EEM",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.003322315928540789,
+      -0.002844074369629864
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "1cbd30a082bce117b73dc3c3",
+    "label_hash": "12eb3e1e4d7bc594f94f271e79ea9d22ec2d52d6dcf4123bbd734212642ccb58",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "EEM",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.003382133266524935,
+      -0.0029326902422141345
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "e310ffa30d05d3ee4dbbf0c0",
+    "label_hash": "d38d2e9b21916c0e19946fb9e072a73342861cb4fd5dc37687499a434c5b3af0",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M04",
+    "asset": "EFA",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.0015571456382233013,
+      -0.0016509816204563139
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "782f7bb3a1991e473bcf9ac4",
+    "label_hash": "a4c68acc0190848232b0d83c7b8e66716d24b43f0748a39a6b36301b93bc7661",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M04",
+    "asset": "EFA",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.0014755668175065607,
+      -0.001613548597836918
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "4d40a152fcb19a744f846f11",
+    "label_hash": "181dd2486e9cf898631a32ef0f1d2f2069fcce754b3a67b48326858002e61e1b",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M04",
+    "asset": "EFA",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0014503973292942993,
+      -0.0016244911249452434
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "c805186187d8502c08a29c9c",
+    "label_hash": "8817216e2ec33e5f0ad947c1b5f066331bc7ba5d49400b6a78f2dd49f1795338",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "EFA",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.002010816572930226,
+      -0.002195774693730892
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "61bd45fde0ecb1b01be5cc02",
+    "label_hash": "318c24cd79f85b84b580aa3f15c10731b0d1f27b2d22271035dea95a1e90c121",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "EFA",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.0019212932291668811,
+      -0.002030748889088158
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "fce46f30e828f42da098d5d0",
+    "label_hash": "0987d7d210d6f981394512104d8643427939776b7f37b744b559c2590d0f21ce",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M04",
+    "asset": "EFA",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.0019002054289365064,
+      -0.002021203544668548
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "a3a863023eca3a1e0e3f2080",
+    "label_hash": "8c5f31ef984a34bc6fd89008578b0e2f79d9ba776df62abbbc88428b4a161e2a",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "EFA",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.0018840391960600594,
+      -0.002095611822820201
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "132095f75858e9a49140c875",
+    "label_hash": "72d87490528caf24bbc48da0e36dbd205b307251655f05c4a03c494609be41bc",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "EFA",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.0018547428087737144,
+      -0.002273773188256928
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "533b0a036a249bc3386e961f",
+    "label_hash": "7610fd30a35e6453896ff896c26c9e6c17ce31fe53b060709d08748b7e3871d1",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "EFA",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.0018847158748493235,
+      -0.002229183873068052
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "a25537836f292a06ee71fcdd",
+    "label_hash": "079d3927c5ef0c7166c04550702c11505d1448e741cb13cb596e27c3e92bc869",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M04",
+    "asset": "GLD",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.003499232125721803,
+      -0.00197747508142946
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "a66e00db4053572a74532dfd",
+    "label_hash": "4917dda27796d21dbd9d325acf33dcd585e7836b21f5b918156340c88e0279c9",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M04",
+    "asset": "GLD",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.0035563657609957223,
+      -0.0019134585804049186
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "c9fdc9a15da9655e3f30933a",
+    "label_hash": "11dde4546f9e512b3b1d7409605cabc3dde48b32171fb09533ebd30c6e1f263e",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M04",
+    "asset": "GLD",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.003653723691206434,
+      -0.0019097619973355376
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "c9b8baa94b57e1f0e3dff191",
+    "label_hash": "0aa2feecb860e4f15eacb02eecf30478f75bcfac94a5de0246efa8dfa1d329ff",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "GLD",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.0033456619990921165,
+      -0.00190712875792258
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "a759395b6a0bfdc7be94baf9",
+    "label_hash": "69de4f3b2082b956200ea85027feea5efc89b6a85268260c887e05e55f1f7f22",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "GLD",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.0034900144597979745,
+      -0.0019069773238978396
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "84cb01b47755c09c295878cb",
+    "label_hash": "3bf733f2ec2adf1d809ddec30385acd6bc5bdc58b03273fa38840a0658a185bd",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M04",
+    "asset": "GLD",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.0032097016717309913,
+      -0.0018914845035138293
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "0d1eb94499f6ae31b515c74d",
+    "label_hash": "3d311c4ab527961c9a8a61e4a95db2cc2a066eb31203a783236af1ca2b3b98ca",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "GLD",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.0035112003699378507,
+      -0.0017383633094723103
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "58d76f827342a296d58ae859",
+    "label_hash": "245263d19ded7fcdd21a64dd0fe28ba46b731c61a55653dc17ba3d9d63fec3b7",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "GLD",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.003504935053336596,
+      -0.001716407979168177
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "554b70267fd331410dca265b",
+    "label_hash": "f55a80d95f4d615a6856f5ddaa0da7487ecf4c9a81d9b8a1108fb8faf96aa424",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "GLD",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.003607492925331041,
+      -0.0018589519941172039
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "5f83f07b24a2caab63b209d0",
+    "label_hash": "1a8ebcfa6cf883ebfe850672454a01987b291aed5696b0aba0c45e3272e1d5a1",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M04",
+    "asset": "IEF",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.0013010661946529765,
+      -0.0007305819846218195
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "026d15ab67c84115f3c2027f",
+    "label_hash": "8f3bf8bc71621cc7d9ab1082fd08daa6f15bc836b90fb8de9089badbc82da49a",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M04",
+    "asset": "IEF",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.00129777934552095,
+      -0.0007143659233381371
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "f18daa7696931995e377f257",
+    "label_hash": "cc773c8ae80e3e36499ce64c41d87e54e4a54ba1af2515c7c300a100ceee0134",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M04",
+    "asset": "IEF",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0012252415688423504,
+      -0.0008450179890722345
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "cf682a3f08cec4745302ddbe",
+    "label_hash": "eb83555ec96120ac767c403769a35708c22c1d57d24f7c18bd3e53805610b070",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "IEF",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.0011084739855091485,
+      -0.000987559547435185
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "519243db7e70c373f89441df",
+    "label_hash": "f3f94fb780ea2d1b522c2a48af10ee4a72decd8f0d1ca44d2935771dd3bb81af",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "IEF",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.0011506460296308153,
+      -0.0010286727831265155
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "7467714351d4eb9cddc85144",
+    "label_hash": "cf46c0c58e05a9d07c7477d6a720054c8352a4c6f629009f0bed0032b189f277",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M04",
+    "asset": "IEF",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.0011717137891025897,
+      -0.0010366328839158969
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "3c42778d8b9268f3829867d3",
+    "label_hash": "68fe366bf4b58589c10f7fdf934f142429ba3cd4579f5c4516caadf358b710ad",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "IEF",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.001166918849769128,
+      -0.0010427813423333973
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "e098e3e2f970a0c05a1c4312",
+    "label_hash": "cd2e7dce2f274896ee91f2dc23df397f32d84281928f5b383f6f29cabb66bf8c",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "IEF",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.0011276418690692662,
+      -0.001097903127655
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "2c67652f261d26328e80c2ad",
+    "label_hash": "eec483a8308f178c5bee22f9853853a5c59337069517bd5290e6f0fb4133d4c8",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "IEF",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.0011475371180565787,
+      -0.0010979559263255485
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "6f51950ba519af3821bfc5bb",
+    "label_hash": "337ed956500c1a268c79d12ea48577133f29b26efc361e5e1f153493d5ff7e05",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M04",
+    "asset": "IYR",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.0016369341458836542,
+      -0.0014983026419972778
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "11278c17c2f54380fdc81a5e",
+    "label_hash": "5d44bce7db241f6ce68e406865d9936972682364788135b0b256a6a4a83eb322",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M04",
+    "asset": "IYR",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.0015739209028335919,
+      -0.001542196932243478
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "d7ccd92047240f1fc6fd8f12",
+    "label_hash": "46b23ec05882736d38e0f0c4bd49a7bcf3a6dff532e22f99133ad2a9c8f414a1",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M04",
+    "asset": "IYR",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0015298966895770487,
+      -0.0017332372217484006
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "ecb2ac769b5bcbfce2aaca80",
+    "label_hash": "27dd7bc4d766cdc32c794ed296df0536b3cdd4b70daf79a77ebdd83d77aad436",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "IYR",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.001506459106158445,
+      -0.0017696226079790024
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "6a45021290557fc52d4b1529",
+    "label_hash": "da653e8948630a5f0de29837b08e1a416537e15d2013d576518648f032d4bb23",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "IYR",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.001511794120197477,
+      -0.0016700909400252345
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "7434a55c9955a3e7f2646d03",
+    "label_hash": "052904af5cd0bfc2d72d328f3a92e02e0911ca7fdc122beba53a244011e9a19d",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M04",
+    "asset": "IYR",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.0016399661725619353,
+      -0.001788933654946379
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "b59c4cf8516ef1df0ded2b70",
+    "label_hash": "e3751d67841ddd7a60e829c918764655f355171651e27b0f7141479f69da32c5",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "IYR",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.001624664476015851,
+      -0.001751899984705743
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "e6b70ed5885319b9271d8094",
+    "label_hash": "bff494f87401ea824ca6697f19343ed969d357362a5524c73ac199f59cf932e6",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "IYR",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.0015929789813071199,
+      -0.0017439944028497514
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "2ce7f14b1360566edfb37225",
+    "label_hash": "6fec6186ab67da4d472c6a908fe0f1c64b95a2c6c239ad7d6b4763e537ad52f4",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "IYR",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.0026800148033052887,
+      -0.0024907090970717883
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "7bd5300c38bab1851452dd30",
+    "label_hash": "68e2c6b067ccd07d51cd30f2019d01a1edcb0b600183b760e528b0492184ad4e",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M04",
+    "asset": "LQD",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.0007236964705933801,
+      -0.000338045800870326
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "b7bedcebd6bc65f5ecab519e",
+    "label_hash": "9ffb6c11ad5ef596e9ae266d39b1e5a687cefb83fb2520e533ad578a3ecc38c7",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M04",
+    "asset": "LQD",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.0011574735258693286,
+      -0.0006185886543583373
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "3d3af898a519e0467d7e8ec9",
+    "label_hash": "1fc58236d6734c49bebc0b16e63e8dd75217f58f19ac5d1479ad77731befbbad",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M04",
+    "asset": "LQD",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0010679643001737995,
+      -0.0008863252621531889
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "d4f19e28ee5c16432df63bf5",
+    "label_hash": "db1d2ece79e4ace737a309ceda667126cbdd275eeac3782800d1922c8aec898f",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "LQD",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.0010182920585860868,
+      -0.0009657046790181856
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "84bc961b71ae99040e6cf168",
+    "label_hash": "35cae4946809daa1f265d09a529261cde1081b760b45e471306d60cf6f916de6",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "LQD",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.0010799042730795594,
+      -0.00096266796864818
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "70e631d5254b344dd74eb500",
+    "label_hash": "6e995a49f09274933ce83f7dd1b4cfaf5b7f68c51e427bdcffcfdc269a34f57b",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M04",
+    "asset": "LQD",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.0011267253555222023,
+      -0.0010422475118020233
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "5fb296ee07928e1455c4c7ab",
+    "label_hash": "b101ce06b69f1123463db7bde7a3377a2bc66880b39025f39f75094d35d6e033",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "LQD",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.0011308230409658013,
+      -0.0010650211380783291
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "3c9b7381e10fb2310e2b6abe",
+    "label_hash": "2a4b04834c82a20ce13bbd033165abc355d2bcce63b51e0e3ada3d21e4b2f5d5",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "LQD",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.0011244913368172254,
+      -0.0011173345106354222
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "77a3aff498e97464b2f28df2",
+    "label_hash": "1bba795d7f51e0f1f69979321674b897bf0d485cce255e3cdf782b22d2673a1d",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "LQD",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.0011895533700154723,
+      -0.0010820346914517105
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "abf6f370e6ef4bf23cb8d0e2",
+    "label_hash": "50e07d3a62c41f25ea374cbc802214599047f91100d5d5c401c262cdcb142747",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M04",
+    "asset": "SPY",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.0008979156991000839,
+      -0.002748947265903482
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "8efe0ee7ac2a7a7e746560e0",
+    "label_hash": "56bdddb18df22352de731a28540888dde0c32274dca690c6ea198b1f0dd4a1e9",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M04",
+    "asset": "SPY",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.0008632243230049263,
+      -0.002748947265903482
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "6ec4346bacf928553ca9dfb2",
+    "label_hash": "9e5ba331ff44bc0342856abe5fbc242baf721ec74a16cb2958d598e703c94730",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M04",
+    "asset": "SPY",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.0008644378799479991,
+      -0.0022605272573745982
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "3f01188f964078fb14ab811c",
+    "label_hash": "ff89e251d2375a99940921bfed274295716dd24d5c694927f0a9f82370895849",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "SPY",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.00085029117042153,
+      -0.000810243107404178
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "a28e2d624adc9d141cc3a223",
+    "label_hash": "5dcbc094d148b2879ab2ab1c993dea4555cbb3626cab757fab7ccebe9e46bacb",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "SPY",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.0008828245905073614,
+      -0.002181040821368554
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "934031070dc19089852fb828",
+    "label_hash": "e7602594913f26d648a1a0e17d92e29c14d239bc7a19fe03f9a59993a659c661",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M04",
+    "asset": "SPY",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.0008864306273612825,
+      -0.002181040821368554
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "f04f4431d2b4235354f53e4b",
+    "label_hash": "18a5b180a63917496705498b4f0c17d4f9c116be749f36d0450a15d74d856c1e",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "SPY",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.0008720574179992344,
+      -0.002181040821368554
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "efe97252deeffc0c4944ae63",
+    "label_hash": "19037d81a7933521966565954d176cb092b2f2d983cafa87e50c921816724067",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "SPY",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.000837630001866445,
+      -0.002181040821368554
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "0cd2e9d58ca178c0ef777bbe",
+    "label_hash": "8a99c8619830db2ee714755de8aa3ef3f6ce5f6588b4083094459118d19f35a5",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "SPY",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.0008826918347169834,
+      -0.002185443682037901
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "f51f8458c47e2e31239bdc68",
+    "label_hash": "ffe8786aa82bbac5ae24edbd3d33a621e4878a96dcd7baad73a20b93952cce26",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M04",
+    "asset": "TLT",
+    "asof": "2021-06-30 00:00:00",
+    "means": [
+      0.0014570294853206618,
+      -0.00040481802485610826
+    ],
+    "empty_states": [],
+    "known_start": "2010-06-30 00:00:00",
+    "known_end": "2021-06-30 00:00:00",
+    "label_model_id": "54273fc43f8dcf6d826d2bf9",
+    "label_hash": "e39a23bc15fef64ec460de6928f694632dbb4ebd5ec10c5a8d15ea8506437e70",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M04",
+    "asset": "TLT",
+    "asof": "2021-12-31 00:00:00",
+    "means": [
+      0.0014709922625995829,
+      -0.00031084843891439405
+    ],
+    "empty_states": [],
+    "known_start": "2010-12-31 00:00:00",
+    "known_end": "2021-12-31 00:00:00",
+    "label_model_id": "adcc1b17eb6d4d8e6f320999",
+    "label_hash": "305fbf39baef490a1ffb3377ffd8e62b61e244aaadfb4bf821351c273ceadc2c",
+    "weight_sum": 2770.0
+  },
+  {
+    "id": "M04",
+    "asset": "TLT",
+    "asof": "2022-06-30 00:00:00",
+    "means": [
+      0.001018900606088347,
+      -0.0007198557253090794
+    ],
+    "empty_states": [],
+    "known_start": "2011-06-30 00:00:00",
+    "known_end": "2022-06-30 00:00:00",
+    "label_model_id": "ba59d433a7120d72e3834964",
+    "label_hash": "1bf5126e4a2798b8c3187e416bccc51b434c2f02731365e8f5acbd31f86cd7f6",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "TLT",
+    "asof": "2022-12-30 00:00:00",
+    "means": [
+      0.0009849254442696924,
+      -0.0007915941905560283
+    ],
+    "empty_states": [],
+    "known_start": "2011-12-30 00:00:00",
+    "known_end": "2022-12-30 00:00:00",
+    "label_model_id": "ada95067a11f0fcf5ac6a501",
+    "label_hash": "35adf8c7bf9e8c17257972123d72eff26b18f0e4b9fdfed08199a2f36e699457",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "TLT",
+    "asof": "2023-06-30 00:00:00",
+    "means": [
+      0.0009508874677801795,
+      -0.0006667679995144956
+    ],
+    "empty_states": [],
+    "known_start": "2012-07-02 00:00:00",
+    "known_end": "2023-06-30 00:00:00",
+    "label_model_id": "8e0d666503772b5d5973bbeb",
+    "label_hash": "c5a1d7a4b87df08c4bfc1022b692a483b3d4a68e714857c7def56c29976d7d4d",
+    "weight_sum": 2767.0
+  },
+  {
+    "id": "M04",
+    "asset": "TLT",
+    "asof": "2023-12-29 00:00:00",
+    "means": [
+      0.0010262749882021828,
+      -0.000786772394796437
+    ],
+    "empty_states": [],
+    "known_start": "2012-12-31 00:00:00",
+    "known_end": "2023-12-29 00:00:00",
+    "label_model_id": "7d5d923f5295062a1a560273",
+    "label_hash": "c8e862792137ea4a0446f3ea0e100e655423278abf9f12552d2dfe33013f299e",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "TLT",
+    "asof": "2024-06-28 00:00:00",
+    "means": [
+      0.0009918921044588082,
+      -0.0007288195666258648
+    ],
+    "empty_states": [],
+    "known_start": "2013-06-28 00:00:00",
+    "known_end": "2024-06-28 00:00:00",
+    "label_model_id": "a3400fda7429f90ccba79a99",
+    "label_hash": "55d0429454c24dd95756b3a112b8287a9304d4d4d4bcf5566e5df7a77c7599c2",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "TLT",
+    "asof": "2024-12-31 00:00:00",
+    "means": [
+      0.0007763561641572491,
+      -0.0011920364222227358
+    ],
+    "empty_states": [],
+    "known_start": "2013-12-31 00:00:00",
+    "known_end": "2024-12-31 00:00:00",
+    "label_model_id": "d7cb968c3aceb84e8d2d9f8b",
+    "label_hash": "12bf75bf143f17cfb61bc9b6e864a3444a15dcbbaf67b74bca15e2a8126b97ce",
+    "weight_sum": 2769.0
+  },
+  {
+    "id": "M04",
+    "asset": "TLT",
+    "asof": "2025-06-30 00:00:00",
+    "means": [
+      0.002010389504287277,
+      -0.0020657549853725695
+    ],
+    "empty_states": [],
+    "known_start": "2014-06-30 00:00:00",
+    "known_end": "2025-06-30 00:00:00",
+    "label_model_id": "222c3a12be446b6c00d197e9",
+    "label_hash": "622165c41a7d573f8879f3039c9425cf335e84c2f393990ee36e8ff36f5ff237",
+    "weight_sum": 2767.0
+  }
+]

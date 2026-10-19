@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-19T15:17:23.171346+00:00",
+  "contract_sha256": "5b5068acdd753832e48cf191ad22d8983868c0d5d0e04406f62b1693b55ef474",
+  "source_sha256": "98f9347d08f1deb9354c265694b87aafb9674a753531e8bc5c180c450a6be869",
+  "preexisting_values_unchanged": true,
+  "original_trades_content_sha256": "82c5978702170d9dccc26c03076c3ae0815911a6c509748defacce5574189675",
+  "enriched_original_trades_content_sha256": "82c5978702170d9dccc26c03076c3ae0815911a6c509748defacce5574189675",
+  "original_predictions_content_sha256": "d8be982972a29388a175b3c7fd80cd8ad2eedcc65327413aba7e83499770ae53",
+  "enriched_original_predictions_content_sha256": "d8be982972a29388a175b3c7fd80cd8ad2eedcc65327413aba7e83499770ae53",
+  "quote_rows": 9603,
+  "unit_accounts": 31,
+  "unit_representation": "adjusted-price reinvested units",
+  "source_manifest_sha256": "65e9fb4f33450395f945677eb0a824ff7d7ddd12abae71441c952b1f546e1b73"
+}

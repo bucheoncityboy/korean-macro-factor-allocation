@@ -1,0 +1,15 @@
+{
+  "status": "executing_numerical_replay",
+  "created_utc": "2026-10-19T14:29:17.039502+00:00",
+  "execution_commit": "fc13fc5dd30c6344a8600b70853c8a7646515567",
+  "contract_sha256": "2e065e4921055446d0b6addb00c70ba88a4c414cae23ad7bf659e8302cec8ab4",
+  "prior_results_viewed": true,
+  "finished_utc": "2026-10-19T15:03:03.945736+00:00",
+  "initial_execution_contract_sha256": "d83247ffa312841f1dff48d65ec9cc651d6aac2ba355ad7bd8b258c3ce7fea28",
+  "verification_only_amendment": "configs/diagnostic_execution_contract.json#verification_invocation_amendment",
+  "initial_execution_commit": "fc13fc5dd30c6344a8600b70853c8a7646515567",
+  "replay_invocation_commit": "26672032a86f04f65dff81b98b4286323e577101",
+  "replay_source_sha256": "4e5d48c72e365f5cd90367f39760274c5f662ad5766fbe591d229fdc97fa4e6d",
+  "pre_numerical_contract_sha256": "2e065e4921055446d0b6addb00c70ba88a4c414cae23ad7bf659e8302cec8ab4",
+  "replay_started_utc": "2026-10-19T15:11:58.761487+00:00"
+}

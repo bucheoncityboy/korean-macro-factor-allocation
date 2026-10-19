@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "issue": "Verifier coerced committed integer lambda to float, changing serialized JM5 identity only",
+  "protocol_value": 10,
+  "protocol_type": "int",
+  "coerced_type": "float",
+  "probabilities_exactly_equal": true,
+  "labels_and_means_exactly_equal": true,
+  "original_input_reproduces_saved_IDs": true,
+  "original_label_id": "82f79cfcd065afecf0a21817",
+  "coerced_label_id": "a918501c32b4b064af27e777",
+  "remedy": "Verifier passes the original value/type from the frozen candidate list; no estimator or output changes; tolerances unchanged"
+}

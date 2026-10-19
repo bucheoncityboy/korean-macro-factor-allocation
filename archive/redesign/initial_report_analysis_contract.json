@@ -1,0 +1,105 @@
+{
+  "version": 4,
+  "created_utc": "2026-10-19T14:18:05.753163+00:00",
+  "prior_results_viewed": true,
+  "new_analysis_computed": false,
+  "source_sha256": {
+    "src/etf_regimes/redesign_analysis.py": "b7115839a07fa38c83827e17223d7acca39645195dab3c1483959bf97ebb0bfb",
+    "tests/test_redesign_analysis.py": "6db1be9e8588a1f571ac95710af443edd1bf4bcf06a8da47d354dcc8193b0d56"
+  },
+  "input_sha256": {
+    "results/study/nav.parquet": "c73da4db0d91d017e953e7ce43e2ea8d9fdee3f06a4195ccc29dbae9e38abb83",
+    "results/study/trades.parquet": "7c9b6aef95d652977f43d2639a3d4eaa2f65560b2e98f6b47a5ed1e1d4a54ff7",
+    "results/study/targets.parquet": "5643f2f6a1031e42a5046b20cd933c616bb420bb030ebe46ea4d5b5a4ec9d283",
+    "results/study/predictions.parquet": "829120df3d4d2dcafa92c105a49e2601dd64386fecf9a5dad4aed98c064879a8",
+    "results/study/summary.csv": "94d9e0c3ab06e3b58c90c0443a6a54dee13e83b57c7266b4604e27bc02ba6987",
+    "results/study/verification.json": "342b57b73d16c439bd4c0f5fcb967fd8ca5becb6bb33317ef4fe1018f388a8e0",
+    "results/study/artifact_manifest.json": "e9a2458c1a3efe8fce707eb068a881bcccd23b151c2f63f50c2456fd2d70607e",
+    "configs/execution_contract.json": "9c66e54be5b83594fd01791d483a28821e54b40f7320c4dbf49134e0221c1d7e",
+    "configs/followup_contract.json": "106451e8f6eaf386f061d1861b1d5a6c5d23f7f707742b35e1e1f8982c7eb6b8",
+    "configs/source_snapshot.json": "af1dae52f7f86201c5c4ce27e8180e39167086f2318cfb9d0bc21f9f98d9996b",
+    "results/source_manifest.json": "65e9fb4f33450395f945677eb0a824ff7d7ddd12abae71441c952b1f546e1b73",
+    "docs/redesign-plan.md": "2fb574613e3c19be5fcf1c0f4fb219e6325763b0086a80e9ce58447e1e54a86b",
+    "docs/redesign-review.md": "3e6193e74dd7a562b30d57e8010b75ab6e0b0ba8dd0cad430a9b82c452e42d8b"
+  },
+  "periods": {
+    "full_51": [
+      "2021-07-01",
+      "2025-09-30",
+      51
+    ],
+    "paper_overlap_30": [
+      "2021-07-01",
+      "2023-12-31",
+      30
+    ],
+    "extension_21": [
+      "2024-01-01",
+      "2025-09-30",
+      21
+    ]
+  },
+  "pairs": [
+    [
+      "mv",
+      "mv_jmxgb_floor"
+    ],
+    [
+      "mv",
+      "mv_jmxgb_cap"
+    ],
+    [
+      "minvar",
+      "minvar_jmxgb"
+    ],
+    [
+      "equal_weight",
+      "ew_jmxgb"
+    ]
+  ],
+  "formulas": {
+    "R": "252*mean(net daily return - actual BIL daily return)",
+    "V": "sqrt(252)*std(net daily return - actual BIL daily return, ddof=1)",
+    "S": "R/V; zero V -> undefined_zero_volatility",
+    "MDD": "min(cumprod(1+r)/cummax([1,cumprod(1+r)])-1), subperiod rebased",
+    "CAGR": "prod(1+r)**(12/months)-1",
+    "Calmar": "R/abs(MDD); zero DD -> undefined_zero_drawdown",
+    "CER": "12*mean(monthly r)-30*var(monthly r,ddof=1)",
+    "exposure": "mean(sum(actual closing risky weights))",
+    "turnover": "sum(abs(traded ETF notional)/NAV_before_open)/(months/12); 8 and 9 legs",
+    "cost": "sum(fee/prior closing NAV)/(months/12)",
+    "IC_CC": "Pearson(mu[t],C[d]/C[t]-1-known_DGS3MO[d]/100/252)",
+    "IC_intraday": "Pearson(mu[t],C[d]/O[d]-C_BIL[d]/O_BIL[d])",
+    "IC_mu": "unconditional original EWMA1260; hard p0>=.5; bear floor AND cap at -.001; include cash days",
+    "IC_aggregation": "mean of defined per-asset correlations; n and exclusions disclosed; not paper Overall",
+    "constant": "not_estimable_constant, never zero replacement",
+    "direction": "unrounded delta >1e-10 improve; <-1e-10 worse; otherwise numerical tie",
+    "subperiod": "slice original returns and trades; never reset holdings or rerun"
+  },
+  "outputs": [
+    "paper_table4.csv",
+    "paper_table6.csv",
+    "paper_directions.csv",
+    "paper_table7.csv",
+    "paper_ic_observations.parquet",
+    "paper_fidelity.json",
+    "analysis_verification.json",
+    "figures/paper_portfolios.png",
+    "figures/signals_SPY.png",
+    "figures/signals_IYR.png",
+    "figures/signals_IEF.png",
+    "figures/signals_all.png",
+    "analysis.json"
+  ],
+  "representative_assets": [
+    "SPY",
+    "IYR",
+    "IEF"
+  ],
+  "limitations": [
+    "Historical post-result analysis, not prospective",
+    "51 vs paper 204 months; 8 ETF vs 12 indices",
+    "JM baseline shares selected XGB penalty",
+    "Calmar convention not exact confirmed paper formula"
+  ]
+}

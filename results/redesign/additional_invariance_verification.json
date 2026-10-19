@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "mode": "actual_raw_data",
+  "verified_utc": "2026-10-19T15:25:49.894614+00:00",
+  "source_sha256": "3b8150d54acbcf4d311442c8228604a60d31f500ed7501ae4170910db2c6b5e9",
+  "M06_full_NAV_and_orders_exactly_invariant": true,
+  "future_new_selection_checks": 6,
+  "future_candidate_smoothing_checks": 1760,
+  "financial_outputs_modified": false,
+  "input_sha256": {
+    "results/redesign/nav.parquet": "7aedf9c673f54fab6128048f02084afbfbc70a11fa24b787c0ced703a327c926",
+    "results/redesign/targets.parquet": "44c2d75ac2a70271e98d14ad61e412992e4bad5b7a3f320ec70740aafb3c61e4",
+    "results/redesign/predictions.parquet": "b0bc4d2633232295871b89162d8cae95dcd28a54f21261e97798122145513bff",
+    "results/redesign/candidate_probabilities.parquet": "fec470f8f09910cf4db00594c9f5a69843a5f130d756d348d5e90f6ec847e61c"
+  }
+}

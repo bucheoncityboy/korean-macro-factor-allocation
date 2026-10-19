@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-10-19T14:29:33.058994+00:00",
+  "contract_sha256": "9e2894ff422ac9ed53150f08ca96351356d84e7a5e6dfd109aeca5c77d0c51d1",
+  "source_sha256": "b7115839a07fa38c83827e17223d7acca39645195dab3c1483959bf97ebb0bfb",
+  "published_metric_checks": 48,
+  "IC_target_rows": 8536,
+  "subperiod_accounts": 24,
+  "raw_manifest_checked": true,
+  "no_new_investment_accounts": true
+}

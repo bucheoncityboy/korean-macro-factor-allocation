@@ -1,0 +1,16 @@
+{
+  "path": "archive/redesign_ratio_source.bundle",
+  "sha256": "4910e241075fe79532d7fc329747cc6bccaddd92d3a2d1e81d553b54e926113c",
+  "execution_commit": "fc13fc5dd30c6344a8600b70853c8a7646515567",
+  "prerequisite": "1eb943301e4e523e20f4ae97adcb70035e12f0cb",
+  "sources": {
+    "src/etf_regimes/redesign_spec.py": "280ea2ef7efc5cfe880ff78a4c1715d00685f58815a177b13d04132e2a5e2040",
+    "src/etf_regimes/redesign_models.py": "fea10075dbddb86b0630acc5e91493d1b548cca4de4c111817ee3cf64acf2c0e",
+    "src/etf_regimes/redesign.py": "0ec74162830dd52004a163fd22e655f13baebd188eb859b03ddad51b320a4fec",
+    "src/etf_regimes/redesign_validation.py": "c2cfc226c57433a92b051491bcec6a90a8eb9c8c855b3793cd41f63ee46a2944",
+    "src/etf_regimes/redesign_account.py": "6fd315524ac777efa6e639bfd292593246f596be6315daf52f4acd86a8370e7b"
+  },
+  "contract_sha256": "2e065e4921055446d0b6addb00c70ba88a4c414cae23ad7bf659e8302cec8ab4",
+  "initial_failed_execution_binding": "archive/redesign/pre_ratio_execution_binding.json",
+  "scope": "Numerical account replay only; all8360 model fits and forecasts reused exactly"
+}

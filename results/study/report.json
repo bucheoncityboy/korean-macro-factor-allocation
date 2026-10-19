@@ -1,10 +1,10 @@
 {
   "status": "generated_after_actual_verification",
-  "report_source_sha256": "67519855fa4a2acb17866518150081fe336792ecfc53144f20d7492bc48253a6",
+  "report_source_sha256": "5d3d3f03c522f6c48c4d04b90e8b98c59b635f65ad349464558c3dbc22f86024",
   "document_sha256": "8a6ff65747525c561ba610a0f07e00e3c40ccb8fa79f36b1beea252bdd5ebcb2",
   "statistics_source_sha256": "9201b0a70582d0e096917cf94cf754920a6aa7a30e04e09f6b4f6e5705aacaf0",
   "extra_document_sha256": {
-    "README.md": "ec841cada6edaad58e390355f777af455595c820ae6e03921d7fbffb5e5be64f",
+    "README.md": "7a91a8d59b4ddeea35dfc4888012d5b3506949afbfe96680bab21ade45703f84",
     "docs/paper-comparison.md": "8e1b5adf4bf30fa4b75ea2c9ec5c1cb0500295e6ba0d9c87432a7247d7ddf0f5",
     "docs/assets/paper_nav_drawdown.png": "99829c49b6fad2e2635abe3145498054e14127562671a8303fb295a838cbb2e5",
     "docs/assets/paper_nav_drawdown.svg": "34d3eda71f42069ecdae8bc364d1803ae48fe4b85b19b19daa5fd4d32b0d911e",
@@ -13,7 +13,8 @@
     "docs/assets/portfolio_figures.json": "d761d1b6bbf923cbd28b7da0d684bdca43ee38956b2114e08dc6d5d79dd39171"
   },
   "presentation_update": {
-    "scope": "Portfolio case-study README with result tables, account-path chart and simultaneous CER intervals; generated from verified saved results",
-    "empirical_outputs_unchanged": true
+    "scope": "Explicit paper-first README with verified A51 empirical tables and all30 D51 diagnostics; original financial outputs unchanged",
+    "project_report": "results/redesign/report.json",
+    "actual_verification_record_preserved": true
   }
 }

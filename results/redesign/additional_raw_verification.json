@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "mode": "actual_raw_data",
+  "verified_utc": "2026-10-19T14:40:20.237980+00:00",
+  "source_sha256": "76e8fb911067a25e423a8a0a318d8bc9522e2fd2bd06deedb549cfa0261f3b5d",
+  "EWMA1260_manual_recursion_max_abs_errors": {
+    "EEM": 0.0,
+    "EFA": 0.0,
+    "GLD": 0.0,
+    "IEF": 0.0,
+    "IYR": 0.0,
+    "LQD": 0.0,
+    "SPY": 0.0,
+    "TLT": 0.0
+  },
+  "independent_next_session_returns": "passed",
+  "IC_rows": 8536,
+  "financial_accounts_recomputed": 0
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "item": "training",
+    "paper": "https://arxiv.org/html/2406.09578v2#S3",
+    "evidence": "11y train,5y validation,6m updates",
+    "code": "models.py:fit_fold; study.py:choose,fold_dates",
+    "status": "일치"
+  },
+  {
+    "item": "features",
+    "paper": "https://arxiv.org/html/2406.09578v2#S3",
+    "evidence": "return8+market5; IEF substitutes aggregate bond; FRED date lag",
+    "code": "data.py:build_features",
+    "status": "적용상 대체"
+  },
+  {
+    "item": "JM",
+    "paper": "https://arxiv.org/html/2406.09578v2#S3",
+    "evidence": "author implementation pinned; train-only scaler; frozen online truth",
+    "code": "models.py:fit_fold; uv.lock",
+    "status": "일치"
+  },
+  {
+    "item": "XGB",
+    "paper": "https://arxiv.org/html/2406.09578v2#S3",
+    "evidence": "paper version unspecified; locked 2.1.4 defaults; resolved configuration saved",
+    "code": "models.py:classify; results/study/fits.json",
+    "status": "원문 미확정"
+  },
+  {
+    "item": "selection",
+    "paper": "https://arxiv.org/html/2406.09578v2#S3",
+    "evidence": "lambda 0,.1,1,10,100; h 0,2,4,8 initial then fixed; exact grid/count/order unspecified",
+    "code": "study.py:choose,forecasts; configs/protocol.json",
+    "status": "원문 미확정"
+  },
+  {
+    "item": "mean",
+    "paper": "https://arxiv.org/html/2406.09578v2#S4",
+    "evidence": "daily DGS excess state mean; both -10bp floor/cap retained",
+    "code": "study.py:execute; models.py:fit_fold",
+    "status": "원문 미확정"
+  },
+  {
+    "item": "covariance",
+    "paper": "https://arxiv.org/html/2406.09578v2#S4",
+    "evidence": "past11y EWM252, unbiased, daily known-DGS excess",
+    "code": "trading.py:ewm_covariance; study.py:prepare",
+    "status": "일치"
+  },
+  {
+    "item": "objective",
+    "paper": "https://arxiv.org/html/2406.09578v2#S4.E2",
+    "evidence": "risk10/trade1,8 risky cost penalty,cap.4; baseMV risk5/trade0; OSQP replaces Gurobi",
+    "code": "allocation.py:DailyOptimizer; study.py:execute",
+    "status": "적용상 대체"
+  },
+  {
+    "item": "cash_rule",
+    "paper": "https://arxiv.org/html/2406.09578v2#S4",
+    "evidence": "<=3 bullish threshold carried from12 indices to8 ETFs",
+    "code": "study.py:execute",
+    "status": "적용상 대체"
+  },
+  {
+    "item": "trading",
+    "paper": "https://arxiv.org/html/2406.09578v2#S4",
+    "evidence": "after close -> next adjusted open; actual9-leg5bp; BIL cash",
+    "code": "allocation.py:sequential_account; trading.py:settle",
+    "status": "적용상 대체"
+  },
+  {
+    "item": "universe",
+    "paper": "https://arxiv.org/html/2406.09578v2#S5",
+    "evidence": "8 listed ETFs vs12 indices,51mo vs204mo; no synthetic prelisting history",
+    "code": "configs/protocol.json; results/calendar_audit.json",
+    "status": "명시적 변경"
+  },
+  {
+    "item": "JM_baseline",
+    "paper": "https://arxiv.org/html/2406.09578v2#S5.SS1",
+    "evidence": "shared selected XGB lambda; paper baseline penalty unspecified",
+    "code": "study.py:execute; configs/protocol.json",
+    "status": "원문 미확정"
+  },
+  {
+    "item": "baselines",
+    "paper": "https://arxiv.org/html/2406.09578v2#S5.SS2",
+    "evidence": "MinVar constant .001 fixed here; fix-mix sleeve-normalized ETF proxy",
+    "code": "study.py:execute; configs/protocol.json",
+    "status": "적용상 대체"
+  }
+]

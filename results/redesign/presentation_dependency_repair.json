@@ -1,0 +1,8 @@
+{
+  "status": "pre-account dependency repair",
+  "created_utc": "2026-10-19T14:29:12.325505+00:00",
+  "initial_diagnostic_run": "archive/redesign/initial_diagnostic_run.json",
+  "new_account_outputs_present": false,
+  "only_contract_dependency_mapping_changed": true,
+  "all_financial_code_and_estimation_paths_unchanged": true
+}

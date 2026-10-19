@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/youngjaekim/Desktop/dynamic/src/etf_regimes/redesign.py", line 277, in <module>
+    main()
+  File "/Users/youngjaekim/Desktop/dynamic/src/etf_regimes/redesign.py", line 267, in main
+    verify(a.workers)
+  File "/Users/youngjaekim/Desktop/dynamic/src/etf_regimes/redesign_validation.py", line 217, in verify
+    check();counts=artifacts(hashes=False);a=anchor()
+                                             ^^^^^^^^
+  File "/Users/youngjaekim/Desktop/dynamic/src/etf_regimes/redesign_validation.py", line 89, in anchor
+    require(np.allclose(o[cols],n[cols],atol=1e-9,rtol=1e-9),f'A0 does not reproduce {name}')
+  File "/Users/youngjaekim/Desktop/dynamic/src/etf_regimes/common.py", line 30, in require
+    raise RuntimeError(message)
+RuntimeError: A0 does not reproduce targets

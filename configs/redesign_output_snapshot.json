@@ -1,0 +1,79 @@
+{
+  "format": "deterministic-zip-split-v1",
+  "archive_sha256": "da3753fc48f0a4ba72459d40266c6c6b3dc1bc5fbc5efca271fb4da080e54674",
+  "archive_bytes": 31853779,
+  "parts": [
+    {
+      "path": "archive/redesign_outputs/part-000.bin",
+      "bytes": 4194304,
+      "sha256": "51978d3bf086525a272b29b469019f67591f17c764eaf92d5037d9469e45133e"
+    },
+    {
+      "path": "archive/redesign_outputs/part-001.bin",
+      "bytes": 4194304,
+      "sha256": "43f102e9874bd51c23cdbc2b8edc705f2803165a6a4e4c44077484dbbea264b6"
+    },
+    {
+      "path": "archive/redesign_outputs/part-002.bin",
+      "bytes": 4194304,
+      "sha256": "e51163bb2e8de2fb84701f392fb43946b5d30b393d398e83cb70e7128b15636d"
+    },
+    {
+      "path": "archive/redesign_outputs/part-003.bin",
+      "bytes": 4194304,
+      "sha256": "06705d8ed8eaa9fb889490cb78ede8f4a8c42b2ef5e5e2236420b5183e8c74b9"
+    },
+    {
+      "path": "archive/redesign_outputs/part-004.bin",
+      "bytes": 4194304,
+      "sha256": "2ce5c3d96be40f6711d632c9e86d6d46ea43effc5c8792ccd1a50687c9250b9c"
+    },
+    {
+      "path": "archive/redesign_outputs/part-005.bin",
+      "bytes": 4194304,
+      "sha256": "3446d8f1c3dd6c12ea4ed76649f3f3b170eaaa2084593d36c8aaf8e6f16fc6b7"
+    },
+    {
+      "path": "archive/redesign_outputs/part-006.bin",
+      "bytes": 4194304,
+      "sha256": "d9e8926997f4bf9c82f33b21a166d56941e4d5e099db0a55346f2dcb68d543e5"
+    },
+    {
+      "path": "archive/redesign_outputs/part-007.bin",
+      "bytes": 2493651,
+      "sha256": "9ed4a7e9ddd6bff443d227ac75d17d544b82eed7b5ca723dd51bd7dd25dd964a"
+    }
+  ],
+  "members": {
+    "results/redesign/candidate_probabilities.parquet": {
+      "bytes": 7748857,
+      "sha256": "fec470f8f09910cf4db00594c9f5a69843a5f130d756d348d5e90f6ec847e61c"
+    },
+    "results/redesign/predictions.parquet": {
+      "bytes": 2540822,
+      "sha256": "b0bc4d2633232295871b89162d8cae95dcd28a54f21261e97798122145513bff"
+    },
+    "results/redesign/fits.json": {
+      "bytes": 48455100,
+      "sha256": "4dffe8e0dc7c0320bf7d97f3194a6801787995db4a491007b061214610e9ac25"
+    },
+    "results/redesign/tuning.json": {
+      "bytes": 177251,
+      "sha256": "1b346f36c0cee8b526d5b9609a88bbccb5630778b24873b3cfdae611c23bf8a8"
+    },
+    "results/redesign/nav.parquet": {
+      "bytes": 2703401,
+      "sha256": "7aedf9c673f54fab6128048f02084afbfbc70a11fa24b787c0ced703a327c926"
+    },
+    "results/redesign/targets.parquet": {
+      "bytes": 4185823,
+      "sha256": "44c2d75ac2a70271e98d14ad61e412992e4bad5b7a3f320ec70740aafb3c61e4"
+    },
+    "results/redesign/trades.parquet": {
+      "bytes": 13047688,
+      "sha256": "6b188f3fbda0f8b0468b062e8cc4cba47539bd87557b53bee582492614ab81d1"
+    }
+  },
+  "numeric_values_unchanged": true,
+  "dedicated_archive_path": "results/private/redesign_outputs.zip"
+}

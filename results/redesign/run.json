@@ -1,0 +1,17 @@
+{
+  "status": "verified",
+  "created_utc": "2026-10-19T14:29:17.039502+00:00",
+  "execution_commit": "fc13fc5dd30c6344a8600b70853c8a7646515567",
+  "contract_sha256": "2e065e4921055446d0b6addb00c70ba88a4c414cae23ad7bf659e8302cec8ab4",
+  "prior_results_viewed": true,
+  "finished_utc": "2026-10-19T15:03:03.945736+00:00",
+  "initial_execution_contract_sha256": "d83247ffa312841f1dff48d65ec9cc651d6aac2ba355ad7bd8b258c3ce7fea28",
+  "verification_only_amendment": "configs/diagnostic_execution_contract.json#verification_invocation_amendment",
+  "initial_execution_commit": "1eb943301e4e523e20f4ae97adcb70035e12f0cb",
+  "replay_invocation_commit": "a1e3b29d1b1789d3fe7158eb34e24a4561f04e72",
+  "replay_source_sha256": "2f5271b2574548fc584110e8f99b64e543d5194d394e670670e3406765556f88",
+  "pre_numerical_contract_sha256": "b06b6fd39aa7058737bf77ff137f73f1f575f5eb53eef5611e408b0ee71817ed",
+  "replay_started_utc": "2026-10-19T15:13:48.510903+00:00",
+  "forecasts_reused_without_change": true,
+  "replay_finished_utc": "2026-10-19T15:17:24.079331+00:00"
+}

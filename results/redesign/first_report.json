@@ -1,0 +1,7 @@
+{
+  "status": "paper_analysis_verified",
+  "diagnostics": "not_yet_executed",
+  "document_sha256": "b0246c2cefe1c7969f08b788d017fc1dd8e6239082e25d6f7003417b7b9c90ad",
+  "analysis_contract_sha256": "9714d3821e39ff3a172e9e2236df6398a1f33e3e0ae0d8292115f4dbcdfe5d9b",
+  "archived_document_path": "archive/redesign/first_paper_report.md"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "fresh_temporary_directories": true,
+  "checks": {
+    "redesign_output_snapshot": {
+      "status": "passed",
+      "restored_files": 7,
+      "verified_files": 7,
+      "numeric_values_and_bytes_unchanged": true,
+      "manifest_sha256": "a16aee2b30d92c898b36b6eb20d9474fb419ab9d1032369b6cf453271cf6f68d"
+    },
+    "redesign_failed_accounts_snapshot": {
+      "status": "passed",
+      "restored_files": 3,
+      "verified_files": 3,
+      "numeric_values_and_bytes_unchanged": true,
+      "manifest_sha256": "090cfaee1f86a4a3994c89b4190a381feff72d40afc0100ecf4857dfa1168148"
+    }
+  }
+}

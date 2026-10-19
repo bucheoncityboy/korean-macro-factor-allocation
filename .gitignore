@@ -16,3 +16,12 @@ results/followup/tuning.json
 results/followup/nav.parquet
 results/followup/targets.parquet
 results/followup/trades.parquet
+results/redesign/candidate_probabilities.parquet
+results/redesign/predictions.parquet
+results/redesign/fits.json
+results/redesign/tuning.json
+results/redesign/nav.parquet
+results/redesign/targets.parquet
+results/redesign/trades.parquet
+results/followup/verification_artifacts.json
+results/redesign/verification_artifacts.json

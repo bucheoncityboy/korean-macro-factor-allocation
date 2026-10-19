@@ -1,0 +1,10 @@
+{
+  "path": "archive/redesign_verification_source.bundle",
+  "sha256": "eb76e8ece627fcdc511bbdc3984354256f4ac8ff60e6018fecaec92f612a89ec",
+  "verification_commit": "94392f9227be246a03095d18ea82fa2228db3609",
+  "prerequisite": "1eb943301e4e523e20f4ae97adcb70035e12f0cb",
+  "execution_source_binding": "configs/redesign_execution_source.json",
+  "active_contract_sha256": "b06b6fd39aa7058737bf77ff137f73f1f575f5eb53eef5611e408b0ee71817ed",
+  "verification_source_sha256": "c2cfc226c57433a92b051491bcec6a90a8eb9c8c855b3793cd41f63ee46a2944",
+  "financial_estimator_allocation_sources_unchanged": true
+}

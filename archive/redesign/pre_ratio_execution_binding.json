@@ -1,0 +1,14 @@
+{
+  "path": "archive/redesign_execution_source.bundle",
+  "sha256": "ed012eb8820f262341e9135efa4e607ed17b845fa7969c8ff949969e6f1f7b68",
+  "execution_commit": "1eb943301e4e523e20f4ae97adcb70035e12f0cb",
+  "prerequisite": "b2018d9fcc3d6f0bee6a14aee29889cf3e321b14",
+  "sources": {
+    "src/etf_regimes/redesign_spec.py": "0ec92bf9f68dfb4e6ddeae75863d3fbae1dd5a8dbc5444e3f93c0864280825c3",
+    "src/etf_regimes/redesign_models.py": "fea10075dbddb86b0630acc5e91493d1b548cca4de4c111817ee3cf64acf2c0e",
+    "src/etf_regimes/redesign.py": "6a75d3744d18f699327ff0133f28aaa543d0c5489d3e11ab9eee0d06872f825f",
+    "src/etf_regimes/redesign_validation.py": "cc6295e3e3554650a837c468f5e9160c22f4054e74ff6522107e87c00e617984"
+  },
+  "contract_sha256": "d83247ffa312841f1dff48d65ec9cc651d6aac2ba355ad7bd8b258c3ce7fea28",
+  "purpose": "Exact local frozen source and pre-account dependency amendment; prior results viewed."
+}

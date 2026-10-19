@@ -1,0 +1,8 @@
+{
+  "status": "executed_unverified",
+  "created_utc": "2026-10-19T14:29:17.039502+00:00",
+  "execution_commit": "1eb943301e4e523e20f4ae97adcb70035e12f0cb",
+  "contract_sha256": "d83247ffa312841f1dff48d65ec9cc651d6aac2ba355ad7bd8b258c3ce7fea28",
+  "prior_results_viewed": true,
+  "finished_utc": "2026-10-19T15:03:03.945736+00:00"
+}

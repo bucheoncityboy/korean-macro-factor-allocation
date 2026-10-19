@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-10-19T14:50:49.186054+00:00",
+  "source_sha256": "98f9347d08f1deb9354c265694b87aafb9674a753531e8bc5c180c450a6be869",
+  "purpose": "Append explicit clocks and adjusted-price units; preserve every existing column exactly",
+  "unit_definition": "Units in distribution-reinvested adjusted-price representation, not broker share counts",
+  "inputs": "D51 saved ledger and pinned raw adjusted open/close; no signal regeneration",
+  "checks": [
+    "exact preexisting DataFrame columns/content hashes",
+    "raw manifest",
+    "units * adjusted close = saved NAV",
+    "prior units * adjusted open = saved pre-trade NAV"
+  ],
+  "quote_release": "one row per asset/execution session, including preceding adjusted close; frozen source manifest referenced",
+  "causal_identity_addendum": {
+    "created_utc": "2026-10-19T14:55:47.108443+00:00",
+    "initial_contract_archive": "archive/redesign/initial_packaging_contract.json",
+    "initial_contract_sha256": "6831ffae1a008701a40cf1bfe8f6469dee27a49e3242fb5f96b61e640ea02801",
+    "initial_source_archive": "archive/redesign/initial_redesign_packaging.py",
+    "purpose": "Preserve legacy fit_key as provenance and append forecast_model_id built only from known training-prefix data/configuration.",
+    "financial_columns_unchanged": true
+  }
+}

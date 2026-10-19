@@ -1,0 +1,47 @@
+{
+  "format": "deterministic-zip-split-v1",
+  "purpose": "Preserve all31 failed-arithmetic accounts before ratio-first compatibility repair; never promote these as final results",
+  "archive_sha256": "fdddcb3afcd25c501c820d1232df854cc59961c9dfc3764a981ffb8a594c56b0",
+  "archive_bytes": 19773296,
+  "parts": [
+    {
+      "path": "archive/redesign_failed_accounts/part-000.bin",
+      "bytes": 4194304,
+      "sha256": "97180fb20247e799483db2ecc37346510972bb18667f472c8a01f5b11918e8c2"
+    },
+    {
+      "path": "archive/redesign_failed_accounts/part-001.bin",
+      "bytes": 4194304,
+      "sha256": "1eefa91e4c15ff0ad6574c66d98a49fa39fb1846bbfbcb37348377b35d84b4a3"
+    },
+    {
+      "path": "archive/redesign_failed_accounts/part-002.bin",
+      "bytes": 4194304,
+      "sha256": "010fbb104b8d652606e217a771732ca43fd3bae51d061e023d456de6f7b84aec"
+    },
+    {
+      "path": "archive/redesign_failed_accounts/part-003.bin",
+      "bytes": 4194304,
+      "sha256": "5c6e2b2c999c130824f66a706846b3167d25a0ca65e8a1f623c0951c500ce1d1"
+    },
+    {
+      "path": "archive/redesign_failed_accounts/part-004.bin",
+      "bytes": 2996080,
+      "sha256": "d74963a35402a9f82f75b4711a2eccc6f12e5688fa46f719551209c91af5476b"
+    }
+  ],
+  "members": {
+    "results/redesign/nav.parquet": {
+      "bytes": 2703611,
+      "sha256": "95d3452b39b57269a38ad591ab9043b445b383ca8250fd41e2d3388906071d1d"
+    },
+    "results/redesign/targets.parquet": {
+      "bytes": 4190012,
+      "sha256": "b507076e57aa571fcd6bedc64ffeea38f6fc255e6f8af588f4abb96294e021c9"
+    },
+    "results/redesign/trades.parquet": {
+      "bytes": 13063395,
+      "sha256": "70f20fc989e1b4fcd4fa9a080851d1bc0ef7a77485a72c582572a21364911063"
+    }
+  }
+}

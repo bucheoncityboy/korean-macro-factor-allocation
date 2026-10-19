@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "purpose": "Numerical compatibility repair only; original A0 reference, no new strategy selection",
+  "checks": {
+    "nav": {
+      "max_abs_error": 0.0,
+      "exact": true
+    },
+    "targets": {
+      "max_abs_error": 0.0,
+      "exact": true
+    },
+    "trades": {
+      "max_abs_error": 0.0,
+      "exact": true
+    }
+  },
+  "candidate_account_source_sha256": "6fd315524ac777efa6e639bfd292593246f596be6315daf52f4acd86a8370e7b",
+  "tolerances_unchanged": true
+}

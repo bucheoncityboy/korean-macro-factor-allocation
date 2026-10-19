@@ -1,0 +1,13 @@
+period,baseline,enhanced,delta_annual_excess_return,direction_annual_excess_return,delta_daily_sharpe,direction_daily_sharpe,delta_max_drawdown,direction_max_drawdown,all_three_improved
+extension_21,mv,mv_jmxgb_floor,-0.16070110293171538,worse,-1.1741809014429867,worse,0.029420393804755363,improved,False
+extension_21,mv,mv_jmxgb_cap,-0.16070110256227138,worse,-1.1741808971948589,worse,0.029420393430474312,improved,False
+extension_21,minvar,minvar_jmxgb,-0.05782891018193878,worse,-0.8811441081023038,worse,-0.021413592834522932,worse,False
+extension_21,equal_weight,ew_jmxgb,-0.10177101075320209,worse,-1.1113322198395439,worse,-0.012751927655306083,worse,False
+full_51,mv,mv_jmxgb_floor,-0.059213694068251985,worse,-0.5490019488491633,worse,0.18244497761593437,improved,False
+full_51,mv,mv_jmxgb_cap,-0.058154259701493946,worse,-0.5344844455197229,worse,0.18244497724165432,improved,False
+full_51,minvar,minvar_jmxgb,-0.0025816837921500057,worse,-0.10029515408638412,worse,0.15110376517277468,improved,False
+full_51,equal_weight,ew_jmxgb,-0.02625936997918668,worse,-0.32298546728673033,worse,0.1537832306970529,improved,False
+paper_overlap_30,mv,mv_jmxgb_floor,0.011456393502808394,improved,-0.2699499020936059,worse,0.18600597076326197,improved,False
+paper_overlap_30,mv,mv_jmxgb_cap,0.013253557743689706,improved,-0.24089270349390146,worse,0.1883895872223763,improved,False
+paper_overlap_30,minvar,minvar_jmxgb,0.035889357795652034,improved,0.2546413487448777,improved,0.15334238700849068,improved,True
+paper_overlap_30,equal_weight,ew_jmxgb,0.02632266286504027,improved,0.12997020415687005,improved,0.16058716036563325,improved,True

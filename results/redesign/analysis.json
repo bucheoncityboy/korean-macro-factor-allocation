@@ -1,0 +1,12 @@
+{
+  "status": "verified",
+  "created_utc": "2026-10-19T14:18:35.305722+00:00",
+  "contract_sha256": "9e2894ff422ac9ed53150f08ca96351356d84e7a5e6dfd109aeca5c77d0c51d1",
+  "execution_commit": "a8b12a6b703845867850c73770fbb09f3192032c",
+  "prior_results_viewed": true,
+  "rows_table4": 72,
+  "ic_rows": 144,
+  "initial_contract_sha256": "9714d3821e39ff3a172e9e2236df6398a1f33e3e0ae0d8292115f4dbcdfe5d9b",
+  "dependency_mapping_updated_without_metric_recomputation": true,
+  "verification_record_sha256": "c1ecd98f274d150371ce051a463e77fcc792a29a02ff1b2f0e1f7323787c56a7"
+}

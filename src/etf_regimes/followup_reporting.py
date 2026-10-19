@@ -217,7 +217,7 @@ def readme_from_saved():
               "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 uv run etf-study followup verify --workers 4",
               "uv run etf-study followup report", "uv run etf-study followup verify --artifacts-only", "```", "",
               "원자료 없이 저장 결과만 검사할 때는 먼저 `uv run python -m etf_regimes.followup_snapshot restore`로 분할 스냅샷을 복원한다. 기존 실행에서는 `followup freeze`로 계약을 덮어쓰지 않는다. [재현 안내](docs/reproduction.md) · [원문 준거 결과](docs/results.md) · [공개 CI](https://github.com/bucheoncityboy/korean-macro-factor-allocation/actions)"]
-    (ROOT / "README.md").write_text("\n".join(lines) + "\n")
+    (ROOT / "docs/followup-readme.md").write_text("\n".join(lines) + "\n")
 
 
 def write_document(summary, inference, power):

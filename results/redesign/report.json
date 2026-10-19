@@ -1,0 +1,16 @@
+{
+  "status": "generated_after_actual_verification",
+  "created_utc": "2026-10-19T15:31:25.372438+00:00",
+  "report_source_sha256": "73896dd56e66abf84007e3dec75f86d00e4202a755985f6bd279d1508facbe2d",
+  "analysis_contract_sha256": "f43e9011ab7de27beac728ea3c9dfe750c046757b8b6797c252682a1f9afae8d",
+  "README_sha256": "7a91a8d59b4ddeea35dfc4888012d5b3506949afbfe96680bab21ade45703f84",
+  "documents": {
+    "docs/redesign-paper.md": "c6708d152927891d5ff6001baca5ad75231eb87371bbac0c49859a82977c240b",
+    "docs/redesign-diagnostics.md": "6a14f7079060f3e0abd3eef57fc57c1e733cfbce7295f88cbe8e6f0b5a96cc24"
+  },
+  "prior_results_viewed": true,
+  "diagnostic_accounts": 30,
+  "canonical_selection": "explicit redesign report command",
+  "output_snapshot_manifest_sha256": "a16aee2b30d92c898b36b6eb20d9474fb419ab9d1032369b6cf453271cf6f68d",
+  "output_snapshot_source_sha256": "2fef4312e90d50213690af573cce7ce1887bae8b47302b3515273caba825c844"
+}

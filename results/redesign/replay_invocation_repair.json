@@ -1,0 +1,9 @@
+{
+  "status": "corrected_before_account_replay",
+  "cause": "Standalone repair runner lacked the multiprocessing main guard on macOS; child import repeated orchestration initialization.",
+  "initial_script": "archive/redesign/initial_allocation_replay.py",
+  "initial_script_sha256": "4e5d48c72e365f5cd90367f39760274c5f662ad5766fbe591d229fdc97fa4e6d",
+  "corrected_script_sha256": "2f5271b2574548fc584110e8f99b64e543d5194d394e670670e3406765556f88",
+  "financial_engine_sources_and_all_forecasts_unchanged": true,
+  "resume_from": "archive/redesign/pre_ratio_run.json"
+}

@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-10-19T14:50:49.186054+00:00",
+  "source_sha256": "c2e325506ccbfabb2c2366edfa94a6031701757839e3236418922aa27725b7ce",
+  "purpose": "Append explicit clocks and adjusted-price units; preserve every existing column exactly",
+  "unit_definition": "Units in distribution-reinvested adjusted-price representation, not broker share counts",
+  "inputs": "D51 saved ledger and pinned raw adjusted open/close; no signal regeneration",
+  "checks": [
+    "exact preexisting DataFrame columns/content hashes",
+    "raw manifest",
+    "units * adjusted close = saved NAV",
+    "prior units * adjusted open = saved pre-trade NAV"
+  ],
+  "quote_release": "one row per asset/execution session, including preceding adjusted close; frozen source manifest referenced"
+}

@@ -1,0 +1,682 @@
+{
+  "status": "passed",
+  "mode": "actual_raw_data",
+  "verified_utc": "2026-10-19T15:26:22.748861+00:00",
+  "verification_source_sha256": "c2cfc226c57433a92b051491bcec6a90a8eb9c8c855b3793cd41f63ee46a2944",
+  "contract_sha256": "2e065e4921055446d0b6addb00c70ba88a4c414cae23ad7bf659e8302cec8ab4",
+  "new_accounts": 30,
+  "anchor_accounts": 1,
+  "predictions": 110968,
+  "candidate_predictions": 1023000,
+  "resolved_matrix_contract_sha256": "2e065e4921055446d0b6addb00c70ba88a4c414cae23ad7bf659e8302cec8ab4",
+  "contract_version": 4,
+  "anchor": {
+    "nav_max_abs_error": 0.0,
+    "targets_max_abs_error": 0.0,
+    "trades_max_abs_error": 0.0
+  },
+  "independent_cold_fits": 264,
+  "new_selection_rechecks": 144,
+  "hostile_future": {
+    "cutoff": "2023-12-29 00:00:00",
+    "feature_assets": 8,
+    "new_learning_paths": 11,
+    "account_prefixes": 31,
+    "price_market_vintage_unpublished_labels": "passed",
+    "M06_regime_invariance": "passed"
+  },
+  "independent_complete_share_replays": 31,
+  "optimality_certificates": [
+    {
+      "id": "A0",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 2.6724553559703823e-13,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "A0",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 5.21412492175688e-12,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "A0",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 7.882459875790948e-12,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F01",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 2.6724553559703823e-13,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F01",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 1.8377581574580137e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F01",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 2.438266277250689e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F02",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 2.6724553559703823e-13,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F02",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 3.851889141849585e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F02",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 1.1392254761072307e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F03",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 2.6724553559703823e-13,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F03",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 1.7912469034084277e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F03",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 2.5314359983208412e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F04",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 2.6724553559703823e-13,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F04",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 1.3795029354946031e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F04",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 6.43096448489644e-12,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F05",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 2.6724553559703823e-13,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F05",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 3.727000153809501e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F05",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 3.195829668609096e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F06",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 2.6724553559703823e-13,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F06",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 7.664507917226615e-12,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F06",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 3.8545857044408605e-12,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F07",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 2.6724553559703823e-13,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F07",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 1.4373929563965548e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F07",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 4.577207970285491e-12,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F08",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 2.6724553559703823e-13,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F08",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 9.943526254121982e-12,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F08",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 3.0283734721303635e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F09",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 2.6724553559703823e-13,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F09",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 7.898244124698861e-12,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "F09",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 3.46477371532955e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "I01_M_L2_5",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 2.6724553559703823e-13,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "I01_M_L2_5",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 1.1634906363008901e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "I01_M_L2_5",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 3.072111467126992e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "I01_N_L2_5",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 2.6724553559703823e-13,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "I01_N_L2_5",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 1.79600856756168e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "I01_N_L2_5",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 9.96496093107202e-12,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "I02_asset2_8_21",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 7.48878021226973e-12,
+      "scope": 8,
+      "horizon": 21
+    },
+    {
+      "id": "I02_asset2_8_21",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 8.487880537311199e-13,
+      "scope": 8,
+      "horizon": 21
+    },
+    {
+      "id": "I02_asset2_8_21",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 5.461441683011353e-12,
+      "scope": 8,
+      "horizon": 21
+    },
+    {
+      "id": "I02_asset2_9_1",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 0.0,
+      "scope": 9,
+      "horizon": 1
+    },
+    {
+      "id": "I02_asset2_9_1",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 4.76073173938385e-16,
+      "scope": 9,
+      "horizon": 1
+    },
+    {
+      "id": "I02_asset2_9_1",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 2.769388635515818e-11,
+      "scope": 9,
+      "horizon": 1
+    },
+    {
+      "id": "I02_asset2_9_21",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 1.8090246748508898e-11,
+      "scope": 9,
+      "horizon": 21
+    },
+    {
+      "id": "I02_asset2_9_21",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 4.222907830711553e-13,
+      "scope": 9,
+      "horizon": 21
+    },
+    {
+      "id": "I02_asset2_9_21",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 7.418529169873206e-12,
+      "scope": 9,
+      "horizon": 21
+    },
+    {
+      "id": "I02_economic4_8_21",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 1.0658780058385702e-11,
+      "scope": 8,
+      "horizon": 21
+    },
+    {
+      "id": "I02_economic4_8_21",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 0.0,
+      "scope": 8,
+      "horizon": 21
+    },
+    {
+      "id": "I02_economic4_8_21",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 3.5269181374248185e-16,
+      "scope": 8,
+      "horizon": 21
+    },
+    {
+      "id": "I02_economic4_9_1",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 0.0,
+      "scope": 9,
+      "horizon": 1
+    },
+    {
+      "id": "I02_economic4_9_1",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 0.0,
+      "scope": 9,
+      "horizon": 1
+    },
+    {
+      "id": "I02_economic4_9_1",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 0.0,
+      "scope": 9,
+      "horizon": 1
+    },
+    {
+      "id": "I02_economic4_9_21",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 0.0,
+      "scope": 9,
+      "horizon": 21
+    },
+    {
+      "id": "I02_economic4_9_21",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 6.777667094687344e-13,
+      "scope": 9,
+      "horizon": 21
+    },
+    {
+      "id": "I02_economic4_9_21",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 7.599051613248241e-13,
+      "scope": 9,
+      "horizon": 21
+    },
+    {
+      "id": "M01",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 2.6978152784656872e-12,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "M01",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 9.549744892436984e-12,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "M01",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 1.273033870159701e-12,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "M02",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 1.7493396054640842e-12,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "M02",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 1.8405019262118794e-12,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "M02",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 6.579363789893655e-12,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "M03",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 0.0,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "M03",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 1.4071192778672414e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "M03",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 8.995288303288718e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "M04",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 3.057076076659615e-13,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "M04",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 1.8374281913688395e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "M04",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 1.043015738881603e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "M05",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 2.6724553559703823e-13,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "M05",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 1.26144256065025e-10,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "M05",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 5.447846037134885e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "M06",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 0.0,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "M06",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 2.7566675071116764e-13,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "M06",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 5.421010862427522e-20,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "M07",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 7.319520857473893e-12,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "M07",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 3.2516521593362047e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "M07",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 1.9744664887452745e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "P01",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 3.9950057151294516e-12,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "P01",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 1.251482619792077e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "P01",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 1.1080373706236213e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "S01",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 4.669692909263501e-13,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "S01",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 1.079804735210077e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "S01",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 2.2511342616382546e-11,
+      "scope": 8,
+      "horizon": 1
+    },
+    {
+      "id": "T01",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 1.2232656836259903e-12,
+      "scope": 9,
+      "horizon": 1
+    },
+    {
+      "id": "T01",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 1.509928922345527e-11,
+      "scope": 9,
+      "horizon": 1
+    },
+    {
+      "id": "T01",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 1.9116366475890878e-11,
+      "scope": 9,
+      "horizon": 1
+    },
+    {
+      "id": "T02",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 5.514188281333099e-13,
+      "scope": 8,
+      "horizon": 21
+    },
+    {
+      "id": "T02",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 3.1545438136659776e-11,
+      "scope": 8,
+      "horizon": 21
+    },
+    {
+      "id": "T02",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 3.889283795195653e-11,
+      "scope": 8,
+      "horizon": 21
+    },
+    {
+      "id": "T03",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 5.548199161382883e-12,
+      "scope": 9,
+      "horizon": 21
+    },
+    {
+      "id": "T03",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 1.2538707268652804e-11,
+      "scope": 9,
+      "horizon": 21
+    },
+    {
+      "id": "T03",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 1.4722896296212595e-11,
+      "scope": 9,
+      "horizon": 21
+    },
+    {
+      "id": "T04",
+      "date": "2021-07-01 00:00:00",
+      "improvement_bound": 5.548199161382883e-12,
+      "scope": 9,
+      "horizon": 21
+    },
+    {
+      "id": "T04",
+      "date": "2024-01-02 00:00:00",
+      "improvement_bound": 1.253849975235699e-11,
+      "scope": 9,
+      "horizon": 21
+    },
+    {
+      "id": "T04",
+      "date": "2025-07-01 00:00:00",
+      "improvement_bound": 7.624468114156291e-12,
+      "scope": 9,
+      "horizon": 21
+    }
+  ]
+}

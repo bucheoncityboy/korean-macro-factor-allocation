@@ -1,0 +1,31 @@
+{
+  "status": "failed_strict_compatibility",
+  "tolerances_unchanged": true,
+  "differences": {
+    "nav": {
+      "max_abs_error": 1.4288292771169608e-09,
+      "field": "nav",
+      "row": 814,
+      "date": "2024-09-26 00:00:00",
+      "old": 1.0132593335845583,
+      "new": 1.0132593350133876
+    },
+    "targets": {
+      "max_abs_error": 1.0702079383806407e-07,
+      "field": "IEF",
+      "row": 822,
+      "date": "2024-10-08 00:00:00",
+      "old": 0.1852292879835834,
+      "new": 0.18522918096278956
+    },
+    "trades": {
+      "max_abs_error": 1.0702079383806407e-07,
+      "field": "target_weight",
+      "row": 7402,
+      "date": "2024-10-08 00:00:00",
+      "old": 0.1852292879835834,
+      "new": 0.18522918096278956
+    }
+  },
+  "candidate_cause": "Floating arithmetic order in followup account differs from original ratio-first overnight/intraday representation; investigate exactly."
+}
