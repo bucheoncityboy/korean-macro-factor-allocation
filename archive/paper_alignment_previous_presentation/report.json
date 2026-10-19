@@ -1,0 +1,36 @@
+{
+  "status": "generated_after_actual_verification",
+  "created_utc": "2026-10-19T15:31:25.372438+00:00",
+  "report_source_sha256": "35339483b6fa72173ce5e228315f146c293e356e2db6496e13260e00d5901c44",
+  "analysis_contract_sha256": "39f79a6fbed5d16845fc87a4375b86d9c38c2a0689403250c593f460712bfed9",
+  "README_sha256": "86ff06ed9357faafdf3191087f3d941f3e54deb80f2700b050601659800a1af1",
+  "documents": {
+    "docs/redesign-paper.md": "c6708d152927891d5ff6001baca5ad75231eb87371bbac0c49859a82977c240b",
+    "docs/redesign-diagnostics.md": "6a14f7079060f3e0abd3eef57fc57c1e733cfbce7295f88cbe8e6f0b5a96cc24",
+    "docs/paper-replication-readiness.md": "97e7e4f46a1b6f8491ed1e3b2233796d8c791f0efb1e6d58b44f01169a4c0398",
+    "docs/public-method-reconstruction.md": "e16cff14911969ad7f812137677d78b5683e35abe6a83a64bd0629cdf80023aa"
+  },
+  "prior_results_viewed": true,
+  "diagnostic_accounts": 30,
+  "canonical_selection": "explicit redesign report command",
+  "output_snapshot_manifest_sha256": "a16aee2b30d92c898b36b6eb20d9474fb419ab9d1032369b6cf453271cf6f68d",
+  "output_snapshot_source_sha256": "2fef4312e90d50213690af573cce7ce1887bae8b47302b3515273caba825c844",
+  "public_method_controls_contract_sha256": "6c98c106da1f24d8310fdde1d69de58a77f38a9fe73b8c7f21b1dc453b3fc503",
+  "public_method_controls_proof_sha256": "0c222319ed7f927a7d034a965fdfa8e276beb8e33fb4536e59f44191c9932326",
+  "presentation_refresh_history": [
+    {
+      "created_utc": "2026-10-19T16:59:50.471210+00:00",
+      "reason": "Disclose incomplete identical-data paper replication and primary-source audit before new experiments",
+      "previous_report_archive": "archive/paper_replication_readiness/report.json",
+      "previous_report_sha256": "83babd4e982483e089e8ac53a687eaaa1578f6411b2b838d0d36f90d9440f2fe",
+      "financial_calculations_rerun": false,
+      "actual_verification_timestamp_changed": false
+    },
+    {
+      "created_utc": "2026-10-19T17:17:34.142129+00:00",
+      "scope": "Document the user-confirmed public-only scope and independent method controls; README and existing financial results unchanged",
+      "previous_report_archive": "archive/public_method_checks_previous_presentation/report.json",
+      "previous_report_sha256": "63678a9788fce4e7336424f086f059012af46bc9c42f32b57d31e906aa604832"
+    }
+  ]
+}

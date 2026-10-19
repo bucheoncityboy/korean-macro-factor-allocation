@@ -1,0 +1,69 @@
+{
+  "objects": [
+    {
+      "path": "data/raw/paper_alignment/AGG_2004.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/AGG?period1=1072915200&period2=1199145600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-19T17:30:25.517544+00:00",
+      "sha256": "2ccc3b2a1b9146802b66f5930ed0fca713197214b48022be7c450f67d9eee63f",
+      "bytes": 110889,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/paper_alignment/AGG_2008.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/AGG?period1=1199145600&period2=1325376000&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-19T17:30:25.533244+00:00",
+      "sha256": "2b2cbfeb4b733899956d250ba437c91e759710053332c9e747f73e55c32e8e7c",
+      "bytes": 112584,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/paper_alignment/AGG_2012.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/AGG?period1=1325376000&period2=1451606400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-19T17:30:25.497956+00:00",
+      "sha256": "848135ee7b16ca07b26037c4814fa2077242e1341fdd8701d82d3ed87b6c5005",
+      "bytes": 113307,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/paper_alignment/AGG_2016.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/AGG?period1=1451606400&period2=1577836800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-19T17:30:25.563012+00:00",
+      "sha256": "9ff2fe6a0eb12608df9e84d0e286ebc32e941e8e2ccd0110a0554d8bf487278f",
+      "bytes": 114114,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/paper_alignment/AGG_2020.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/AGG?period1=1577836800&period2=1704067200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-19T17:30:26.082407+00:00",
+      "sha256": "8576e550d3abb7abd1ed73fb193c5c76c0e029958ce461fcb522c4f95fb0da60",
+      "bytes": 113184,
+      "content_type": "application/json;charset=utf-8"
+    },
+    {
+      "path": "data/raw/paper_alignment/AGG_2024.json",
+      "url": "https://query2.finance.yahoo.com/v8/finance/chart/AGG?period1=1704067200&period2=1759276800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "downloaded_at_utc": "2026-10-19T17:30:26.067332+00:00",
+      "sha256": "452e0fc28adb86834a12c099594e7b6ea01620545e8b101eaf0a85c92b9f1bf2",
+      "bytes": 48873,
+      "content_type": "application/json;charset=utf-8"
+    }
+  ],
+  "archive": "archive/paper_alignment_inputs.zip",
+  "archive_sha256": "27a82fd0e347a9b83853596fe9ff80eac99cabbbd380c703be3a4898ce5d73bf",
+  "members": {
+    "data/raw/paper_alignment/AGG_2004.json": "2ccc3b2a1b9146802b66f5930ed0fca713197214b48022be7c450f67d9eee63f",
+    "data/raw/paper_alignment/AGG_2008.json": "2b2cbfeb4b733899956d250ba437c91e759710053332c9e747f73e55c32e8e7c",
+    "data/raw/paper_alignment/AGG_2012.json": "848135ee7b16ca07b26037c4814fa2077242e1341fdd8701d82d3ed87b6c5005",
+    "data/raw/paper_alignment/AGG_2016.json": "9ff2fe6a0eb12608df9e84d0e286ebc32e941e8e2ccd0110a0554d8bf487278f",
+    "data/raw/paper_alignment/AGG_2020.json": "8576e550d3abb7abd1ed73fb193c5c76c0e029958ce461fcb522c4f95fb0da60",
+    "data/raw/paper_alignment/AGG_2024.json": "452e0fc28adb86834a12c099594e7b6ea01620545e8b101eaf0a85c92b9f1bf2",
+    "data/raw/paper_alignment/AGG_2004.json.meta.json": "7df7d225b93eda038d7afaf023b43c63d73ab9476773cb731c02bef1a3f53896",
+    "data/raw/paper_alignment/AGG_2008.json.meta.json": "ae1dc79c5c3789d37d9f7c2084af90d5d23e18c0d7b6d899e826bf12e64f237d",
+    "data/raw/paper_alignment/AGG_2012.json.meta.json": "36fa054b877afda1e38ddacb3eac4d3b02b6741b743081490f2d274596909dfb",
+    "data/raw/paper_alignment/AGG_2016.json.meta.json": "891d54ca2e494656bdce7bf9b29194bc9fecff9fb878f02ed0a0f0a02faddd40",
+    "data/raw/paper_alignment/AGG_2020.json.meta.json": "3a4087420205c68ce1e7741dca867b03a570cf489d1e817814b00223c87a6b5d",
+    "data/raw/paper_alignment/AGG_2024.json.meta.json": "4a006da41f4607f070a5748c81bfac7a7d9753058a2687f6c1c5fb69f6629039"
+  },
+  "use": "feature only; never traded"
+}

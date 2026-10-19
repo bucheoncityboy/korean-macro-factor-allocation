@@ -33,7 +33,7 @@
   "results/redesign/presentation_dependency_repair.json": "46468e3655de8872e22b4ea853de706e9efac5688598832ef0c03ecdca5ea9cb",
   "results/redesign/ratio_first_certificate.json": "f07cfcc07ec76aff8779b1e31800ee55004f1dc6f7a8179f1677cf5307b80ec0",
   "results/redesign/replay_invocation_repair.json": "eea3e56a7dd8267703b06ac68c5483d2a03e288e33ae92b84527cce5d7622969",
-  "results/redesign/report.json": "554c4c57e58bc07b102cab2ebfd73e4f3c016607ac9a6fb5062adb2796ab2b81",
+  "results/redesign/report.json": "61a7287cf83bfd93d7084ed80defef62f634f96a403b9f1401e14566051bd847",
   "results/redesign/run.json": "dfe20090e91055735d0de86f28fff954db319a0a4aa78f55b2628d2b400828d4",
   "results/redesign/targets.parquet": "44c2d75ac2a70271e98d14ad61e412992e4bad5b7a3f320ec70740aafb3c61e4",
   "results/redesign/trades.parquet": "6b188f3fbda0f8b0468b062e8cc4cba47539bd87557b53bee582492614ab81d1",

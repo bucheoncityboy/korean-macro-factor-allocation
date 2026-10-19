@@ -1,0 +1,21 @@
+{
+  "results/paper_alignment/anchor.json": "f564b7fbb7a71d32e9fc256d9dc1123def441ac169c9acb4e81aaabeef785d6f",
+  "results/paper_alignment/candidate_probabilities.parquet": "44361ae0712aad241a071fd6a57425b9a4d46ee32dae8e13dc72f3b421847443",
+  "results/paper_alignment/contrast.csv": "aa471b1e7be15fff5edb71a79e336970d1e31c38a43c3c08c08c34f0cd5e46b8",
+  "results/paper_alignment/correlation_inputs.parquet": "ae5343678b28564c76e079d5ef2f8a12f8060f283f2b6d5d3622af7dcaf58b31",
+  "results/paper_alignment/execution_source.bundle": "66d56c022f0579e5f1f6a858344175374d9565faa35f22be7d992e2674293e33",
+  "results/paper_alignment/figures/portfolios.png": "0676cd3fff92baec92fd2058b2d18a29291655ce0c664d43d12fc35c6ef616d3",
+  "results/paper_alignment/fits.json": "2ccfef04941740cee4d0fde2635935fb705d24282e1590c18abc9e510191ed2b",
+  "results/paper_alignment/input_transport_verification.json": "e25a2924865bc24472016b6a772a333ada2b806b9a1d948b458be10a9029de33",
+  "results/paper_alignment/nav.parquet": "19f471413d8a145df7df7fa705b31de2d6f81cc79c7b1ccb09a04917a7227d94",
+  "results/paper_alignment/output_transport_verification.json": "9420c5f16cad668416fa2e265f9f6f7d94a6c37fefcedbae1c5805fcb1d09576",
+  "results/paper_alignment/predictions.parquet": "ee86e71e01eea73df7d72dec70fd94f688ad5796f7a99020b79ce3651f5ceb6e",
+  "results/paper_alignment/report.json": "5f6a9ff9359faf1b81e6005cfa21e796165e543e85e3e75b6c99f4cdeeed3cf0",
+  "results/paper_alignment/run.json": "5a8fd44b6a7e24649f4d7893f14d973e82d3a6ea6a61e9ec115634ec4440f043",
+  "results/paper_alignment/source_snapshot.json": "0c4acf9fd39b8853dafcf84dbea799a7e5b0a8238df5431159a7b30c374768ec",
+  "results/paper_alignment/summary.csv": "b76a370536790aaa6c661c3ed9524de6aee44949f58dc6ba2a992068916c23ed",
+  "results/paper_alignment/targets.parquet": "ecc4b616962a62ba158a5f81c307f46557184ff45f877e7255ba5812815e0010",
+  "results/paper_alignment/trades.parquet": "a2b41eb2cfc45f14b5e5f8ac7b0c173db961c23727547a26ec6a23378ea97616",
+  "results/paper_alignment/tuning.json": "ecfdd6066661ff1513c610fe38d222b728cb214099c6a0c61d26b18c9b736d61",
+  "results/paper_alignment/verification.json": "16ee95d93a0112d9442c2befc6c1e7616b8b73ca1d9a72d894d4cabca2a5c365"
+}

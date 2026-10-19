@@ -1,0 +1,29 @@
+{
+  "status": "completed",
+  "started_utc": "2026-10-19T17:33:52.636407+00:00",
+  "checkout_commit": "14bbd090d07bef9ff19aa15950abdde1bc9c0d18",
+  "contract_sha256": "413854b99ef05ba803d065bc1be20de1f3b25fa0c4d80925d003b5b0b1a86416",
+  "anchor": {
+    "mv_jmxgb_cap/nav": 0.0,
+    "mv_jmxgb_cap/targets": 0.0,
+    "mv_jmxgb_cap/trades": 0.0,
+    "mv_jmxgb_floor/nav": 0.0,
+    "mv_jmxgb_floor/targets": 0.0,
+    "mv_jmxgb_floor/trades": 0.0,
+    "minvar_jmxgb/nav": 0.0,
+    "minvar_jmxgb/targets": 0.0,
+    "minvar_jmxgb/trades": 0.0,
+    "ew_jmxgb/nav": 0.0,
+    "ew_jmxgb/targets": 0.0,
+    "ew_jmxgb/trades": 0.0
+  },
+  "AGG_audit": {
+    "rows": 5471,
+    "missing_sessions": 0,
+    "frequency": "exchange daily",
+    "events": 261,
+    "distribution_reconciliation_max_error": 6.599504525250932e-05
+  },
+  "completed_utc": "2026-10-19T17:36:52.534048+00:00",
+  "accounts": 31
+}

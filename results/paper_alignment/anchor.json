@@ -1,0 +1,14 @@
+{
+  "mv_jmxgb_cap/nav": 0.0,
+  "mv_jmxgb_cap/targets": 0.0,
+  "mv_jmxgb_cap/trades": 0.0,
+  "mv_jmxgb_floor/nav": 0.0,
+  "mv_jmxgb_floor/targets": 0.0,
+  "mv_jmxgb_floor/trades": 0.0,
+  "minvar_jmxgb/nav": 0.0,
+  "minvar_jmxgb/targets": 0.0,
+  "minvar_jmxgb/trades": 0.0,
+  "ew_jmxgb/nav": 0.0,
+  "ew_jmxgb/targets": 0.0,
+  "ew_jmxgb/trades": 0.0
+}

@@ -1,0 +1,10 @@
+{
+  "status": "generated_after_actual_verification",
+  "source_sha256": "7458a7a753b99704a922d68456924b3039e3c7f0ced31c37a0c09a5b9923c42a",
+  "document_sha256": "9d230182339c40f50ee7670f300a22b874c1ac56d16cf6c4f662d10670548afa",
+  "figure_sha256": "0676cd3fff92baec92fd2058b2d18a29291655ce0c664d43d12fc35c6ef616d3",
+  "verification_sha256": "16ee95d93a0112d9442c2befc6c1e7616b8b73ca1d9a72d894d4cabca2a5c365",
+  "snapshot_manifest_sha256": "5d420fb8e72062778b5e7c55a2c1532370cb6feae3ffc10e3ac24a2d34ff602d",
+  "portfolio_README_sha256": "70329600809007e60c3d49ca12c6381e8da28253048f58f593fd87c967364fba",
+  "portfolio_presentation_overlay": "Versioned Markdown overlay after verified results; source generators and finance unchanged"
+}

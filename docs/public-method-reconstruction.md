@@ -71,3 +71,7 @@ uv run python -m etf_regimes.public_method_checks artifacts
 ```
 
 [실제 자료 검증 기록](../results/public_method_checks/verification.json) · [저자 자료 계산 기록](../results/public_method_checks/author_control.json) · [검증 소스](../src/etf_regimes/public_method_checks.py) · [기존 원문 자료 확보 감사](paper-replication-readiness.md)
+
+## 공개 자료로 줄일 수 있는 입력 차이의 후속 대조
+
+원문의 주식–종합채권 상관에 더 가까운 SPY–AGG 입력으로 교체한 [고정 대조](agg-feature-alignment.md)를 별도 계약·실행·검증했다. AGG는 피처 전용이며, 기존8개 투자 대상과 학습·튜닝·배분 조건은 유지했다. 이 문서의 기존 계산 검증과 원문 동일자료 재현의 미완료 상태는 그대로다.

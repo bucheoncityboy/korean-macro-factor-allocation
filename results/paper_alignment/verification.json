@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "mode": "actual_raw_data",
+  "verified_utc": "2026-10-19T17:38:59.323341+00:00",
+  "contract_sha256": "413854b99ef05ba803d065bc1be20de1f3b25fa0c4d80925d003b5b0b1a86416",
+  "checkout_commit": "14bbd090d07bef9ff19aa15950abdde1bc9c0d18",
+  "independent_cold_selected_fits": 24,
+  "saved_raw_selection_rechecks": 72,
+  "three_signal_free_baseline_NAVs_exact": true,
+  "future_correlation_prefix": "passed",
+  "old_anchor_exact": true,
+  "old_financial_outputs_unchanged": 41,
+  "accounts": 31,
+  "independent_full_share_replays": 31,
+  "forecast_rows": 8536
+}

@@ -26,3 +26,11 @@ results/redesign/trades.parquet
 results/followup/verification_artifacts.json
 results/redesign/verification_artifacts.json
 results/public_method_checks/artifact_verification.json
+results/paper_alignment/predictions.parquet
+results/paper_alignment/candidate_probabilities.parquet
+results/paper_alignment/fits.json
+results/paper_alignment/tuning.json
+results/paper_alignment/nav.parquet
+results/paper_alignment/targets.parquet
+results/paper_alignment/trades.parquet
+results/paper_alignment/artifact_verification.json

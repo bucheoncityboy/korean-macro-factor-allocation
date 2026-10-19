@@ -38,3 +38,11 @@ jobs:
         env:
           OMP_NUM_THREADS: "1"
           OPENBLAS_NUM_THREADS: "1"
+      - name: Verify fixed AGG feature alignment
+        if: ${{ hashFiles('results/paper_alignment/verification.json') != '' }}
+        run: |
+          uv run python -m etf_regimes.paper_alignment restore
+          uv run python -m etf_regimes.paper_alignment artifacts
+        env:
+          OMP_NUM_THREADS: "1"
+          OPENBLAS_NUM_THREADS: "1"

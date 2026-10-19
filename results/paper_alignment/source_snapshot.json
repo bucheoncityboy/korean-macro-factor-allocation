@@ -1,0 +1,8 @@
+{
+  "source_commit": "14bbd090d07bef9ff19aa15950abdde1bc9c0d18",
+  "source_ref": "codex/paper-alignment-frozen-source",
+  "prerequisite_commit": "8d40581d03757de0b065ecd73e231b1f0aa62e26",
+  "bundle_path": "results/paper_alignment/execution_source.bundle",
+  "bundle_sha256": "66d56c022f0579e5f1f6a858344175374d9565faa35f22be7d992e2674293e33",
+  "contract_sha256": "413854b99ef05ba803d065bc1be20de1f3b25fa0c4d80925d003b5b0b1a86416"
+}

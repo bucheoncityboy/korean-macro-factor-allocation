@@ -3,12 +3,13 @@
   "created_utc": "2026-10-19T15:31:25.372438+00:00",
   "report_source_sha256": "35339483b6fa72173ce5e228315f146c293e356e2db6496e13260e00d5901c44",
   "analysis_contract_sha256": "39f79a6fbed5d16845fc87a4375b86d9c38c2a0689403250c593f460712bfed9",
-  "README_sha256": "86ff06ed9357faafdf3191087f3d941f3e54deb80f2700b050601659800a1af1",
+  "README_sha256": "70329600809007e60c3d49ca12c6381e8da28253048f58f593fd87c967364fba",
   "documents": {
     "docs/redesign-paper.md": "c6708d152927891d5ff6001baca5ad75231eb87371bbac0c49859a82977c240b",
     "docs/redesign-diagnostics.md": "6a14f7079060f3e0abd3eef57fc57c1e733cfbce7295f88cbe8e6f0b5a96cc24",
-    "docs/paper-replication-readiness.md": "97e7e4f46a1b6f8491ed1e3b2233796d8c791f0efb1e6d58b44f01169a4c0398",
-    "docs/public-method-reconstruction.md": "e16cff14911969ad7f812137677d78b5683e35abe6a83a64bd0629cdf80023aa"
+    "docs/paper-replication-readiness.md": "8adf82d899426170927845d81229b917be72dd50eeb0c90913b4650893fb2779",
+    "docs/public-method-reconstruction.md": "e2044539460767ac650233a70245b720dfee3f479e0c280f448b2e9e2496f6f7",
+    "docs/agg-feature-alignment.md": "9d230182339c40f50ee7670f300a22b874c1ac56d16cf6c4f662d10670548afa"
   },
   "prior_results_viewed": true,
   "diagnostic_accounts": 30,
@@ -31,6 +32,14 @@
       "scope": "Document the user-confirmed public-only scope and independent method controls; README and existing financial results unchanged",
       "previous_report_archive": "archive/public_method_checks_previous_presentation/report.json",
       "previous_report_sha256": "63678a9788fce4e7336424f086f059012af46bc9c42f32b57d31e906aa604832"
+    },
+    {
+      "created_utc": "2026-10-19T17:43:51.617465+00:00",
+      "scope": "Versioned manual README/document overlay for a single frozen AGG-input contrast; financial generators and previous empirical results unchanged",
+      "previous_README_archive": "archive/paper_alignment_previous_presentation/README.md",
+      "previous_README_sha256": "86ff06ed9357faafdf3191087f3d941f3e54deb80f2700b050601659800a1af1",
+      "alignment_contract_sha256": "413854b99ef05ba803d065bc1be20de1f3b25fa0c4d80925d003b5b0b1a86416",
+      "alignment_verification_sha256": "16ee95d93a0112d9442c2befc6c1e7616b8b73ca1d9a72d894d4cabca2a5c365"
     }
   ]
 }

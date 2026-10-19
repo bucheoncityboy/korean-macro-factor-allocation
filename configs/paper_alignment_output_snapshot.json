@@ -1,0 +1,52 @@
+{
+  "format": "deterministic-zip-split-v1",
+  "archive_sha256": "5e5c41ff3ed35a55392eb2e71ce4848a0e63b0e5ead93e5afc826b7183ac5dee",
+  "archive_bytes": 10129115,
+  "parts": [
+    {
+      "path": "archive/paper_alignment_outputs/part-000.bin",
+      "bytes": 4194304,
+      "sha256": "6c2e9f4fc13358e24fb38770b745b57dbf6cba07976ce9df71f0a0034ab2c70e"
+    },
+    {
+      "path": "archive/paper_alignment_outputs/part-001.bin",
+      "bytes": 4194304,
+      "sha256": "e5384c9dc947db4e10632f3e2ea10c7afd90565efecfd4d04ef20b395b45cc23"
+    },
+    {
+      "path": "archive/paper_alignment_outputs/part-002.bin",
+      "bytes": 1740507,
+      "sha256": "0a62590abf5bba4750c37f4f068d84df7b1e023bb3f7667dd86ba032e65f6bfe"
+    }
+  ],
+  "members": {
+    "results/paper_alignment/predictions.parquet": {
+      "bytes": 259598,
+      "sha256": "ee86e71e01eea73df7d72dec70fd94f688ad5796f7a99020b79ce3651f5ceb6e"
+    },
+    "results/paper_alignment/candidate_probabilities.parquet": {
+      "bytes": 1414570,
+      "sha256": "44361ae0712aad241a071fd6a57425b9a4d46ee32dae8e13dc72f3b421847443"
+    },
+    "results/paper_alignment/fits.json": {
+      "bytes": 8777273,
+      "sha256": "2ccfef04941740cee4d0fde2635935fb705d24282e1590c18abc9e510191ed2b"
+    },
+    "results/paper_alignment/tuning.json": {
+      "bytes": 107313,
+      "sha256": "ecfdd6066661ff1513c610fe38d222b728cb214099c6a0c61d26b18c9b736d61"
+    },
+    "results/paper_alignment/nav.parquet": {
+      "bytes": 2674719,
+      "sha256": "19f471413d8a145df7df7fa705b31de2d6f81cc79c7b1ccb09a04917a7227d94"
+    },
+    "results/paper_alignment/targets.parquet": {
+      "bytes": 765408,
+      "sha256": "ecc4b616962a62ba158a5f81c307f46557184ff45f877e7255ba5812815e0010"
+    },
+    "results/paper_alignment/trades.parquet": {
+      "bytes": 6378095,
+      "sha256": "a2b41eb2cfc45f14b5e5f8ac7b0c173db961c23727547a26ec6a23378ea97616"
+    }
+  }
+}
