@@ -3,7 +3,7 @@
   "created_utc": "2026-10-19T15:31:25.372438+00:00",
   "report_source_sha256": "35339483b6fa72173ce5e228315f146c293e356e2db6496e13260e00d5901c44",
   "analysis_contract_sha256": "39f79a6fbed5d16845fc87a4375b86d9c38c2a0689403250c593f460712bfed9",
-  "README_sha256": "cc4a7307845d90611deaf5abdbb762e85bd8c873df0016820d0e4d79ad3b56b4",
+  "README_sha256": "4513315e20511cc421806c67bda898aa8d5178f51b081b86eafc3da4de37b1fd",
   "documents": {
     "docs/redesign-paper.md": "c6708d152927891d5ff6001baca5ad75231eb87371bbac0c49859a82977c240b",
     "docs/redesign-diagnostics.md": "6a14f7079060f3e0abd3eef57fc57c1e733cfbce7295f88cbe8e6f0b5a96cc24",
@@ -50,6 +50,14 @@
       "README_sha256": "cc4a7307845d90611deaf5abdbb762e85bd8c873df0016820d0e4d79ad3b56b4",
       "financial_calculations_rerun": false,
       "actual_verification_timestamp_changed": false
+    },
+    {
+      "created_utc": "2026-10-19T18:28:26.533225+00:00",
+      "scope": "Resolve two percentage-emphasis delimiters observed in the GitHub Markdown preview; wording and presentation only",
+      "previous_README_git_commit": "47710cd694eaee9398c9d8aacf941cf5695fb10f",
+      "previous_README_sha256": "cc4a7307845d90611deaf5abdbb762e85bd8c873df0016820d0e4d79ad3b56b4",
+      "README_sha256": "4513315e20511cc421806c67bda898aa8d5178f51b081b86eafc3da4de37b1fd",
+      "financial_calculations_rerun": false
     }
   ]
 }
