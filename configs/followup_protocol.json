@@ -1,0 +1,155 @@
+{
+  "version": "1.0.0",
+  "study_type": "Historical remedial extension after inspecting the original results; exploratory, never prospective",
+  "preserve_reference": "The sealed 51-month A/B execution remains the reference, not overwritten",
+  "seed": 240609578,
+  "assets": [
+    "SPY",
+    "EFA",
+    "EEM",
+    "IEF",
+    "TLT",
+    "LQD",
+    "IYR",
+    "GLD"
+  ],
+  "cash": "BIL",
+  "validation_start": "2011-01-01",
+  "evaluation_start": "2014-01-02",
+  "evaluation_end": "2025-09-30",
+  "evaluation_months": 141,
+  "train_years": 5,
+  "validation_years": 3,
+  "refit_months": 6,
+  "jump_penalties": [
+    0,
+    0.1,
+    1,
+    10,
+    100
+  ],
+  "jump_n_init": 10,
+  "jump_exclude_dd_assets": [
+    "IEF",
+    "TLT",
+    "GLD"
+  ],
+  "features": "Identical return8 + market5 + macro momentum2 + ages2 for both definitions and all learned models",
+  "monthly_training_weight": "Each target observation month sums to one; no rescaling of total weight",
+  "macro_width_months": 3,
+  "logistic": {
+    "C": 1,
+    "max_iter": 2000
+  },
+  "xgboost": {
+    "max_depth": 2,
+    "n_estimators": 100,
+    "learning_rate": 0.03,
+    "reg_lambda": 5,
+    "n_jobs": 1
+  },
+  "capacity_bridge_xgboost": {
+    "n_jobs": 1
+  },
+  "models": [
+    "logistic",
+    "xgb",
+    "xgb_paper",
+    "persistence",
+    "frequency"
+  ],
+  "persistence": "99% mass on last causally observed state + 1% training prior; no tuning",
+  "smoothing_halflife": 4,
+  "jump_selection": "Average logistic and regularized-XGB net 0/1 validation Sharpe over preceding three years; same selected JM labels for all models; ties choose lower penalty",
+  "conditional_mean": "Actual BIL excess; monthly weighted; 12-month shrink toward the known overall mean; only available return/label pairs",
+  "mean_shrink_months": 12,
+  "covariance": {
+    "lookback_years": 5,
+    "halflife": 252
+  },
+  "risk_aversion": 10,
+  "asset_cap": 0.4,
+  "forced_cash_rule": false,
+  "policy_variants": {
+    "legacy": {
+      "include_cash": false,
+      "horizon_days": 1,
+      "band_l1": 0
+    },
+    "cash_cost": {
+      "include_cash": true,
+      "horizon_days": 1,
+      "band_l1": 0
+    },
+    "horizon": {
+      "include_cash": true,
+      "horizon_days": 21,
+      "band_l1": 0
+    },
+    "primary": {
+      "include_cash": true,
+      "horizon_days": 21,
+      "band_l1": 0.02
+    },
+    "wide_band": {
+      "include_cash": true,
+      "horizon_days": 21,
+      "band_l1": 0.05
+    }
+  },
+  "holding_horizon_note": "21-day mean/variance planning horizon amortizes the objective's one-time transaction penalty only; actual fees remain 5 bp on every traded ETF leg. No claim of 21-day forecast accuracy or guaranteed cost reduction.",
+  "band_note": "At signal close compare proposed and existing weights across nine legs. Below band, submit a HOLD-UNITS order with zero trade and fee, including overnight drift; never rebalance to old closing weights. Rebalance if the signal-close asset cap is breached. Log order weights separately from executed weights.",
+  "primary_policy": "primary",
+  "one_way_cost_bp": 5,
+  "cost_sensitivities_bp": [
+    0,
+    10,
+    25
+  ],
+  "primary_comparisons": [
+    [
+      "asset2_xgb",
+      "economic4_xgb"
+    ],
+    [
+      "asset2_xgb",
+      "asset2_logistic"
+    ],
+    [
+      "economic4_xgb",
+      "economic4_logistic"
+    ]
+  ],
+  "cer_risk_aversion": 5,
+  "bootstrap_replicates": 20000,
+  "bootstrap_blocks": [
+    6,
+    3,
+    12
+  ],
+  "fixed_effect_annual_cer": 0.005,
+  "power": "Conditional path-block power and 80% detectable effect; includes a variance uncertainty band but not full refitting/design-selection uncertainty",
+  "bridge": {
+    "source": "Fixed original A forecasts, 2021-07 to 2025-09",
+    "cash_rule": [
+      false,
+      true
+    ],
+    "means": [
+      "hard_paper",
+      "soft_paper",
+      "hard_shrink",
+      "soft_shrink"
+    ],
+    "policies": [
+      "legacy",
+      "cash_cost",
+      "horizon"
+    ],
+    "note": "Full 2 x 4 x 3 factorial; no winning chain selection. Hard/soft use the same conditional means and the same bearish floor, isolating probability mixing. Paper/shrink combines return reference, weighting and shrinkage, explicitly a bundled effect. Actual fee always 5 bp."
+  },
+  "reporting": "Report every frozen variant and the full 141-month primary result, the common 51-month overlap, pre/post-2024 segments, and all baselines; no winning appendix promotion",
+  "success": "Audited data, complete frozen execution, independent refits/replays, honest inference and diagnosis. Positive returns, ML superiority or significance are not guaranteed.",
+  "no_parameter_expansion_after_results": true,
+  "baselines": "JM persistence and training-frequency forecasts use the same conditional means and allocation; unconditional MV uses the same monthly-weighted known five-year BIL excess mean, covariance and execution policy. Additional EW, SPY/IEF 60/40, 200-day trend and BIL benchmarks."
+}

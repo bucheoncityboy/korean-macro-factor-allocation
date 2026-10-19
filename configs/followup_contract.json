@@ -1,0 +1,215 @@
+{
+  "frozen_at_utc": "2026-10-19T07:37:56.047379+00:00",
+  "prior_results_viewed": true,
+  "new_performance_computed": false,
+  "protocol": {
+    "version": "1.0.0",
+    "study_type": "Historical remedial extension after inspecting the original results; exploratory, never prospective",
+    "preserve_reference": "The sealed 51-month A/B execution remains the reference, not overwritten",
+    "seed": 240609578,
+    "assets": [
+      "SPY",
+      "EFA",
+      "EEM",
+      "IEF",
+      "TLT",
+      "LQD",
+      "IYR",
+      "GLD"
+    ],
+    "cash": "BIL",
+    "validation_start": "2011-01-01",
+    "evaluation_start": "2014-01-02",
+    "evaluation_end": "2025-09-30",
+    "evaluation_months": 141,
+    "train_years": 5,
+    "validation_years": 3,
+    "refit_months": 6,
+    "jump_penalties": [
+      0,
+      0.1,
+      1,
+      10,
+      100
+    ],
+    "jump_n_init": 10,
+    "jump_exclude_dd_assets": [
+      "IEF",
+      "TLT",
+      "GLD"
+    ],
+    "features": "Identical return8 + market5 + macro momentum2 + ages2 for both definitions and all learned models",
+    "monthly_training_weight": "Each target observation month sums to one; no rescaling of total weight",
+    "macro_width_months": 3,
+    "logistic": {
+      "C": 1,
+      "max_iter": 2000
+    },
+    "xgboost": {
+      "max_depth": 2,
+      "n_estimators": 100,
+      "learning_rate": 0.03,
+      "reg_lambda": 5,
+      "n_jobs": 1
+    },
+    "capacity_bridge_xgboost": {
+      "n_jobs": 1
+    },
+    "models": [
+      "logistic",
+      "xgb",
+      "xgb_paper",
+      "persistence",
+      "frequency"
+    ],
+    "persistence": "99% mass on last causally observed state + 1% training prior; no tuning",
+    "smoothing_halflife": 4,
+    "jump_selection": "Average logistic and regularized-XGB net 0/1 validation Sharpe over preceding three years; same selected JM labels for all models; ties choose lower penalty",
+    "conditional_mean": "Actual BIL excess; monthly weighted; 12-month shrink toward the known overall mean; only available return/label pairs",
+    "mean_shrink_months": 12,
+    "covariance": {
+      "lookback_years": 5,
+      "halflife": 252
+    },
+    "risk_aversion": 10,
+    "asset_cap": 0.4,
+    "forced_cash_rule": false,
+    "policy_variants": {
+      "legacy": {
+        "include_cash": false,
+        "horizon_days": 1,
+        "band_l1": 0
+      },
+      "cash_cost": {
+        "include_cash": true,
+        "horizon_days": 1,
+        "band_l1": 0
+      },
+      "horizon": {
+        "include_cash": true,
+        "horizon_days": 21,
+        "band_l1": 0
+      },
+      "primary": {
+        "include_cash": true,
+        "horizon_days": 21,
+        "band_l1": 0.02
+      },
+      "wide_band": {
+        "include_cash": true,
+        "horizon_days": 21,
+        "band_l1": 0.05
+      }
+    },
+    "holding_horizon_note": "21-day mean/variance planning horizon amortizes the objective's one-time transaction penalty only; actual fees remain 5 bp on every traded ETF leg. No claim of 21-day forecast accuracy or guaranteed cost reduction.",
+    "band_note": "At signal close compare proposed and existing weights across nine legs. Below band, submit a HOLD-UNITS order with zero trade and fee, including overnight drift; never rebalance to old closing weights. Rebalance if the signal-close asset cap is breached. Log order weights separately from executed weights.",
+    "primary_policy": "primary",
+    "one_way_cost_bp": 5,
+    "cost_sensitivities_bp": [
+      0,
+      10,
+      25
+    ],
+    "primary_comparisons": [
+      [
+        "asset2_xgb",
+        "economic4_xgb"
+      ],
+      [
+        "asset2_xgb",
+        "asset2_logistic"
+      ],
+      [
+        "economic4_xgb",
+        "economic4_logistic"
+      ]
+    ],
+    "cer_risk_aversion": 5,
+    "bootstrap_replicates": 20000,
+    "bootstrap_blocks": [
+      6,
+      3,
+      12
+    ],
+    "fixed_effect_annual_cer": 0.005,
+    "power": "Conditional path-block power and 80% detectable effect; includes a variance uncertainty band but not full refitting/design-selection uncertainty",
+    "bridge": {
+      "source": "Fixed original A forecasts, 2021-07 to 2025-09",
+      "cash_rule": [
+        false,
+        true
+      ],
+      "means": [
+        "hard_paper",
+        "soft_paper",
+        "hard_shrink",
+        "soft_shrink"
+      ],
+      "policies": [
+        "legacy",
+        "cash_cost",
+        "horizon"
+      ],
+      "note": "Full 2 x 4 x 3 factorial; no winning chain selection. Hard/soft use the same conditional means and the same bearish floor, isolating probability mixing. Paper/shrink combines return reference, weighting and shrinkage, explicitly a bundled effect. Actual fee always 5 bp."
+    },
+    "reporting": "Report every frozen variant and the full 141-month primary result, the common 51-month overlap, pre/post-2024 segments, and all baselines; no winning appendix promotion",
+    "success": "Audited data, complete frozen execution, independent refits/replays, honest inference and diagnosis. Positive returns, ML superiority or significance are not guaranteed.",
+    "no_parameter_expansion_after_results": true,
+    "baselines": "JM persistence and training-frequency forecasts use the same conditional means and allocation; unconditional MV uses the same monthly-weighted known five-year BIL excess mean, covariance and execution policy. Additional EW, SPY/IEF 60/40, 200-day trend and BIL benchmarks."
+  },
+  "sources": {
+    "src/etf_regimes/data.py": "95714ca1cc94f027b7af3fd123a6ccf38af48ffac615b867f4850da1d6c01e0d",
+    "src/etf_regimes/models.py": "5581b862ad62a824a3593e056724b81a167effa785d8a13720ecf7abc52a41fe",
+    "src/etf_regimes/estimation.py": "977d9d41972d293014de352e14b730bd9b74626f05799941cd533dca793bc7b2",
+    "src/etf_regimes/study.py": "dc921566a042c81769aa1759288ec7b4bc400a88ed219d7c3e6a90b5c32cfef8",
+    "src/etf_regimes/allocation.py": "9047eb8050a955d41fe560137535f48600b9490075032020f54c163eb56c3455",
+    "src/etf_regimes/trading.py": "38178bf9d219693812719c76309dbdc73e906468e9e5e79ec87997ec9177aa90",
+    "src/etf_regimes/common.py": "969831ba3d4b22e5abb5cbb2fe0262f6588541a2aeaf6fb741fe554306650a63",
+    "src/etf_regimes/runtime.py": "b76c6b3ff2e66910bca06159db54f76923bc07e59dc36922837cdc82b42d188b",
+    "uv.lock": "e1b9ea1fec0d4674eca97d73c4be1c9d744a5ad428b22eb2017f2ac919d9d026",
+    "pyproject.toml": "07d6f06626f8445d39a85c890e7a6ddd3b875174702c4b12cfda2cf899bf9571",
+    "configs/protocol.json": "a5bb50a063de055fb2874b9b7371224808aa467d316bd66044c3c89c1343b203",
+    "src/etf_regimes/followup.py": "ff3fe69feebf1eb2187e72c0638cac0617f8ca422e1c09fdfb5f24d391043ff5",
+    "src/etf_regimes/followup_models.py": "98e16edf0e0af35e7757b5e72d3cb5dfac1d786d9250084f57cdd3ba2e64abe2",
+    "src/etf_regimes/followup_allocation.py": "4cea06b7142d408631a3dfd83d6bb1de768eda1a6407ba2c9df00ed7806158a5",
+    "src/etf_regimes/followup_statistics.py": "978703b845216b061d5307c8b708ab22c5727b1b33385988a3541e640ef33bc6",
+    "src/etf_regimes/statistics.py": "9201b0a70582d0e096917cf94cf754920a6aa7a30e04e09f6b4f6e5705aacaf0",
+    "configs/followup_protocol.json": "7bf5b52e6e155359fb0fd410827a6dd45c80df15500a93d4dab41b2302b86bda"
+  },
+  "audit_sha256": "7e2c787cc4044107eb7008bd85966fe69887581695f426c9406d4e877203982c",
+  "raw_manifest_sha256": "65e9fb4f33450395f945677eb0a824ff7d7ddd12abae71441c952b1f546e1b73",
+  "reference_empirical_sha256": {
+    "results/study/annual.csv": "08e9eb147396800518a87aa3d3b497f0ccca3f9ef05a01622780d5066c4910f3",
+    "results/study/candidate_probabilities.parquet": "5bad28fb717bfdd03f388a511dbb310855f88c0c4bcaf2cb41e7ed5ffbf1c507",
+    "results/study/class_fallbacks.json": "6616f0698a3f7f082d0e713647965c2e4b6a88fbdd82ee81dfc3db7926dd4f16",
+    "results/study/classification.csv": "8f839b2e8682dac8a41144640af1a83600af13f1c51b02af96aa597450ef3583",
+    "results/study/design_bridge.csv": "94f0f9b4814fab1aa3825c40df4604c9876f737273cb3f221256f19671caf99a",
+    "results/study/economic_labels.csv": "4b98c4abc15f416ee0e7b018fede719850eee1fca5fac9b2764d42676e7934f4",
+    "results/study/economic_labels_6.csv": "fefcd473385e302f0c35e39639cf2285f83365f98579dadffc338eb191758d34",
+    "results/study/feature_importance.csv": "c8e4f85f46242ef978ecc5c47098267930c94e67c4f70dfbf8a367330b2fcc85",
+    "results/study/figures/a_net_nav.png": "164a361a99b396de7c04c7a5e3c2ee513ce6ce77bd2e14a0821cd3c977d87165",
+    "results/study/figures/a_net_nav.svg": "949a529e47bc00e5ccda7901827eccbc6f33d9ef4dc26e3ef98d610cdff12f3f",
+    "results/study/figures/a_probabilities.png": "1adeff555e7cfcffd5ec83d1d2cffdc01025f7e0d5310f83a5af176d7933cf29",
+    "results/study/figures/a_probabilities.svg": "570a1f2c732975a13f9c6d09174077e3249646f7ef9cfdee82934205b9d48321",
+    "results/study/figures/b_exposure_cost.png": "ca5012de0d3abb2a9e1fe801712656fc759de4a79f678a78690699b23d892f6f",
+    "results/study/figures/b_exposure_cost.svg": "f8ae9653f294d1febd23617138bfe6b56caa045f64c6e2fd84e13edbf9b828d1",
+    "results/study/figures/b_net_nav.png": "6cfe0452330f216f89c542c2eba17a3386b262fa255136f71dd85a60db162daa",
+    "results/study/figures/b_net_nav.svg": "1eef2b1150c3ee46235bae4ab13979dacd4eaf56d17e6a7db354cf8ac6f23c16",
+    "results/study/figures/economic_timeline.png": "9c6a1d2a1c9cbb9afe77edf05afe005248d11cca796abb3ca400a755bbd86684",
+    "results/study/figures/economic_timeline.svg": "af903aaad828cd0779e5bde77b3877f2d68133004eeba19beac283e1dc79e9ac",
+    "results/study/fits.json": "087abc591c14d40501529bda74100eb60e059ea32a2f0aed036e3e3d097ad8c6",
+    "results/study/inference.json": "95c5e9287b2b226730412ae62358ae47f3fa3ff218d1e24fdc3baff6805f326f",
+    "results/study/monthly.csv": "95e140d53c0f128a9f95ec5b6e14da6d457b6a57f189162c6cc41d82c3c22588",
+    "results/study/nav.parquet": "c73da4db0d91d017e953e7ce43e2ea8d9fdee3f06a4195ccc29dbae9e38abb83",
+    "results/study/packaging.json": "1e0db0f0af6397681f3572d0e1417444936aa52a27939dc4d28c92d8a54ad2da",
+    "results/study/paper_comparison.csv": "b4bf8edb76bec2cb5b251a9620b8c21c9510e11673d1c5ef116f44b78cd0df48",
+    "results/study/predictions.parquet": "829120df3d4d2dcafa92c105a49e2601dd64386fecf9a5dad4aed98c064879a8",
+    "results/study/run.json": "fd8dd2044d18bcbe2d2b056c5d06dddcb96cc0dd7d9c916b18024ff6a48539d1",
+    "results/study/subperiods.csv": "01b941ebae5d75f4b8155ea29fbd0e229541f7641eb349de0d32f817dc56315e",
+    "results/study/summary.csv": "94d9e0c3ab06e3b58c90c0443a6a54dee13e83b57c7266b4604e27bc02ba6987",
+    "results/study/targets.parquet": "5643f2f6a1031e42a5046b20cd933c616bb420bb030ebe46ea4d5b5a4ec9d283",
+    "results/study/trades.parquet": "7c9b6aef95d652977f43d2639a3d4eaa2f65560b2e98f6b47a5ed1e1d4a54ff7",
+    "results/study/tuning.json": "efae6166ef506d6b98c20925ca300652256a0e885c2e9905515f59ca58b115bf",
+    "results/study/verification.json": "342b57b73d16c439bd4c0f5fcb967fd8ca5becb6bb33317ef4fe1018f388a8e0"
+  }
+}

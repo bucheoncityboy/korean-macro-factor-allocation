@@ -15,6 +15,10 @@ def main():
     verify_parser = sub.add_parser('verify')
     verify_parser.add_argument('--artifacts-only', action='store_true')
     sub.add_parser('report')
+    follow = sub.add_parser('followup', help='Separately frozen long-horizon remedial study')
+    follow.add_argument('stage', choices=['audit', 'freeze', 'run', 'verify', 'report'])
+    follow.add_argument('--workers', type=int, default=4)
+    follow.add_argument('--artifacts-only', action='store_true')
     args = parser.parse_args()
     if args.command == 'acquire':
         from .data import acquire
@@ -39,6 +43,19 @@ def main():
     elif args.command == 'report':
         from .reporting import report
         report()
+    elif args.command == 'followup':
+        if args.stage in ['audit', 'freeze', 'run']:
+            from . import followup
+            method = getattr(followup, args.stage)
+            result = method(args.workers) if args.stage == 'run' else method()
+        elif args.stage == 'verify':
+            from .followup_validation import verify
+            result = verify(args.artifacts_only, args.workers)
+        else:
+            from .followup_reporting import report
+            result = report()
+        if result is not None:
+            print(json.dumps(result, indent=2, default=str))
 
 
 if __name__ == '__main__':
